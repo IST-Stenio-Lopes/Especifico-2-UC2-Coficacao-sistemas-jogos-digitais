@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogos Digitais - SENAI EAD</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="SENAISP" />
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/global/table.css" />
+    <script type="text/javascript" src="./scripts/jquery.js"></script>
+    <script src="./scripts/index.js"></script>
+    <link rel="stylesheet" href="./css/global/question.css" />
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/ue2.js"></script>
+    <script src="./scripts/questions.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a onclick="openNav()"
+        ><img src="./img/global/icons/menu.png" class="logoJogos"
+      /></a>
+      <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+      <div></div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <button onclick="openList()" class="accordion">
+        <img src="./img/global/icons/summary.svg" style="margin-right: 10px" />
+        <p>Sumário</p>
+      </button>
+      <div class="panel" id="panelBtn">
+        <ul type="1">
+          <a class="listPanel" href="#contextualizing">
+            <li>1.0 Contextualizando</li>
+          </a>
+          <a class="listPanel" href="#tecnica-levantamento-demandas">
+            <li>2.0 Técnica de levantamento de demandas</li>
+          </a>
+          <ul type="1" style="margin-left: 20px">
+            <a class="listPanel" href="#brainstorm">
+              <li>2.1 Brainstorm</li>
+            </a>
+            <a class="listPanel" href="#questionario">
+              <li>2.2 Questionário</li>
+            </a>
+            <a class="listPanel" href="#entrevista">
+              <li>2.3 Entrevista</li>
+            </a>
+            <a class="listPanel" href="#etnografia">
+              <li>2.4 Etnografia</li>
+            </a>
+            <a class="listPanel" href="#workshop">
+              <li>2.5 Workshop</li>
+            </a>
+            <a class="listPanel" href="#prototipagem">
+              <li>2.6 Prototipagem</li>
+            </a>
+          </ul>
+        </ul>
+      </div>
+      <button onclick="changeTheme()" class="accordion">
+        <img
+          src="./img/global/icons/themeIcon.svg"
+          style="margin-right: 10px"
+          alt="Alterar tema"
+        />
+        <p>Alterar tema</p>
+      </button>
+      <button onclick="changeGray()" class="accordion">
+        <img
+          src="./img/global/icons/scaleGrayIcon.svg"
+          style="margin-right: 10px"
+          alt="Escala de Cinza"
+        />
+        <p>Escala de Cinza</p>
+      </button>
+      <button onclick="carregarFichaTecnica()" class="accordion">
+        <img
+          src="img\global\icons\lab_profile.svg"
+          style="margin-right: 10px"
+          alt="Ficha Técnica"
+        />
+        <p>Ficha Técnica</p>
+      </button>
+      <div class="accordion2">
+        <div style="display: flex">
+          <img
+            src="./img/global/icons/textIcon.svg"
+            style="margin-right: 10px"
+            alt="Tamanho da fonte"
+          />
+          <p>Tamanho da fonte</p>
+        </div>
+        <div>
+          <button
+            name="decrease-font"
+            id="decrease-font"
+            title="Diminuir fonte"
+          >
+            A -
+          </button>
+          <button
+            name="increase-font"
+            id="increase-font"
+            title="Aumentar fonte"
+          >
+            A +
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <header class="homePage">
+      <div class="header-title">
+        <div>
+          <h2 class="text-Course">Curso Técnico em</h2>
+          <h1 class="text-NameCourse">Jogos Digitais</h1>
+        </div>
+        <div id="containerBoxTitle">
+          <div class="box-unit-number">
+            <span> 2 </span>
+          </div>
+          <div class="titleHeader">Técnicas de Levantamento de demandas</div>
+        </div>
+        <div>
+          <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
+          <p class="text-DescriptUnit">
+            Definir os requisitos funcionais e não funcionais do sistema de
+            jogos demandados pela aplicação.
+          </p>
+        </div>
+        <div>
+          <p class="text-LetsLearn">Vamos iniciar os estudos!</p>
+          <a class="btnPlay" href="#contextualizing">Play</a>
+        </div>
+      </div>
+    </header>
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <div>
+            <div class="espaceTitle" id="contextualizing"></div>
+            <h1 class="text-Title light-orange">Contextualizando</h1>
+            <h3 class="text-Course">
+              Assista ao vídeo abaixo para uma introdução aos seus estudos
+            </h3>
+          </div>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/I_T_794h_fg"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="dicas">
+            <img
+              src="./img/global/icons/help.png"
+              id="help"
+              style="margin-right: 20px"
+            />
+            <p>
+              Quais os principais benefícios que Luana terá ao utilizar técnicas
+              para o levantamento de demandas no seu novo projeto?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1
+            class="text-Title light-orange"
+            id="tecnica-levantamento-demandas"
+          >
+            Técnica de levantamento de demandas
+          </h1>
+
+          <p>
+            No desenvolvimento de jogos digitais, o levantamento do público-alvo
+            é extremamente importante, pois é a partir dos resultados obtidos
+            que serão utilizadas outras técnicas de elicitação de requisitos e
+            gerar no final do processo, um documento de validação de requisitos.
+          </p>
+
+          <p>
+            Para traçar o perfil de um público-alvo, várias pesquisas são
+            realizadas envolvendo fatores que vão desde os comportamentais como
+            dados demográficos . Esses dados são utilizados para indicar quais
+            as características comuns entre essas pessoas e ter um melhor
+            direcionamento do foco do jogo.
+          </p>
+
+          <p>
+            Depois que o público-alvo é obtido e definido, parte-se para as
+            demais etapas de levantamento de requisitos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="brainstorm">
+            Brainstorm
+          </h1>
+
+          <p>
+            O brainstorm (interpretado como chuva de ideias em portugues) é uma
+            técnica de elicitação de requisitos que é muito eficiente para
+            grupos desenvolverem ideias criativas. Além de criar novas ideias,
+            motiva a equipe envolvida inserindo os membros em uma discussão
+            geral.
+          </p>
+
+          <!--Div de aviso com lâmpada-->
+          <div class="atencion my-3 mx-3">
+            <img src="./img/global/icons/lightbulb.png" />
+            <p>
+              O Brainstorm foi criado em 1948 pelo publicitário Alex Osborn, e
+              mesmo com o passar dos anos continua atual. Segundo ele, "O
+              objetivo do brainstorm consiste em uma tempestade de ideias e
+              perspectivas com o intuito de chegar ao melhor resultado.
+            </p>
+          </div>
+
+          <p>
+            A técnica é utilizada normalmente em reuniões permitindo o
+            compartilhamento de ideias, soluções e feedbacks de grande valor
+            para o projeto que será desenvolvido, além de melhorar a comunicação
+            de toda a equipe, que geralmente começa a se expressar de maneira
+            mais clara e objetiva.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/Imagem 1.png"
+            alt="Pessoas de negócios em reunião, brainstorming e discutindo notas postadas na parede de vidro no escritório."
+          />
+
+          <p>O brainstorm é realizado em duas fases:<br /></p>
+          <ol type="1">
+            <li class="mx-1">
+              Fase de geração, onde as ideias são recolhidas e reunidas.
+            </li>
+            <li class="mx-1">
+              Fase de avaliação, onde as ideias coletadas são discutidas.
+            </li>
+          </ol>
+
+          <p>
+            A técnica de brainstorm leva a uma melhor compreensão do problema
+            para todos e um sentimento de que todos cooperaram para atingir o
+            objetivo (MENDONÇA, 2012).
+          </p>
+
+          <p>
+            Vantagens em utilizar essa técnica:<br />
+            <li class="mx-1">Muitas pessoas pensando é melhor do que uma;</li>
+            <li class="mx-1">Rompe a inibição de idéias;</li>
+            <li class="mx-1">
+              Generaliza que todos os membros do grupo participem;
+            </li>
+          </p>
+
+          <p>
+            Desvantagens em utilizar a técnica:<br />
+            <li class="mx-1">
+              A disponibilidade de todos pode inviabilizar a elicitação de
+              informações e dados.
+            </li>
+          </p>
+
+          <p>
+            O brainstorming é uma técnica que valoriza a quantidade de ideias
+            geradas, as pessoas tendem a se sentir mais à vontade para propor
+            soluções mesmo que não sejam perfeitas, o que pode reduzir o medo de
+            errar e estimular a criatividade.
+          </p>
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://youtube.com/embed/AS9Fk-DAVSw"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="questionario">
+            Questionário
+          </h1>
+
+          <p>
+            São perguntas organizadas com o objetivo de levantar dados para uma
+            pesquisa ou estudo, cujas respostas são fornecidas pelo informante
+            sem a orientação direta do pesquisador. Os resultados do
+            questionário são obtidos por escrito.
+          </p>
+
+          <p>
+            O modelo a seguir mostra um exemplo de questionário de um jogo
+            fictício, para que você possa perceber detalhes necessários de
+            acordo com as especificidades do jogo.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/Questionario.png"
+            alt="Questionário"
+          />
+
+          <p>
+            O objetivo dessa técnica é a criação de uma versão inicial, e em
+            geral, parcial do sistema. . Isso é possível, a partir dos feedbacks
+            dos stakeholders, colhidos através de questionários.
+          </p>
+
+          <p>
+            O que é bastante útil para clarear os requisitos mal definidos e
+            desenvolver um protótipo o mais breve possível. É importante que as
+            perguntas do questionário sejam bem elaboradas e que sua aplicação
+            seja cuidadosamente planejada, a fim de garantir que os resultados
+            obtidos sejam relevantes e confiáveis. Caso contrário, os dados
+            coletados podem levar a conclusões equivocadas e comprometer o
+            sucesso do projeto.
+          </p>
+
+          <p>
+            Destacamos a seguir as vantagens e desvantagens em utilizar essa
+            técnica.
+          </p>
+
+          <!--TODO - Vantagens e Desvantagens -->
+
+          <table class="greyTable">
+            <thead>
+              <tr>
+                <th class="greenFontTh">Vantagens</th>
+                <th class="purpleFontTh">Desvantagens</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <ul>
+                    <li>Contempla um alto distanciamento geográfica;</li>
+                    <li>Atinge um grande número de usuários;</li>
+                    <li>Permite uma análise por amostragem.</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Há resistências dos usuários para preenchimento; </li>
+                    <li>Interação baixa durante a comunicação;</li>
+                    <li>
+                      Não é possível verificar a seriedade/atenção com que o
+                      pesquisado respondeu às questões;
+                    </li>
+                    <li>
+                      A dificuldade na escrita é um elemento que pode atrapalhar
+                      o desempenho da resposta.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="entrevista">
+            Entrevista
+          </h1>
+
+          <p>
+            A técnica de entrevista para levantamento de requisitos é bastante
+            utilizada no desenvolvimento de jogos digitais. Geralmente é
+            utilizada no início do processo de desenvolvimento. Consistindo como
+            o próprio nome sugere, em uma entrevista com stakeholders(
+            interessados finais, usuários, patrocinadores) do projeto. Assista a
+            seguir um vídeo sobre algumas dicas para entrevista.
+          </p>
+
+          <p>
+            O objetivo da técnica é levantar e identificar os requisitos do
+            software e as demais necessidades do projeto diretamente junto aos
+            mais interessados. As perguntas que serão realizadas na entrevista
+            podem ser simples( não estruturadas), com um contexto livre e com
+            isso conhecer a realidade do cliente. Como podem ser mais
+            elaboradas(estruturadas) e objetivas buscando assim conhecer as
+            necessidades mais importantes.
+          </p>
+
+          <p>
+            A técnica requer prática e bastante atenção aos detalhes, sendo
+            assim realizada por alguém capacitado. Para se obter sucesso na
+            entrevista deve-se levar em consideração alguns fatores importantes:
+            <br />
+            <li class="mx-1">
+              O entrevistador deve conhecer os tópicos que serão discutidos e
+              assim conduzir eficientemente a reunião.
+            </li>
+            <li class="mx-1">
+              Deve captar de maneira sucinta e documentar os pontos principais
+              que o stakeholder afirmou.
+            </li>
+            <li class="mx-1">
+              Verificar a rapidez com que o entrevistado responde e fornece a
+              informação.
+            </li>
+          </p>
+
+          <p>A entrevista deve ser realizada em três fases:<br /></p>
+          <ol type="1">
+            <li class="mx-1">
+              <p>
+                <strong>Preparação</strong>: o foco é na identificação dos
+                potenciais entrevistados, se será estruturada ou não, como
+                dividir as questões, gravar ou não, o tempo de entrevista,
+                local, e no agendamento da entrevista com os entrevistados.
+              </p>
+            </li>
+            <li class="mx-1">
+              <p>
+                <strong>Condução</strong>: foca-se na execução da entrevista,
+                introduzindo a razão da mesma, mantendo o foco na entrevista,
+                fazendo escuta activa.
+              </p>
+            </li>
+            <li class="mx-1">
+              <p>
+                <strong>Confirmação</strong>: o foco é na partilha de notas da
+                entrevista para revisão e validação do entrevistado.
+              </p>
+            </li>
+          </ol>
+
+          <p>
+            Tem como vantagens ser uma técnica simples, permitindo discussão
+            aberta e aos entrevistados exprimirem opiniões de forma privada.
+            Como desvantagens, a entrevista torna-se difícil atingir consenso
+            quando feitas em grupo. Requer comprometimento dos participantes; a
+            documentação da entrevista pode ser complexa e ainda existir o risco
+            não intencional do entrevistador conduzir o resultado da entrevista.
+          </p>
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://youtube.com/embed/ykNt4iJ-ZFY"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- inicio questão 1 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question1-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 1</p>
+                <p>Avalie se a afirmação a seguir é verdadeira ou falsa.</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>
+                  A técnica de levantamento de requisitos entrevista é uma
+                  técnica simples, permite aos entrevistados expressarem
+                  opiniões de forma privada.
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q1-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-1"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-1"> Verdadeiro </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-2"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-2"> Falso </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question1)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 1 -->
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="etnografia">
+            Etnografia
+          </h1>
+
+          <p>
+            A etnografia é uma técnica utilizada pela antropologia para coleta
+            de dados. Na engenharia de softwares, é um método utilizado no
+            levantamento de requisitos para o desenvolvimento de um software,
+            como exemplo de um jogo digital.
+          </p>
+
+          <p>
+            É uma técnica de observação utilizada para traçar um mapeamento de
+            requisitos implícitos, sejam eles sociais ou organizacionais,
+            refletindo os processos reais onde as pessoas estão envolvidas.
+            Nesta técnica, o responsável se insere no ambiente de trabalho em
+            que o sistema( jogo) será utilizado.
+          </p>
+
+          <p>
+            A ideia principal é que o engenheiro de requisitos participe das
+            atividades no papel do usuário e obtenha o conhecimento necessário
+            para gerar os requisitos. A etnografia é muito eficaz para o
+            desenvolvimento de um protótipo, utilizando o levantamento dos
+            requisitos funcionais e não funcionais através da técnica.
+          </p>
+
+          <p>
+            Ao realizar uma etnografia para o desenvolvimento de um jogo, um
+            pesquisador pode se inserir no ambiente, observando as atividades e
+            interações dos jogadores em seu contexto real. Isso pode envolver a
+            observação de como os jogadores interagem com o jogo, suas
+            preferências, dificuldades, comportamentos e interações sociais
+            durante o jogo. O pesquisador também pode coletar dados adicionais,
+            como entrevistas e anotações de campo, para obter uma compreensão
+            mais profunda do contexto de uso do jogo.
+          </p>
+
+          <p>
+            Investigar comunidades online de jogadores, como fóruns, grupos de
+            redes sociais ou plataformas de streaming de jogos é um bom exemplo
+            disso, pois assim pode compreender as discussões, opiniões e
+            feedback dos jogadores sobre o jogo. Isso pode fornecer informações
+            valiosas sobre os sentimentos, preferências e expectativas dos
+            jogadores em relação ao jogo, bem como identificar problemas ou
+            pontos de melhoria.
+          </p>
+
+          <p>
+            Através da etnografia, os desenvolvedores de software podem obter
+            insights valiosos sobre as necessidades e expectativas dos usuários
+            em relação ao jogo, o que pode ajudar a identificar problemas e
+            oportunidades de melhorias no design e na usabilidade do jogo. Essa
+            abordagem centrada no usuário pode resultar em um jogo mais bem
+            adaptado às necessidades e preferências dos jogadores, levando a uma
+            experiência de jogo mais satisfatória.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="workshop">
+            Workshop
+          </h1>
+
+          <p>
+            A técnica de workshop de requisitos é uma reunião composta por
+            alguns analistas e um público estratégico chamado de stakeholders,
+            que estão interessados no jogo que será produzido. A partir dessa
+            reunião obtém-se um conjunto de requisitos bem definidos.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/Imagem 2.png"
+            alt="O workshop é utilizado para mobilizar o trabalho em equipe, onde os interessados esclarecem e detalham suas necessidades e funcionalidades. Promovendo as discussões entre os participantes e obtendo um processo de negociação que é mediado por um facilitador. Para reunião, deve haver uma pauta, dia agendado, horário de  início e de término e a documentação do workshop."
+          />
+
+          <p>
+            O workshop é utilizado para mobilizar o trabalho em equipe, onde os
+            interessados esclarecem e detalham suas necessidades e
+            funcionalidades. Promovendo as discussões entre os participantes e
+            obtendo um processo de negociação que é mediado por um facilitador.
+          </p>
+
+          <p>
+            A reunião deve haver uma pauta, dia agendado, horário de início e de
+            término e a documentação do workshop. As informações levantadas
+            serão utilizadas para a produção de uma série de requisitos para o
+            sistema.
+          </p>
+
+          <p>
+            Durante a reunião, o facilitador é responsável por conduzir as
+            discussões e garantir que todas as partes tenham a oportunidade de
+            se expressar. É importante que haja uma pauta pré-definida para que
+            as discussões sejam organizadas e direcionadas para os objetivos do
+            workshop.
+          </p>
+
+          <p>
+            Ao final do workshop, a equipe de desenvolvimento terá uma lista de
+            requisitos bem definidos e documentados, que serão utilizados para a
+            produção do sistema. Esses requisitos servirão como base para a
+            equipe de desenvolvimento projetar, construir e testar o sistema de
+            acordo com as expectativas dos stakeholders.
+          </p>
+
+          <!-- inicio questão 2 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question2-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 2</p>
+                <p>Avalie se a afirmação a seguir é verdadeira ou falsa.</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>
+                  Não é necessário ter uma pauta pré-definida para o workshop de
+                  requisitos. Pois o facilitador é responsável por conduzir as
+                  discussões e garantir que todas as partes tenham a
+                  oportunidade de se expressar.
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q2-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-1"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-1"> Verdadeiro </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-2"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-2"> Falso </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question2)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 2 -->
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="prototipagem">
+            Prototipagem
+          </h1>
+
+          <p>
+            A prototipação é uma etapa fundamental no planejamento de jogos,
+            pois oferece uma série de benefícios importantes. Algumas razões
+            pelas quais a prototipação é essencial no desenvolvimento de jogos
+            são: testar conceitos e ideias, identificar problemas e fazer
+            ajustes, comunicar e alinhar expectativas, estimular a criatividade
+            e inovação entre outras.
+          </p>
+
+          <p>
+            O usuário deve ser lembrado que os protótipos são apenas rascunhos
+            de telas de interface do usuário, sem código e o software ainda não
+            especificado e codificado. Para Sommerville (2007, p.271), "O
+            protótipo é a primeira versão de sistemas de software usados para
+            demonstrar conceitos e assim aprender mais sobre o problema e suas
+            soluções possíveis.”.
+          </p>
+
+          <p>
+            Segundo Batista e Pontedeiro (2004), essa técnica reduz o risco de
+            falhas no desenvolvimento de softwares porque é uma tarefa que
+            permite renderização. A funcionalidade do sistema fica imediatamente
+            disponível para o usuário, resultando no fornecimento de informações
+            relacionadas à construção do produto final.
+          </p>
+
+          <p>
+            Sendo assim, o protótipo cumpre a função como instrumento de
+            teste/avaliação.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/Imagem 3.png"
+            alt="Imagem de protótipo de baixa fidelidade de intreface de login do usuário."
+          />
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/Imagem 4.png"
+            alt="Protótipo de alta fidelidade de interface de uma fase de um jogo digital, utilizando a engine Construct 2."
+          />
+
+          <!-- inicio questão 3 -->
+          <div class="marginVertical">
+            <div id="q1" class="myt-3">
+              <div class="question-box-container" id="question4-box-correct">
+                <div class="question-description-container">
+                  <p>QUESTÃO 3</p>
+                  <p class="my-1">
+                    Escolha a opção CORRETA que valida a sentença a seguir:
+                  </p>
+                </div>
+
+                <div class="question-description-container q3-sq1">
+                  <p></p>
+                  <p style="line-height: 28px">
+                    A técnica de
+                    <span
+                      id="q3-sq1-block-1"
+                      class="block"
+                      style="cursor: pointer"
+                      onclick="unselectCheckFromCompleteTypeQuestion(this, question3.subQuestions[0])"
+                      >_____________________
+                    </span>
+                    pode ser usada para gerar ideias criativas e soluções
+                    inovadoras para um problema específico. Onde todos são
+                    encorajados a compartilhar livremente suas ideias sem
+                    julgamento.
+                  </p>
+                </div>
+
+                <div class="question-select-type-container q3-sq1-options">
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-saida"
+                      class="question-select-type-opt-label"
+                      >Questionário</label
+                    >
+                    <input
+                      id="sq1-saida"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
+                    />
+                  </div>
+
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-entrada"
+                      class="question-select-type-opt-label"
+                      >Entrevista</label
+                    >
+                    <input
+                      id="sq1-entrada"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
+                    />
+                  </div>
+
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-pinceis-virtuais"
+                      class="question-select-type-opt-label"
+                      >Brainstorm</label
+                    >
+                    <input
+                      id="sq1-pinceis-virtuais"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="question-box-correct-container feedback-container"
+                  id="q3-sq1-box-feedback"
+                >
+                  <div class="question-box-title">
+                    <p class="feedback-title">Muito bem!</p>
+
+                    <svg
+                      class="feedback-success-icon"
+                      style="position: absolute; right: 32px"
+                      width="19"
+                      height="14"
+                      viewBox="0 0 19 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                        fill="#436900"
+                      />
+                    </svg>
+
+                    <svg
+                      class="feedback-error-icon"
+                      style="position: absolute; right: 32px"
+                      width="19"
+                      height="19"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                        fill="#93000A"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                        fill="#93000A"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="question-box-text">
+                    <span class="feedback-message">
+                      O Windows é um sistema operacional, então não pode ser
+                      considerado um hardware.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="w-full flex justify-center">
+                  <div
+                    class="button-send-responses"
+                    onclick="handleSubmitCompleteTypeQuestion(question3)"
+                  >
+                    Enviar resposta
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- fim questão 3 -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section">
+        <div class="contentSection">
+          <div class="espaceTitle" id="Recapitulando"></div>
+          <h1 class="text-Title light-orange">Recapitulando</h1>
+
+          <p>
+            Nesta unidade você conheceu várias técnicas capazes de gerar ideias
+            inovadoras. O workshop, por exemplo, é uma técnica de dinâmica de
+            grupo para colaboração e tomada de decisões em equipe. A entrevista
+            pode ser utilizada para coletar informações e opiniões de jogadores
+            e especialistas, enquanto o questionário pode ser usado para coletar
+            dados sobre as preferências dos jogadores.
+          </p>
+
+          <p>
+            O brainstorming é uma técnica popular para geração de ideias
+            criativas e inovadoras, e a etnografia pode ser utilizada para
+            observação e interação com jogadores em seu ambiente natural de
+            jogo. A prototipagem é uma técnica importante para testar e refinar
+            o jogo antes de seu lançamento, permitindo ajustes e melhorias com
+            base no feedback obtido.
+          </p>
+
+          <p>
+            Utilizar essas técnicas de forma eficaz pode ajudar na criação de
+            jogos mais atraentes e envolventes para os jogadores, com uma
+            jogabilidade e design mais refinados. Cada técnica tem seu papel e é
+            importante escolher a abordagem adequada para o objetivo pretendido
+            no desenvolvimento do jogo.
+          </p>
+
+          <div class="espaceTitle" id="SoluçãoDoProblematizando"></div>
+          <div class="flex justify-center align-center w-full">
+            <img src="./img/global/icons/greenCheck.png" />
+            <h3 class="px-3 green">Solução do problematizando</h3>
+          </div>
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/2hkdKFybJ0I"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                              gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="containerFooter row">
+      <button class="row empty-btn" type="button" onclick="carregarHTML(1)">
+        <img class="arrowImg" src="img/global/icons/previusclass.png" />
+        <p class="btnDesafio">Desafio anterior</p>
+      </button>
+      <button class="row empty-btn" type="button" onclick="carregarHTML(3)">
+        <p class="btnDesafio">Próximo Desafio</p>
+        <img class="arrowImg" src="img/global/icons/nextclass.png" />
+      </button>
+    </div>
+  </body>
+</html>

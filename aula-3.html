@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogos Digitais - SENAI EAD</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="SENAISP" />
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script type="text/javascript" src="./scripts/jquery.js"></script>
+    <script src="./scripts/index.js"></script>
+    <link rel="stylesheet" href="./css/global/question.css" />
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/ue3.js"></script>
+    <script src="./scripts/questions.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a onclick="openNav()"
+        ><img src="./img/global/icons/menu.png" class="logoJogos"
+      /></a>
+      <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+      <div></div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <button onclick="openList()" class="accordion">
+        <img src="./img/global/icons/summary.svg" style="margin-right: 10px" />
+        <p>Sumário</p>
+      </button>
+      <div class="panel" id="panelBtn">
+        <ul type="1">
+          <a class="listPanel" href="#contextualizing">
+            <li>1.0 Contextualizando</li>
+          </a>
+          <a class="listPanel" href="#producao">
+            <li>2.0 Produção multimídia</li>
+          </a>
+          <ul type="1" style="margin-left: 20px">
+            <a class="listPanel" href="#design">
+              <li>2.1 Design do jogo</li>
+            </a>
+            <a class="listPanel" href="#arte">
+              <li>2.2 Arte conceitual</li>
+            </a>
+            <a class="listPanel" href="#criacao">
+              <li>2.3 Criação dos sprites ou modelos 3D</li>
+            </a>
+            <a class="listPanel" href="#texturizacao">
+              <li>2.4 Texturização</li>
+            </a>
+            <a class="listPanel" href="#animacao">
+              <li>2.5 Animação</li>
+            </a>
+            <a class="listPanel" href="#efeitos-visuais">
+              <li>2.6 Efeitos visuais</li>
+            </a>
+            <a class="listPanel" href="#efeitos-sonoros">
+              <li>2.7 Efeitos sonoros e Trilha sonora</li>
+            </a>
+          </ul>
+          <a class="listPanel" href="#implementacao">
+            <li>3.0 Implementação</li>
+          </a>
+          <ul type="1" style="margin-left: 20px">
+            <a class="listPanel" href="#programacao">
+              <li>3.1 Programação das mecânicas de jogo</li>
+            </a>
+            <a class="listPanel" href="#integracao">
+              <li>3.2 Integração</li>
+            </a>
+            <a class="listPanel" href="#testes">
+              <li>3.3 Testes</li>
+            </a>
+            <a class="listPanel" href="#polimento">
+              <li>3.4 Polimento</li>
+            </a>
+          </ul>
+        </ul>
+      </div>
+      <button onclick="changeTheme()" class="accordion">
+        <img
+          src="./img/global/icons/themeIcon.svg"
+          style="margin-right: 10px"
+          alt="Alterar tema"
+        />
+        <p>Alterar tema</p>
+      </button>
+      <button onclick="changeGray()" class="accordion">
+        <img
+          src="./img/global/icons/scaleGrayIcon.svg"
+          style="margin-right: 10px"
+          alt="Escala de Cinza"
+        />
+        <p>Escala de Cinza</p>
+      </button>
+      <button onclick="carregarFichaTecnica()" class="accordion">
+        <img
+          src="img\global\icons\lab_profile.svg"
+          style="margin-right: 10px"
+          alt="Ficha Técnica"
+        />
+        <p>Ficha Técnica</p>
+      </button>
+      <div class="accordion2">
+        <div style="display: flex">
+          <img
+            src="./img/global/icons/textIcon.svg"
+            style="margin-right: 10px"
+            alt="Tamanho da fonte"
+          />
+          <p>Tamanho da fonte</p>
+        </div>
+        <div>
+          <button
+            name="decrease-font"
+            id="decrease-font"
+            title="Diminuir fonte"
+          >
+            A -
+          </button>
+          <button
+            name="increase-font"
+            id="increase-font"
+            title="Aumentar fonte"
+          >
+            A +
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <header class="homePage">
+      <div class="header-title">
+        <div>
+          <h2 class="text-Course">Curso Técnico em</h2>
+          <h1 class="text-NameCourse">Jogos Digitais</h1>
+        </div>
+        <div id="containerBoxTitle">
+          <div class="box-unit-number">
+            <span> 3 </span>
+          </div>
+          <div class="titleHeader">Implementação</div>
+        </div>
+        <div>
+          <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
+          <p class="text-DescriptUnit">
+            Avaliar o GDD para garantir conformidade com as especificações
+            técnicas do projeto.
+          </p>
+        </div>
+        <div>
+          <p class="text-LetsLearn">Vamos iniciar os estudos!</p>
+          <a class="btnPlay" href="#contextualizing">Play</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <div>
+            <div class="espaceTitle" id="contextualizing"></div>
+            <h1 class="text-Title light-orange">Contextualizando</h1>
+            <h3 class="text-Course">
+              Assista ao vídeo abaixo para uma introdução aos seus estudos
+            </h3>
+          </div>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/6IZ73MYJdJQ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="dicas">
+            <img
+              src="./img/global/icons/help.png"
+              id="help"
+              style="margin-right: 20px"
+            />
+            <p>
+              Quais os principais pontos que João precisa estar atento para que
+              a etapa de implementação seja feita sem maiores problemas?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="producao">
+            Produção multimídia
+          </h1>
+
+          <p>
+            Antes de partir para a implementação é importante relembrar as
+            etapas que acontecem na produção multimídia, que desempenha um papel
+            fundamental no desenvolvimento de um jogo digital, uma vez que
+            envolve a criação de todos os elementos visuais e sonoros que
+            compõem a experiência do jogo.
+          </p>
+
+          <p>
+            Nela, é realizada a criação de conteúdo que utiliza diferentes tipos
+            de mídia, como texto, imagem, som e vídeo. Cada uma dessas áreas tem
+            sua própria equipe de produção e processos de trabalho, mas
+            geralmente trabalham em conjunto para criar uma experiência de jogo
+            coesa e atraente.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue3/Imagem 1.jpg"
+            alt="Um rapaz sentado em frente a uma mesa com programas de produção multimídia abertos no computador, enquanto usa óculos de realidade virtual."
+          />
+
+          <p>
+            A produção multimídia em si engloba a produção de cada elemento do
+            jogo, seja de qualquer área, o propósito de falarmos disso agora é
+            proporcionar uma visão macro de todas as etapas de produção, para
+            que você consiga ter uma perspectiva mais ampla do processo de
+            desenvolvimento.
+          </p>
+
+          <p>
+            Revisar tudo que foi produzido é uma ótima maneira de analisar a
+            qualidade da produção, além de identificar possíveis erros ou
+            problemas que possam ser corrigidos antes do lançamento. Além disso,
+            a revisão também ajuda a garantir que todos os elementos do jogo
+            estejam integrados e funcionando juntos.
+          </p>
+
+          <p>
+            Aqui estão algumas das principais etapas da produção multimídia de
+            um jogo:
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="design">
+            Design do jogo
+          </h1>
+
+          <p>
+            Antes de começar a criar conteúdo multimídia, é importante ter um
+            design completo do jogo. Isso inclui a definição das mecânicas de
+            jogo, história, personagens e ambiente. O design deve ser detalhado
+            o suficiente para que a equipe de produção multimídia possa entender
+            exatamente o que precisa criar.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue3/Imagem 2.jpg"
+            alt="Na imagem temos dois desenvolvedores, uma mulher sentada na cadeira e um homem em pé ao seu lado, ambos olhando para a tela do computador, com o homem apontando para tela que tem um modelo 3D de um cenário."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="arte">
+            Arte conceitual
+          </h1>
+
+          <p>
+            A equipe de arte conceitual trabalha em conjunto com a equipe de
+            design para criar uma identidade geral do jogo. Isso envolve a
+            criação de conceitos de personagens, cenários e elementos do jogo. A
+            equipe de arte conceitual trabalha com o designer para garantir que
+            o jogo tenha uma aparência e sensação visual coerentes.
+          </p>
+
+          <p>
+            Essas ilustrações servem como referência para os artistas 2D ou 3D e
+            animação, que usam as ideias e conceitos criados pelo artista
+            conceitual para criar as imagens finais do jogo. O processo de arte
+            conceitual envolve muita experimentação e interação, com muitas
+            revisões e ajustes ao longo do caminho. O objetivo final é criar
+            conceitos visualmente coesos e atraentes para o jogador, que capture
+            a essência do jogo e ajude a contar sua história.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue3/Imagem 3.jpg"
+            alt="Mãos de um artista segurando folhas de papel com vários desenhos conceituais de robôs."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="criacao">
+            Criação dos sprites ou modelos 3D
+          </h1>
+
+          <p>
+            É realizado o processo de criação de objetos, pessoas e cenários em
+            2D ou a modelagem em 3D, usando softwares como o Krita ou Photoshop
+            para os sprites e para modelagem 3D geralmente é o Blender ou Maya
+            que são usados. O objetivo é produzir elementos de acordo com as
+            especificações dadas pelo Game Designer, ou necessidades apontadas
+            por outros membros da equipe.
+          </p>
+
+          <p>
+            Independentemente do software utilizado, é importante que os
+            artistas e modeladores trabalhem em estreita colaboração com o Game
+            Designer e outros membros da equipe para garantir que todos os
+            elementos visuais estejam alinhados com a visão do jogo e atendam às
+            necessidades do design e da jogabilidade.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue3/Imagem 4.jpg"
+            alt="É mostrado um jovem sentado na frente de um computador fazendo um modelo 3D de uma nave espacial."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="texturizacao">
+            Texturização
+          </h1>
+
+          <p>
+            Após a criação dos modelos 3D, é necessário aplicar texturas neles
+            para dar mais vida e realismo aos objetos e personagens. As texturas
+            são criadas a partir de imagens que são aplicadas na superfície do
+            modelo 3D, como uma espécie de "pintura". As texturas podem ser
+            criadas usando referências, vários artistas com capacitação em
+            trabalhar com texturas podem ajudar, mesmo que não sejam modeladores
+            3D de fato. Utilizando um software de pintura 2D ou 3D para criar a
+            textura, que será mapeada no modelo 3D.
+          </p>
+
+          <p>
+            O mapeamento da textura é a etapa em que a textura é aplicada ao
+            modelo 3D. Existem diferentes técnicas de mapeamento, como o
+            mapeamento UV, que envolve a criação de uma malha de coordenadas que
+            são usadas para aplicar a textura no modelo 3D.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue3/Imagem 5.jpg"
+            alt="Na imagem uma artista usando um notebook e uma mesa digitalizadora para pintar uma textura simples."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="animacao">
+            Animação
+          </h1>
+
+          <p>
+            A animação é a etapa em que os personagens e objetos criados em 2D
+            ou 3D ganham movimento. Isso é feito utilizando softwares de
+            animação, como o Dragonbones ou o Blender para objetos 3D. A
+            animação pode ser feita de forma manual ou até utilizando técnicas
+            de captura de movimento.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue3/Imagem 6.jpg"
+            alt="Na imagem uma pessoa sentada na frente do computador configurando as animações do modelo 3D de um personagem após ser colocado na engine."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="efeitos-visuais">
+            Efeitos visuais
+          </h1>
+
+          <p>
+            Os efeitos visuais são elementos que ajudam a dar mais impacto às
+            cenas do jogo. Eles podem incluir explosões, fumaça, partículas,
+            entre outros. Os efeitos visuais são criados utilizando softwares de
+            pós-produção, como o After Effects ou até mesmo o Krita.
+          </p>
+
+          <p>
+            Depois, são passados para a game engine, como a unity, onde por meio
+            de um painel gráfico, é feita uma combinação de nós para criar
+            efeitos processuais avançados, usando blocos de construção que para
+            geração, inicialização, atualização e renderização dos efeitos.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue3/Imagem 7.jpg"
+            alt="Do lado esquerdo da imagem temos a visualização do efeitos na engine e do lado direito, o painel utilitário com o sistema de nós que criam os efeitos mostrados."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="efeitos-sonoros">
+            Efeitos sonoros e Trilha sonora
+          </h1>
+
+          <p>
+            Os efeitos sonoros são sons que são adicionados ao jogo para dar
+            mais realismo e impacto às ações dos personagens e objetos. Eles
+            podem incluir sons de passos, tiros, explosões, entre outros. Os
+            efeitos sonoros são criados utilizando softwares de edição de áudio,
+            como o Audacity ou FMOD.
+          </p>
+
+          <p>
+            Eles são criados utilizando técnicas de gravação e edição de áudio,
+            muitas vezes combinando diferentes tipos de sons para criar um
+            resultado final realista e impactante. Usando uma combinação de
+            equipamentos para criar efeitos sonoros realistas e imersivos em
+            jogos. Cada equipamento tem sua própria função e é importante na
+            criação de diferentes tipos de sons.
+          </p>
+
+          <p>
+            A trilha sonora é a música que é adicionada ao jogo para dar mais
+            emoção e ambientação às cenas. Ela pode ser composta especialmente
+            para o jogo ou pode ser uma música já existente. A trilha sonora é
+            criada utilizando softwares de composição musical, como o FMOD ou FL
+            Studio.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue3/Imagem 8.jpg"
+            alt="Na imagem temos a mão de um sound designer sobre um painel com vários botões de um equipamento de som."
+          />
+
+          <!-- inicio questão 1 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question1-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 1</p>
+                <p>Avalie se a afirmação a seguir é verdadeira ou falsa.</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>
+                  A produção multimídia é uma etapa essencial no desenvolvimento
+                  de jogos digitais, no processo de texturização os personagens
+                  e objetos criados em 3D ganham movimento.
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q1-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-1"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-1"> Verdadeiro </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-2"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-2"> Falso </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question1)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 1 -->
+
+          <p>
+            Quando toda a produção multimídia estiver completa ou, no processo
+            em que os elementos forem sendo finalizados, dar-se início a etapa
+            de implementação, que veremos a seguir:
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="implementacao">
+            Implementação
+          </h1>
+
+          <p>
+            Uma das fases, ou senão a fase mais importante na criação de um jogo
+            digital é a implementação, o principal profissional atuando nessa
+            etapa é o programador, pois é agora que o projeto começa a tomar
+            forma e a evoluir para um produto final jogável dentro da game
+            engine.
+          </p>
+
+          <p>
+            Ela envolve escrever o código-fonte do jogo ou programar os recursos
+            e elementos de jogabilidade que foram especificados durante o design
+            do jogo e desenvolvidos durante a produção multimídia, as ideias
+            conceituais são transformadas em código e outras formas de arte
+            digital. Isso ajuda a concretizá-las e a visualizar como o jogo
+            será.
+          </p>
+
+          <p>
+            A implementação de um jogo digital envolve uma série de
+            tarefas-chave, a seguir você conhecerá um breve resumo de cada
+            etapa:
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="programacao">
+            Programação das mecânicas de jogo
+          </h1>
+
+          <p>
+            A programação das mecânicas de um jogo digital envolve a criação do
+            código que define as regras e comportamentos do jogo. É muito
+            importante começar a implementação estabelecendo o bom funcionamento
+            das mecânicas, pois isso inclui coisas como movimento, colisões,
+            interações entre objetos, inteligência artificial, pontuação e
+            lógica do jogo em geral, que estão diretamente ligadas aos outros
+            aspectos do jogo que serão implementados a seguir.
+          </p>
+
+          <p>
+            O processo começa com a definição dessas mecânicas, que é o conjunto
+            de regras que regem a jogabilidade. Isso pode incluir coisas como a
+            física do jogo (por exemplo, como os personagens se movem e
+            interagem com o ambiente), as ações que os jogadores podem executar
+            (por exemplo, se pode saltar, atacar, coletar itens), as condições
+            de vitória ou derrota e outros elementos fundamentais do jogo.
+          </p>
+
+          <p>
+            Com base nessas mecânicas, os programadores criam o código que
+            implementa essas regras. Inclusive o desenvolvimento de sistemas de
+            comportamento para personagens não jogáveis (NPCs) ou inimigos.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue3/Imagem 9.jpg"
+            alt="Um programador criando um protótipo na Unity de um jogo de corrida. Onde é possível ver a interface da engine e as mãos do programador sobre o teclado."
+          />
+
+          <p>
+            Em resumo, a programação das mecânicas de um jogo digital envolve a
+            criação do código que implementa as regras e a lógica do jogo,
+            permitindo que os jogadores interajam com o ambiente virtual e
+            experimentem a jogabilidade de forma envolvente e imersiva.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="integracao">
+            Integração
+          </h1>
+
+          <p>
+            A integração começa depois da criação do protótipo com a mecânica
+            principal do jogo programada. Uma vez que o protótipo é testado e
+            refinado, a equipe começa a integrar na game engine os elementos
+            individuais do jogo como modelos de personagens, animações, efeitos
+            sonoros e música. À medida que os componentes são adicionados, o
+            jogo é testado regularmente para garantir que cada elemento esteja
+            funcionando corretamente e que o jogo esteja fluindo como deveria.
+          </p>
+
+          <p>
+            As diferentes partes do jogo são integradas para criar uma
+            experiência coesa e fluida. Isso inclui integrar a jogabilidade,
+            gráficos, som, animação, inteligência artificial e outros elementos
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue3/Imagem 10.jpg"
+            alt="Na imagem temos uma desenvolvedora sentada na frente de um computador realizando a integração do modelo 3D de um personagem."
+          />
+
+          <p>
+            Uma vez que todos os elementos do jogo foram integrados, isto é,
+            foram importados para dentro da engine, a equipe de desenvolvimento
+            passa por uma fase de polimento, que envolve a correção de bugs,
+            ajustes de equilíbrio do jogo e refinamento de gráficos e som,
+            então, começam os testes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="testes">Testes</h1>
+
+          <p>
+            Essa etapa é focada na identificação e correção de erros, falhas e
+            bugs que possam ocorrer durante o processo de desenvolvimento. Uma
+            vez que as mecânicas do jogo são implementadas, os desenvolvedores
+            testam o jogo para garantir que tudo esteja funcionando como
+            esperado. Eles podem ajustar as mecânicas do jogo, adicionando ou
+            removendo elementos para melhorar a jogabilidade e a experiência do
+            jogador.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue3/Imagem 11.jpg"
+            alt="Uma pessoa sentada na frente de um computador com controle de videogame na mão, jogando o protótipo de um jogo de naves espaciais."
+          />
+
+          <p>
+            Durante o processo de teste, que é feito com o desenvolvedor jogando
+            ou forçando o jogo a repetir a execução de determinada mecânica ou
+            ação, é importante documentar os resultados dos testes e relatar
+            quaisquer problemas encontrados. Os desenvolvedores então trabalham
+            para corrigir esses problemas antes de lançar o jogo. Além disso, é
+            importante garantir que o jogo seja testado em diferentes
+            plataformas e dispositivos para garantir a compatibilidade.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="polimento">
+            Polimento
+          </h1>
+
+          <p>
+            A equipe de desenvolvimento trabalha em ajustes finos, refinando o
+            jogo para torná-lo mais agradável e atraente. Isso pode incluir
+            melhorias nos gráficos, ajustes na jogabilidade, correções de bugs,
+            ajustes de equilíbrio e outras melhorias.
+          </p>
+
+          <p>
+            Para garantir que o jogo seja concluído no prazo e dentro do
+            orçamento, é crucial que a equipe de desenvolvimento utilize
+            ferramentas de gerenciamento de projetos. Existem muitas ferramentas
+            de gerenciamento de projetos disponíveis, como o Trello, Asana, JIRA
+            e Microsoft Project. Cada uma dessas ferramentas tem seus prós e
+            contras, e a escolha da ferramenta depende das necessidades
+            específicas da equipe de desenvolvimento.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue3/Imagem 12.jpg"
+            alt="Na imagem a uma mulher sentada na frente de um computador, na tela, temos uma tabela com datas e várias notas escritas em pequenos quadros."
+          />
+
+          <p>
+            É fundamental que a equipe de desenvolvimento mantenha uma
+            comunicação clara e aberta durante todo o processo de
+            desenvolvimento do jogo. Isso ajudará a garantir que todos estejam
+            trabalhando em conjunto para atingir os objetivos do projeto, e
+            também pode ajudar a evitar atrasos ou problemas de última hora.
+          </p>
+
+          <!-- inicio questão 2 -->
+          <div class="marginVertical">
+            <div id="q1" class="myt-3">
+              <div class="question-box-container" id="question4-box-correct">
+                <div class="question-description-container">
+                  <p>QUESTÃO 2</p>
+                  <p class="my-1">
+                    Escolha a opção CORRETA que valida a sentença a seguir:
+                  </p>
+                </div>
+
+                <div class="question-description-container q2-sq1">
+                  <p></p>
+                  <p style="line-height: 28px">
+                    O processo de implementação é
+                    <span
+                      id="q2-sq1-block-1"
+                      class="block"
+                      style="cursor: pointer"
+                      onclick="unselectCheckFromCompleteTypeQuestion(this, question2.subQuestions[0])"
+                      >_________________
+                    </span>
+                    da produção multimídia.
+                  </p>
+                </div>
+
+                <div class="question-select-type-container q2-sq1-options">
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-saida"
+                      class="question-select-type-opt-label"
+                      >Uma sequência direta</label
+                    >
+                    <input
+                      id="sq1-saida"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question2.subQuestions[0])"
+                    />
+                  </div>
+
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-entrada"
+                      class="question-select-type-opt-label"
+                      >Independente</label
+                    >
+                    <input
+                      id="sq1-entrada"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question2.subQuestions[0])"
+                    />
+                  </div>
+
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-pinceis-virtuais"
+                      class="question-select-type-opt-label"
+                      >Realizado antes</label
+                    >
+                    <input
+                      id="sq1-pinceis-virtuais"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question2.subQuestions[0])"
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="question-box-correct-container feedback-container"
+                  id="q2-sq1-box-feedback"
+                >
+                  <div class="question-box-title">
+                    <p class="feedback-title">Muito bem!</p>
+
+                    <svg
+                      class="feedback-success-icon"
+                      style="position: absolute; right: 32px"
+                      width="19"
+                      height="14"
+                      viewBox="0 0 19 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                        fill="#436900"
+                      />
+                    </svg>
+
+                    <svg
+                      class="feedback-error-icon"
+                      style="position: absolute; right: 32px"
+                      width="19"
+                      height="19"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                        fill="#93000A"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                        fill="#93000A"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="question-box-text">
+                    <span class="feedback-message">
+                      O Windows é um sistema operacional, então não pode ser
+                      considerado um hardware.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="w-full flex justify-center">
+                  <div
+                    class="button-send-responses"
+                    onclick="handleSubmitCompleteTypeQuestion(question2)"
+                  >
+                    Enviar resposta
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- fim questão 2 -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section">
+        <div class="contentSection">
+          <div class="espaceTitle" id="Recapitulando"></div>
+          <h1 class="text-Title light-orange">Recapitulando</h1>
+
+          <p>
+            Nesta unidade você aprendeu sobre a etapa de produção multimídia,
+            tomando conhecimento de uma visão geral de como ela acontece durante
+            o desenvolvimento de um jogo.
+          </p>
+
+          <p>
+            Depois, foi falando sobre o processo de implementação, que é uma das
+            etapas mais importantes no desenvolvimento de um jogo, pois é quando
+            o projeto ele realmente toma a forma de um jogo e a passa a ser
+            possível jogá-lo, depois que os elementos fundamentais para isso são
+            implementados pelo programador na game engine.
+          </p>
+
+          <div class="espaceTitle" id="SoluçãoDoProblematizando"></div>
+          <div class="flex justify-center align-center w-full">
+            <img src="./img/global/icons/greenCheck.png" />
+            <h3 class="px-3 green">Solução do problematizando</h3>
+          </div>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/-rThIWsxckM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                              gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="containerFooter row">
+      <button class="row empty-btn" type="button" onclick="carregarHTML(2)">
+        <img class="arrowImg" src="img/global/icons/previusclass.png" />
+        <p class="btnDesafio">Desafio anterior</p>
+      </button>
+      <button class="row empty-btn" type="button" onclick="carregarHTML(4)">
+        <p class="btnDesafio">Próximo Desafio</p>
+        <img class="arrowImg" src="img/global/icons/nextclass.png" />
+      </button>
+    </div>
+  </body>
+</html>

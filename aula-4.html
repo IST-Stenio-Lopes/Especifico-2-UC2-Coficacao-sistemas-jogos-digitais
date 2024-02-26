@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogos Digitais - SENAI EAD</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="SENAISP" />
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./scripts/select.js" defer></script>
+    <link rel="stylesheet" href="./css/global/question.css" />
+    <script src="./scripts/questions.js"></script>
+    <script src="./scripts/ue4.js"></script>
+    <script src="./scripts/index.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a onclick="openNav()"
+        ><img src="./img/global/icons/menu.png" class="logoJogos"
+      /></a>
+      <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+      <div></div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <button onclick="openList()" class="accordion">
+        <img src="./img/global/icons/summary.svg" style="margin-right: 10px" />
+        <p>Sumário</p>
+      </button>
+      <div class="panel" id="panelBtn">
+        <ul type="1">
+          <a class="listPanel" href="#contextualizing">
+            <li>1.0 Contextualizando</li>
+          </a>
+          <a class="listPanel" href="#teste-integracao">
+            <li>2.0 Teste de Integração</li>
+          </a>
+          <a class="listPanel" href="#controle-versoes">
+            <li>3.0 Controle de versões</li>
+          </a>
+          <a class="listPanel" href="#integracao-versoes">
+            <li>4.0 Integração de versões</li>
+          </a>
+          <a class="listPanel" href="#integracao-arte-software">
+            <li>5.0 Integração de arte e software</li>
+          </a>
+          <a class="listPanel" href="#integracao-componentes">
+            <li>6.0 Integração de componentes</li>
+          </a>
+          <a class="listPanel" href="#motivacao">
+            <li>7.0 Motivação</li>
+          </a>
+        </ul>
+      </div>
+      <button onclick="changeTheme()" class="accordion">
+        <img
+          src="./img/global/icons/themeIcon.svg"
+          style="margin-right: 10px"
+          alt="Alterar tema"
+        />
+        <p>Alterar tema</p>
+      </button>
+      <button onclick="changeGray()" class="accordion">
+        <img
+          src="./img/global/icons/scaleGrayIcon.svg"
+          style="margin-right: 10px"
+          alt="Escala de Cinza"
+        />
+        <p>Escala de Cinza</p>
+      </button>
+      <button onclick="carregarFichaTecnica()" class="accordion">
+        <img
+          src="img\global\icons\lab_profile.svg"
+          style="margin-right: 10px"
+          alt="Ficha Técnica"
+        />
+        <p>Ficha Técnica</p>
+      </button>
+      <div class="accordion2">
+        <div style="display: flex">
+          <img
+            src="./img/global/icons/textIcon.svg"
+            style="margin-right: 10px"
+            alt="Tamanho da fonte"
+          />
+          <p>Tamanho da fonte</p>
+        </div>
+        <div>
+          <button
+            name="decrease-font"
+            id="decrease-font"
+            title="Diminuir fonte"
+          >
+            A -
+          </button>
+          <button
+            name="increase-font"
+            id="increase-font"
+            title="Aumentar fonte"
+          >
+            A +
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <header class="homePage">
+      <div class="header-title">
+        <div>
+          <h2 class="text-Course">Curso Técnico em</h2>
+          <h1 class="text-NameCourse">Jogos Digitais</h1>
+        </div>
+        <div id="containerBoxTitle">
+          <div class="box-unit-number">
+            <span> 4 </span>
+          </div>
+          <div class="titleHeader">Integração</div>
+        </div>
+        <div>
+          <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
+          <p class="text-DescriptUnit">
+            Avaliar o GDD para garantir conformidade com as especificações
+            técnicas do projeto.
+          </p>
+        </div>
+        <div>
+          <p class="text-LetsLearn">Vamos iniciar os estudos!</p>
+          <a class="btnPlay" href="#contextualizing">Play</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <div>
+            <div class="espaceTitle" id="contextualizing"></div>
+            <h1 class="text-Title light-orange">Contextualizando</h1>
+            <h3 class="text-Course">
+              Assista ao vídeo abaixo para uma introdução aos seus estudos
+            </h3>
+          </div>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/QXTA_a28-Dk"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                              gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="dicas">
+            <img
+              src="./img/global/icons/help.png"
+              id="help"
+              style="margin-right: 20px"
+            />
+            <p>
+              Quais métodos Carlos pode empregar nessa etapa do projeto, para
+              garantir que uma versão satisfatória do jogo seja desenvolvida?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="teste-integracao">
+            Teste de Integração
+          </h1>
+
+          <p>
+            A integração do jogo é o momento em que o que foi produzido, é
+            colocado no projeto base dentro da engine, para um processo muito
+            importante no final da etapa de produção. Nele, primeiramente são
+            realizados os testes para implementação dos primeiros elementos para
+            o jogo, montando tudo para formar uma versão voltada para testar
+            cada um desses elementos.
+          </p>
+
+          <p>
+            Nesse teste, não há apenas a ação do programador, mas também de toda
+            a equipe, inclusive produtor do jogo. É um trabalho em conjunto para
+            que seja verificado e testado cada elemento que precisa estar
+            presente no jogo para sua publicação. Por enquanto, serão testados
+            alguns objetos de cada aspecto, isto é, elementos da narrativa,
+            estética, dinâmica, mecânica, áudio etc.
+          </p>
+
+          <!--Div de aviso com alerta-->
+          <div class="atencion my-3 mx-1">
+            <img src="./img/global/icons/atencion.png" />
+            <p>
+              As etapas finais da produção são momentos em que o produtor do
+              jogo pode contribuir bastante, por meio de análises e
+              sinalizações, ele precisa garantir que o planejado seja cumprido e
+              integrado ao jogo, visando a sua publicação.
+            </p>
+          </div>
+
+          <p>
+            É importante saber selecionar os elementos para essa etapa,
+            primeiramente devem ser escolhidos aqueles que mais possuem
+            interação no jogo, ou são de extrema importância em momentos chaves,
+            como botões muito usados da interface ou o boss (chefe) da primeira
+            fase, por exemplo. Depois, os demais elementos, para que tudo seja
+            aprovado.
+          </p>
+
+          <p>
+            Nesse momento, realizar uma documentação com clareza é importante
+            para deixar todos os envolvidos, nessa etapa, cientes do que está
+            sendo testado, como no exemplo da tabela a seguir:
+          </p>
+
+          <table class="greenTable">
+            <thead>
+              <tr>
+                <th class="greenTh">Interface</th>
+                <th class="greenTh">Personagens</th>
+                <th class="greenTh">Inimigos</th>
+                <th class="greenTh">Cenário</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="greenTd">Botão play</td>
+                <td class="greenTd">Protagonista</td>
+                <td class="greenTd">Inimigo terrestre</td>
+                <td class="greenTd">Porta de saída</td>
+              </tr>
+              <tr>
+                <td class="greenTd">Barra de vida do jogador</td>
+                <td class="greenTd">Mentor</td>
+                <td class="greenTd">Inimigo voador</td>
+                <td class="greenTd">Plataforma móvel</td>
+              </tr>
+              <tr>
+                <td class="greenTd">Texto de pontuação</td>
+                <td class="greenTd">Princesa</td>
+                <td class="greenTd">Boss</td>
+                <td class="greenTd">Alavanca</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            Recomenda-se a escolha de poucos elementos, mas que sejam essenciais
+            para obter um feedback preciso do funcionamento de cada área do
+            jogo. A pouca quantidade contribui para agilizar o processo, para
+            ficar melhor sua compreensão, vamos usar o caso de teste de um
+            inimigo no jogo como exemplo, não é necessário nesse momento colocar
+            todos os inimigos desse mesmo tipo, apenas um é o suficiente.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/Imagem 1.png"
+            alt="Cenário montado na engine, formado por um terreno de terra e grama, dividido por um poço com água. Na interface da engine há uma pasta contendo as imagens que estão sendo colocadas na cena, com a do inimigo Ninja estando selecionada."
+          />
+
+          <p>
+            Uma forma de resumir o que é feito nessa etapa é como o teste de
+            cada elemento que será integrado no jogo, checando se:
+            <br />
+            <li class="mx-1">Sua mecânica está funcionando como deveria;</li>
+            <li class="mx-1">Se a animação está fluída;</li>
+            <li class="mx-1">
+              Se os conceitos, como o do personagem principal, está em sintonia
+              com o resto;
+            </li>
+            <li class="mx-1">
+              Se os efeitos sonoros estão sendo tocados corretamente etc…
+            </li>
+          </p>
+
+          <p>
+            Essas, entre outras características que o game designer ou o
+            produtor achar necessário, podem ser testadas, no caso do exemplo
+            que usamos, com apenas um inimigo, pois uma vez que a instância que
+            está sendo testada funciona como deveria, logicamente, todas as
+            outras desse mesmo inimigo também estarão.
+          </p>
+
+          <p>
+            Um exemplo de teste de integração com elemento narrativo, seria como
+            a caixa de diálogo é aberta enquanto o jogador interage com algum
+            personagem que lhe informa algo da história. Assim, digamos que a
+            programação dessa parte é feita para, independentemente do
+            personagem que o jogador esteja interagindo, a caixa de diálogo seja
+            aberta e apareça em escrito o que o personagem diz.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/Imagem 2.png"
+            alt="Diálogo entre dois personagens aberto durante o jogo, com a caixa de texto no canto inferior da tela, com opção de diálogo no lado direito."
+          />
+
+          <p>
+            Então, para testar a integração no caso desse exemplo, basta usar
+            apenas um personagem, pois todos os outros que compartilham da mesma
+            programação, estarão funcionando. De forma semelhante funciona a
+            programação para as animações e comportamentos dos inimigos do jogo.
+          </p>
+
+          <p>
+            Após os últimos elementos escolhidos serem implementados, além do
+            teste da qualidade de função (se funcionam exatamente como
+            deveriam), também é feita localização de possíveis bugs ou brechas
+            na mecânica, o que pode não ser necessariamente um bug, mas não
+            estão de acordo com o proposto pelo game designer.
+          </p>
+
+          <!--Div de aviso com lâmpada-->
+          <div class="atencion my-3 mx-3">
+            <img src="./img/global/icons/lightbulb.png" />
+            <p>
+              Alguns jogadores mais astutos conseguem tirar proveito de brechas
+              nas mecânicas dos jogos para terem certa vantagem, essas brechas
+              são mais conhecidas como Glitchs, que são falhas na programação,
+              mas que não causam a quebra do jogo como os Bugs, apenas respostas
+              inesperadas da mecânica do jogo.
+            </p>
+          </div>
+
+          <!--TODO - Vídeo-->
+
+          <!-- inicio questão 1 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question1-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 1</p>
+                <p>Avalie se a afirmação a seguir é verdadeira ou falsa.</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>
+                  A etapa do teste de integração tem como principal objetivo
+                  verificar se os elementos produzidos estão funcionando
+                  corretamente.
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q1-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-1"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-1"> Verdadeiro </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-2"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-2"> Falso </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question1)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 1 -->
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="controle-versoes">
+            Controle de versões
+          </h1>
+          <p>
+            Ao começar a integrar os primeiros elementos é comum a criação de
+            várias versões do projeto. Ao criar essas versões se obtém um
+            controle melhor do processo de integração, além do que está sendo
+            testado.
+          </p>
+          <p>
+            O objetivo básico de um sistema de controle de versão é salvar todo
+            o histórico da produção do jogo, desde a primeira até a versão mais
+            recente. No desenvolvimento de jogos é muito importante ter uma
+            espécie de backup de versões, pois pode ser que elementos possam ser
+            retirados, adicionados ou sofrer uma grande alteração e, algumas
+            vezes, esses elementos influenciam, de forma funcional, em muita
+            coisa dentro jogo.
+          </p>
+          <p>
+            Por isso, mesmo antes de haver a integração das versões,
+            recomenda-se a elaboração de um sistema de controle de versões
+            específico para o projeto de jogo. Acompanhe a seguir alguns dos
+            principais benefícios da utilização de um sistema de controle de
+            versão para controlar alterações feitas durante essa etapa da
+            produção do jogo:
+          </p>
+
+          <p>
+            <li class="mx-1">
+              <strong>Possibilidade de backups</strong>: Facilidade de manusear
+              o histórico de desenvolvimento, além de recuperar versões
+              anteriores e mais estáveis. A maioria das implementações permite
+              examinar.
+            </li>
+            <li class="mx-1">
+              <strong>Trabalho em equipe</strong>: As equipes podem trabalhar
+              juntas, mesmo em áreas de desenvolvimento diferentes, testando a
+              mesma versão, reduzindo a ocorrência de problemas causados por
+              conflitos de versão. É possível que a solução ainda inclua
+              controle de acesso para cada área.
+            </li>
+            <li class="mx-1">
+              <strong>Análises em paralelo</strong>: Possibilita que todas as
+              áreas de desenvolvimento, possam analisar a mesma versão do jogo
+              ao mesmo tempo de forma segura, mas com foco em suas respectivas
+              áreas de atuação, isto é, a equipe de arte pode verificar tudo que
+              precisa no ritmo necessário sem atrapalhar a análise das outras
+              áreas.
+            </li>
+            <li class="mx-1">
+              <strong>Identificação</strong>: Utilizando uma nomenclatura
+              própria e fácil de ser identificada, cada versão precisa ser
+              localizada de forma prática e clara, geralmente são usados
+              números, mas podem ser usadas letras quando em conjunto, por
+              exemplo: “nome do jogo” v1.0, “nome do jogo” v2.1 ou “nome do
+              jogo” v1a, “nome do jogo” v1.2b. Ficando a critério do programador
+              quando esse exportar a nova versão da engine.
+            </li>
+          </p>
+
+          <p>
+            Recomenda-se que o envio de novas versões, que é feito a critério da
+            necessidade, seja enviada sempre que a mesma esteja no mínimo
+            estável, para minimizar conflitos de versão, facilitar o desfazer de
+            alterações e controlar o histórico. Entregando correções ou uma
+            atualização relevante que funcione corretamente. Não é recomendado
+            enviar quando a versão pode apresentar um problema para o
+            desenvolvimento de outro colaborador, como código não compilado ou
+            uma falha que comprometa toda a execução.
+          </p>
+
+          <p>
+            Existem modelos de sistemas de controle de versão já prontos como o
+            CVS, Git, Subversion, Mercurial entre outros, que organizam arquivos
+            de maneira lógica para criação, acesso controlado, atualização e
+            exclusão. A automação e controle de versão estão intimamente
+            ligados, bem como a integração e configuração contínua como os dados
+            a serem entregues. A seguir, está um exemplo de um histórico de
+            versões utilizando o sistema CVS.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/Imagem 3.png"
+            alt="Infográfico de uso do sistema CVS. As informações estão distribuídas em três linhas diferentes, sendo na linha A: 1.0; a1.1; Na linha B: 1.0; 1.1; 1.2; 1.3. Já na linha C: 1.0;1.1;1.2"
+          />
+
+          <!--Div de aviso com lâmpada-->
+          <div class="atencion my-3 mx-3">
+            <img src="./img/global/icons/lightbulb.png" />
+            <p>
+              O modelo CVS emprega uma arquitetura cliente-servidor, na qual um
+              servidor mantém as versões e o histórico atuais do projeto, o
+              resto da equipe se conecta a esse servidor para adquirir uma cópia
+              completa do projeto, trabalhar nele e retornar suas alterações.
+            </p>
+          </div>
+
+          <p>
+            Mas, claro! Cabe ao produtor ou por meio de um consenso entre todos
+            os membros da equipe, de utilizar um desses sistemas prontos, pois o
+            que é realmente necessário e que contribui bastante para evitar
+            problemas nessa fase final do processo de produção.
+          </p>
+
+          <!-- inicio questão 2 -->
+          <div id="q4" class="myt-4" style="margin-top: 50px">
+            <div class="question-box-container" id="question4-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 2</p>
+                <p class="my-1">
+                  Clique nos campos vazios e escolha a opção correspondente ao
+                  seu enunciado:
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q2-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title">
+                    <!-- Titulo -->
+                  </p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message">
+                    <!-- Mensagem Feedback -->
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div id="q2-select" class="question-type-two-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr class="select-header">
+                  <td>
+                    <span>Enunciado</span>
+                  </td>
+                  <td>
+                    <span>Correspondente</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span
+                      >Poder verificar a mesma versão do jogo ao mesmo tempo de
+                      forma segura.</span
+                    >
+                  </td>
+                  <td>
+                    <div class="custom-select">
+                      <select id="q2-select-1">
+                        <option value="0">selecione</option>
+                        <option value="1">Trabalho em equipe</option>
+                        <option value="2">Identificação</option>
+                        <option value="3">Análises em paralelo</option>
+                        <option value="4">Backups</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span
+                      >Manusear o histórico de desenvolvimento, e poder
+                      recuperar versões anteriores.</span
+                    >
+                  </td>
+                  <td>
+                    <div class="custom-select">
+                      <select id="q2-select-2">
+                        <option value="0">selecione</option>
+                        <option value="1">Trabalho em equipe</option>
+                        <option value="2">Identificação</option>
+                        <option value="3">Análises em paralelo</option>
+                        <option value="4">Backups</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span
+                      >Poder trabalhar em conjunto, testando a mesma
+                      versão.</span
+                    >
+                  </td>
+                  <td>
+                    <div class="custom-select">
+                      <select id="q2-select-3">
+                        <option value="0">selecione</option>
+                        <option value="1">Trabalho em equipe</option>
+                        <option value="2">Identificação</option>
+                        <option value="3">Análises em paralelo</option>
+                        <option value="4">Backups</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span
+                      >Cada versão precisa ser localizada de forma prática e
+                      clara.</span
+                    >
+                  </td>
+                  <td>
+                    <div class="custom-select">
+                      <select id="q2-select-4">
+                        <option value="0">selecione</option>
+                        <option value="1">Trabalho em equipe</option>
+                        <option value="2">Identificação</option>
+                        <option value="3">Análises em paralelo</option>
+                        <option value="4">Backups</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+              <div class="w-full flex justify-center">
+                <div
+                  class="button-send-responses"
+                  onclick="handleSubmitSelectTypeQuestion(question2)"
+                >
+                  Enviar resposta
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 2 -->
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="integracao-versoes">
+            Integração de versões
+          </h1>
+          <p>
+            Na etapa de integração de versões é onde a equipe de programação vai
+            gerar uma nova versão atualizada, após os testes de integração,
+            passará por novos testes, mas agora para saber como está sendo
+            executada.
+          </p>
+          <p>
+            É importantíssimo que o elaborador da versão nomeie as versões de
+            forma clara e objetiva, pois ela será acessada por outras pessoas,
+            além de que haverá outras versões.
+          </p>
+          <p>
+            Dependendo da engine utilizada, o programador deverá exportar a nova
+            versão para todas as plataformas em que o jogo pretende ser lançado,
+            para colher informações de como está sendo executado nelas.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/Imagem 4.png"
+            alt="Janela da interface da unity mostrando diferentes tipos de plataformas no lado esquerdo, com o android como plataforma selecionada para exportação do jogo."
+          />
+
+          <p>
+            Assim que uma nova versão é integrada, na pasta compartilhada pela
+            equipe, recomenda-se que o autor dessa versão, avise a todos
+            informando o nome completo dela, para que assim os membros que
+            possam estar esperando-a para análise, poupem tempo e facilmente a
+            identifique para continuar com seu trabalho.
+          </p>
+
+          <p>
+            O programador precisa dominar esse processo de integração de versão,
+            pois um ponto muito importante é que ele garanta a execução do jogo
+            de forma otimizada, conseguindo um ótimo desempenho nas plataformas
+            alvo.
+          </p>
+
+          <p>
+            Isso é possível por meio de testes e balanceamento entre o que é
+            implementado na versão e como é feita sua integração, pois mesmo que
+            execute o processo para gerar uma nova versão sem falhas, ela pode
+            apresentar problemas de desempenho durante a gameplay do jogo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="integracao-arte-software">
+            Integração de arte e software
+          </h1>
+          <p>
+            É agora que todas as artes finais que foram produzidas para o jogo
+            são integradas no projeto de forma definitiva, a equipe de
+            programação precisa elaborar uma forma bem estruturada para
+            implementar todas as artes no projeto de maneira ordenada, para que
+            dessa forma tenho um melhor controle do que está sendo colocado e o
+            que ainda falta.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/Imagem 5.png"
+            alt="Temos um cenário montado na engine, formado por um terreno com grama na superfície, temos dois personagens com ambos de costas para uma árvore. Na interface da engine é possível ver a pasta contendo as artes que estão sendo colocadas na cena."
+          />
+
+          <p>
+            Essa etapa não possui muito segredo, mesmo sendo a equipe de
+            programação os principais atuantes no momento, é importante que as
+            outras áreas contribuam com uma fiscalização, muitas vezes sendo
+            necessário sua participação para que por exemplo, a velocidade de
+            uma animação que acabou de ser programada, que precisa reproduzir
+            essa animação de acordo com o que foi planejado.
+          </p>
+
+          <p>
+            Recomenda-se que seja utilizada uma tabela para controle do que está
+            sendo implementado, nela, é listada todos os elementos que devem
+            está no jogo, e a medida que cada um for sendo colocado, tal
+            elemento deve ser marcado na lista informando que já foi integrado
+            ao jogo, vale salientar que essa tabela precisa ficar disponível
+            para toda a equipe.
+          </p>
+
+          <p>
+            Esse processo é bastante semelhante ao que vimos no teste de
+            integração, mas agora de forma bem mais ampla, pois contém todos os
+            elementos visuais que devem estar no jogo, ou seja, todas as artes e
+            modelos do cenário, dos personagens, objetos, interface, efeitos
+            etc. Como na tabela a seguir, que como exemplo está com algumas
+            células com preenchimento verde para indicar os elementos que foram
+            integrados.
+          </p>
+
+          <table class="greenTable">
+            <thead>
+              <tr>
+                <th class="greenTh">Interface</th>
+                <th class="greenTh">Personagens</th>
+                <th class="greenTh">Inimigos</th>
+                <th class="greenTh">Cenário</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  class="greenTd"
+                  style="background-color: #e4fbef; color: #000"
+                >
+                  Botão de menu
+                </td>
+                <td
+                  class="greenTd"
+                  style="background-color: #e4fbef; color: #000"
+                >
+                  Herói
+                </td>
+                <td
+                  class="greenTd"
+                  style="background-color: #e4fbef; color: #000"
+                >
+                  Inimigo terrestre
+                </td>
+                <td
+                  class="greenTd"
+                  style="background-color: #e4fbef; color: #000"
+                >
+                  Porta de saída
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="greenTd"
+                  style="background-color: #e4fbef; color: #000"
+                >
+                  Barra de energia
+                </td>
+                <td class="greenTd">Rei</td>
+                <td
+                  class="greenTd"
+                  style="background-color: #e4fbef; color: #000"
+                >
+                  Inimigo voador
+                </td>
+                <td class="greenTd">Plataforma móvel</td>
+              </tr>
+              <tr>
+                <td
+                  class="greenTd"
+                  style="background-color: #e4fbef; color: #000"
+                >
+                  Texto de Game Over
+                </td>
+                <td class="greenTd">Vendedor</td>
+                <td class="greenTd">Boss</td>
+                <td class="greenTd">Baú</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            Simples não é? Mas é uma solução prática que pode evitar problemas,
+            e dependendo do tamanho da equipe, recomenda-se ainda divisão do
+            processo de integração, isto é, cada pessoa responsável para
+            implementar determinados elementos, isso contribui para evitar que
+            uma só pessoa fique sobrecarregada e possa esquecer ou cometer
+            enganos na hora de preencher a tabela, podendo sinalizar que algum
+            elemento foi colocado mas sem ter sido de fato, o que causaria
+            retardo no desenvolvimento depois.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="integracao-componentes">
+            Integração de componentes
+          </h1>
+          <p>
+            Um jogo digital pode apresentar uma variedade de componentes que
+            interagem com o jogador, como música, efeitos sonoros e efeitos
+            visuais são alguns exemplos. A maneira como as interações são
+            realizadas tem uma influência direta na experiência de imersão do
+            jogador.
+          </p>
+
+          <p>
+            Cada componente integrado precisa ser testado depois, para caso
+            apresente algum desacordo com o que foi planejado para o jogo, ou
+            claro, alguma falha de execução, seja objetivamente registrado, para
+            que então a equipe responsável pelo componente possa fazer as
+            alterações necessárias.
+          </p>
+
+          <p>
+            Uma boa recomendação é esperar que todos os componentes sejam
+            testados para só depois mandar para que as alterações sejam
+            realizadas, dessa maneira poupa-se tempo e reduz a quantidade de
+            versões.
+          </p>
+
+          <p>
+            Assim como as outras integrações, elaborar uma tabela para ter uma
+            melhor administração de quais componentes são implementados nessa
+            etapa, é muito importante. Tornando o processo mais rápido e
+            contribuindo para evitar que faltem componentes ou a ocorrência de
+            integração do que não deveria.
+          </p>
+
+          <p>
+            Um bom exemplo de integração de componentes são os efeitos sonoros,
+            geralmente colocados por último, quando o jogo em si está pronto,
+            para isso, alguns programas já contam com recursos muito úteis que
+            permitem que eles próprios sejam integrados na engine, como é o caso
+            do FMOD e a Unity.
+          </p>
+
+          <p>
+            Com isso, torna o processo de implementação dos efeitos muito mais
+            prático, uma vez que é possível editar os sons que já estão dentro
+            do projeto na engine, poupando o desenvolvedor da etapa de exportar
+            o efeito novamente e depois importar para o jogo.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/Imagem 6.png"
+            alt="Uma imagem mostrando a interface da unity mostrando em destaque no lado direito as opção de integração dos scripts para funcionamento do FMOD dentro da engine."
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="motivacao">Motivação</h1>
+          <p>
+            Os jogos eletrônicos proporcionam entretenimento para pessoas de
+            todas as idades. Sendo possível jogá-los com consoles, desktops e
+            dispositivos móveis. A princípio, deveria ter sido projetado para o
+            entretenimento para crianças e jovens, mas aos poucos se tornou um
+            hobby para os adultos.
+          </p>
+
+          <p>
+            Por causa da tremenda expansão da tecnologia de jogos e do realismo
+            empregado em sua construção, o mercado de videogames agora produz
+            bilionários, lidando com bastante dinheiro e criando uma legião de
+            fãs.
+          </p>
+
+          <p>
+            É importante verificar o processo de decisão dos jogadores, que
+            inclui a busca para satisfazer um desejo ou necessidade, levando a
+            uma pesquisa por mais informações, a avaliação de alternativas, a
+            decisão de compra e o comportamento depois da compra, que contribuem
+            para formar a opinião dele sobre o jogo.
+          </p>
+
+          <p>
+            O primeiro passo para o jogador adquirir um jogo, é quando ele
+            desperta o desejo por ele ou acha que precisa ter aquele jogo,
+            muitas vezes ele tem uma concepção de que jogar uma ou duas vezes
+            não é o bastante, ele precisa tê-lo pra jogar sempre que quiser.
+          </p>
+
+          <p>
+            Mas para despertar esse desejo, o jogo precisa gerar motivação, que
+            de acordo com o Dicio, Dicionário Online de Português, é o ato ou
+            efeito de motivar, de despertar o interesse por algo; a reunião das
+            razões pelas quais alguém age de certa forma e que dá origem a uma
+            ação consciente.
+          </p>
+
+          <!--Div de aviso com alerta-->
+          <div class="atencion my-3 mx-1">
+            <img src="./img/global/icons/atencion.png" />
+            <p>
+              A geração de motivação é muito importante nos jogos, pois não só
+              garante que o jogador irá comprar o jogo, como também é capaz de
+              convencê-lo há, de forma espontânea, fazer propaganda ou
+              recomendar o jogo para seus amigos.
+            </p>
+          </div>
+
+          <p>
+            Nos jogos, ela está relacionada a necessidade de lazer que os seres
+            humanos possuem, de ser capaz de distraí-lo quando usado como
+            passatempo, por exemplo. Nesse sentido os jogos têm a capacidade de
+            fazer com que o jogador possa se abstrair do seu cotidiano ao se
+            envolver na história do jogo, por exemplo. A motivação de passatempo
+            também influencia na compra e é semelhante ao da fuga da rotina, mas
+            de maneira menos específica.
+          </p>
+
+          <p>
+            Cabe ao desenvolvedor encontrar um meio de colher as informações
+            necessárias do seu público, que depende do tipo de jogo que está
+            produzindo. Por isso é muito importante conhecê-lo, para saber de
+            fato os aspectos que o motivam a jogar, para então ser feita uma
+            análise a fim de confirmar se o jogo atende a isso.
+          </p>
+
+          <p>
+            Então por meio dos conhecimentos adquiridos com o estudo do público
+            alvo, é possível focar no que vai conseguir satisfazer o jogador e
+            fazê-lo gostar do jogo, nesse processo cabe ao game design ou
+            produtor, analisar o jogo como um todo, para verificar se ele
+            realmente atende ao que foi determinado como motivação para o
+            jogador, geralmente com isso uma lista pode ser criada, apontando
+            quais são essas motivações, como no exemplo a seguir:
+          </p>
+
+          <p>
+            <li class="mx-1">
+              Desbravar todas as áreas de um mundo cheio de magia;
+            </li>
+            <li class="mx-1">
+              Encontrar todos os segredos escondidos de uma civilização perdida;
+            </li>
+            <li class="mx-1">
+              Completar todos os desafios do jogo e acumular conquistas.
+            </li>
+          </p>
+
+          <p>
+            É importante salientar que as motivações dependem do estilo do jogo
+            que está sendo produzido, podendo ser aspectos específicos desse
+            jogo e não do gênero que faz parte. Essas motivações precisam ser
+            facilmente atendidas durante o gameplay, de forma que o jogador não
+            se esforce para notá-las, além de consegui-las de maneira clara e
+            prática enquanto joga, para assim sentir-se jogando algo que gosta e
+            se sentindo recompensado por ter, em determinado caso, comprado o
+            jogo.
+          </p>
+
+          <!-- inicio questão 3 -->
+          <div class="marginVertical">
+            <div id="q1" class="myt-3">
+              <div class="question-box-container" id="question4-box-correct">
+                <div class="question-description-container">
+                  <p>QUESTÃO 3</p>
+                  <p class="my-1">
+                    Escolha a opção CORRETA que valida a sentença a seguir:
+                  </p>
+                </div>
+
+                <div class="question-description-container q3-sq1">
+                  <p></p>
+                  <p style="line-height: 28px">
+                    É na etapa de
+                    <span
+                      id="q3-sq1-block-1"
+                      class="block"
+                      style="cursor: pointer"
+                      onclick="unselectCheckFromCompleteTypeQuestion(this, question3.subQuestions[0])"
+                      >______________________
+                    </span>
+                    que o programador precisa testar e garantir que o jogo seja
+                    executado de forma otimizada nas plataformas em que será
+                    publicado.
+                  </p>
+                </div>
+
+                <div class="question-select-type-container q3-sq1-options">
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-saida"
+                      class="question-select-type-opt-label"
+                      >Integração de arte e software</label
+                    >
+                    <input
+                      id="sq1-saida"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
+                    />
+                  </div>
+
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-entrada"
+                      class="question-select-type-opt-label"
+                      >Integração de versão</label
+                    >
+                    <input
+                      id="sq1-entrada"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
+                    />
+                  </div>
+
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-pinceis-virtuais"
+                      class="question-select-type-opt-label"
+                      >Integração de componentes</label
+                    >
+                    <input
+                      id="sq1-pinceis-virtuais"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="question-box-correct-container feedback-container"
+                  id="q3-sq1-box-feedback"
+                >
+                  <div class="question-box-title">
+                    <p class="feedback-title">Muito bem!</p>
+
+                    <svg
+                      class="feedback-success-icon"
+                      style="position: absolute; right: 32px"
+                      width="19"
+                      height="14"
+                      viewBox="0 0 19 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                        fill="#436900"
+                      />
+                    </svg>
+
+                    <svg
+                      class="feedback-error-icon"
+                      style="position: absolute; right: 32px"
+                      width="19"
+                      height="19"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                        fill="#93000A"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                        fill="#93000A"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="question-box-text">
+                    <span class="feedback-message">
+                      O Windows é um sistema operacional, então não pode ser
+                      considerado um hardware.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="w-full flex justify-center">
+                  <div
+                    class="button-send-responses"
+                    onclick="handleSubmitCompleteTypeQuestion(question3)"
+                  >
+                    Enviar resposta
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- fim questão 3 -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section">
+        <div class="contentSection">
+          <div class="espaceTitle" id="Recapitulando"></div>
+          <h1 class="text-Title light-orange">Recapitulando</h1>
+
+          <p>
+            Nesta unidade conhecemos as últimas etapas do processo de produção
+            do jogo, que começa com o teste de integração dos principais
+            elementos que estarão presentes nele, essa primeira etapa, tem o
+            propósito de checar se o que foi produzido está funcionando como
+            deveria, por isso utilizar somente uma representação de cada
+            elemento é o mais recomendado para agilizar o processo
+          </p>
+
+          <p>
+            Depois conhecemos como é importante ter o controle das versões, que
+            traz vários benefícios, como backups, trabalho em equipe, ações em
+            paralelo e uma melhor identificação de cada versão, tudo voltado
+            para melhorar o trabalho de toda a equipe.
+          </p>
+
+          <p>
+            Em seguida foi abordado a integração de uma nova versão e a
+            implementação das artes finais do jogo, que inclui tudo que faz
+            parte da estética do projeto, e nisso, pontuando mais uma vez a
+            importância do uso de tabelas para ter um melhor controle do que
+            está sendo integrado.
+          </p>
+
+          <p>
+            A Integração de componentes, geralmente é a última parte do processo
+            de integração, que é a etapa responsável pelo “acabamento” do jogo,
+            esse componentes podem contribuem bastante para implementação de
+            recursos que melhoram a imersão do jogo ou tornam a gameplay mais
+            agradável.
+          </p>
+
+          <p>
+            Por fim, foi falado a respeito da motivação que precisa ser gerada
+            para que o jogador desperte o interesse pelo jogo. Mas para isso, é
+            necessário conhecer o que o seu público prefere em um jogo do gênero
+            escolhido, para assim garantir que o projeto seja concluído contendo
+            as preferências do jogador e que vá conquistá-lo quando começar a
+            jogar.
+          </p>
+
+          <div class="espaceTitle" id="SoluçãoDoProblematizando"></div>
+          <div class="flex justify-center align-center w-full">
+            <img src="./img/global/icons/greenCheck.png" />
+            <h3 class="px-3 green">Solução do problematizando</h3>
+          </div>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/AS9Fk-DAVSw"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                        gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="containerFooter row">
+      <button class="row empty-btn" type="button" onclick="carregarHTML(3)">
+        <img class="arrowImg" src="img/global/icons/previusclass.png" />
+        <p class="btnDesafio">Desafio anterior</p>
+      </button>
+      <button class="row empty-btn" type="button" onclick="carregarHTML(5)">
+        <p class="btnDesafio">Próximo Desafio</p>
+        <img class="arrowImg" src="img/global/icons/nextclass.png" />
+      </button>
+    </div>
+  </body>
+</html>

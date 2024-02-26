@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogos Digitais - SENAI EAD</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="SENAISP" />
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./scripts/select.js" defer></script>
+    <link rel="stylesheet" href="./css/global/question.css" />
+    <script src="./scripts/questions.js"></script>
+    <script src="./scripts/ue5.js"></script>
+    <script src="./scripts/index.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a onclick="openNav()"
+        ><img src="./img/global/icons/menu.png" class="logoJogos"
+      /></a>
+      <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+      <div></div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <button onclick="openList()" class="accordion">
+        <img src="./img/global/icons/summary.svg" style="margin-right: 10px" />
+        <p>Sumário</p>
+      </button>
+      <div class="panel" id="panelBtn">
+        <ul type="1">
+          <a class="listPanel" href="#contextualizing">
+            <li>1.0 Contextualizando</li>
+          </a>
+          <a class="listPanel" href="#testes">
+            <li>2.0 Testes</li>
+          </a>
+          <a class="listPanel" href="#publicacao">
+            <li>3.0 Publicação</li>
+          </a>
+        </ul>
+      </div>
+      <button onclick="changeTheme()" class="accordion">
+        <img
+          src="./img/global/icons/themeIcon.svg"
+          style="margin-right: 10px"
+          alt="Alterar tema"
+        />
+        <p>Alterar tema</p>
+      </button>
+      <button onclick="changeGray()" class="accordion">
+        <img
+          src="./img/global/icons/scaleGrayIcon.svg"
+          style="margin-right: 10px"
+          alt="Escala de Cinza"
+        />
+        <p>Escala de Cinza</p>
+      </button>
+      <button onclick="carregarFichaTecnica()" class="accordion">
+        <img
+          src="img\global\icons\lab_profile.svg"
+          style="margin-right: 10px"
+          alt="Ficha Técnica"
+        />
+        <p>Ficha Técnica</p>
+      </button>
+      <div class="accordion2">
+        <div style="display: flex">
+          <img
+            src="./img/global/icons/textIcon.svg"
+            style="margin-right: 10px"
+            alt="Tamanho da fonte"
+          />
+          <p>Tamanho da fonte</p>
+        </div>
+        <div>
+          <button
+            name="decrease-font"
+            id="decrease-font"
+            title="Diminuir fonte"
+          >
+            A -
+          </button>
+          <button
+            name="increase-font"
+            id="increase-font"
+            title="Aumentar fonte"
+          >
+            A +
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <header class="homePage">
+      <div class="header-title">
+        <div>
+          <h2 class="text-Course">Curso Técnico em</h2>
+          <h1 class="text-NameCourse">Jogos Digitais</h1>
+        </div>
+        <div id="containerBoxTitle">
+          <div class="box-unit-number">
+            <span> 5 </span>
+          </div>
+          <div class="titleHeader">Publicação</div>
+        </div>
+        <div>
+          <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
+          <p class="text-DescriptUnit">
+            Avaliar o GDD para garantir conformidade com as especificações
+            técnicas do projeto.
+          </p>
+        </div>
+        <div>
+          <p class="text-LetsLearn">Vamos iniciar os estudos!</p>
+          <a class="btnPlay" href="#contextualizing">Play</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <div>
+            <div class="espaceTitle" id="contextualizing"></div>
+            <h1 class="text-Title light-orange">Contextualizando</h1>
+            <h3 class="text-Course">
+              Assista ao vídeo abaixo para uma introdução aos seus estudos
+            </h3>
+          </div>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/CxeQ4NhUyN8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                              gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="dicas">
+            <img
+              src="./img/global/icons/help.png"
+              id="help"
+              style="margin-right: 20px"
+            />
+            <p>
+              Quais os cuidados que Bianca terá que tomar para realizar a
+              publicação do jogo de forma correta?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="testes">Testes</h1>
+
+          <p>
+            A fase de testes é a etapa em que os jogadores podem contribuir para
+            deixar o jogo ainda melhor, a fim de melhorá-lo para o lançamento
+            oficial, seja com feedbacks construtivos ou até mesmo de forma
+            financeira.
+          </p>
+
+          <p>
+            Os jogadores podem pagar por um jogo que está no começo do
+            desenvolvimento e depois ter acesso a todo o trabalho, incluindo as
+            versões de teste alfa e beta do jogo, enquanto o desenvolvedor pode
+            utilizar os fundos para continuar trabalhando no jogo.
+          </p>
+
+          <p>
+            Os testes alfa são disponibilizados com o jogo na fase do teste de
+            integração, ou seja, quando os primeiros elementos e recursos ainda
+            estão sendo implementados para checar se estão funcionando
+            corretamente. É uma fase ainda muito primitiva do jogo, bastante
+            comum, e até mesmo, esperado que bugs aconteçam ou alguns elementos
+            não estarem funcionando ainda.
+          </p>
+
+          <p>
+            Já o teste beta, é quando o jogo está quase pronto, todos os
+            elementos e recursos principais foram integrados, tudo que foi
+            planejado deve estar no jogo e agora será testado e avaliado até que
+            tudo funcione sem apresentar erros. Essa etapa está mais para uma
+            fase de limpeza de bugs e acabamento do projeto, pois o processo de
+            integração já passou e agora são os testes finais para prepará-lo
+            para o lançamento.
+          </p>
+
+          <p>
+            Ainda é comum que bugs aconteçam, pois trata-se de uma versão
+            inacabada do jogo, entretanto devem ser falhas leves e que não
+            comprometem demais a gameplay. Caso contrário, mostrará incapacidade
+            dos desenvolvedores em resolver esses problemas, fazendo com que os
+            jogadores deixem de acreditar no sucesso do jogo e sua opinião mude
+            drasticamente de forma negativa, pois a fase de teste alfa serve
+            justamente para consertar esses tipos de problemas. Nesse sentido, a
+            fase de teste beta já deve entregar em essência o que o jogo
+            pretende quando for lançado.
+          </p>
+
+          <p>
+            Podemos citar dois tipos de teste que são bastante comuns. São eles:
+            o teste de usabilidade, voltado para checar como está o estado de
+            interação do jogo com o jogador, se os comandos funcionam como
+            deveriam, se não há atrasos na resposta do jogo entre outras coisas.
+          </p>
+
+          <p>
+            E outro tipo de teste, bem importante, é o de balanceamento. O mais
+            comum de todos, e como já sugere, ele serve para checar se a
+            dificuldade do jogo está bem balanceada, se a aprendizagem está bem
+            fluída e natural, com desafios que equivalem às recompensas.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue5/Imagem 1.jpg"
+            alt="Na imagem temos um garoto, vestido de blusa branca e ao seu entorno ícones representativos da área de jogos."
+          />
+
+          <p>
+            É comum que algumas empresas de jogos evitem liberar versões
+            inacabadas de seus produtos para o público, em vez disso, confiam em
+            testes internos sob acordos de confidencialidade. Isso proíbe que a
+            pirataria de software tenha como alvo versões específicas, bem como,
+            limita as informações que podem ser compartilhadas com concorrentes.
+            Assim, algumas publicadoras bancam todo o desenvolvimento de um jogo
+            até que seja finalizado, tornando-os menos propensos a arriscar com
+            produtos experimentais.
+          </p>
+
+          <p>
+            As publicadoras utilizam maneiras de permitir que os jogadores
+            ganhem ou comprem acesso beta a um jogo em um ambiente controlado
+            com algumas circunstâncias. Por exemplo, com o jogo Crackdown para o
+            console Xbox 360, foi dado aos jogadores um convite beta para o
+            multiplayer de Halo 3, o que, na época, contribuiu para as altas
+            vendas do jogo.
+          </p>
+
+          <p>
+            Outro problema para os desenvolvedores independentes é encontrar uma
+            maneira de testar seus jogos antes do lançamento, porque eles
+            geralmente não têm os recursos de uma publicadora e não recebem
+            feedback suficiente.
+          </p>
+
+          <!--Div de aviso com lâmpada-->
+          <div class="atencion my-3 mx-3">
+            <img src="./img/global/icons/lightbulb.png" />
+            <p>
+              É comum que o capital para o desenvolvimento de jogos
+              independentes seja bem baixo e, geralmente, não são publicados por
+              meio de uma empresa publicadora, apenas em uma plataforma de
+              publicação, como a Steam, que cobram valores bem acessíveis para
+              publicação do jogo.
+            </p>
+          </div>
+
+          <p>
+            O acesso antecipado é uma ideia que pode ajudar com esses problemas.
+            O acesso antecipado a um jogo geralmente é concedido quando o jogo
+            já está jogável, ou seja depois, que a maioria do seu conteúdo foi
+            integrada e testada, mas ainda não tem tudo implementado, ou quando
+            ainda há falhas de software a serem corrigidas.
+          </p>
+
+          <p>
+            Esses jogos frequentemente estão nas versões alfa ou beta e podem
+            levar meses ou anos para serem concluídos. Os jogadores interessados
+            podem adquirir acesso antecipado ao desenvolvimento do jogo,
+            conseguindo acesso ao jogo à medida que ele está sendo desenvolvido,
+            e eles podem comprar o acesso ou são convidados a jogar e testá-lo.
+          </p>
+
+          <p>
+            Aqueles que pagam para jogar, geralmente, auxiliam no
+            desenvolvimento do jogo, contribuem com comentários e sugestões e
+            podem ter acesso a conteúdo exclusivo do jogo. O acesso antecipado é
+            uma das maneiras mais utilizadas para obter dinheiro para jogos
+            independentes e pode ser usada junto com outras formas de
+            financiamento, como financiamento colaborativo, mais conhecido como
+            crowdfunding.
+          </p>
+
+          <p>
+            Em março de 2013, a Valve Corporation adicionou o recurso de acesso
+            antecipado à plataforma Steam, possibilitando que os desenvolvedores
+            a usassem para permitir que os jogadores testarem seus jogos nas
+            versões alfas e betas. Mas em 2017 esse sistema foi substituído pelo
+            Steam Direct, e segundo a própria empresa: "O objetivo com o Steam
+            Direct é dar um caminho compreensível e previsível para os
+            desenvolvedores de todo o mundo trazerem seus jogos para o Steam,"
+            explicou a Valve.
+          </p>
+
+          <p>
+            Um exemplo de jogo que usou o crowdfunding da valve foi o Don't
+            Starve que para manter os jogadores interessados durante esse
+            período, o jogo acesso antecipado da versão Steam para adicionar
+            recursos lentamente e obter informações de sua base de jogadores, em
+            que cada novo lançamento de versão era como uma nova expansão do
+            jogo.
+          </p>
+
+          <p>
+            Antes da publicação é fundamental que sejam realizados todos os
+            testes de compatibilidade da versão do jogo, isto é, que ele seja
+            testado em diferentes sistemas operacionais, para que seja
+            comprovado se não vai haver problemas de execução quando ele for
+            publicado.
+          </p>
+
+          <p>
+            Para publicar jogos nas grandes plataformas como a Steam para PC e a
+            Playstore da Google para dispositivos mobiles, é precisa pagar uma
+            taxa para se obter uma conta de desenvolvedor, mas há sites como o
+            itch.io e o GameJolt.com, que são otimos para desenvolvedores
+            independentes publicarem seus jogos, pois eles permitem uma
+            publicação totalmente gratuita.
+          </p>
+
+          <p>
+            Sendo assim, uma ótima forma de colher feedbacks importantes tanto
+            de jogadores como de outros desenvolvedores, o dono do jogo
+            publicado possui total controle de acesso dele, podendo limitar esse
+            acesso a qualquer hora.
+          </p>
+
+          <p>
+            Dentre os níveis de acesso dos testes alfas e betas, há os níveis de
+            acesso restrito, que são mais conhecidos como Closed Alfa e Closed
+            Beta (alfa fechado e beta fechado). Para o jogador ter acesso a
+            esses testes ele pode comprar o acesso ou ganhar uma chave de acesso
+            de forma gratuita.
+          </p>
+
+          <p>
+            Geralmente quando os desenvolvedores vendem a chave de acesso a
+            testes, os jogadores que comprarem estarão ajudando os devs na
+            produção do jogo.
+          </p>
+
+          <!-- inicio questão 1 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question1-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 1</p>
+                <p>Marque a alternativa CORRETA sobre testes nos jogos.</p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q1-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-1"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-1">
+                      Os desenvolvedores não podem cobrar o acesso a versões de
+                      teste do jogo, como versões alfa e beta.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-2"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-2">
+                      O acesso antecipado a um jogo é concedido mesmo quando os
+                      elementos estão sendo integrados e testados.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-3"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-3">
+                      A fase de testes é fundamental para encontrar e corrigir
+                      bugs antes do lançamento, garantindo uma melhor
+                      experiência para o usuário.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-4"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-4">
+                      A versão alfa trata-se da primeira versão finalizada do
+                      jogo com todos os bugs corrigidos.
+                    </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question1)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 1 -->
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="publicacao">Publicação</h1>
+
+          <p>
+            O processo de publicação de um jogo se dá logo após a conclusão da
+            produção, essa é a etapa onde lançamos o jogo para o mundo. De
+            acordo com o Dicionário Online de Português, publicação é a ação que
+            torna um fato público. Ato de publicar, de tornar algo de
+            conhecimento público, uma obra que já foi impressa, publicada.
+            Assim, a publicação do jogo é quando se entrega o jogo para os
+            jogadores utilizando plataformas de publicação, que são onde os
+            mesmos podem ter acesso ao jogo, como a Steam e a Origin para os
+            jogos para PC, por exemplo.
+          </p>
+
+          <p>
+            Uma Publicadora de videogames é a responsável pela publicação e
+            comercialização de um jogo, incluindo estudos de mercado e todos os
+            aspectos da publicidade. Algumas empresas publicam videogames que
+            eles mesmos criaram como a Microsoft, Sony e a Blizzard, por
+            exemplo, ou podem ser uma empresa criada com esse propósito
+            específico e publicar jogos criados por outras empresas
+            desenvolvedoras de jogos como a Amazon e Level Up Games.
+          </p>
+
+          <p>
+            As publicadoras também são responsáveis por decidir e pagar por
+            quaisquer licenças que o jogo possa exigir, além de cuidar do
+            layout, impressão e possivelmente conteúdo do manual de instruções,
+            além de gerar e projetar aspectos gráficos como a caixa em qual o
+            produto é vendido, quando esse possui mídia física.
+          </p>
+
+          <p>
+            Pode ocorrer até de uma empresa publicadora tomar a iniciativa e
+            sugerir que ela publique o jogo, isso geralmente acontece com jogos
+            que chamam a atenção de muita gente quando são expostos em eventos
+            ou redes sociais, geralmente são publicadoras pertencentes a
+            empresas de consoles que buscam jogos assim para publicar.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue5/Imagem 2.jpg"
+            alt="Logotipo e nome da plataforma Steam, e no fundo, imagens de vários jogos publicados por ela."
+          />
+
+          <p>
+            Mas antes do jogo estar disponível para os jogadores de fato, a
+            maioria dos jogos passam por várias etapas durante sua publicação,
+            da mesma importância sobre o que é publicado, também deve-se levar
+            em conta o “como” é publicado. Referente a isso, são levantados
+            pontos importantes que precisam ser bem definidos para evitar que
+            alguma decisão mal tomada acabe prejudicando o sucesso do jogo. Os
+            principais pontos são:
+            <br />
+            <li class="mx-1">
+              <strong>O jogo realemnte está pronto?</strong> Passando por todos
+              os setores de produção para confirmar se tudo foi feito como
+              planejado, caso não, recomenda-se implementar o que está faltando
+              antes de prosseguir na publicação.
+            </li>
+            <li class="mx-1">
+              <strong>O jogo está otimizado?</strong> É muito importante a boa
+              otimização do jogo, incluindo a completa compatibilidade com o
+              dispositivos e plataformas em que pretendo ser jogado.
+            </li>
+            <li class="mx-1">
+              <strong
+                >A plataforma de publicação escolhida é a melhor para o gênero
+                do jogo?</strong
+              >
+              Recomenda-se publicar o jogo numa plataforma onde o seu gênero ou
+              tipo de jogo já tem uma base consolidada de jogadores, assim
+              contribuindo para garantir bom número de jogadores.
+            </li>
+          </p>
+
+          <p>
+            O produtor do jogo pode definir outros pontos que achar necessários
+            avaliar, esses três foram usados como exemplo, pois são
+            indispensáveis para qualquer publicação de jogos. Uma vez que tudo
+            foi analisado e está de acordo, o jogo é enviado para a publicadora.
+            Citando as plataformas de publicação de jogos mais conhecidas temos
+            a PlayStation, Xbox e Nintendo Switch para os consoles. Já as
+            plataformas mobile são iOS e Android e para o PC, o jogo pode ser
+            publicado nos sites como o itch.io e o GameJolt.com que citamos
+            anteriormente ou na Steam que é a mais famosa do mercado.
+          </p>
+
+          <p>
+            Após enviado para a plataforma publicadora, ele será analisado pela
+            sua equipe de testadores e controle de qualidade:
+            <br />
+            <li class="mx-1">
+              para checar se existe algum elemento do jogo fora dos critérios
+              (se não há elementos proibidos pela faixa etária escolhida);
+            </li>
+            <li class="mx-1">
+              se apresenta algum erro de execução (a diversão e qualidade
+              gráfico não entram em questão aqui);
+            </li>
+            <li class="mx-1">
+              Recebendo um retorno positivo, o jogo é hospedado nessa plataforma
+              e posteriormente publicado.
+            </li>
+          </p>
+
+          <p>
+            Uma boa estratégia, agora, é que não libere para todo o público
+            ainda, recomenda-se deixar o acesso ao jogo privado e dar esse
+            acesso para algumas pessoas, para testar como está sendo a
+            distribuição do jogo e a compatibilidade com seus dispositivos.
+          </p>
+
+          <p>
+            Antes de disponibilizar o jogo para todos os jogadores, é saudável
+            para o sucesso do jogo testar como ele é baixado, instalado e jogado
+            em todos os tipos de dispositivos pretendidos e não sendo encontrado
+            nenhum problema, aí pode ser é liberado para todo mundo. Dessa
+            forma, evita-se más avaliações do jogo por problemas que poderiam
+            ter sido evitados, contribuindo grande para a satisfação dos
+            jogadores.
+          </p>
+
+          <p>
+            Muitas empresas de pequeno porte dependem de dinheiro da própria
+            equipe, enquanto empresas maiores podem buscar financiamento de
+            outras fontes, e plataformas de crowdfunding.
+          </p>
+
+          <!--Div de aviso com lâmpada-->
+          <div class="atencion my-3 mx-3">
+            <img src="./img/global/icons/lightbulb.png" />
+            <p>
+              Antes de utilizar a internet para publicação e publicidade dos
+              jogos, eram usadas revistas voltadas para o público gamer, para
+              informar com detalhes os lançamentos de novos jogos no mercado,
+              sendo esses, apenas jogos produzidos e distribuídos pelas grandes
+              empresas de consoles da época.
+            </p>
+          </div>
+
+          <p>
+            A etapa de publicação não acaba com o lançamento inicial do jogo,
+            também pode ser tratada a implementação de conteúdos extras para o
+            jogo, que é uma etapa opcional mas que ocorre frequentemente, pois é
+            quando são colocados todas as ideias e elementos extras ou que não
+            eram essenciais para o jogo, mesmo não fazendo parte da essência do
+            projeto, não quer dizer que essas ideias não contribuam para seu
+            sucesso, em outras palavras, são aquelas ideias que o jogo não
+            precisa mas pode ficar melhor ou mais divertido com elas.
+          </p>
+
+          <p>
+            Esse processo de implementação pode acontecer até mesmo durante a
+            fase Beta de testes, em que já é possível ter noção de como o jogo
+            será ao todo, e com isso saber o que falta ou o que pode ser
+            melhorado.
+          </p>
+
+          <p>
+            Durante a implementação, é saudável para o projeto, se valer do bom
+            senso para não acabar colocando coisas demais no jogo, pois nem
+            sempre quantidade é qualidade e ainda pode não trazer benefícios
+            nenhum, por isso, é necessário um bom planejamento do que
+            implementar no jogo, para que o resultado seja positivo.
+          </p>
+
+          <p>
+            Recomenda-se ter muita cautela ao implementar novos elementos e
+            recursos ao jogo, pois é possível que acabe comprometendo o bom
+            funcionamento geral do que já foi feito, causando no mínimo atraso
+            na entrega ao perder-se tempo consertando os bugs e problemas
+            causados pela má implementação.
+          </p>
+
+          <p>
+            A implementação citada geralmente acontece quando o jogo já está um
+            tempo lançado e recebe bom número de feedback dos jogadores. E nesta
+            o foco é em aperfeiçoar o jogo, dando mais diversão e entretenimento
+            para os jogadores.
+          </p>
+
+          <p>
+            Um ótimo e bastante utilizado, exemplo de implementação nos jogos
+            quando já estão no mercado são as chamadas DLCs. A DLC é um sigla
+            que do inglês significa Downloadable Content ou Conteúdo baixável em
+            português. É um recurso bastante utilizado pelas empresas
+            desenvolvedoras de jogos para que o jogo continue dando lucros.
+          </p>
+
+          <!--Div de aviso com lâmpada-->
+          <div class="atencion my-3 mx-3">
+            <img src="./img/global/icons/lightbulb.png" />
+            <p>
+              O jogo Total Annihilation para PC, foi um dos primeiros a usar
+              DLCs em 1997, em que sua produtora a CaveDog Entertainment,
+              lançava mensalmente e de forma gratuita, novos conteúdos do jogo,
+              como mapas e personagens.
+            </p>
+          </div>
+
+          <p>
+            Um dos jogos bastante conhecidos por ter várias DLCs são os jogos
+            The Sims da Ubisoft, com o The Sims sendo o último lançamento e
+            contando com mais de dez DLCs. Essas DLCs adicionam elementos extras
+            para o jogo, que pode ou não influenciar.
+          </p>
+
+          <p>
+            É comum existirem pacotes de expansões também, esses pacotes trazem
+            mais conteúdos para o jogo, não sendo apenas extras, mas expandindo
+            o jogo de fato. Um pacote de expansão pode mudar o jogo
+            drasticamente, funcionando como uma grande atualização para ele,
+            diferente de um DLC que só adiciona recursos ou elementos que não
+            influenciam no jogo principal.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue5/Imagem 3.jpg"
+            alt="São mostradas 3 capas de publicação de DLCs do jogo The Sims 4, a primeira mostrando a DLC Estações, com personagens vestindo roupas de cada estação, a segunda é  a DLC Meu primeiro bichinho com personagem ao lado de animais de estimação e a última é a DLC Aventuras na Selva."
+          />
+
+          <p>
+            Além das DLCs e pacotes de expansão, existem também os patches, que
+            são atualizações lançadas para corrigir bugs e melhorar a
+            jogabilidade do jogo. Os patches podem ser lançados regularmente,
+            principalmente nos primeiros dias após o lançamento do jogo, quando
+            ainda há muitos bugs a serem corrigidos. É importante para a
+            satisfação dos jogadores que a equipe de desenvolvimento esteja
+            sempre trabalhando para melhorar o jogo e corrigir problemas.
+          </p>
+
+          <!-- inicio questão 2 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question2-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 2</p>
+                <p>Avalie se a afirmação a seguir é verdadeira ou falsa.</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>
+                  O principal ponto a ser analisado pela equipe da plataforma
+                  publicadora é se o jogo está divertido.
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q2-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-1"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-1"> Verdadeiro </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-2"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-2"> Falso </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question2)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 2 -->
+
+          <!-- inicio questão 3 -->
+          <div class="marginVertical">
+            <div id="q1" class="myt-3">
+              <div class="question-box-container" id="question4-box-correct">
+                <div class="question-description-container">
+                  <p>QUESTÃO 3</p>
+                  <p class="my-1">
+                    Escolha a opção CORRETA que valida a sentença a seguir:
+                  </p>
+                </div>
+
+                <div class="question-description-container q3-sq1">
+                  <p></p>
+                  <p style="line-height: 28px">
+                    Os testes de
+                    <span
+                      id="q3-sq1-block-1"
+                      class="block"
+                      style="cursor: pointer"
+                      onclick="unselectCheckFromCompleteTypeQuestion(this, question3.subQuestions[0])"
+                      >__________________
+                    </span>
+                    são utilizados para garantir que o jogo funcione
+                    corretamente em diferentes sistemas operacionais e
+                    dispositivos, sendo este diretamente ligado a publicação do
+                    jogo.
+                  </p>
+                </div>
+
+                <div class="question-select-type-container q3-sq1-options">
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-saida"
+                      class="question-select-type-opt-label"
+                      >Balanceamento</label
+                    >
+                    <input
+                      id="sq1-saida"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
+                    />
+                  </div>
+
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-entrada"
+                      class="question-select-type-opt-label"
+                      >Compatibilidade</label
+                    >
+                    <input
+                      id="sq1-entrada"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
+                    />
+                  </div>
+
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-pinceis-virtuais"
+                      class="question-select-type-opt-label"
+                      >Usabilidade</label
+                    >
+                    <input
+                      id="sq1-pinceis-virtuais"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="question-box-correct-container feedback-container"
+                  id="q3-sq1-box-feedback"
+                >
+                  <div class="question-box-title">
+                    <p class="feedback-title">Muito bem!</p>
+
+                    <svg
+                      class="feedback-success-icon"
+                      style="position: absolute; right: 32px"
+                      width="19"
+                      height="14"
+                      viewBox="0 0 19 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                        fill="#436900"
+                      />
+                    </svg>
+
+                    <svg
+                      class="feedback-error-icon"
+                      style="position: absolute; right: 32px"
+                      width="19"
+                      height="19"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                        fill="#93000A"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                        fill="#93000A"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="question-box-text">
+                    <span class="feedback-message">
+                      O Windows é um sistema operacional, então não pode ser
+                      considerado um hardware.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="w-full flex justify-center">
+                  <div
+                    class="button-send-responses"
+                    onclick="handleSubmitCompleteTypeQuestion(question3)"
+                  >
+                    Enviar resposta
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- fim questão 3 -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section">
+        <div class="contentSection">
+          <div class="espaceTitle" id="Recapitulando"></div>
+          <h1 class="text-Title light-orange">Recapitulando</h1>
+
+          <p>
+            Esta unidade de estudo abordou sobre a importância de realizar os
+            testes que os jogos passam durante sua finalização, em suas versões
+            alfas e betas, citando como os jogadores podem ter acesso a essas
+            versões para contribuir com o desenvolvimento do jogo.
+          </p>
+
+          <p>
+            Também foi falado sobre a publicação, escolhendo a melhor plataforma
+            de publicação para o jogo, seja referente ao dispositivo que vai
+            executar o jogo ou ao seu gênero mesmo.
+          </p>
+
+          <p>
+            Por fim, conhecemos o que são DLCs e o processo de implementação de
+            conteúdo extra nos jogos, reforçando que é muito importante ter
+            cuidado nessa etapa para que o conteúdo novo para o jogo não cause
+            bugs ou piore a experiência do jogador.
+          </p>
+
+          <div class="espaceTitle" id="SoluçãoDoProblematizando"></div>
+          <div class="flex justify-center align-center w-full">
+            <img src="./img/global/icons/greenCheck.png" />
+            <h3 class="px-3 green">Solução do problematizando</h3>
+          </div>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/AS9Fk-DAVSw"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                        gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="containerFooter row">
+      <button class="row empty-btn" type="button" onclick="carregarHTML(4)">
+        <img class="arrowImg" src="img/global/icons/previusclass.png" />
+        <p class="btnDesafio">Desafio anterior</p>
+      </button>
+      <button class="row empty-btn" type="button" onclick="carregarHTML(6)">
+        <p class="btnDesafio">Próximo Desafio</p>
+        <img class="arrowImg" src="img/global/icons/nextclass.png" />
+      </button>
+    </div>
+  </body>
+</html>

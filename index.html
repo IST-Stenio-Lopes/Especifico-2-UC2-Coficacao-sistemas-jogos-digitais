@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="bt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Específico 2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="SENAI/PB" />
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SCORM -->
+    <script type="text/javascript" src="scripts/APIWrapper.js"></script>
+    <script type="text/javascript" src="scripts/SCOFunctions.js"></script>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="scripts/index.js"></script>
+
+    <!-- JQUERY v3.3.1 -->
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+  </head>
+
+  <body onunload="unloadPage();">
+    <div id="root"></div>
+    <script>
+      carregarHTML(aulaAtual);
+
+      function carregarHTML(id) {
+        if (id != "x") {
+          $(function () {
+            $("#root").load("aula-" + id + ".html#root", () => {
+              aulaAtual = id;
+              updateLessonPage();
+              changeFontSize();
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            });
+          });
+        }
+      }
+
+      function carregarFichaTecnica() {
+        $(function () {
+          $("#root").load("ficha-tecnica.html#root");
+
+          window.scrollTo({ top: 0, behavior: "instant" });
+        });
+      }
+
+      // ajustes Moodle e T2K
+      setTimeout(function () {
+        if (top.document.getElementById("scorm_layout")) {
+          top.document.getElementById("scorm_layout").style.height = "100vh";
+        }
+
+        // Usado no T2K para forçar a saida do LMS e Ajustes de Layout
+        if (top.document.getElementById("blsm-qp-exit")) {
+          var parent = top.document.getElementById("blsm-qp-exit");
+          parent.addEventListener(
+            "click",
+            function (event) {
+              unloadPage();
+            },
+            true
+          );
+          top.document.getElementById("scorm_content").style.height =
+            "calc(100vh - 30px)";
+          top.document.getElementsByClassName("launcher")[0].style.height =
+            "26px";
+          top.document.getElementsByClassName("launcher")[0].style.fontSize =
+            "19px";
+          top.document.getElementsByClassName("launcher")[0].style.padding =
+            "unset";
+          window.addEventListener("resize", function (e) {
+            top.document.getElementById("scorm_content").style.height =
+              "calc(100vh - 30px)";
+          });
+        }
+      }, 200);
+    </script>
+
+    <!-- Libras -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+    <button onclick="topFunction()" id="myBtn" title="Ir ao topo">
+      <img src="./img/global/icons/arrowUpScroll.png" />
+    </button>
+  </body>
+</html>

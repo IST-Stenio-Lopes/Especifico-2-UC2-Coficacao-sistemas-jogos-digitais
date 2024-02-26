@@ -1,0 +1,108 @@
+#table {
+  width: 100%;
+}
+
+.tbody {
+}
+
+.tbody tr {
+  height: 47px;
+}
+
+.tbody th {
+  font-size: 1em;
+  color: #464742;
+  font-weight: 400;
+}
+.tbody th:nth-child(1n) {
+  border: 1px 1px 1px 0px;
+  border-width: 1px 1px 1px 0px;
+  border-style: solid;
+  border-color: #b8c4ff;
+}
+.tbody th:nth-child(3) {
+  border-width: 1px 0px 1px 0px;
+}
+
+.dark-mode .tbody th {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #e3e3db;
+}
+
+.greenTable {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2rem auto;
+  table-layout: fixed;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.greenTh {
+  color: #1a1827;
+  background-color: #a2f3c7;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #a2f3c7;
+}
+
+.greenTd {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #a2f3c7;
+}
+
+.greenTd:first-child {
+  border-left: none;
+}
+
+.greenTd:last-child {
+  border-right: none;
+}
+
+.greyTable {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  table-layout: fixed;
+  margin: auto;
+}
+
+.greenFontTh {
+  color: #7bab33;
+  font-size: 1.25em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.purpleFontTh {
+  color: #a42ab8;
+  font-size: 1.25em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.greyTable th,
+td,
+.greyTable tbody td:last-child {
+  border: none;
+  vertical-align: text-top;
+}
+
+.greyTable tbody td {
+  border-right: 4px solid #e6e7e8;
+  padding-left: 40px;
+}
+
+.greyTable tr,
+td {
+  align-items: start;
+}
+
+@media (max-width: 500px) {
+  .tbody tr {
+    height: 64px;
+  }
+  .tbody th {
+    font-size: 14px;
+  }
+}

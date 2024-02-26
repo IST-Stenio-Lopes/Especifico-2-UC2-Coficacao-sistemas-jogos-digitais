@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogos Digitais - SENAI EAD</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="SENAISP" />
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/aula6.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./scripts/select.js" defer></script>
+    <link rel="stylesheet" href="./css/global/question.css" />
+    <script src="./scripts/questions.js"></script>
+    <script src="./scripts/ue6.js"></script>
+    <script src="./scripts/index.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a onclick="openNav()"
+        ><img src="./img/global/icons/menu.png" class="logoJogos"
+      /></a>
+      <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+      <div></div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <button onclick="openList()" class="accordion">
+        <img src="./img/global/icons/summary.svg" style="margin-right: 10px" />
+        <p>Sumário</p>
+      </button>
+      <div class="panel" id="panelBtn">
+        <ul type="1">
+          <a class="listPanel" href="#contextualizing">
+            <li>1.0 Contextualizando</li>
+          </a>
+          <a class="listPanel" href="#planejamento">
+            <li>2.0 Planejamento</li>
+          </a>
+          <ul type="1" style="margin-left: 20px">
+            <a class="listPanel" href="#polimento">
+              <li>2.1 Polimento</li>
+            </a>
+            <a class="listPanel" href="#marketing">
+              <li>2.2 Marketing</li>
+            </a>
+            <a class="listPanel" href="#lancamento">
+              <li>2.3 Lançamento</li>
+            </a>
+            <a class="listPanel" href="#pos-lancamento">
+              <li>2.4 Pós-lançamento</li>
+            </a>
+          </ul>
+          <a class="listPanel" href="#plataformas">
+            <li>3.0 Plataformas</li>
+          </a>
+          <ul type="1" style="margin-left: 20px">
+            <a class="listPanel" href="#steam">
+              <li>3.1 Steam</li>
+            </a>
+            <a class="listPanel" href="#google">
+              <li>3.2 Google</li>
+            </a>
+            <a class="listPanel" href="#consoles">
+              <li>3.3 Consoles</li>
+            </a>
+            <a class="listPanel" href="#sites">
+              <li>3.4 Sites</li>
+            </a>
+          </ul>
+          <a class="listPanel" href="#metodo-publicacao">
+            <li>4.0 Método de publicação</li>
+          </a>
+        </ul>
+      </div>
+      <button onclick="changeTheme()" class="accordion">
+        <img
+          src="./img/global/icons/themeIcon.svg"
+          style="margin-right: 10px"
+          alt="Alterar tema"
+        />
+        <p>Alterar tema</p>
+      </button>
+      <button onclick="changeGray()" class="accordion">
+        <img
+          src="./img/global/icons/scaleGrayIcon.svg"
+          style="margin-right: 10px"
+          alt="Escala de Cinza"
+        />
+        <p>Escala de Cinza</p>
+      </button>
+      <button onclick="carregarFichaTecnica()" class="accordion">
+        <img
+          src="img\global\icons\lab_profile.svg"
+          style="margin-right: 10px"
+          alt="Ficha Técnica"
+        />
+        <p>Ficha Técnica</p>
+      </button>
+      <div class="accordion2">
+        <div style="display: flex">
+          <img
+            src="./img/global/icons/textIcon.svg"
+            style="margin-right: 10px"
+            alt="Tamanho da fonte"
+          />
+          <p>Tamanho da fonte</p>
+        </div>
+        <div>
+          <button
+            name="decrease-font"
+            id="decrease-font"
+            title="Diminuir fonte"
+          >
+            A -
+          </button>
+          <button
+            name="increase-font"
+            id="increase-font"
+            title="Aumentar fonte"
+          >
+            A +
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <header class="homePage">
+      <div class="header-title">
+        <div>
+          <h2 class="text-Course">Curso Técnico em</h2>
+          <h1 class="text-NameCourse">Jogos Digitais</h1>
+        </div>
+        <div id="containerBoxTitle">
+          <div class="box-unit-number">
+            <span> 6 </span>
+          </div>
+          <div class="titleHeader">Planejamento de Publicação de Jogo</div>
+        </div>
+        <div>
+          <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
+          <p class="text-DescriptUnit">
+            Reconhecer os procedimentos de publicação de jogos digitais.
+          </p>
+        </div>
+        <div>
+          <p class="text-LetsLearn">Vamos iniciar os estudos!</p>
+          <a class="btnPlay" href="#contextualizing">Play</a>
+        </div>
+      </div>
+    </header>
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <div>
+            <div class="espaceTitle" id="contextualizing"></div>
+            <h1 class="text-Title light-orange">Contextualizando</h1>
+            <h3 class="text-Course">
+              Assista ao vídeo abaixo para uma introdução aos seus estudos
+            </h3>
+          </div>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/DP73xvZdzz8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                      gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="dicas">
+            <img
+              src="./img/global/icons/help.png"
+              id="help"
+              style="margin-right: 20px"
+            />
+            <p>
+              Quais pontos podemos destacar no planejamento que Joaquim precisa
+              fazer para publicação do jogo?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="planejamento">
+            Planejamento
+          </h1>
+
+          <p>
+            O planejamento para a publicação de um jogo envolve diversos
+            conceitos importantes para o sucesso do projeto. Primeiramente, é
+            fundamental definir claramente os objetivos do jogo e o público-alvo
+            a que se destina. Isso permitirá que a equipe de desenvolvimento
+            possa criar uma experiência de jogo que atenda às expectativas dos
+            jogadores. O planejamento na publicação de um jogo digital é
+            extremamente importante, porque ajuda a garantir que o jogo seja
+            lançado de maneira eficiente, maximizando suas chances de sucesso
+            comercial e de aceitação pelo público.
+          </p>
+
+          <p>
+            Primeiramente, o planejamento permite que a equipe de
+            desenvolvimento identifique os objetivos do jogo e o público-alvo, o
+            que influenciará todas as decisões de marketing, como a escolha dos
+            canais de divulgação, a linguagem usada para comunicar o jogo, as
+            estratégias de preço, entre outras.
+          </p>
+
+          <p>
+            Os testes alfa são disponibilizados com o jogo na fase do teste de
+            integração, ou seja, quando os primeiros elementos e recursos ainda
+            estão sendo implementados para checar se estão funcionando
+            corretamente. É uma fase ainda muito primitiva do jogo, bastante
+            comum, e até mesmo, esperado que bugs aconteçam ou alguns elementos
+            não estarem funcionando ainda.
+          </p>
+
+          <p>
+            Além disso, o planejamento ajuda a determinar as datas de lançamento
+            do jogo e a trabalhar na estratégia de pré-lançamento, que é
+            fundamental para gerar interesse e expectativa em torno do jogo.
+            Isso inclui a criação de trailers, teasers, demos, o uso das redes
+            sociais para promover o jogo, além de trabalhar na relação com a
+            imprensa especializada.
+          </p>
+
+          <p>
+            É muito importante que os desenvolvedores definam os objetivos,
+            recursos e estratégias necessários. Planejar bem o cronograma é
+            crucial para garantir que o jogo seja lançado dentro do prazo e do
+            orçamento previsto. Os desenvolvedores devem definir um orçamento
+            realista e garantir que haja recursos suficientes para concluir o
+            projeto. O cronograma deve ser bem planejado e gerenciado para
+            garantir que todas as etapas do desenvolvimento sejam concluídas
+            dentro do prazo.
+          </p>
+
+          <p>
+            Além disso, o planejamento também deve levar em conta o design do
+            jogo, incluindo a aparência visual e sonora, bem como a narrativa
+            que será apresentada. É essencial que o jogo tenha um visual
+            atraente e uma trilha sonora que complementa a experiência de jogo.
+            Tudo isso precisa ser levado em conta no planejamento da publicação,
+            para que os pontos fortes do jogo sejam devidamente explorados.
+          </p>
+
+          <p>
+            Buscando uma maneira de tornar toda a etapa de publicação em um
+            processo tranquilo de ser realizado, pode ser elaborado um mapa de
+            publicação, ele é uma espécie de cronograma que define a sequência
+            de fases que devem acontecer para lançar o jogo no mercado com
+            sucesso. Sendo uma ferramenta essencial para planejar e gerenciar o
+            processo de lançamento de um jogo.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue6/Imagem 1.jpg"
+            alt="Na imagem temos uma mulher sentada à frente de um computador, em que na sua tela há uma tabela com vários blocos coloridos com informações escritas, como um cronograma."
+          />
+
+          <p>
+            Para elaborar um mapa de publicação de um jogo, é importante levar
+            em consideração as fases que geralmente envolvem o lançamento de um
+            game, ou seja, após o jogo ter sido produzido. Elas podem variar de
+            acordo com o tipo de jogo, tamanho da equipe e outras
+            especificidades do projeto, mas de forma geral, o mapa de publicação
+            de um jogo pode incluir as seguintes fases:
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="polimento">
+            Polimento
+          </h1>
+
+          <p>
+            Essa etapa acontece logo após a fase de produção, envolve a revisão
+            final do jogo antes de seu lançamento. Nesta fase, a equipe de
+            desenvolvimento faz testes finais, corrige bugs e realiza ajustes
+            finais na jogabilidade e na mecânica do jogo. É a fase de acabamento
+            do jogo, podendo ser colocados os conteúdos extras que foram
+            pensados, mas claro, apenas se sobrou tempo e recursos para isso.
+          </p>
+
+          <p>
+            Eles também se concentram em ajustar a dificuldade do jogo para
+            garantir que seja desafiador o suficiente para manter os jogadores
+            interessados, mas não tão difícil a ponto de gerar frustração.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="marketing">
+            Marketing
+          </h1>
+
+          <p>
+            Após a fase de polimento estar concluída, a equipe de marketing
+            entra em ação para promover o jogo. O objetivo do marketing é fazer
+            o jogo ficar conhecido e gerar interesse nos jogadores, para que
+            eles comprem e joguem-no.
+          </p>
+
+          <p>
+            Uma das principais táticas de marketing para jogos é a criação de
+            trailers, que apresentam imagens do jogo, recursos, história e
+            jogabilidade, para criar entusiasmo nos jogadores. Esses trailers
+            são frequentemente exibidos em eventos de jogos, como feiras e
+            convenções, bem como em canais online, como YouTube e Twitch.
+          </p>
+
+          <p>
+            A equipe de marketing desempenha um papel crucial na promoção do
+            jogo e na geração de interesse dos jogadores. Eles usam uma
+            variedade de táticas para criar conscientização e entusiasmo em
+            torno do jogo, o que pode levar a vendas bem-sucedidas e uma base de
+            jogadores leais.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="lancamento">
+            Lançamento
+          </h1>
+
+          <p>
+            Na hora do lançamento do jogo, dependendo do tipo de jogo e da
+            plataforma escolhida, o jogo pode ser lançado em lojas de
+            aplicativos, consoles de jogos, lojas online de PC, ou em outras
+            plataformas. O lançamento é um momento importante para o sucesso do
+            jogo, então é importante garantir que tudo esteja pronto para a
+            estreia.
+          </p>
+
+          <p>
+            A equipe de desenvolvimento deve escolher as lojas e plataformas de
+            distribuição certas para o jogo. Isso pode incluir lojas de
+            aplicativos, consoles de jogos, lojas online de PC, ou em outras
+            plataformas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="lancamento">
+            Pós-lançamento
+          </h1>
+
+          <p>
+            Após o lançamento, a equipe continua trabalhando no jogo, fazendo
+            correções de bugs, adicionando novos recursos e conteúdos e
+            respondendo a feedbacks de jogadores. Isso é essencial para manter o
+            jogo atualizado e interessante para os jogadores, além de ajudar a
+            manter a comunidade engajada.
+          </p>
+
+          <p>
+            Além disso, a equipe de desenvolvimento também pode trabalhar em
+            atualizações regulares do jogo, que podem incluir novos conteúdos,
+            como níveis adicionais, personagens, itens ou modos de jogo. Essas
+            atualizações ajudam a manter o jogo fresco e atraente para os
+            jogadores, incentivando-os a continuar jogando e recomendando o jogo
+            para outros jogadores.
+          </p>
+
+          <p>
+            Cada fase é essencial para o sucesso do jogo, e deve ser planejada e
+            gerenciada cuidadosamente para garantir que o jogo seja lançado com
+            sucesso e mantenha uma base de jogadores fiéis ao longo do tempo.
+          </p>
+
+          <!-- inicio questão 1 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question1-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 1</p>
+                <p>
+                  Marque a alternativa CORRETA sobre qual é a fase em que o jogo
+                  é refinado e ajustado antes de ser lançado?
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q1-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-1"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-1"> Fase de Lançamento </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-2"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-2"> Fase de Marketing </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-3"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-3"> Fase de Polimento </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-4"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-4"> Fase de Pós-Lançamento </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question1)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 1 -->
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="plataformas">Plataformas</h1>
+
+          <p>
+            Existem várias plataformas de publicação relevantes para a
+            publicação de jogos, cada uma com suas próprias características e
+            vantagens. A seguir, listamos algumas das plataformas de publicação
+            mais relevantes:
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="steam">Steam</h1>
+
+          <p>
+            A Steam é uma das maiores e mais populares plataformas de
+            distribuição digital para jogos no PC, com uma ampla variedade de
+            jogos e recursos para desenvolvedores. Possui um grande número de
+            usuários ativos em todo o mundo e oferece várias ferramentas de
+            marketing para desenvolvedores.
+          </p>
+
+          <p>
+            Ela também tem um sistema de avaliação de jogos pelos usuários, que
+            permite aos jogadores avaliarem e comentarem sobre os jogos que
+            jogaram. Essas avaliações são usadas para ajudar outros usuários a
+            decidir se um jogo vale a pena ou não.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue6/Imagem 2.jpg"
+            alt="Imagem mostrando a logo da Steam, com um quadro de várias capas de jogos."
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="google">
+            Google Play
+          </h1>
+
+          <p>
+            A Google Play é uma das maiores plataformas de distribuição de
+            aplicativos móveis, o que também inclui jogos. Ela possui grande
+            número de usuários ativos em todo o mundo, o que significa que os
+            jogos publicados nela têm grande potencial de alcance.
+          </p>
+
+          <p>
+            A Google Play tem requisitos específicos de formato de aplicativo
+            que os desenvolvedores devem seguir, incluindo a inclusão de ícones,
+            imagens de promoção, descrição, tamanho do APK e muito mais. É
+            importante seguir esses requisitos para garantir que o aplicativo
+            seja exibido corretamente na loja.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue6/Imagem 3.jpg"
+            alt="Imagem com fundo cinza, mostrando a logo da google play no centro e logo abaixo o nome Google Play."
+          />
+
+          <p>
+            As políticas de publicação da Google Play incluem diretrizes para
+            conteúdo inapropriado, violência, discurso de ódio, discriminação,
+            assédio, spam, segurança, privacidade e muito mais. Os
+            desenvolvedores de jogos devem garantir que seus jogos atendam a
+            essas diretrizes antes de serem publicados na loja.
+          </p>
+
+          <p>
+            Antes que um jogo seja publicado na Google Play, ele passa por um
+            processo de revisão onde a equipe da Google Play verifica se o
+            aplicativo atende a todas as políticas da loja. Esse processo pode
+            levar alguns dias ou até semanas, dependendo do aplicativo.
+          </p>
+
+          <p>
+            Os desenvolvedores podem fazer atualizações regulares em seus
+            aplicativos e publicá-las na Play Store. Essas atualizações podem
+            incluir correções de bugs, novos recursos, melhorias de desempenho e
+            muito mais. Os usuários da Play Store são notificados
+            automaticamente quando uma atualização está disponível para o
+            aplicativo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="consoles">
+            Consoles
+          </h1>
+
+          <p>
+            As principais características da publicação de jogos para consoles
+            incluem a necessidade de se adaptar ao hardware específico do
+            console em questão, para garantir a melhor experiência de jogo
+            possível. Isso inclui a otimização de gráficos, som, controles e
+            jogabilidade para o console em questão. Além disso, a plataforma do
+            console, geralmente, tem requisitos estritos de qualidade, segurança
+            e legalidade para garantir a conformidade do jogo com as políticas
+            da plataforma.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue6/Imagem 4.jpg"
+            alt="Na imagem temos o um compilado com os nomes dos principais modelos de console."
+          />
+
+          <p>
+            Os jogos para consoles também têm requisitos de certificação mais
+            rigorosos em relação aos jogos para PC ou dispositivos móveis, o que
+            significa que o processo de aprovação pode levar mais tempo e ter
+            custos adicionais. Os desenvolvedores também precisam estar cientes
+            das políticas de preço, royalties e exclusividade associadas a cada
+            plataforma de console.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="sites">Sites</h1>
+
+          <p>
+            Sites de publicação de jogos, como o Gamejolt, oferecem uma
+            plataforma para desenvolvedores de jogos independentes publicarem
+            seus jogos online, sem ter que criar sua própria ou pagar altas
+            taxas. Esses sites também têm uma comunidade ativa de jogadores e
+            desenvolvedores, onde eles podem se comunicar e compartilhar suas
+            experiências de jogo.
+          </p>
+
+          <p>
+            Eles geralmente oferecem uma biblioteca de jogos, onde os usuários
+            podem navegar e jogar jogos criados por outros desenvolvedores. Os
+            usuários também podem fornecer feedback e classificações sobre os
+            jogos que jogam, ajudando outros jogadores a tomar decisões
+            informadas sobre quais jogos jogar.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue6/Imagem 5.jpg"
+            alt="Imagem mostrando a página da loja do site gamejolt.com, mostrando algumas capas de jogos."
+          />
+
+          <p>
+            Os jogadores podem compartilhar os jogos que gostam em suas redes
+            sociais, ajudando a promover os jogos criados pelos desenvolvedores
+            independentes. Alguns sites de publicação de jogos permitem que os
+            desenvolvedores monetizem seus jogos por meio de publicidade,
+            doações ou vendas diretas.
+          </p>
+
+          <!-- inicio questão 2 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question2-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 2</p>
+                <p>Avalie se a afirmação a seguir é verdadeira ou falsa.</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>
+                  Os jogos para consoles têm requisitos de certificação menos
+                  rigorosos em relação aos jogos para PC ou dispositivos móveis.
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q2-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-1"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-1"> Verdadeiro </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-2"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-2"> Falso </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question2)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 2 -->
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="metodo-publicacao">
+            Método de publicação
+          </h1>
+
+          <p>
+            De maneira geral, o método para publicação de um jogo é o mesmo para
+            todas as plataformas, isto é, os principais passos e a sua sequência
+            se repetem, independente da plataforma, mas mesmo assim, cada
+            plataforma possui suas especificações.
+          </p>
+
+          <p>
+            O Steam por exemplo, que é o serviço de distribuição de jogos para
+            PC mais popular da atualidade, para publicar um jogo lá, primeiro é
+            preciso se inscrever no programa de parceiros Steamworks na
+            plataforma.
+          </p>
+
+          <p>
+            Para isso, deve preencher um formulário online e depositar o valor
+            para cada jogo que deseja distribuir. Cada nação tem um valor, então
+            é importante se informar qual o valor atual.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue6/Imagem 6.jpg"
+            alt="Imagem mostrando a página principal do site steamworks, com fundo branco e ilustrações  simples, com números na parte de baixo indicando número de usuários e jogadores ativos."
+          />
+
+          <p>
+            O mais importante é que você conheça qual é o método principal, pois
+            assim poderá publicar em qualquer plataforma com mais facilidade.
+            Acompanhe a seguir os passos para isso.
+          </p>
+
+          <!--Div de aviso com alerta-->
+          <div class="atencion my-3 mx-1">
+            <img src="./img/global/icons/atencion.png" />
+            <p>
+              Antes de realizar a publicação de um jogo é muito importante que
+              você se certifique de que seu jogo está pronto para ser publicado,
+              incluindo a resolução de todos os bugs e testes de desempenho.
+            </p>
+          </div>
+
+          <p>
+            <li class="mx-1">
+              <strong>Conta de desenvolvedor</strong>: Seja na Steam ou na
+              Google Play por exemplo, geralmente é preciso criar uma conta de
+              desenvolvedor, o que pode ser feito através do site da plataforma,
+              você precisará preencher algumas informações e caso seja
+              necessário, pagar uma taxa única de inscrição.
+            </li>
+          </p>
+
+          <p>
+            <li class="mx-1">
+              <strong>Página do jogo</strong>: Depois de ter criado uma conta de
+              desenvolvedor, é possível configurar uma página do jogo. Você
+              precisará incluir informações como a descrição do jogo, requisitos
+              de sistema, preços, e outras informações relevantes. Essa página
+              será o primeiro contato de muitos jogadores com o jogo, por isso é
+              fundamental que seja bem elaborada, e conte com imagens, vídeos e
+              descrições assertivas que despertem a vontade de jogá-lo.
+            </li>
+          </p>
+
+          <p>
+            <li class="mx-1">
+              <strong>Configurar a publicação</strong>: Essa etapa está
+              diretamente ligada à anterior, pois é ainda na configuração da
+              página do jogo, que geralmente escolhemos a data de lançamento do
+              jogo e caso não seja gratuito fazer a pré-venda. Você também pode
+              escolher entre diferentes opções de preços e decidir se deseja
+              lançar o jogo em diferentes regiões do mundo também. É nessa etapa
+              que é feita a configuração sobre a monetização do jogo, inclusive
+              para qual público ele é destinado.
+            </li>
+          </p>
+
+          <p>
+            <li class="mx-1">
+              <strong>Envio do jogo</strong>: Depois de configurar a página do
+              jogo e as opções de publicação, chegou a hora de enviar o jogo,
+              também conhecido como Upload. A plataforma analisará o jogo e
+              fornecerá feedbacks, incluindo sugestões para melhorias ou para os
+              ajustes que precisam ser feitos.
+            </li>
+          </p>
+
+          <p>
+            <li class="mx-1">
+              <strong>Lançamento</strong>: Após a aprovação da plataforma, o
+              jogo será lançado na na data escolhida. É importante sempre
+              atualizar a página do jogo com informações adicionais, como avisos
+              de atualizações do jogo.
+            </li>
+          </p>
+
+          <p>
+            Como dito anteriormente, esses passos que mostramos são o conjunto
+            padrão que você precisará executar na publicação de qualquer jogo
+            nas plataformas mais relevantes, vale a pena salientar que podem
+            haver mudanças singelas em alguns passos, mas a lógica por trás de
+            sua realização continua a mesma continua a mesma.
+          </p>
+
+          <p>
+            Além disso, é importante lembrar que a publicação de um jogo não é
+            garantia de sucesso. É preciso investir em marketing e divulgação,
+            ter uma estratégia para alcançar o público-alvo e fornecer um
+            produto de qualidade.
+          </p>
+
+          <p>
+            É importante também monitorar o feedback dos jogadores e estar
+            aberto a fazer melhorias e ajustes necessários. Com esforço,
+            dedicação e uma boa dose de criatividade, é possível criar um jogo
+            de sucesso e alcançar um público cada vez maior.
+          </p>
+
+          <!-- inicio questão 3 -->
+          <div class="marginVertical">
+            <div id="q1" class="myt-3">
+              <div class="question-box-container" id="question4-box-correct">
+                <div class="question-description-container">
+                  <p>QUESTÃO 3</p>
+                  <p class="my-1">
+                    Escolha a opção CORRETA que valida a sentença a seguir:
+                  </p>
+                </div>
+
+                <div class="question-description-container q3-sq1">
+                  <p></p>
+                  <p style="line-height: 28px">
+                    Na publicação de um jogo
+                    <span
+                      id="q3-sq1-block-1"
+                      class="block"
+                      style="cursor: pointer"
+                      onclick="unselectCheckFromCompleteTypeQuestion(this, question3.subQuestions[0])"
+                      >____________________
+                    </span>
+                    é essencial para maximizar seu potencial de sucesso, atingir
+                    seu público-alvo e garantir que a equipe de desenvolvimento
+                    trabalhe de forma eficiente e estratégica.
+                  </p>
+                </div>
+
+                <div class="question-select-type-container q3-sq1-options">
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-saida"
+                      class="question-select-type-opt-label"
+                      >O método de publicação</label
+                    >
+                    <input
+                      id="sq1-saida"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
+                    />
+                  </div>
+
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-entrada"
+                      class="question-select-type-opt-label"
+                      >O planejamento</label
+                    >
+                    <input
+                      id="sq1-entrada"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
+                    />
+                  </div>
+
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-pinceis-virtuais"
+                      class="question-select-type-opt-label"
+                      >A escolha da plataforma</label
+                    >
+                    <input
+                      id="sq1-pinceis-virtuais"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="question-box-correct-container feedback-container"
+                  id="q3-sq1-box-feedback"
+                >
+                  <div class="question-box-title">
+                    <p class="feedback-title">Muito bem!</p>
+
+                    <svg
+                      class="feedback-success-icon"
+                      style="position: absolute; right: 32px"
+                      width="19"
+                      height="14"
+                      viewBox="0 0 19 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                        fill="#436900"
+                      />
+                    </svg>
+
+                    <svg
+                      class="feedback-error-icon"
+                      style="position: absolute; right: 32px"
+                      width="19"
+                      height="19"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                        fill="#93000A"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                        fill="#93000A"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="question-box-text">
+                    <span class="feedback-message">
+                      O Windows é um sistema operacional, então não pode ser
+                      considerado um hardware.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="w-full flex justify-center">
+                  <div
+                    class="button-send-responses"
+                    onclick="handleSubmitCompleteTypeQuestion(question3)"
+                  >
+                    Enviar resposta
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- fim questão 3 -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section">
+        <div class="contentSection">
+          <div class="espaceTitle" id="Recapitulando"></div>
+          <h1 class="text-Title light-orange">Recapitulando</h1>
+
+          <p>
+            Nessa unidade abordamos como o planejamento que é uma etapa muito
+            importante, em que devemos que ter em mente os objetivos do jogo, o
+            público-alvo a ser alcançado, as mecânicas e o design que serão
+            utilizados, além da escolha da plataforma de lançamento e uma
+            estratégia de marketing adequada para promover o jogo e alcançar os
+            jogadores interessados.
+          </p>
+
+          <p>
+            Tudo isso deve ser pensado e definido antes mesmo de iniciar o
+            desenvolvimento do jogo, para garantir que todas as decisões estejam
+            alinhadas com os objetivos traçados e que o produto final atenda às
+            expectativas do público-alvo.
+          </p>
+
+          <div class="espaceTitle" id="SoluçãoDoProblematizando"></div>
+          <div class="flex justify-center align-center w-full">
+            <img src="./img/global/icons/greenCheck.png" />
+            <h3 class="px-3 green">Solução do problematizando</h3>
+          </div>
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/hY_Lf142htI"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                                gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="containerFooter row">
+      <button class="row empty-btn" type="button" onclick="carregarHTML(5)">
+        <img class="arrowImg" src="img/global/icons/previusclass.png" />
+        <p class="btnDesafio">Desafio anterior</p>
+      </button>
+      <button class="row empty-btn" type="button" onclick="carregarHTML(7)">
+        <p class="btnDesafio">Próximo Desafio</p>
+        <img class="arrowImg" src="img/global/icons/nextclass.png" />
+      </button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,572 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+.question-description-container {
+  width: 100%;
+  padding: 8px 32px;
+  background-color: #fcedff;
+  color: #372739;
+  font-size: 1em;
+  border-bottom: 1px solid #e9ceee;
+  margin-bottom: 8px;
+}
+
+.question-description-container * {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 800px) {
+  .question-description-container {
+    font-family: "Open Sans", sans-serif !important;
+    font-weight: 700;
+  }
+}
+
+.question-description-container p:nth-child(1) {
+  font-size: 11px;
+  margin-bottom: 20px;
+}
+
+.myt-1 {
+  margin-top: 8px;
+}
+
+.question-box-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-container {
+  display: none;
+}
+
+.feedback-title {
+  font-weight: 600;
+}
+
+.feedback-success > div:first-of-type {
+  background-color: #f9ffe8;
+  color: #436900;
+}
+
+.feedback-error > div:first-of-type {
+  background-color: #ffedea;
+  color: #93000a;
+}
+
+.feedback-success > div:last-of-type {
+  border-color: #97d934;
+}
+
+.feedback-error > div:last-of-type {
+  border-color: #de3730;
+}
+
+.question-box-title {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+  align-items: center;
+  padding: 8px 32px;
+}
+
+.question-box-text {
+  color: #e3e3db;
+  border: 1px solid #97d934;
+  width: 100%;
+  padding: 12px 32px;
+  font-weight: 400;
+}
+
+.dark-mode .question-box-text {
+  color: #464742;
+}
+
+/*Inicio do css referente a questão de tipo 1, com modelo de seleção do tipo Radio*/
+
+.question-type-one-container {
+  /**/
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.question-type-one-container table {
+  width: 100%;
+  margin-top: 8px;
+  table-layout: fixed;
+
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.question-type-one-container td:nth-child(1) {
+  height: 64px;
+  width: 64px;
+  border-width: 0px 1px 1px 0px;
+  border-style: solid;
+  border-color: #e9ceee;
+  padding-left: 16px;
+}
+
+.question-type-one-container td:nth-child(2) {
+  height: 64px;
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: #e9ceee;
+  padding-left: 16px;
+}
+
+.question-type-checkbox {
+  position: absolute;
+  cursor: pointer;
+  width: 0px;
+  height: 0px;
+}
+
+.question-type-checkbox:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 4px solid #5e5f59;
+  border-radius: 3px;
+  background-color: #ffffff;
+  transform: translateY(-50%);
+}
+
+.question-type-checkbox:checked:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 4px solid #436900;
+  transition: all 0.2s linear;
+}
+
+.question-type-checkbox:checked:after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 19px;
+  border: solid #436900;
+  border-width: 0 5px 5px 0;
+  top: -15px;
+  left: 11px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.question-type-one-radio {
+  width: 27px;
+  height: 27px;
+}
+
+.question-type-one-radio::after {
+  content: "";
+  /*Faz com que se possa editar a bolinha central*/
+  display: inline-block;
+  visibility: visible;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  border: 3px solid #5e5f59;
+}
+
+.question-type-one-radio:checked:hover {
+  content: "";
+  box-shadow: 0 0 0 0;
+  filter: none;
+  border: 0 none;
+  outline: none;
+  clear: both;
+  white-space: nowrap;
+}
+
+.question-type-one-radio:checked:after {
+  width: 13px;
+  height: 13px;
+  border-radius: 15px;
+  top: 4px;
+  left: 4px;
+  position: relative;
+  background-color: #436900;
+  content: "";
+  /*Faz com que se possa editar a bolinha central*/
+  display: inline-block;
+  visibility: visible;
+  border-color: #436900;
+  accent-color: #436900;
+  /*Cor da linha externa*/
+}
+
+.question-type-one-radio:checked {
+  accent-color: #436900;
+  border: 3px solid red;
+}
+
+.question-type-one-question {
+}
+
+/*Fim do css referente a questão de tipo 1, com modelo de seleção do tipo Radio*/
+
+/*Inicio do css referente a questão de tipo 2, com modelo de seleção do tipo select*/
+
+.question-type-two-container {
+  /**/
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.question-type-two-container table {
+  width: 100%;
+  margin-top: 8px;
+  table-layout: fixed;
+  /*Faz com que se possa editar os espaçamentos da tabela*/
+  background-color: rgba(255, 255, 255, 0.12);
+  /* color: #5E5F59; */
+}
+
+.question-type-two-container table tr:nth-child(1) {
+  background-color: transparent;
+}
+
+.dark-mode .question-type-two-container table tr:nth-child(1) {
+  background-color: #fefbff;
+}
+
+.question-type-two-container table tr:nth-child(1) td:nth-child(1) {
+  text-align: left;
+}
+
+.question-type-two-container table td:nth-child(1) {
+  height: 64px;
+  border-width: 0px 1px 1px 0px;
+  border-style: solid;
+  border-color: #e9ceee;
+  padding-left: 16px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.question-type-two-container td:nth-child(2) {
+  padding-left: 16px;
+  border-width: 0px 0px 1px 1px;
+  border-style: solid;
+  border-color: #e9ceee;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.dark-mode .question-type-two-container .exception-question-destac {
+  color: #5e5f59;
+}
+
+/* Customização do select */
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #72417a;
+
+  min-width: 200px;
+  max-width: 50%;
+  height: 40px;
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element:*/
+}
+
+.select-selected {
+  color: #464742;
+  background-color: #dfc8e3;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  padding: 0 5px;
+  width: 100%;
+}
+
+.select-selected span {
+  margin: auto;
+}
+
+.select-header td {
+  background-color: #fcedff;
+}
+
+.select-header span {
+  color: #372739;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/*style the arrow inside the select element:*/
+/* .select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+} */
+
+/*point the arrow upwards when the select box is open (active):*/
+/* .select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+} */
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+  height: 100%;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+
+  border-bottom-color: #72417a;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  vertical-align: center;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: white;
+  color: #464742;
+
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Remove seta padrão do FireFox */
+.question-select select::-ms-expand {
+  display: none;
+}
+
+/* Remove seta padrão do IE*/
+
+/* Fim da customização do select */
+
+/* .question-type-two-container select{
+    background-color: #DDE1FF;
+    width: 160px;
+    height: 28px;
+    border: 1px solid #5B71CB;
+    appearance: none;
+    outline: 0;
+}
+.question-type-two-container option{
+    background-color: white;
+    height: 28px;
+    padding-bottom: 28px;
+    
+} */
+
+.pseudo-select {
+  cursor: pointer;
+  background-color: #dfc8e3;
+  width: 250px;
+  min-height: 28px;
+  height: 28px;
+  border: 1px solid #72417a;
+  display: grid;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.pseudo-select p {
+  margin-top: 0px;
+  text-align: center;
+  font-weight: 400;
+  color: #5e5f59;
+  align-self: baseline;
+}
+
+.pseudo-select .expand {
+  margin-top: 28px;
+  width: 300px;
+  height: auto;
+  position: absolute;
+  display: none;
+}
+
+.pseudo-select .expand div {
+  cursor: pointer;
+  background-color: white;
+  height: 28px auto;
+  padding: 5px;
+  border-bottom: 1px solid #91918b;
+  font-weight: 400;
+  font-size: 14px;
+  color: #5e5f59;
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-align: left;
+}
+
+.pseudo-select .expand div:nth-child(1) {
+}
+
+.pseudo-select .expand div:last-child {
+  border: none;
+}
+
+/*Fim do css referente a questão de tipo 2, com modelo de seleção do tipo select*/
+
+/*Inicio do css referente a questão de tipo 3, com modelo de seleção de diversos botões*/
+
+.ans-t3-box {
+  padding: 3px 16px;
+  border-bottom: 1px solid #72417a;
+  background-color: #dfc8e3;
+}
+
+.question-select-type-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  margin-bottom: 8px;
+}
+
+.question-select-type-opt {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: #dfc8e3;
+  padding: 2rem 1rem;
+  height: 40px;
+}
+
+.question-select-type-opt:has(input[type="checkbox"]:checked) {
+  opacity: 0.6;
+}
+
+.question-select-type-opt-label {
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  align-self: center;
+  color: #372739;
+}
+
+.question-select-type-opt-input {
+  display: none;
+}
+
+.opt-t3t:checked.select-opt {
+  background-color: red;
+}
+
+.opt-t3 {
+  cursor: pointer;
+  height: 40px;
+  flex: 1;
+  font-weight: 400;
+  font-size: 1em;
+  display: flex;
+  min-width: 154px;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background-color: #dfc8e3;
+  text-align: center;
+  display: none;
+}
+
+.desabled-opt-t3 {
+  cursor: auto;
+  opacity: 0.6;
+}
+
+.none {
+  display: none;
+}
+
+.button-send-responses {
+  margin-top: 35px;
+  cursor: pointer;
+  width: 229px;
+  height: 48px;
+  background-color: #dfc8e3;
+  border: 1px solid #72417a;
+  color: #72417a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*Fim do css referente a questão de tipo 3, com modelo de seleção de diversos botões*/
+
+/*Inicio do css referente a questão de tipo 4, com modelo de seleção de diversos botões*/
+
+.question-type-four-checkbox {
+  appearance: unset;
+  width: 27px;
+  height: 27px;
+  /* fill: red;
+    stroke: red;
+    color: red; */
+  display: grid;
+  place-content: center;
+
+  border: 3px solid #5e5f59;
+}
+
+.question-type-four-checkbox:checked {
+  border: 3px solid #436900;
+}
+
+.question-type-four-checkbox[type="checkbox"]:checked::before {
+  content: "✔";
+  color: #436900;
+  /* cor da seta interna */
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/*Fim do css referente a questão de tipo 4, com modelo de seleção de diversos botões*/

@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogos Digitais - SENAI EAD</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="SENAISP" />
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/aula7.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./scripts/select.js" defer></script>
+    <link rel="stylesheet" href="./css/global/question.css" />
+    <script src="./scripts/questions.js"></script>
+    <script src="./scripts/ue7.js"></script>
+    <script src="./scripts/index.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a onclick="openNav()"
+        ><img src="./img/global/icons/menu.png" class="logoJogos"
+      /></a>
+      <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+      <div></div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <button onclick="openList()" class="accordion">
+        <img src="./img/global/icons/summary.svg" style="margin-right: 10px" />
+        <p>Sumário</p>
+      </button>
+      <div class="panel" id="panelBtn">
+        <ul type="1">
+          <a class="listPanel" href="#contextualizing">
+            <li>1.0 Contextualizando</li>
+          </a>
+          <a class="listPanel" href="#integracao">
+            <li>2.0 Integração de sistemas</li>
+          </a>
+          <a class="listPanel" href="#instalacao">
+            <li>3.0 Instalação</li>
+          </a>
+          <a class="listPanel" href="#configuracao">
+            <li>4.0 Configuração</li>
+          </a>
+          <ul type="1" style="margin-left: 20px">
+            <a class="listPanel" href="#criar-conta">
+              <li>4.1 Criar uma conta no itch.io</li>
+            </a>
+            <a class="listPanel" href="#criar-projeto">
+              <li>4.2 Criar um projeto</li>
+            </a>
+            <a class="listPanel" href="#configurar-projeto">
+              <li>4.3 Configurar o projeto</li>
+            </a>
+            <a class="listPanel" href="#adicionando-arquivo">
+              <li>4.4 Adicionando o arquivo</li>
+            </a>
+            <a class="listPanel" href="#detalhes-projeto">
+              <li>4.5 Detalhes do projeto</li>
+            </a>
+            <a class="listPanel" href="#publicacao">
+              <li>4.6 Publicação</li>
+            </a>
+          </ul>
+        </ul>
+      </div>
+      <button onclick="changeTheme()" class="accordion">
+        <img
+          src="./img/global/icons/themeIcon.svg"
+          style="margin-right: 10px"
+          alt="Alterar tema"
+        />
+        <p>Alterar tema</p>
+      </button>
+      <button onclick="changeGray()" class="accordion">
+        <img
+          src="./img/global/icons/scaleGrayIcon.svg"
+          style="margin-right: 10px"
+          alt="Escala de Cinza"
+        />
+        <p>Escala de Cinza</p>
+      </button>
+      <button onclick="carregarFichaTecnica()" class="accordion">
+        <img
+          src="img\global\icons\lab_profile.svg"
+          style="margin-right: 10px"
+          alt="Ficha Técnica"
+        />
+        <p>Ficha Técnica</p>
+      </button>
+      <div class="accordion2">
+        <div style="display: flex">
+          <img
+            src="./img/global/icons/textIcon.svg"
+            style="margin-right: 10px"
+            alt="Tamanho da fonte"
+          />
+          <p>Tamanho da fonte</p>
+        </div>
+        <div>
+          <button
+            name="decrease-font"
+            id="decrease-font"
+            title="Diminuir fonte"
+          >
+            A -
+          </button>
+          <button
+            name="increase-font"
+            id="increase-font"
+            title="Aumentar fonte"
+          >
+            A +
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <header class="homePage">
+      <div class="header-title">
+        <div>
+          <h2 class="text-Course">Curso Técnico em</h2>
+          <h1 class="text-NameCourse">Jogos Digitais</h1>
+        </div>
+        <div id="containerBoxTitle">
+          <div class="box-unit-number">
+            <span> 7 </span>
+          </div>
+          <div class="titleHeader">Configuração</div>
+        </div>
+        <div>
+          <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
+          <p class="text-DescriptUnit">
+            Aplicar os procedimentos de publicação de jogos digitais.
+          </p>
+        </div>
+        <div>
+          <p class="text-LetsLearn">Vamos iniciar os estudos!</p>
+          <a class="btnPlay" href="#contextualizing">Play</a>
+        </div>
+      </div>
+    </header>
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <div>
+            <div class="espaceTitle" id="contextualizing"></div>
+            <h1 class="text-Title light-orange">Contextualizando</h1>
+            <h3 class="text-Course">
+              Assista ao vídeo abaixo para uma introdução aos seus estudos
+            </h3>
+          </div>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/dS6OJAFUhac"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                      gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="dicas">
+            <img
+              src="./img/global/icons/help.png"
+              id="help"
+              style="margin-right: 20px"
+            />
+            <p>
+              Quais os principais cuidados que mariana precisa ter para publicar
+              seu jogo com sucesso.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="integracao">
+            Integração de sistemas
+          </h1>
+
+          <p>
+            A integração de sistema refere-se à compatibilidade e integração do
+            jogo com o sistema operacional ou plataforma em que será executado,
+            como PC, console, dispositivo móvel, entre outros. Ocorrendo antes
+            da instalação e configuração de um jogo digital, envolvendo também a
+            união dos diferentes componentes do jogo em um único sistema
+            funcionando de maneira harmoniosa e sem erros.
+          </p>
+
+          <p>
+            Isso inclui a otimização do código do jogo para funcionar
+            corretamente com as especificidades do sistema operacional ou
+            plataforma, aproveitando seus recursos e funcionalidades.
+          </p>
+
+          <p>
+            Por exemplo, para um jogo de PC, a integração de sistema envolve
+            garantir que o jogo seja compatível com diferentes versões do
+            sistema operacional Windows, macOS ou Linux, e também que possa ser
+            executado em diferentes configurações de hardware, como
+            processadores, placas de vídeo, memória RAM etc. Além disso, a
+            integração de sistema pode incluir a otimização do desempenho do
+            jogo, para garantir que ele execute suavemente em uma variedade de
+            configurações de hardware.
+          </p>
+
+          <p>
+            Da mesma forma, para jogos em consoles, como PlayStation, Xbox ou
+            Nintendo Switch, a integração de sistema envolve garantir que o jogo
+            seja compatível com as especificidades do hardware e do sistema
+            operacional dessas plataformas, como a arquitetura do processador, a
+            quantidade de memória disponível, os controles específicos do
+            console, entre outros.
+          </p>
+
+          <p>
+            No caso de jogos para dispositivos móveis, a integração de sistema
+            pode envolver a otimização do jogo para diferentes sistemas
+            operacionais móveis, como iOS, Android, ou até mesmo diferentes
+            versões desses sistemas operacionais, e também para diferentes
+            tamanhos e resoluções de tela de dispositivos móveis.
+          </p>
+
+          <p>
+            Após a integração de sistemas, é feita uma revisão final para
+            garantir que todos os elementos estejam funcionando de maneira
+            correta e que não haja erros ou problemas de desempenho. Caso sejam
+            encontrados problemas, eles serão resolvidos antes do lançamento do
+            jogo.
+          </p>
+
+          <p>
+            Por fim, a integração de sistemas é um passo que ajuda a garantir
+            que todos os elementos individuais do jogo funcionem em conjunto
+            para proporcionar uma experiência de jogo envolvente e sem problemas
+            para os jogadores.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="instalacao">Instalação</h1>
+
+          <p>
+            A instalação de um jogo digital refere-se ao processo de transferir
+            e configurar todos os arquivos necessários para que o jogo possa ser
+            executado no computador ou dispositivo em que o jogo será jogado.
+          </p>
+
+          <p>
+            Existem jogos digitais que são projetados para serem instalados e
+            executados no computador e existem jogos que são jogados diretamente
+            no navegador sem precisar de instalação.
+          </p>
+
+          <p>
+            Os jogos que são instalados no computador geralmente têm gráficos
+            mais avançados, som mais detalhado e requerem mais recursos do
+            sistema, como espaço de armazenamento e memória. Esses jogos
+            geralmente oferecem uma experiência mais imersiva, mas exigem mais
+            trabalho para instalar e manter.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue7/Imagem 1.png"
+            alt="Imagem mostrando uma barra sendo preenchida representando o processo de instalação do jogo."
+          />
+
+          <p>
+            É dever do desenvolvedor testá-lo antes de liberar acesso ao público
+            e cada tipo de jogo tem suas vantagens e desvantagens referentes a
+            forma de instalação. A instalação de um jogo pode estar diretamente
+            ligada aos meios de publicação, pois é durante o processo de
+            publicação que o desenvolvedor decide como o jogo será distribuído e
+            disponibilizado para os jogadores.
+          </p>
+
+          <p>
+            Quando um desenvolvedor decide publicar seu jogo em uma plataforma
+            online, por exemplo, ele precisará seguir as diretrizes dela e
+            fornecer informações sobre o jogo, como uma descrição, capturas de
+            tela e um vídeo de gameplay. Além disso, o desenvolvedor precisará
+            fornecer um arquivo de instalação do jogo que seja compatível com a
+            plataforma de distribuição escolhida.
+          </p>
+
+          <p>
+            Esse processo deve ser simples e intuitivo para os jogadores, e o
+            desenvolvedor deve garantir que o jogo seja instalado corretamente e
+            que todos os arquivos necessários sejam baixados e instalados no
+            dispositivo do jogador.
+          </p>
+
+          <p>
+            Normalmente, a instalação envolve:
+            <br />
+            <li class="mx-1">
+              A cópia de arquivos do disco ou download de uma plataforma de
+              distribuição digital, como a Steam;
+            </li>
+            <li class="mx-1">
+              A configuração de opções e configurações do jogo.
+            </li>
+            <li class="mx-1">
+              Durante o processo de instalação, podem ser instalados arquivos
+              adicionais, como bibliotecas de gráficos ou som, ou atualizações
+              para o jogo, dependendo da versão do jogo que está sendo
+              instalada.
+            </li>
+            <li class="mx-1">
+              Em alguns casos, a instalação também pode incluir a ativação do
+              jogo, o que envolve inserir uma chave de produto ou fazer login
+              com uma conta associada ao jogo.
+            </li>
+          </p>
+
+          <p>
+            Uma vez concluída a instalação, o jogo estará pronto para ser
+            jogado. O processo de instalação pode variar dependendo do
+            dispositivo em que o jogo será instalado e do método de distribuição
+            escolhido pelo desenvolvedor do jogo. No entanto, geralmente, o
+            processo de instalação segue alguns passos básicos, que são:
+          </p>
+
+          <p>
+            <li class="mx-1">
+              <strong>Baixar o jogo</strong>: O primeiro passo é baixar o
+              arquivo de instalação do jogo. Isso pode ser feito através de uma
+              plataforma de distribuição de jogos, como a Steam ou a Epic Games
+              Store, ou diretamente do site do desenvolvedor.
+            </li>
+            <li class="mx-1">
+              <strong>Executar o arquivo de instalação</strong>: Depois que o
+              arquivo de instalação é baixado, o próximo passo é executá-lo.
+              Isso geralmente envolve clicar duas vezes no arquivo de instalação
+              baixado.
+            </li>
+            <li class="mx-1">
+              <strong>Aceitar os termos e condições</strong>: Antes de instalar
+              o jogo, é comum ser solicitado a aceitar os termos e condições do
+              desenvolvedor. Esses termos podem incluir informações sobre como o
+              jogo pode ser usado, regras de conduta para os jogadores e
+              políticas de privacidade.
+            </li>
+            <li class="mx-1">
+              <strong>Escolher a localização da instalação</strong>: É possível
+              escolher onde o jogo será instalado em seu dispositivo. Se você
+              não escolher um local específico, o jogo será instalado na pasta
+              padrão de jogos em seu computador.
+            </li>
+            <li class="mx-1">
+              <strong>Aguardar o processo de instalação</strong>: Após
+              selecionar a localização da instalação, o processo de instalação
+              do jogo começará. Esse processo pode levar alguns minutos ou mais,
+              dependendo do tamanho do jogo e da velocidade do seu dispositivo.
+            </li>
+            <li class="mx-1">
+              <strong>Finalizar a instalação</strong>: Quando a instalação
+              estiver concluída, você poderá ser solicitado a realizar outras
+              configurações, como selecionar a qualidade gráfica ou escolher um
+              idioma. Depois de concluir essas etapas, o jogo estará pronto para
+              ser jogado.
+            </li>
+          </p>
+
+          <p>
+            Além disso, o processo de desinstalação também é importante, pois
+            permite que os jogadores removam o jogo de seu dispositivo se
+            decidirem que não desejam mais jogá-lo. Normalmente, o processo de
+            desinstalação é simples e envolve acessar o painel de controle do
+            sistema operacional ou a plataforma de distribuição do jogo e
+            selecionar a opção de desinstalar.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue7/Imagem 2.png"
+            alt="Imagem mostra o caminho de opções para realizar a desinstalação de um jogo na Steam, que é Gerenciar e depois Desinstalar."
+          />
+
+          <p>
+            O desenvolvedor do jogo deve garantir que o processo de instalação
+            seja simples e intuitivo e que todos os arquivos necessários sejam
+            baixados e instalados corretamente no dispositivo do jogador. Além
+            disso, é importante fornecer instruções claras sobre como instalar e
+            desinstalar o jogo, bem como suporte ao cliente para ajudar os
+            jogadores que possam encontrar problemas durante o processo de
+            instalação.
+          </p>
+
+          <!-- inicio questão 1 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question1-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 1</p>
+                <p>Avalie se a afirmação a seguir é verdadeira ou falsa.</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>
+                  O processo de instalação pode variar dependendo do dispositivo
+                  em que o jogo será instalado.
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q1-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-1"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-1"> Verdadeiro </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-2"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-2"> Falso </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question1)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 1 -->
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="configuracao">
+            Configuração
+          </h1>
+
+          <p>
+            Depois que a plataforma de publicação de um jogo digital é
+            escolhida, o processo de configuração começa com a criação de uma
+            conta de desenvolvedor na plataforma escolhida. Em seguida, é
+            necessário seguir as diretrizes da plataforma para a preparação do
+            jogo para publicação.
+          </p>
+
+          <p>
+            Isso pode incluir a preparação de arquivos e materiais promocionais,
+            a criação de uma página de informações sobre o jogo e a definição de
+            preços e opções de distribuição.
+          </p>
+
+          <p>
+            Também é importante configurar a forma como o jogo será monetizado,
+            seja por meio de vendas diretas, assinaturas, compras no aplicativo
+            ou publicidade. É necessário definir as políticas de privacidade e
+            termos de serviço do jogo, além de garantir que o conteúdo esteja em
+            conformidade com as diretrizes da plataforma em relação a conteúdo
+            ofensivo ou inapropriado.
+          </p>
+
+          <p>
+            Para ficar ainda melhor de você entender, vamos falar como é na
+            prática, acompanhe agora como é a configuração para publicar um jogo
+            na plataforma online do itch.io. O itch.io é uma plataforma de
+            distribuição digital de jogos independente, onde desenvolvedores
+            podem publicar seus jogos para venda ou download gratuito. Neste
+            tutorial, a seguir vamos explicar detalhadamente como configurar e
+            publicar um jogo nessa plataforma.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue7/Imagem 3.png"
+            alt="Imagem da página do itch.io, mostrando capas de vários jogos já publicados na plataforma."
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="criar-conta">
+            Criar uma conta no itch.io
+          </h1>
+
+          <p>
+            Para começar, você precisa criar uma conta no itch.io. Para fazer
+            isso, vá para o site itch.io e clique em "Register" no canto
+            superior direito da tela, indo para a página como a imagem a seguir.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue7/Imagem 4.png"
+            alt="Tela inicial do itch.io"
+          />
+
+          <p>
+            Nessa tela, preencha os campos necessários, como nome de usuário
+            (username), endereço de e-mail(email address) e senha(password).
+            Então, concordando, aceite os termos de serviço marcando a opção “I
+            accept the Term of Service”. Depois clique em "Create account" para
+            finalizar essa etapa.
+          </p>
+
+          <!--Div de aviso com alerta-->
+          <div class="atencion my-3 mx-1">
+            <img src="./img/global/icons/atencion.png" />
+            <p>
+              Depois de terminar o registro é muito importante que você entre no
+              email registrado e faça a verificação de conta, pois sem essa
+              verificação não será possível enviar o arquivo do jogo para a
+              plataforma.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="criar-projeto">
+            Criar um projeto
+          </h1>
+
+          <p>
+            Depois de se registrar no itch.io, você precisa criar um projeto
+            para o seu jogo. Para isso, clique em “Dashboard” na guia principal
+            do site no canto superior direito e depois em "Create new project"
+            localizado no centro como na imagem a seguir. 
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue7/Imagem 5.png"
+            alt="Tela guia principal do site."
+          />
+
+          <p>
+            Preencha os campos necessários, como nome do projeto e descrição.
+            Você também pode adicionar uma imagem de capa para o seu projeto,
+            clicando em "Choose file" abaixo de "Cover image".
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="configurar-projeto">
+            Configurar o projeto
+          </h1>
+
+          <p>
+            Depois de criar o projeto, você precisa configurá-lo. Na página de
+            configurações, você pode colocar qual é o título do projeto em
+            “Title”, e um pouco mais abaixo é a caixa de texto onde você pode
+            fazer uma breve descrição sobre o jogo em “Short description or
+            tagline”, então em “Classification” é onde informamos qual é a
+            classificação do projeto, se é só um jogo, um pacote de ferramentas,
+            recursos, livro etc. Como você pode ver a seguir na imagem 6.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue7/Imagem 6.png"
+            alt="Tela da página de configurações."
+          />
+
+          <p>
+            Ainda sobre a imagem 6, escolhemos o tipo do projeto em “Kind of
+            project”, aqui é definido que tipo de arquivo será disponibilizado,
+            se será em html, como os jogos de navegador, ou se é baixável
+            (downloadable), isto é, se o jogador precisará baixar o executável
+            do jogo para joga-lo, entre outros tipos. Em sequência, temos o
+            “Release status”, para descrever o estágio do projeto, se ele já
+            está completo ou em desenvolvimento, por exemplo.
+          </p>
+
+          <p>
+            Ao lado você pode adicionar uma imagem para ser a capa do jogo na
+            plataforma com o botão “Upload Cover Image”, logo abaixo temos o
+            lugar onde colocamos o link para o trailer do projeto ou vídeo de
+            gameplay do jogo e em seguida podemos adicionar imagens e capturas
+            de tela com o botão “Add screenshots”.
+          </p>
+
+          <p>
+            Você também pode definir o preço do seu jogo e escolher se deseja
+            permitir que os jogadores façam doações ou não nessa parte mostrada
+            na imagem a seguir.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue7/Imagem 7.png"
+            alt="Tela para trailer do projeto ou vídeo de gameplay do jogo."
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="adicionando-arquivo">
+            Adicionando o arquivo
+          </h1>
+
+          <p>
+            Para adicionar o jogo ao seu projeto, clique em "Upload files" e
+            escolha o arquivo do jogo ou pasta. Certifique-se de que o arquivo
+            do jogo esteja no formato correto para o itch.io, que pode ser um
+            arquivo ZIP, EXE, DMG ou APK contendo o executável do jogo para que
+            o jogador baixo e jogue, ou dependendo do tipo do projeto que você
+            escolheu anteriormente em “kind of project”, você deve colocar um
+            arquivo .ZIP, contendo os arquivos que a engine exportou para HTML,
+            sendo obrigatório a presença do arquivo chamado index.html, que é
+            criado automaticamente no processo de exportação do jogo, assim, os
+            jogadores poderão jogá-lo diretamente no navegador.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue7/Imagem 8.png"
+            alt="Tela para Uploads."
+          />
+
+          <!--Div de aviso com alerta-->
+          <div class="atencion my-3 mx-1">
+            <img src="./img/global/icons/atencion.png" />
+            <p>
+              O tamanho máximo do arquivo para fazer o upload permitido pelo
+              itch.io é de até 1 GB (um gigabyte).
+            </p>
+          </div>
+
+          <p>
+            Dependendo do tipo de projeto escolhido, como o tipo HTML, pode
+            haver outras opções disponíveis, referente a resolução de execução
+            do jogo no navegador, na primeira opção recomenda-se que mantenha a
+            opção de “Embed in page” para o jogo ficar melhor incorporado a
+            página.
+          </p>
+
+          <p>
+            Já na segundo opção, é onde você escolhe se quer definir manualmente
+            o tamanho da tela de visão do jogo, por padrão a escolha é "Manually
+            set size” como verá na próxima imagem e serve para definir
+            manualmente, mas caso o jogo tenha sido exportado como HTML da
+            Unity, então o mais recomendado é escolher a outra opção chamada
+            “Auto-detect size” que define o tamanho automaticamente.
+          </p>
+
+          <p>
+            Caso escolha por definir manualmente, no “Width” se trata da largura
+            da tela e o “Height” a altura, então antes de preencher tenha
+            certeza desses valores para não causar problemas de resolução
+            durante o jogo.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue7/Imagem 9.png"
+            alt="Tela Embed options."
+          />
+
+          <p>As “Frame options” são opcionais e fazem o seguinte.</p>
+
+          <p>
+            <strong>Mobile friendly</strong>: Esta opção permite que o conteúdo
+            do seu projeto seja executado em dispositivos móveis com resolução
+            menor e suporte a toque. Isso torna o seu projeto mais acessível a
+            usuários que acessam a partir de smartphones ou tablets.
+          </p>
+
+          <p>
+            <strong>Automatically start on page load</strong>: Esta opção faz
+            com que o seu projeto comece a ser executado automaticamente quando
+            a página é carregada. No entanto, ela não é recomendada para jogos
+            em Unity, pois pode causar atrasos no carregamento da página.
+          </p>
+
+          <p>
+            <strong>Fullscreen button</strong>: Esta opção adiciona um botão no
+            canto inferior direito do quadro que permite ao usuário visualizar o
+            conteúdo em tela cheia. Isso pode melhorar a experiência do usuário,
+            especialmente se o conteúdo é gráfico ou visual.
+          </p>
+
+          <p>
+            <strong>Enable scrollbars</strong>: Esta opção permite que barras de
+            rolagem sejam adicionadas ao quadro que contém o seu projeto. Isso é
+            útil se o conteúdo do projeto for maior do que a área disponível no
+            quadro, permitindo que os usuários rolem para ver o conteúdo
+            adicional.
+          </p>
+
+          <p>
+            <strong>SharedArrayBuffer support</strong>: Esta opção é
+            experimental e pode quebrar partes da página ou do projeto. Ela só
+            deve ser ativada se você souber que precisa dela. O
+            SharedArrayBuffer é uma maneira de compartilhar dados de JavaScript
+            em uma página. Se você estiver usando essa funcionalidade em seu
+            projeto, poderá habilitar essa opção.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="detalhes-projeto">
+            Detalhes do projeto
+          </h1>
+
+          <p>
+            Logo após fazer o upload do projeto, vamos descrevê-lo em um breve
+            resumo na parte de “Description”, que no caso de um jogo,
+            recomenda-se fazer uma descrição com informações sobre o tema do
+            jogo, a mecânica principal com as regras para vencer no jogo.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue7/Imagem 10.png"
+            alt="Tela Details."
+          />
+
+          <p>
+            Ainda sobre a imagem 10, em “Genre” você define o tipo de jogo que
+            está publicando. Algumas opções comuns de gênero são ação, aventura,
+            estratégia, RPG, simulação, entre outras. Escolher um gênero ajuda a
+            categorizar o jogo e torná-lo mais fácil de encontrar para jogadores
+            que procuram por um determinado tipo de jogo. Já em “Tags”, defina
+            palavras-chave que descrevem o jogo de uma forma mais específica do
+            que o gênero. As tags ajudam a identificar características
+            específicas do jogo que podem não ser imediatamente aparentes a
+            partir do gênero. Por exemplo, se o jogo for um RPG de fantasia com
+            elementos de estratégia, as tags podem incluir "fantasia", "RPG",
+            "estratégia", "magia" e assim por diante.
+          </p>
+
+          <p>Seguindo com a configuração, você terá as seguintes opções:</p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue7/Imagem 11.png"
+            alt="Tela Details."
+          />
+
+          <p>
+            Nessa parte, em “App store links” você pode adicionar os links para
+            outras plataformas que o jogo já estiver disponível, como Google
+            Play, App Store ou Steam. Isso pode ajudar os jogadores a encontrar
+            e baixar o jogo em outras plataformas.
+          </p>
+
+          <p>
+            Já em “Custom noun”, é um campo opcional onde você pode adicionar um
+            substantivo personalizado para descrever o jogo. Isso pode ser usado
+            em vez do nome do jogo em certas partes do site, como na seção "Você
+            pode gostar também" na página de um jogo. Por exemplo, se o jogo for
+            chamado "The Adventures of John", o substantivo personalizado pode
+            ser "aventuras" para tornar a descrição mais genérica e atraente
+            para jogadores que gostam de jogos de aventura.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="publicacao">
+            Publicação
+          </h1>
+
+          <p>Agora chegamos na última etapa do processo</p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue7/Imagem 12.png"
+            alt="Tela de última etapa do processo."
+          />
+
+          <p>
+            Explicando cada opção, começamos com “Community”, este recurso
+            permite que os usuários postem comentários e discutam sobre o jogo
+            na página do projeto. Isso pode ajudar a construir uma comunidade em
+            torno do jogo e fornecer feedback aos desenvolvedores, suas opções
+            são:
+          </p>
+
+          <p>
+            <strong>Disabled</strong>: Estas opções permitem que você desative a
+            funcionalidade de comentários ou discussões, se desejar. Isso pode
+            ser útil se você não quiser permitir comentários ou discussões na
+            página do projeto.
+          </p>
+
+          <p>
+            <strong>Comments</strong>: Esta opção permite que os usuários postem
+            comentários na parte inferior da página do projeto. Os comentários
+            podem ser organizados em uma discussão com threads aninhados para
+            facilitar a leitura e a resposta.
+          </p>
+
+          <p>
+            <strong>Discussion board</strong>: Esta opção adiciona uma página de
+            comunidade dedicada ao projeto, com categorias, threads, respostas e
+            mais recursos para facilitar a discussão e o engajamento.
+          </p>
+
+          <p>
+            Agora em “Visibility & Access", permite que você controle quem pode
+            ver a página do projeto enquanto você está trabalhando nele ou após
+            a publicação, suas opções são:
+          </p>
+
+          <p>
+            <strong>Draft</strong>: Esta opção permite que você crie um rascunho
+            da página do projeto para revisão antes de torná-lo público. Somente
+            as pessoas autorizadas que têm permissão para editar o projeto
+            poderão visualizar o rascunho.
+          </p>
+
+          <p>
+            <strong>Restricted</strong>: Esta opção permite que somente
+            proprietários e pessoas autorizadas vejam a página do projeto.
+          </p>
+
+          <p>
+            <strong>Public</strong>: Esta opção torna a página do projeto
+            visível para qualquer pessoa que visite o site itch.io.
+          </p>
+
+          <p>
+            E finalmente, depois de configurar o jogo, você pode enfim
+            publicá-lo clicando no botão "Save" na parte inferior da página de
+            configurações do jogo. Se o seu jogo for gratuito, ele será
+            publicado imediatamente. Se o seu jogo for pago, você precisará
+            definir as informações de pagamento antes que ele seja publicado.
+          </p>
+
+          <p>
+            Este é o processo básico para configurar e publicar um jogo no
+            itch.io. Lembre-se de que você pode personalizar ainda mais o seu
+            jogo e o projeto, adicionando informações como vídeos, links para
+            redes sociais e outras informações sobre o jogo, além das formas de
+            pagamento.
+          </p>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://youtube.com/embed/EGYQJFtHr8A"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- inicio questão 2 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question2-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 2</p>
+                <p>
+                  Marque a opção CORRETA sobre qual é o primeiro passo no
+                  processo de configuração para publicar um jogo em uma
+                  plataforma online, como o itch.io?
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q2-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-1"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-1">
+                      Configurar a monetização do jogo
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-2"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-2">
+                      Criar uma página de informações sobre o jogo
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-3"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-3">
+                      Criar uma conta de desenvolvedor na plataforma escolhida
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-4"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-4">
+                      Preparar arquivos e materiais promocionais
+                    </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question2)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 2 -->
+
+          <!-- inicio questão 3 -->
+          <div class="marginVertical">
+            <div id="q1" class="myt-3">
+              <div class="question-box-container" id="question4-box-correct">
+                <div class="question-description-container">
+                  <p>QUESTÃO 3</p>
+                  <p class="my-1">
+                    Escolha a opção CORRETA que valida a sentença a seguir:
+                  </p>
+                </div>
+
+                <div class="question-description-container q3-sq1">
+                  <p></p>
+                  <p style="line-height: 28px">
+                    O desenvolvedor deve garantir que na etapa de
+                    <span
+                      id="q3-sq1-block-1"
+                      class="block"
+                      style="cursor: pointer"
+                      onclick="unselectCheckFromCompleteTypeQuestion(this, question3.subQuestions[0])"
+                      >___________________
+                    </span>
+                    , o jogador tenha facilidade em abrir e executar o jogo sem
+                    erros depois de instalado.
+                  </p>
+                </div>
+
+                <div class="question-select-type-container q3-sq1-options">
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-saida"
+                      class="question-select-type-opt-label"
+                      >Instalação</label
+                    >
+                    <input
+                      id="sq1-saida"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
+                    />
+                  </div>
+
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-entrada"
+                      class="question-select-type-opt-label"
+                      >Integração de sistemas</label
+                    >
+                    <input
+                      id="sq1-entrada"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
+                    />
+                  </div>
+
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-pinceis-virtuais"
+                      class="question-select-type-opt-label"
+                      >Configuração</label
+                    >
+                    <input
+                      id="sq1-pinceis-virtuais"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="question-box-correct-container feedback-container"
+                  id="q3-sq1-box-feedback"
+                >
+                  <div class="question-box-title">
+                    <p class="feedback-title">Muito bem!</p>
+
+                    <svg
+                      class="feedback-success-icon"
+                      style="position: absolute; right: 32px"
+                      width="19"
+                      height="14"
+                      viewBox="0 0 19 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                        fill="#436900"
+                      />
+                    </svg>
+
+                    <svg
+                      class="feedback-error-icon"
+                      style="position: absolute; right: 32px"
+                      width="19"
+                      height="19"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                        fill="#93000A"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                        fill="#93000A"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="question-box-text">
+                    <span class="feedback-message">
+                      O Windows é um sistema operacional, então não pode ser
+                      considerado um hardware.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="w-full flex justify-center">
+                  <div
+                    class="button-send-responses"
+                    onclick="handleSubmitCompleteTypeQuestion(question3)"
+                  >
+                    Enviar resposta
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- fim questão 3 -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section">
+        <div class="contentSection">
+          <div class="espaceTitle" id="Recapitulando"></div>
+          <h1 class="text-Title light-orange">Recapitulando</h1>
+
+          <p>
+            Nessa unidade, falamos sobre como a integração de sistemas, a
+            instalação e a configuração de publicação são processos cruciais no
+            desenvolvimento e lançamento de um jogo.
+          </p>
+
+          <p>
+            A integração de sistemas visa garantir a compatibilidade e
+            integração adequadas do jogo com o sistema operacional ou plataforma
+            em que será executado, enquanto a instalação e a configuração de
+            publicação são etapas importantes para garantir que o jogo possa ser
+            instalado e disponibilizado aos jogadores de forma eficiente e
+            protegida.
+          </p>
+
+          <p>
+            O sucesso desses processos contribui para a qualidade e
+            acessibilidade do jogo aos jogadores. Assim, é importante que os
+            desenvolvedores de jogos dediquem tempo e recursos adequados para
+            garantir uma integração de sistemas suave, instalação correta e
+            configuração de publicação adequada para seus jogos. Esta é uma
+            parte essencial do ciclo de desenvolvimento de jogos, desde a
+            criação até a disponibilização para os jogadores.
+          </p>
+
+          <p>
+            Com todos esses processos bem feitos, os jogadores podem desfrutar
+            de uma experiência de jogo suave e sem problemas em suas plataformas
+            preferidas. Consequentemente, isso pode levar a uma maior satisfação
+            dos jogadores, uma base de jogadores mais ampla e um maior sucesso
+            comercial do jogo.
+          </p>
+
+          <div class="espaceTitle" id="SoluçãoDoProblematizando"></div>
+          <div class="flex justify-center align-center w-full">
+            <img src="./img/global/icons/greenCheck.png" />
+            <h3 class="px-3 green">Solução do problematizando</h3>
+          </div>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://youtube.com/embed/kHg6bpT9eyc"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="containerFooter row">
+      <button class="row empty-btn" type="button" onclick="carregarHTML(6)">
+        <img class="arrowImg" src="img/global/icons/previusclass.png" />
+        <p class="btnDesafio">Desafio anterior</p>
+      </button>
+      <button class="row empty-btn" type="button" onclick="carregarHTML(8)">
+        <p class="btnDesafio">Próximo Desafio</p>
+        <img class="arrowImg" src="img/global/icons/nextclass.png" />
+      </button>
+    </div>
+  </body>
+</html>

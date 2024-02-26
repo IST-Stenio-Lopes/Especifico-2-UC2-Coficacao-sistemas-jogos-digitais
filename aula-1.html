@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogos Digitais - SENAI EAD</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="SENAISP" />
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/aula1.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script type="text/javascript" src="./scripts/jquery.js"></script>
+    <script src="./scripts/index.js"></script>
+    <link rel="stylesheet" href="./css/global/question.css" />
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/ue1.js"></script>
+    <script src="./scripts/questions.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a onclick="openNav()"
+        ><img src="./img/global/icons/menu.png" class="logoJogos"
+      /></a>
+      <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+      <div></div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <button onclick="openList()" class="accordion">
+        <img src="./img/global/icons/summary.svg" style="margin-right: 10px" />
+        <p>Sumário</p>
+      </button>
+      <div class="panel" id="panelBtn">
+        <ul type="1">
+          <a class="listPanel" href="#contextualizing">
+            <li>1.0 Contextualizando</li>
+          </a>
+          <a class="listPanel" href="#requisitos-jogos">
+            <li>2.0 Requisitos de sistemas de jogos digitais</li>
+          </a>
+          <ul type="1" style="margin-left: 20px">
+            <a class="listPanel" href="#requisitos-hardware">
+              <li>2.1 Requisitos de hardware</li>
+            </a>
+            <a class="listPanel" href="#requisitos-software">
+              <li>2.2 Requisitos de software</li>
+            </a>
+            <ul type="1" style="margin-left: 40px">
+              <a class="listPanel" href="#requisitos-funcionais">
+                <li>2.2.1 Requisitos funcionais</li>
+              </a>
+              <a class="listPanel" href="#requisitos-nao-funcionais">
+                <li>2.2.2 Requisitos não funcionais</li>
+              </a>
+            </ul>
+          </ul>
+        </ul>
+      </div>
+      <button onclick="changeTheme()" class="accordion">
+        <img
+          src="./img/global/icons/themeIcon.svg"
+          style="margin-right: 10px"
+          alt="Alterar tema"
+        />
+        <p>Alterar tema</p>
+      </button>
+      <button onclick="changeGray()" class="accordion">
+        <img
+          src="./img/global/icons/scaleGrayIcon.svg"
+          style="margin-right: 10px"
+          alt="Escala de Cinza"
+        />
+        <p>Escala de Cinza</p>
+      </button>
+      <button onclick="carregarFichaTecnica()" class="accordion">
+        <img
+          src="img\global\icons\lab_profile.svg"
+          style="margin-right: 10px"
+          alt="Ficha Técnica"
+        />
+        <p>Ficha Técnica</p>
+      </button>
+      <div class="accordion2">
+        <div style="display: flex">
+          <img
+            src="./img/global/icons/textIcon.svg"
+            style="margin-right: 10px"
+            alt="Tamanho da fonte"
+          />
+          <p>Tamanho da fonte</p>
+        </div>
+        <div>
+          <button
+            name="decrease-font"
+            id="decrease-font"
+            title="Diminuir fonte"
+          >
+            A -
+          </button>
+          <button
+            name="increase-font"
+            id="increase-font"
+            title="Aumentar fonte"
+          >
+            A +
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <header class="homePage">
+      <div class="header-title">
+        <div>
+          <h2 class="text-Course">Curso Técnico em</h2>
+          <h1 class="text-NameCourse">Jogos Digitais</h1>
+        </div>
+        <div id="containerBoxTitle">
+          <div class="box-unit-number">
+            <span> 1 </span>
+          </div>
+          <div class="titleHeader">Requisitos</div>
+        </div>
+        <div>
+          <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
+          <p class="text-DescriptUnit">
+            Definir os requisitos funcionais e não funcionais do sistema de
+            jogos demandados pela aplicação.
+          </p>
+        </div>
+        <div>
+          <p class="text-LetsLearn">Vamos iniciar os estudos!</p>
+          <a class="btnPlay" href="#contextualizing">Play</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <div>
+            <div class="espaceTitle" id="contextualizing"></div>
+            <h1 class="text-Title light-orange">Contextualizando</h1>
+            <h3 class="text-Course">
+              Assista ao vídeo abaixo para uma introdução aos seus estudos
+            </h3>
+          </div>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/Ur_wIebGHiY"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="dicas">
+            <img
+              src="./img/global/icons/help.png"
+              id="help"
+              style="margin-right: 20px"
+            />
+            <p>
+              Como Lucas deve estruturar esses requisitos para utilizá-los no
+              desenvolvimento do jogo?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="requisitos-jogos">
+            Requisitos de sistemas de jogos digitais
+          </h1>
+
+          <p>
+            De acordo com o dicionário Aurélio, requisito é a condição básica e
+            necessária para se obter alguma coisa ou para alcançar determinado
+            propósito.
+          </p>
+
+          <p>
+            Durante o processo de desenvolvimento de um sistema de software é
+            necessário que alguns aspectos importantes estejam definidos de tal
+            forma que, o resultado almejado e também proposto, consiga ser
+            alcançado de maneira satisfatória.
+          </p>
+
+          <p>
+            Esses aspectos são inerentes a definição e elicitação de requisitos.
+            As etapas de elicitação de requisitos é muito importante para o
+            desenvolvimento de um projeto de software. Elas exigem uma descrição
+            passo a passo do que acontecerá com cada ação do usuário. Dessa
+            forma, o desenvolvimento será mais confiante e os resultados estarão
+            alinhados às expectativas do cliente. A falha dos requisitos básicos
+            do software pode interromper todo o processo e criar alguns
+            problemas, como erro de execução, solicitações desnecessárias, perda
+            de tempo no desenvolvimento.
+          </p>
+
+          <p>
+            A falha dos requisitos básicos do software pode interromper todo o
+            processo e criar os seguintes problemas: difícil de usar; erro de
+            execução; desorganizado; solicitações desnecessárias; falta de
+            funções importantes; perda de tempo de desenvolvimento. Toda essa
+            situação pode ser frustrante para clientes e desenvolvedores. Os
+            orçamentos podem precisar ser revisados, afetando os prazos de
+            entrega. Portanto, quanto mais coesa e clara a especificação dos
+            requisitos de software, melhor para o sucesso desse sistema.
+          </p>
+
+          <p>
+            Definir requisitos é a primeira fase no ciclo de desenvolvimento do
+            projeto.  A partir dela serão definidos vários serviços,
+            funcionalidades, processos, bem como possíveis restrições que o
+            sistema que o software terá.
+          </p>
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://youtube.com/embed/u_iwbpp8Vk8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="requisitos-hardware">
+            Requisitos de Hardware
+          </h1>
+
+          <p>
+            Você já tentou instalar um jogo no seu computador, mas não conseguiu
+            devido a incompatibilidade da sua máquina com as exigências mínimas
+            para rodar o jogo?
+          </p>
+
+          <p>
+            Pois bem esse exemplo retrata sobre os requisitos de hardware, que
+            referem-se às recomendações e características consideradas  mínimas
+            onde o dispositivo em que o sistema será implementado deve possuir
+            para que o mesmo funcione perfeitamente.
+          </p>
+
+          <p>
+            Os requisitos mínimos de hardware são as especificações técnicas
+            mínimas necessárias para que um jogo possa ser executado em um
+            dispositivo, porém com desempenho básico e gráficos em níveis mais
+            baixos. Já os requisitos recomendados indicam a configuração ideal
+            para uma experiência de jogo mais suave, com desempenho otimizado e
+            gráficos de alta qualidade.
+          </p>
+
+          <p>
+            Exemplificando, pode-se citar os requisitos mínimos de hardware que
+            um computador deverá ter para a instalação de um jogo digital como:
+            processador, placa-mãe, memória RAM, placa de vídeo, unidade de
+            armazenamento(HDD/SSD).
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue1/Imagem 1.jpg"
+            alt="Imagens ilustrativas de: Primeiramente uma placa de vídeo, em segundo, um processador, logo depois a memória RAM e por fim um SSD."
+          />
+
+          <p>
+            Os requisitos mínimos de hardware indicam a configuração mínima
+            necessária para rodar o jogo, com desempenho básico e gráficos em
+            níveis mais baixos, enquanto os requisitos recomendados indicam a
+            configuração ideal para uma experiência de jogo mais suave, com
+            desempenho otimizado e gráficos de alta qualidade.
+          </p>
+
+          <p>
+            É importante verificar os requisitos de hardware de um jogo antes de
+            comprá-lo ou instalá-lo em seu dispositivo, para garantir que seu
+            dispositivo atenda aos requisitos mínimos e recomendados. Caso
+            contrário, o jogo pode não funcionar adequadamente ou pode ter um
+            desempenho abaixo do esperado.
+          </p>
+
+          <p>
+            Se o dispositivo não atender aos requisitos mínimos, o jogo pode não
+            funcionar adequadamente ou pode ter um desempenho abaixo do
+            esperado, com problemas como lentidão, travamentos, ou até mesmo não
+            funcionar. Por outro lado, se o dispositivo atender apenas aos
+            requisitos mínimos, o desempenho do jogo pode ser comprometido, com
+            baixa qualidade gráfica e desempenho insatisfatório.
+          </p>
+
+          <p>
+            Para uma experiência de jogo ideal, é recomendável que o dispositivo
+            atenda aos requisitos recomendados, para aproveitar todas as
+            funcionalidades e recursos do jogo de forma adequada. Verificar os
+            requisitos de hardware é uma prática importante para garantir uma
+            experiência de jogo satisfatória.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--Subtitulo-->
+          <h1 class="text-subtitle1 dark-orange mx-3" id="requisitos-software">
+            Requisitos de Software
+          </h1>
+
+          <p>
+            De forma prática, requisitos de softwares é a etapa relacionada a
+            entender as necessidades do cliente e traduzi-las para o sistema, ou
+            seja, o software. Isso é extremamente importante para que a equipe
+            de desenvolvimento consiga chegar mais próximo do produto final
+            evitando, assim, retrabalho.
+          </p>
+
+          <p>
+            Requisitos referem-se à definição de atributos, funcionalidades,
+            características ou algo que o sistema deva restringir e tornar-se
+            útil para seu usuário final.
+          </p>
+
+          <p>
+            De forma mais sucinta, um requisito é algo que o sistema deve fazer
+            (funções) ou algo que o restrinja. Os requisitos de softwares são
+            classificados em requisitos não funcionais e requisitos funcionais.
+          </p>
+
+          <p>
+            Colher requisitos não é um processo simples e deve ser feito com
+            cautela.
+          </p>
+
+          <p>
+            Os passos a seguir mostram o que deve ser seguido para definir os
+            requisitos de software de um projeto.
+            <br />
+            <li class="mx-1">
+              <strong>Discutir o projeto com os interessados</strong>: Conhecer
+              clientes, usuários finais e até patrocinadores. Conversar com eles
+              sobre a expectativa do projeto. E deixar claro que, nem todos os
+              requisitos citados nas conversas, são viáveis para o projeto.
+            </li>
+            <li class="mx-1">
+              <strong>Definir o público</strong>: Saber exatamente quem vai usar
+              o software para que ele seja adaptado a essas pessoas.
+            </li>
+            <li class="mx-1">
+              <strong>Determinar o escopo do projeto</strong>: determinar e
+              definir quais elementos estarão presentes e envolvidos no projeto.
+            </li>
+            <li class="mx-1">
+              <strong>Manter as coisas simples</strong>: os requisitos devem ser
+              sempre objetivos, claros e diretos mesmo que o projeto seja
+              complexo.
+            </li>
+            <li class="mx-1">
+              <strong>Usar linguagem clara e precisa</strong>: ser o mais
+              preciso possível ajuda a evitar contratempos ao longo do projeto.
+              A equipe de desenvolvimento deve ter um bom entendimento de todos
+              os requisitos.
+            </li>
+            <li class="mx-1">
+              <strong>Acompanhar os requisitos</strong>: todos os requisitos
+              devem ser acompanhados de maneira cuidadosa para que atendam as
+              necessidades do cliente e usuário. Evita retrabalho, pois é
+              possível corrigir erros o mais rápido possível.
+            </li>
+            <li class="mx-1">
+              <strong>Documentar todas as alterações</strong>: à medida que o
+              projeto evolui os requisitos de software podem evoluir. Então
+              documentá-los é tão importante. É preciso que a equipe de
+              desenvolvimento tenha ciência que nem tudo sairá como planejado.
+            </li>
+            <li class="mx-1">
+              <strong
+                >Delimitar uma conexão entre cada requisito e a finalidade do
+                software</strong
+              >: é preciso e necessário que cada requisito esteja associado ao
+              principal objetivo do sistema que está em desenvolvimento. Isso
+              faz com que o cliente fique satisfeito com o produto final.
+            </li>
+            <li class="mx-1">
+              <strong>Criar documentação de especificação de requisitos</strong
+              >: o documento de requisitos é fundamental no desenvolvimento de
+              um sistema. Ele é elaborado para servir como resumo do projeto,
+              contendo pontos essenciais como: escopo do projeto, as definições
+              necessárias e personas. Além disso, os requisitos funcionais e não
+              funcionais.
+            </li>
+          </p>
+
+          <p>
+            Os requisitos de softwares são classificados em requisitos não
+            funcionais e requisitos funcionais.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--sub Subtitulo-->
+          <h1 class="text-subtitle2 blue mx-5" id="requisitos-funcionais">
+            Requisitos funcionais
+          </h1>
+
+          <p>
+            Os requisitos funcionais devem descrever de uma maneira clara e
+            explícita todas as funcionalidades que o sistema contém.
+            <br />
+            <li class="mx-1">
+              É necessário que os requisitos funcionais possuam atributos que o
+              identifiquem;
+            </li>
+            <li class="mx-1">
+              A completude é um atributo de um requisito funcional, que se
+              refere a definição de todos os serviços do sistema;
+            </li>
+            <li class="mx-1">
+              O atributo de consistência diz respeito a não contradição das
+              definições do sistema.
+            </li>
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue1/Imagem 2.png"
+            alt="Em síntese, os requisitos funcionais devem apresentar características funcionais do sistema, como por exemplo: criar conta, fazer login, ver perfil, trocar avatar, entre outros. Para que a equipe de desenvolvimento consiga assim atender as necessidades dos possíveis usuários do jogo digital, tais necessidades são feitas por meio de solicitação deles no sistema."
+          />
+
+          <p>
+            A seguir separamos alguns exemplos de requisitos funcionais no
+            desenvolvimento de um jogo digital:
+            <br />
+            <li class="mx-1">
+              Opção de escolha do idioma, disponível na tela de Opções(Options)
+              antes do jogo iniciar.
+            </li>
+            <li class="mx-1">
+              Permissão ao usuário escolher os níveis de dificuldade “fácil”,
+              “normal” e “difícil” através da tela de Opções antes de o jogo
+              iniciar.
+            </li>
+            <li class="mx-1">
+              Configurações do áudio utilizando recursos de teclas de “ativar”
+              ou “desativar” o som através da tela de Opções.
+            </li>
+          </p>
+
+          <!--Div de aviso com alerta-->
+          <div class="atencion my-3 mx-1">
+            <img src="./img/global/icons/atencion.png" />
+            <p>
+              Um requisito funcional não é uma funcionalidade, mas uma
+              necessidade funcional, ou seja, uma função que o software deve
+              atender. Nisso, uma funcionalidade pode requerer um ou mais
+              requisitos funcionais.
+            </p>
+          </div>
+
+          <!-- inicio questão 1 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question1-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 1</p>
+                <p>
+                  Marque a alternativa que contém APENAS requisitos funcionais
+                  do sistema de um jogo digital.
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q1-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-1"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-1">
+                      Política de reembolso, sistema de pontuação, usabilidade.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-2"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-2">
+                      Usabilidade, horários de trabalho, compatibilidade.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-3"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-3">
+                      Configuração de áudio, legendas, escolha de idiomas.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-4"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-4">
+                      Custo de produção, modos de jogo, níveis de dificuldade.
+                    </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question1)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 1 -->
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <!--sub Subtitulo-->
+          <h1 class="text-subtitle2 blue mx-5" id="requisitos-nao-funcionais">
+            Requisitos não funcionais
+          </h1>
+
+          <p>
+            Os requisitos não funcionais são aqueles que descrevem restrições ao
+            sistema e aspectos de qualidade, considerados importantes, e que não
+            estão relacionados à funcionalidade.
+          </p>
+
+          <p>
+            Em um processo de desenvolvimento de um jogo digital, os requisitos
+            não funcionais não irão descrever o que o sistema fará, mas sim,
+            como será feito. Eles estabelecem como o sistema de um jogo irá se
+            comportar em determinadas situações.
+          </p>
+
+          <p>
+            Um exemplo de um requisito não funcional de um jogo digital é sobre
+            qual plataforma o jogo será desenvolvido.
+          </p>
+
+          <p>
+            O requisito não funcional possui categorias imprescindíveis de
+            conhecê-las para haver uma melhor organização do projeto.
+          </p>
+
+          <p>
+            A seguir algumas categorias as quais os requisitos não funcionais
+            são classificados:
+          </p>
+
+          <div class="container-slides-image">
+            <img
+              src="./img/global/icons/back-button.svg"
+              onclick="imagemAnterior(interableImages1)"
+            />
+            <img
+              id="interable1"
+              class="slide-image"
+              src="./img/ue1/Slide 1.png"
+            />
+            <img
+              src="./img/global/icons/next-button.svg"
+              onclick="proximaImagem(interableImages1)"
+            />
+          </div>
+
+          <!--Div de aviso com lâmpada-->
+          <div class="atencion my-3 mx-3">
+            <img src="./img/global/icons/lightbulb.png" />
+            <p>
+              Algumas informações devem estar presentes na definição de um
+              requisito não funcional, mesmo não sendo uma regra obrigatória.
+              Pode-se considerar alguns itens que devem ser discriminados no
+              documento, tais como: nome ou descrição do requisito;
+              categoria;data de criação; pessoa que criou o documento; data da
+              última alteração; descrição detalhada.
+            </p>
+          </div>
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://youtube.com/embed/1f1EahyOcHk"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- inicio questão 2 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question2-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 2</p>
+                <p>Verdadeiro ou Falso</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>Avalie se a afirmação a seguir é verdadeira ou falsa.</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>
+                  Os requisitos não funcionais possuem categorias fundamentais
+                  para organização do projeto.
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q2-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-1"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-1"> Verdadeiro </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-2"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-2"> Falso </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question2)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 2 -->
+
+          <!-- inicio questão 3 -->
+          <div class="marginVertical">
+            <div id="q1" class="myt-3">
+              <div class="question-box-container" id="question4-box-correct">
+                <div class="question-description-container">
+                  <p>QUESTÃO 3</p>
+                  <p class="my-1">
+                    Escolha a opção CORRETA que valida a sentença a seguir:
+                  </p>
+                </div>
+
+                <div class="question-description-container q3-sq1">
+                  <p></p>
+                  <p style="line-height: 28px">
+                    A atividade de realizar testes de desempenho e usabilidade
+                    do sistema de jogos é uma técnica utilizada para identificar
+                    <span
+                      id="q3-sq1-block-1"
+                      class="block"
+                      style="cursor: pointer"
+                      onclick="unselectCheckFromCompleteTypeQuestion(this, question3.subQuestions[0])"
+                      >_________________________.
+                    </span>
+                  </p>
+                </div>
+
+                <div class="question-select-type-container q3-sq1-options">
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-saida"
+                      class="question-select-type-opt-label"
+                      >Requisitos de Software</label
+                    >
+                    <input
+                      id="sq1-saida"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
+                    />
+                  </div>
+
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-entrada"
+                      class="question-select-type-opt-label"
+                      >Requisitos de hardware</label
+                    >
+                    <input
+                      id="sq1-entrada"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
+                    />
+                  </div>
+
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-pinceis-virtuais"
+                      class="question-select-type-opt-label"
+                      >Requisitos não funcionais</label
+                    >
+                    <input
+                      id="sq1-pinceis-virtuais"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="question-box-correct-container feedback-container"
+                  id="q3-sq1-box-feedback"
+                >
+                  <div class="question-box-title">
+                    <p class="feedback-title">Muito bem!</p>
+
+                    <svg
+                      class="feedback-success-icon"
+                      style="position: absolute; right: 32px"
+                      width="19"
+                      height="14"
+                      viewBox="0 0 19 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                        fill="#436900"
+                      />
+                    </svg>
+
+                    <svg
+                      class="feedback-error-icon"
+                      style="position: absolute; right: 32px"
+                      width="19"
+                      height="19"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                        fill="#93000A"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                        fill="#93000A"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="question-box-text">
+                    <span class="feedback-message">
+                      O Windows é um sistema operacional, então não pode ser
+                      considerado um hardware.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="w-full flex justify-center">
+                  <div
+                    class="button-send-responses"
+                    onclick="handleSubmitCompleteTypeQuestion(question3)"
+                  >
+                    Enviar resposta
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- fim questão 3 -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section">
+        <div class="contentSection">
+          <div class="espaceTitle" id="Recapitulando"></div>
+          <h1 class="text-Title light-orange">Recapitulando</h1>
+
+          <p>
+            Nessa unidade você pode estudar sobre os tipos de requisitos
+            necessários para o desenvolvimento de jogos digitais, verificando
+            que tais requisitos são extremamente importantes. Pois, a partir do
+            conhecimento dos requisitos funcionais e não funcionais para iniciar
+            a fase de pré-produção de um jogo.
+          </p>
+
+          <p>
+            Compreender os tipos de requisitos permite uma definição clara e
+            abrangente do escopo do projeto de jogo, estabelecendo as bases para
+            a sua concepção e implementação de forma adequada. Portanto, o
+            conhecimento e a consideração cuidadosa dos requisitos funcionais e
+            não funcionais são passos essenciais na fase de pré-produção de um
+            jogo, contribuindo para o sucesso do projeto como um todo.
+          </p>
+
+          <div class="espaceTitle" id="SoluçãoDoProblematizando"></div>
+          <div class="flex justify-center align-center w-full">
+            <img src="./img/global/icons/greenCheck.png" />
+            <h3 class="px-3 green">Solução do problematizando</h3>
+          </div>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://youtube.com/embed/I1eOgztHKDQ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="containerFooter row">
+      <div class="row disable">
+        <!-- Button Removed -->
+      </div>
+      <button class="row empty-btn" type="button" onclick="carregarHTML(2)">
+        <p class="btnDesafio">Próximo Desafio</p>
+        <img class="arrowImg" src="img/global/icons/nextclass.png" />
+      </button>
+    </div>
+  </body>
+</html>

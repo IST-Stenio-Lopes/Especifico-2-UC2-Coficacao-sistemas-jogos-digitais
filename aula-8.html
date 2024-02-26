@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogos Digitais - SENAI EAD</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="SENAISP" />
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/aula8.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./scripts/select.js" defer></script>
+    <link rel="stylesheet" href="./css/global/question.css" />
+    <script src="./scripts/questions.js"></script>
+    <script src="./scripts/ue8.js"></script>
+    <script src="./scripts/index.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a onclick="openNav()"
+        ><img src="./img/global/icons/menu.png" class="logoJogos"
+      /></a>
+      <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+      <div></div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <button onclick="openList()" class="accordion">
+        <img src="./img/global/icons/summary.svg" style="margin-right: 10px" />
+        <p>Sumário</p>
+      </button>
+      <div class="panel" id="panelBtn">
+        <ul type="1">
+          <a class="listPanel" href="#contextualizing">
+            <li>1.0 Contextualizando</li>
+          </a>
+          <a class="listPanel" href="#validacao-publicacao">
+            <li>2.0 Validação da publicação</li>
+          </a>
+          <a class="listPanel" href="#documentacao">
+            <li>3.0 Documentação</li>
+          </a>
+        </ul>
+      </div>
+      <button onclick="changeTheme()" class="accordion">
+        <img
+          src="./img/global/icons/themeIcon.svg"
+          style="margin-right: 10px"
+          alt="Alterar tema"
+        />
+        <p>Alterar tema</p>
+      </button>
+      <button onclick="changeGray()" class="accordion">
+        <img
+          src="./img/global/icons/scaleGrayIcon.svg"
+          style="margin-right: 10px"
+          alt="Escala de Cinza"
+        />
+        <p>Escala de Cinza</p>
+      </button>
+      <button onclick="carregarFichaTecnica()" class="accordion">
+        <img
+          src="img\global\icons\lab_profile.svg"
+          style="margin-right: 10px"
+          alt="Ficha Técnica"
+        />
+        <p>Ficha Técnica</p>
+      </button>
+      <div class="accordion2">
+        <div style="display: flex">
+          <img
+            src="./img/global/icons/textIcon.svg"
+            style="margin-right: 10px"
+            alt="Tamanho da fonte"
+          />
+          <p>Tamanho da fonte</p>
+        </div>
+        <div>
+          <button
+            name="decrease-font"
+            id="decrease-font"
+            title="Diminuir fonte"
+          >
+            A -
+          </button>
+          <button
+            name="increase-font"
+            id="increase-font"
+            title="Aumentar fonte"
+          >
+            A +
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <header class="homePage">
+      <div class="header-title">
+        <div>
+          <h2 class="text-Course">Curso Técnico em</h2>
+          <h1 class="text-NameCourse">Jogos Digitais</h1>
+        </div>
+        <div id="containerBoxTitle">
+          <div class="box-unit-number">
+            <span> 8 </span>
+          </div>
+          <div class="titleHeader">Validação</div>
+        </div>
+        <div>
+          <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
+          <p class="text-DescriptUnit">
+            Aplicar os procedimentos de publicação de jogos digitais.
+          </p>
+        </div>
+        <div>
+          <p class="text-LetsLearn">Vamos iniciar os estudos!</p>
+          <a class="btnPlay" href="#contextualizing">Play</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <div>
+            <div class="espaceTitle" id="contextualizing"></div>
+            <h1 class="text-Title light-orange">Contextualizando</h1>
+            <h3 class="text-Course">
+              Assista ao vídeo abaixo para uma introdução aos seus estudos
+            </h3>
+          </div>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/pIasFV761Io"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                                gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="dicas">
+            <img
+              src="./img/global/icons/help.png"
+              id="help"
+              style="margin-right: 20px"
+            />
+            <p>
+              Quais os critérios recomendados para Isabela usar na documentação
+              de validação para publicação do seu jogo?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="validacao-publicacao">
+            Validação da publicação
+          </h1>
+
+          <p>
+            A etapa de validação da publicação de jogos digitais é uma parte
+            fundamental do processo de lançamento de um jogo no mercado. É nessa
+            etapa que o desenvolvedor realiza uma série de verificações e testes
+            para garantir que o jogo esteja pronto para ser publicado e
+            distribuído aos jogadores. Nesta unidade, vamos explorar os
+            principais aspectos envolvidos na etapa de validação da publicação
+            de jogos digitais.
+          </p>
+
+          <p>
+            Primeiramente é fundamental saber que a validação da publicação é
+            focada em verificar se o jogo está de acordo com todas as
+            regulamentações exigidas para publicação, isto é, o processo de
+            validação envolve a verificação de conformidade com as
+            regulamentações aplicáveis. Isso pode incluir regulamentações
+            relacionadas a classificação etária, direitos autorais, marcas
+            registradas, privacidade, acessibilidade, entre outros aspectos
+            legais.
+          </p>
+
+          <p>
+            Ela pode ser realizada por diferentes entidades, dependendo da
+            plataforma de distribuição do jogo. Por exemplo, em lojas de
+            aplicativos como a App Store da Apple ou a Google Play Store, a
+            validação é feita pelos respectivos operadores dessas lojas, que têm
+            suas próprias políticas e diretrizes a serem seguidas.
+          </p>
+
+          <p>
+            Em outras plataformas de distribuição, como Steam, Epic Games Store,
+            PlayStation Network ou Xbox Live, também existem processos de
+            validação e conformidade específicos.
+          </p>
+
+          <p>
+            Durante o processo de validação, o jogo é analisado em relação às
+            regras e regulamentos, como restrições de conteúdo explícito,
+            proteção de dados pessoais, direitos autorais de música e imagens,
+            uso adequado de marcas registradas, conformidade com as leis de jogo
+            de azar (em caso de jogos de cassino e apostas), entre outros
+            critérios.
+          </p>
+
+          <p>
+            É importante que os desenvolvedores de jogos estejam cientes das
+            regulamentações aplicáveis em sua região e sigam as diretrizes
+            específicas de cada plataforma de distribuição para garantir a
+            validação bem-sucedida de sua publicação. Isso ajuda a garantir que
+            o jogo seja lançado legalmente, evitar problemas legais futuros e
+            assegura que o jogo esteja de acordo com as políticas e diretrizes
+            da plataforma de distribuição escolhida.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue8/Imagem 1.jpg"
+            alt="Personagem masculino usando um carimbo para validar um documento."
+          />
+
+          <p>
+            Em segundo lugar recomenda-se que a validação da publicação também
+            envolva uma série de processos técnicos que visam garantir a
+            qualidade e o funcionamento adequado do jogo antes do seu
+            lançamento. Esses processos são como uma revisão final, ou seja:
+            <br />
+            <li class="mx-1">
+              alguns testes que já foram realizados durante a produção do jogo,
+              são refeitos de forma prática para identificar e corrigir
+              possíveis bugs;
+            </li>
+            <li class="mx-1">verificação de erros de programação;</li>
+            <li class="mx-1">
+              análise se há falhas de desempenho e outras questões que possam
+              atrapalhar ou impossibilitar que o jogo seja jogado.
+            </li>
+          </p>
+
+          <p>
+            Assim, a publicação pode ser realizada com muito mais propriedade, o
+            que aumenta as chances de sucesso do jogo.
+          </p>
+
+          <!--Div de aviso com alerta-->
+          <div class="atencion my-3 mx-1">
+            <img src="./img/global/icons/atencion.png" />
+            <p>
+              É importante salientar que mesmo havendo outros tipos de análise
+              durante o processo de validação da publicação, o principal é
+              verificar se o jogo está de acordo com todas as regulamentações e
+              leis, pois as outras checagens já devem ter sido feitas durante o
+              desenvolvimento do jogo, e agora, é feita apenas uma revisão para
+              garantir que não passou nada inapropriado.
+            </p>
+          </div>
+
+          <p>
+            Um dos primeiros passos nessa segunda parte da validação é a
+            realização de testes de qualidade. Esses testes são conduzidos para
+            identificar e corrigir possíveis problemas no jogo, como bugs,
+            glitches, problemas de compatibilidade com diferentes plataformas
+            (como PC, consoles ou dispositivos móveis) e outros erros que possam
+            afetar a jogabilidade ou o funcionamento do jogo.
+          </p>
+
+          <p>
+            Além disso, também é importante realizar testes de desempenho para
+            garantir que o jogo funcione de forma adequada em diferentes
+            configurações de hardware e software. Esses testes podem incluir a
+            verificação do desempenho do jogo em diferentes dispositivos, como
+            PCs com diferentes configurações, consoles de diferentes gerações e
+            dispositivos móveis com diferentes capacidades de processamento e
+            memória.
+          </p>
+
+          <p>
+            É fundamental verificar se o jogo é compatível com o hardware e o
+            software dos dispositivos em que será lançado. Os desenvolvedores
+            precisam testar o jogo em diferentes plataformas, como PC, consoles,
+            smartphones ou tablets, para garantir que ele funcione corretamente
+            em cada uma delas. Isso inclui verificar se o jogo é executado sem
+            problemas de desempenho, se é compatível com diferentes sistemas
+            operacionais e versões, e se suporta as especificações técnicas dos
+            dispositivos em que será lançado.
+          </p>
+
+          <p>
+            Além disso, é essencial também realizar testes de localização e
+            tradução para garantir que o jogo seja compreensível e adequado para
+            diferentes regiões e mercados internacionais. Isso inclui a
+            verificação da qualidade da tradução do texto do jogo, a adaptação
+            de elementos culturais e a garantia de que o jogo funcione
+            corretamente em diferentes idiomas e regiões.
+          </p>
+
+          <p>
+            Por fim, é importante realizar testes de usabilidade e experiência
+            do jogador para garantir que o jogo seja fácil de entender, jogar e
+            desfrutar. Isso pode incluir a avaliação do design de interface do
+            usuário, a verificação da acessibilidade para jogadores com
+            deficiências visuais, auditivas ou motoras, a análise do fluxo de
+            jogo e a identificação de possíveis problemas de usabilidade que
+            possam afetar a experiência do jogador de forma negativa.
+          </p>
+
+          <p>
+            Em resumo, a validação da publicação de um jogo digital também
+            envolve uma série de testes técnicos, incluindo testes de qualidade,
+            desempenho, conformidade com as diretrizes das plataformas de
+            distribuição, localização, tradução, usabilidade e experiência do
+            jogador, para garantir a qualidade e o funcionamento adequado do
+            jogo antes do seu lançamento. Esses processos são essenciais para
+            garantir que os jogos sejam lançados com a melhor qualidade possível
+            e proporcionem uma experiência positiva aos jogadores.
+          </p>
+
+          <!-- inicio questão 1 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question1-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 1</p>
+                <p>
+                  Qual é o principal objetivo da validação de publicação de um
+                  jogo digital?
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q1-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-1"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-1">
+                      Avaliar a jogabilidade, mecânicas de jogo, interface do
+                      usuário e experiência do jogador.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-2"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-2">
+                      Verificar se o jogo está em conformidade com as leis e
+                      regulamentos específicos para publicação.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-3"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-3">
+                      Revisar o jogo para rastrear erros narrativos e conteúdos
+                      inapropriados.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-4"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-4">
+                      Checar a quantidade de jogadores que estão esperando pelo
+                      lançamento.
+                    </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question1)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 1 -->
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="documentacao">
+            Documentação
+          </h1>
+
+          <p>
+            Depois de validar a publicação de um jogo digital, é importante
+            elaborar um documento de publicação detalhado para garantir que
+            todas as informações necessárias sejam comunicadas diretamente aos
+            jogadores, à comunidade e aos demais interessados.
+          </p>
+
+          <p>
+            O documento de publicação pode conter várias informações
+            importantes, como a data de lançamento específica do jogo, as
+            plataformas suportadas em que o jogo estará disponível (como PC,
+            consoles ou dispositivos móveis), uma descrição detalhada do jogo,
+            incluindo sua história e mecânicas de jogabilidade, requisitos de
+            sistema necessários para rodar o jogo, informações de preço, como o
+            custo do jogo e possíveis pacotes de conteúdo adicional, edições
+            especiais ou itens de jogo que possam ser adquiridos separadamente.
+          </p>
+
+          <p>
+            Também é importante incluir informações sobre idiomas e regiões em
+            que o jogo estará disponível, atualizações futuras planejadas,
+            suporte ao jogador, como informações de contato para problemas
+            técnicos ou dúvidas, além de uma clara descrição da política de
+            privacidade e termos de uso do jogo, de acordo com as
+            regulamentações de privacidade e proteção de dados. Se for
+            relevante, também é possível incluir informações de contato para a
+            imprensa ou parceiros de mídia interessados em divulgação ou
+            parcerias.
+          </p>
+
+          <p>
+            Um documento de publicação detalhado é muito importante para
+            garantir um lançamento bem-sucedido do jogo, fornecendo informações
+            abrangentes aos jogadores, à comunidade e a outros interessados, e
+            estabelecendo uma base sólida para a divulgação e promoção do jogo.
+          </p>
+
+          <p>
+            Para que conheça melhor todo esse processo, acompanhe a explicação
+            de cada passo para elaborar um documento de publicação:
+            <br />
+            <li class="mx-1">
+              <strong>Título e Descrição do jogo:</strong> Pra começar inclua o
+              título completo do jogo e uma descrição detalhada do jogo,
+              incluindo informações sobre a história, mecânicas de jogabilidade,
+              personagens, modos de jogo, recursos especiais e qualquer conteúdo
+              adicional que tenha sido lançado ou esteja planejado para o
+              futuro. Isso permite que os jogadores tenham uma compreensão mais
+              profunda do jogo e do que podem esperar ao jogá-lo.
+            </li>
+            <li class="mx-1">
+              <strong>Plataformas e requisitos do sistema:</strong> Liste todas
+              as plataformas em que o jogo será lançado, como PC, consoles,
+              dispositivos móveis etc., e forneça os requisitos mínimos e
+              recomendados do sistema para garantir que os jogadores saibam se
+              seus dispositivos são compatíveis com o jogo.
+            </li>
+            <li class="mx-1">
+              <strong>Conteúdos do jogo:</strong> Liste os principais conteúdos
+              do jogo, como multiplayer, modo de criação de conteúdo, suporte a
+              mods, DLCs planejados, atualizações futuras e quaisquer outros
+              recursos relevantes. Isso ajuda a destacar os aspectos únicos do
+              jogo e a informar os jogadores sobre o que podem esperar em termos
+              de atualizações e conteúdo adicional.
+            </li>
+            <li class="mx-1">
+              <strong>Idiomas suportados:</strong> Liste os idiomas nos quais o
+              jogo estará disponível, incluindo os idiomas da interface do
+              usuário, legendas e dublagem, se aplicável. Isso é importante para
+              informar os jogadores sobre as opções de idioma disponíveis no
+              jogo.
+            </li>
+            <li class="mx-1">
+              <strong>Classificação etária:</strong> É uma avaliação que
+              determina a faixa etária adequada para a qual um jogo é
+              recomendado. Ela é geralmente atribuída por órgãos de
+              classificação, como o sistema PEGI na Europa ou a ESRB na América
+              do Norte. Ela leva em consideração o conteúdo do jogo, como
+              violência, linguagem, temas adultos e interações online, para
+              ajudar os consumidores a tomar decisões informadas sobre a
+              adequação do jogo para diferentes faixas etárias.
+            </li>
+            <li class="mx-1">
+              <strong>Data de lançamento:</strong> Informe a data de lançamento
+              oficial do jogo, caso já esteja definida. Isso permite que os
+              jogadores saibam quando poderão jogar o jogo e ajuda a criar
+              expectativa em torno do lançamento.
+            </li>
+            <li class="mx-1">
+              <strong>Políticas de privacidade e termos de uso:</strong> Inclua
+              informações sobre as políticas de privacidade e os termos de uso
+              do jogo, que explicam como os dados dos jogadores serão coletados,
+              usados e protegidos, bem como as regras e regulamentos que os
+              jogadores devem cumprir ao jogar o jogo.
+            </li>
+            <li class="mx-1">
+              <strong>Informações de contato e suporte:</strong> Forneça
+              informações de contato, como um endereço de e-mail, site ou redes
+              sociais, para que os jogadores possam entrar em contato em caso de
+              dúvidas, problemas técnicos ou suporte em geral. É importante
+              garantir que os jogadores tenham uma maneira fácil de entrar em
+              contato com a equipe de suporte do jogo.
+            </li>
+          </p>
+
+          <p>
+            O exemplo a seguir mostra um modelo de exemplo para um documento de
+            publicação de um jogo.
+          </p>
+
+          <br />
+
+          <table class="greenTable">
+            <thead>
+              <tr>
+                <th class="darkGreenTh8">
+                  Exemplo de Documento de Publicação de Jogos Digitais
+                </th>
+              </tr>
+              <tr>
+                <th class="greenTh8">Título do Jogo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="greenTd">Morphball</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="greenTable">
+            <thead>
+              <tr>
+                <th class="greenTh8">Descrição do Jogo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="greenTd">
+                  Morphball é um emocionante jogo de corrida infinita ambientado
+                  em um universo de fantasia. O objetivo do jogo é coletar itens
+                  especiais e riquezas pelo caminho, enquanto adapta a
+                  composição física da esfera para vencer obstáculos e desafios
+                  únicos. No entanto, se a bola parar, será fim do jogo, e o
+                  jogador verá a pontuação que conquistou.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="greenTable">
+            <thead>
+              <tr>
+                <th class="greenTh8">Plataformas e Requisitos de Sistema</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="greenTd">
+                  <strong>Plataformas:</strong> PC, PlayStation 4, Xbox One,
+                  Nintendo Switch e dispositivos móveis. (exemplo) <br /><br />
+                  <strong>Requisitos de Sistema Mínimos (PC):</strong><br />
+                  Sistema Operacional: …<br />
+                  Processador: …<br />
+                  Memória RAM: …<br />
+                  Placa de Vídeo: …<br />
+                  Espaço em Disco: …
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="greenTable">
+            <thead>
+              <tr>
+                <th class="greenTh8">Conteúdos do jogo:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="greenTd">
+                  <strong>Modos de Jogo:</strong> Modo Único (exemplos Modo
+                  Campanha, Modo Desafio e Modo Contrarrelógio).<br />
+                  <strong>Mecânicas de Jogabilidade:</strong> Controle da bola é
+                  feito por meio de um comando para pular e outro para mudar de
+                  forma. Existe a coleta de itens, adaptação da composição
+                  física da esfera para superar obstáculos e desafios.<br />
+                  <strong>Itens Especiais:</strong> Não há. (São Poções mágicas,
+                  power-ups, moedas de ouro e outros itens especiais que
+                  fornecem benefícios ao jogador).<br />
+                  <strong>Riquezas:</strong> Coleta de gemas. (São tesouros e
+                  outros tesouros que podem ser usados desbloquear conteúdo
+                  adicional).<br />
+                  <strong>Obstáculos:</strong> Plataformas móveis, armadilhas,
+                  inimigos e outros obstáculos que o jogador deve superar para
+                  progredir no jogo.<br />
+                  <strong>Som:</strong> Trilha sonora original e efeitos sonoros
+                  imersivos que contribuem para a atmosfera do jogo.<br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="greenTable">
+            <thead>
+              <tr>
+                <th class="greenTh8">Idiomas suportados:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="greenTd">
+                  <strong>Áudio:</strong> Inglês, Francês, Alemão, Espanhol e
+                  Japonês.<br />
+                  <strong>Legendas:</strong> Inglês, Francês, Alemão, Espanhol,
+                  Japonês, Chinês Simplificado e Coreano.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="greenTable">
+            <thead>
+              <tr>
+                <th class="greenTh8">Classificação Etária:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="greenTd">Livre para todas as idades.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="greenTable">
+            <thead>
+              <tr>
+                <th class="greenTh8">Data de Lançamento:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="greenTd">
+                  A data de lançamento oficial será divulgada em breve, sujeita
+                  a confirmação.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="greenTable">
+            <thead>
+              <tr>
+                <th class="greenTh8">
+                  Políticas de Privacidade e Termos de Uso:
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="greenTd">“Descrição das políticas adotadas”</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="greenTable">
+            <thead>
+              <tr>
+                <th class="greenTh8">Termos de Uso:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="greenTd">
+                  <strong
+                    >Ao jogar Esfera Mágica Acelerada, o jogador concorda em
+                    cumprir com os seguintes termos:</strong
+                  >
+                  “Lista com os termos…”<br />
+                  <br />
+                  <strong>Contato e suporte:</strong> Acesse nosso site para nos
+                  enviar feedbacks ou reportar bugs em: www.morphball.com ou nas
+                  redes sociais com @morphball. (endereços escritos são apenas
+                  para servir de exemplos)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/AS9Fk-DAVSw"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                                          gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- inicio questão 2 -->
+          <div class="marginVertical">
+            <div id="q1" class="myt-3">
+              <div class="question-box-container" id="question4-box-correct">
+                <div class="question-description-container">
+                  <p>QUESTÃO 2</p>
+                  <p class="my-1">
+                    Escolha a opção CORRETA que valida a sentença a seguir:
+                  </p>
+                </div>
+
+                <div class="question-description-container q2-sq1">
+                  <p></p>
+                  <p style="line-height: 28px">
+                    O desenvolvedor deve garantir que na etapa de
+                    <span
+                      id="q2-sq1-block-1"
+                      class="block"
+                      style="cursor: pointer"
+                      onclick="unselectCheckFromCompleteTypeQuestion(this, question2.subQuestions[0])"
+                      >___________________
+                    </span>
+                    , o jogador tenha facilidade em abrir e executar o jogo sem
+                    erros depois de instalado.
+                  </p>
+                </div>
+
+                <div class="question-select-type-container q2-sq1-options">
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-saida"
+                      class="question-select-type-opt-label"
+                      >A validação</label
+                    >
+                    <input
+                      id="sq1-saida"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question2.subQuestions[0])"
+                    />
+                  </div>
+
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-entrada"
+                      class="question-select-type-opt-label"
+                      >A documentação</label
+                    >
+                    <input
+                      id="sq1-entrada"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question2.subQuestions[0])"
+                    />
+                  </div>
+
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-pinceis-virtuais"
+                      class="question-select-type-opt-label"
+                      >A análise de plataformas</label
+                    >
+                    <input
+                      id="sq1-pinceis-virtuais"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question2.subQuestions[0])"
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="question-box-correct-container feedback-container"
+                  id="q2-sq1-box-feedback"
+                >
+                  <div class="question-box-title">
+                    <p class="feedback-title">Muito bem!</p>
+
+                    <svg
+                      class="feedback-success-icon"
+                      style="position: absolute; right: 32px"
+                      width="19"
+                      height="14"
+                      viewBox="0 0 19 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                        fill="#436900"
+                      />
+                    </svg>
+
+                    <svg
+                      class="feedback-error-icon"
+                      style="position: absolute; right: 32px"
+                      width="19"
+                      height="19"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                        fill="#93000A"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                        fill="#93000A"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="question-box-text">
+                    <span class="feedback-message">
+                      O Windows é um sistema operacional, então não pode ser
+                      considerado um hardware.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="w-full flex justify-center">
+                  <div
+                    class="button-send-responses"
+                    onclick="handleSubmitCompleteTypeQuestion(question2)"
+                  >
+                    Enviar resposta
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- fim questão 2 -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section">
+        <div class="contentSection">
+          <div class="espaceTitle" id="Recapitulando"></div>
+          <h1 class="text-Title light-orange">Recapitulando</h1>
+
+          <p>
+            Nesta unidade, você pôde estudar sobre a etapa de validação da
+            publicação de jogos digitais, que é fundamental antes do lançamento
+            no mercado. Em resumo, a validação da publicação de jogos digitais é
+            uma etapa essencial no processo de lançamento de um jogo no mercado.
+          </p>
+
+          <p>
+            É importante que os desenvolvedores estejam familiarizados com as
+            regulamentações aplicáveis e sigam as diretrizes de cada plataforma
+            de distribuição para garantir uma validação bem-sucedida. Além
+            disso, a elaboração de um documento de publicação detalhado é
+            fundamental para comunicar informações importantes aos jogadores e à
+            comunidade, como as plataformas suportadas, descrição do jogo,
+            requisitos de sistema, preço, suporte ao jogador, política de
+            privacidade e termos de uso.
+          </p>
+
+          <p>
+            Ao cumprir esses passos, os desenvolvedores podem garantir que seu
+            jogo seja lançado legalmente e esteja em conformidade com as
+            políticas e diretrizes das plataformas de distribuição escolhidas,
+            contribuindo para o sucesso do lançamento e a satisfação dos
+            jogadores.
+          </p>
+
+          <div class="espaceTitle" id="SoluçãoDoProblematizando"></div>
+          <div class="flex justify-center align-center w-full">
+            <img src="./img/global/icons/greenCheck.png" />
+            <h3 class="px-3 green">Solução do problematizando</h3>
+          </div>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/EzMHfQGb2oQ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                                                    gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="containerFooter row">
+      <button class="row empty-btn" type="button" onclick="carregarHTML(7)">
+        <img class="arrowImg" src="img/global/icons/previusclass.png" />
+        <p class="btnDesafio">Desafio anterior</p>
+      </button>
+      <button class="row empty-btn" type="button" onclick="carregarHTML(9)">
+        <p class="btnDesafio">Próximo Desafio</p>
+        <img class="arrowImg" src="img/global/icons/nextclass.png" />
+      </button>
+    </div>
+  </body>
+</html>

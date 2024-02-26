@@ -1,0 +1,36 @@
+.container-slides-image {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-image {
+  max-height: 100%;
+  max-width: calc(100% - 120px);
+}
+
+.container-slides-image :first-child {
+  position: absolute;
+  cursor: pointer;
+  left: -56px;
+}
+
+.container-slides-image :last-child {
+  position: absolute;
+  cursor: pointer;
+  right: -56px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-slides-image :first-child {
+    left: 0;
+  }
+  .container-slides-image :last-child {
+    right: 0;
+  }
+}

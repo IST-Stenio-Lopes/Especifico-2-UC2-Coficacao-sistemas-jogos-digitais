@@ -1,0 +1,30 @@
+.ficha {
+  width: 100%;
+  max-width: 700px;
+}
+
+.content-ficha {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 136px 20% 30px 20%;
+}
+
+.text-department {
+  font-size: 1em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.text-name {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.text-profession {
+  font-size: 0.875em;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
