@@ -96,7 +96,7 @@ sub {
 }
 
 .homePage {
-  background-image: url("../img/global/backgrounds/capa.png");
+  background-image: url("../img/global/backgrounds/capa.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -223,7 +223,7 @@ p {
 }
 .text-Title {
   font-weight: bold;
-  margin: 10px 0px;
+  margin: 2.5rem 0px 1.12rem;
   font-size: 2em;
 }
 .text-subtitle1 {
@@ -234,7 +234,7 @@ p {
 .text-subtitle2 {
   font-weight: bold;
   margin: 12px 0px;
-  font-size: 1.3em;
+  font-size: 1.25em;
 }
 .text-subtitle3 {
   font-weight: bold;

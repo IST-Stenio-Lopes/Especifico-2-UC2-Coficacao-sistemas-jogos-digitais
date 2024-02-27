@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/aula1.css" />
+    <link rel="stylesheet" href="./css/global/table.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <script type="text/javascript" src="./scripts/jquery.js"></script>
     <script src="./scripts/index.js"></script>
@@ -48,25 +49,29 @@
           <a class="listPanel" href="#contextualizing">
             <li>1.0 Contextualizando</li>
           </a>
-          <a class="listPanel" href="#requisitos-jogos">
-            <li>2.0 Requisitos de sistemas de jogos digitais</li>
+          <a class="listPanel" href="#information-security">
+            <li>2.0 Segurança da Informação</li>
+          </a>
+          <a class="listPanel" href="#data-protection">
+            <li>3.0 Proteção de dados pessoais</li>
+          </a>
+          <a class="listPanel" href="#user-profiles">
+            <li>4.0 Perfis de usuários</li>
+          </a>
+          <a class="listPanel" href="#cryptography">
+            <li>5.0 Criptografia</li>
           </a>
           <ul type="1" style="margin-left: 20px">
-            <a class="listPanel" href="#requisitos-hardware">
-              <li>2.1 Requisitos de hardware</li>
+            <a class="listPanel" href="#caesar-cipher">
+              <li>5.1 Cifra de César</li>
             </a>
-            <a class="listPanel" href="#requisitos-software">
-              <li>2.2 Requisitos de software</li>
+            <a class="listPanel" href="#security-policies">
+              <li>5.2 Políticas de segurança da informação</li>
             </a>
-            <ul type="1" style="margin-left: 40px">
-              <a class="listPanel" href="#requisitos-funcionais">
-                <li>2.2.1 Requisitos funcionais</li>
-              </a>
-              <a class="listPanel" href="#requisitos-nao-funcionais">
-                <li>2.2.2 Requisitos não funcionais</li>
-              </a>
-            </ul>
           </ul>
+          <a class="listPanel" href="#recap">
+            <li>6.0 Recapitulando</li>
+          </a>
         </ul>
       </div>
       <button onclick="changeTheme()" class="accordion">
@@ -131,13 +136,12 @@
           <div class="box-unit-number">
             <span> 1 </span>
           </div>
-          <div class="titleHeader">Requisitos</div>
+          <div class="titleHeader">Segurança da Informação</div>
         </div>
         <div>
           <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
           <p class="text-DescriptUnit">
-            Definir os requisitos funcionais e não funcionais do sistema de
-            jogos demandados pela aplicação.
+            Aplicar técnicas de Segurança da Informação.
           </p>
         </div>
         <div>
@@ -147,12 +151,14 @@
       </div>
     </header>
 
+    <!--Section-->
     <section class="container course">
       <div class="section">
         <div class="contentSection">
           <div>
-            <div class="espaceTitle" id="contextualizing"></div>
-            <h1 class="text-Title light-orange">Contextualizando</h1>
+            <h1 class="text-Title light-orange" id="contextualizing">
+              Contextualizando
+            </h1>
             <h3 class="text-Course">
               Assista ao vídeo abaixo para uma introdução aos seus estudos
             </h3>
@@ -162,7 +168,7 @@
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
-                src="https://www.youtube.com/embed/Ur_wIebGHiY"
+                src=""
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -179,68 +185,56 @@
               style="margin-right: 20px"
             />
             <p>
-              Como Lucas deve estruturar esses requisitos para utilizá-los no
-              desenvolvimento do jogo?
+              Por que é importante investir no conhecimento e na aplicação de
+              estratégias de segurança da informação?
             </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!--Section-->
     <section class="container course">
       <div class="section">
         <div class="contentSection">
-          <h1 class="text-Title light-orange" id="requisitos-jogos">
-            Requisitos de sistemas de jogos digitais
+          <h1 class="text-Title light-orange" id="information-security">
+            Segurança da Informação
           </h1>
 
           <p>
-            De acordo com o dicionário Aurélio, requisito é a condição básica e
-            necessária para se obter alguma coisa ou para alcançar determinado
-            propósito.
+            A segurança da informação enfrenta uma série de desafios complexos e
+            em constante evolução. Entre os principais, destacam-se: a ameaça
+            crescente de ciberataques, que vão desde ataques de phishing e
+            malware até invasões avançadas; a proteção de dados sensíveis e
+            privacidade em um mundo cada vez mais interconectado e com uso
+            intensivo de dados; a necessidade de equilibrar a conveniência do
+            acesso à informação com medidas robustas de autenticação e controle
+            de acesso; a falta de conscientização e treinamento adequado dos
+            usuários, que frequentemente são o elo mais fraco da cadeia de
+            segurança; e a garantia de conformidade com regulamentações e leis
+            relevantes, à medida que as normas e exigências governamentais se
+            tornam mais rigorosas.
           </p>
 
           <p>
-            Durante o processo de desenvolvimento de um sistema de software é
-            necessário que alguns aspectos importantes estejam definidos de tal
-            forma que, o resultado almejado e também proposto, consiga ser
-            alcançado de maneira satisfatória.
+            Abordar esses desafios requer abordagens integradas, tecnologias
+            avançadas e uma cultura de segurança proativa para proteger ativos
+            digitais e salvaguardar a confiança dos usuários e organizações em
+            meio a um ambiente digital em constante mudança. 
           </p>
 
           <p>
-            Esses aspectos são inerentes a definição e elicitação de requisitos.
-            As etapas de elicitação de requisitos é muito importante para o
-            desenvolvimento de um projeto de software. Elas exigem uma descrição
-            passo a passo do que acontecerá com cada ação do usuário. Dessa
-            forma, o desenvolvimento será mais confiante e os resultados estarão
-            alinhados às expectativas do cliente. A falha dos requisitos básicos
-            do software pode interromper todo o processo e criar alguns
-            problemas, como erro de execução, solicitações desnecessárias, perda
-            de tempo no desenvolvimento.
+            Imagine você guardando todos os seus segredos em um diário, e para
+            protegê-los, você coloca uma fechadura nesse diário, esconde ele em
+            um lugar seguro, e apenas algumas pessoas de confiança têm a chave
+            para abrir. Segurança da informação é mais ou menos isso, mas
+            aplicada aos dados e sistemas de uma organização.
           </p>
 
-          <p>
-            A falha dos requisitos básicos do software pode interromper todo o
-            processo e criar os seguintes problemas: difícil de usar; erro de
-            execução; desorganizado; solicitações desnecessárias; falta de
-            funções importantes; perda de tempo de desenvolvimento. Toda essa
-            situação pode ser frustrante para clientes e desenvolvedores. Os
-            orçamentos podem precisar ser revisados, afetando os prazos de
-            entrega. Portanto, quanto mais coesa e clara a especificação dos
-            requisitos de software, melhor para o sucesso desse sistema.
-          </p>
-
-          <p>
-            Definir requisitos é a primeira fase no ciclo de desenvolvimento do
-            projeto.  A partir dela serão definidos vários serviços,
-            funcionalidades, processos, bem como possíveis restrições que o
-            sistema que o software terá.
-          </p>
-          <!--TODO - Vídeo-->
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
-                src="https://youtube.com/embed/u_iwbpp8Vk8"
+                src="https://youtube.com/embed/xpAWPSfN8ko"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -257,245 +251,224 @@
     <section class="container course">
       <div class="section">
         <div class="contentSection">
-          <!--Subtitulo-->
-          <h1 class="text-subtitle1 dark-orange mx-3" id="requisitos-hardware">
-            Requisitos de Hardware
+          <h1 class="text-Title light-orange" id="data-protection">
+            Proteção de dados pessoais
           </h1>
 
           <p>
-            Você já tentou instalar um jogo no seu computador, mas não conseguiu
-            devido a incompatibilidade da sua máquina com as exigências mínimas
-            para rodar o jogo?
+            No cenário tecnológico dos jogos digitais, a proteção de dados
+            pessoais assume papel crucial. Por isso, enquanto profissionais, é
+            de suma importância abordar estratégias de proteção e criar
+            experiências inovadoras mantendo a integridade e privacidade dos
+            dados dos usuários. Um mergulho essencial para entender e aplicar
+            medidas de proteção no desenvolvimento de jogos.
           </p>
 
           <p>
-            Pois bem esse exemplo retrata sobre os requisitos de hardware, que
-            referem-se às recomendações e características consideradas  mínimas
-            onde o dispositivo em que o sistema será implementado deve possuir
-            para que o mesmo funcione perfeitamente.
-          </p>
-
-          <p>
-            Os requisitos mínimos de hardware são as especificações técnicas
-            mínimas necessárias para que um jogo possa ser executado em um
-            dispositivo, porém com desempenho básico e gráficos em níveis mais
-            baixos. Já os requisitos recomendados indicam a configuração ideal
-            para uma experiência de jogo mais suave, com desempenho otimizado e
-            gráficos de alta qualidade.
-          </p>
-
-          <p>
-            Exemplificando, pode-se citar os requisitos mínimos de hardware que
-            um computador deverá ter para a instalação de um jogo digital como:
-            processador, placa-mãe, memória RAM, placa de vídeo, unidade de
-            armazenamento(HDD/SSD).
+            Observe a imagem a seguir que ilustra melhor situações desse tipo.
           </p>
 
           <img
-            class="w-75 m-auto"
-            src="./img/ue1/Imagem 1.jpg"
-            alt="Imagens ilustrativas de: Primeiramente uma placa de vídeo, em segundo, um processador, logo depois a memória RAM e por fim um SSD."
+            class="w-50 m-auto"
+            src="./img/ue1/imagem1.jpg"
+            alt="A figura apresenta uma tirinha cômica feita pelo vidadesuporte.com.br. A imagem ilustra alguém que sempre clica em links que oferecem vantagens duvidosas, um péssimo hábito que compromete a segurança da informação. Diálogo – No quadro 1, um homem está ao telefone, e a pessoa que está do outro lado da linha fala “Eu sei que já te dei muito trabalho. Como daquela vez em que um vírus se espalhou pela rede depois que eu abri o arquivo foto.jpg.exe”. No quadro 2, a pessoa do outro lado da linha contínua “E daquela outra quando as suas férias foram interrompidas porque informei o número do meu cartão de crédito ao príncipe da Nigéria”. No quadro 3, a pessoa do outro lado da linha fala “Mas, para te compensar por tudo, vou te dar um presente: um playstation”, o homem pergunta admirado “você comprou um playstation pra mim?”. No quadro 4, a pessoa do outro lado da linha diz finalmente “não, ganhei clicando no link de uma promoção da microsoft que recebi pelo whatsapp”."
           />
 
           <p>
-            Os requisitos mínimos de hardware indicam a configuração mínima
-            necessária para rodar o jogo, com desempenho básico e gráficos em
-            níveis mais baixos, enquanto os requisitos recomendados indicam a
-            configuração ideal para uma experiência de jogo mais suave, com
-            desempenho otimizado e gráficos de alta qualidade.
+            Imagine que seus dados pessoais são como um tesouro que você tem.
+            Esse tesouro pode ser tudo, desde seu nome, endereço, até fotos e
+            mensagens. Agora, não seria legal se alguém pegasse esse tesouro sem
+            sua permissão, certo? E é aí que entra a proteção de dados pessoais.
           </p>
 
           <p>
-            É importante verificar os requisitos de hardware de um jogo antes de
-            comprá-lo ou instalá-lo em seu dispositivo, para garantir que seu
-            dispositivo atenda aos requisitos mínimos e recomendados. Caso
-            contrário, o jogo pode não funcionar adequadamente ou pode ter um
-            desempenho abaixo do esperado.
+            Então, empresas e governos estão trabalhando duro para proteger seu
+            tesouro. Eles estão construindo fortalezas mais fortes, criando
+            mapas mais seguros e treinando marinheiros para serem mais espertos.
+            Tudo isso para garantir que seu tesouro - seus dados pessoais -
+            esteja sempre seguro. Alguns pontos que você precisa estar atento: 
           </p>
 
           <p>
-            Se o dispositivo não atender aos requisitos mínimos, o jogo pode não
-            funcionar adequadamente ou pode ter um desempenho abaixo do
-            esperado, com problemas como lentidão, travamentos, ou até mesmo não
-            funcionar. Por outro lado, se o dispositivo atender apenas aos
-            requisitos mínimos, o desempenho do jogo pode ser comprometido, com
-            baixa qualidade gráfica e desempenho insatisfatório.
+            <b>Roubo de contas:</b> Usuários de sistemas e jogos podem ser
+            vítimas de roubo de contas, em que invasores obtêm acesso não
+            autorizado às contas, muitas vezes por meio de phishing, keyloggers
+            ou ataques de força bruta. 
           </p>
 
           <p>
-            Para uma experiência de jogo ideal, é recomendável que o dispositivo
-            atenda aos requisitos recomendados, para aproveitar todas as
-            funcionalidades e recursos do jogo de forma adequada. Verificar os
-            requisitos de hardware é uma prática importante para garantir uma
-            experiência de jogo satisfatória.
+            <b>Vazamento de dados:</b> O vazamento de dados é um perigo real e
+            impactante na era digital, como exemplificado pelo caso da Ashley
+            Madison. O vazamento de informações pessoais de milhões de usuários
+            deste site de relacionamentos extraconjugais revelou não apenas suas
+            atividades secretas, mas também expôs suas identidades.
+          </p>
+
+          <p>
+            <b>Denial of Service (DoS):</b> Ataques de negação de serviço são
+            comuns em sites e jogos online, nos quais os servidores são
+            sobrecarregados com um grande volume de tráfego malicioso, tornando
+            o acesso impossível para os usuários legítimos.
+          </p>
+
+          <p>
+            <b>Phishing e golpes:</b> Usuários de sistemas podem ser alvo de
+            ataques de phishing, nos quais são enganados por e-mails, mensagens
+            ou sites falsos que se passam por plataformas legítimas. Esses
+            ataques visam obter informações pessoais, como senhas, ou induzir as
+            pessoas a realizar ações prejudiciais, como baixar arquivos
+            maliciosos.
+          </p>
+          <p>
+            <b
+              >LEI GERAL DE PROTEÇÃO DE DADOS (LGPD) (LEI Nº 13.709, DE 14 DE
+              AGOSTO DE 2018)</b
+            >
+          </p>
+          <p>
+            A Lei Geral de Proteção de Dados, ou LGPD, é como uma regra que
+            existe para proteger as informações pessoais de cada pessoa. Quando
+            você compartilha seu nome, sua foto ou qualquer coisa que possa
+            identificar quem você é na internet ou com lojas e serviços, essa
+            lei ajuda a garantir que essas informações sejam usadas de maneira
+            segura e só para aquilo que você concordou. É como se fosse uma
+            armadura digital que protege suas informações pessoais de serem
+            usadas de forma errada ou sem a sua permissão.
           </p>
         </div>
       </div>
     </section>
 
-    <!--Section-->
-    <section class="container course">
-      <div class="section">
-        <div class="contentSection">
-          <!--Subtitulo-->
-          <h1 class="text-subtitle1 dark-orange mx-3" id="requisitos-software">
-            Requisitos de Software
-          </h1>
-
-          <p>
-            De forma prática, requisitos de softwares é a etapa relacionada a
-            entender as necessidades do cliente e traduzi-las para o sistema, ou
-            seja, o software. Isso é extremamente importante para que a equipe
-            de desenvolvimento consiga chegar mais próximo do produto final
-            evitando, assim, retrabalho.
-          </p>
-
-          <p>
-            Requisitos referem-se à definição de atributos, funcionalidades,
-            características ou algo que o sistema deva restringir e tornar-se
-            útil para seu usuário final.
-          </p>
-
-          <p>
-            De forma mais sucinta, um requisito é algo que o sistema deve fazer
-            (funções) ou algo que o restrinja. Os requisitos de softwares são
-            classificados em requisitos não funcionais e requisitos funcionais.
-          </p>
-
-          <p>
-            Colher requisitos não é um processo simples e deve ser feito com
-            cautela.
-          </p>
-
-          <p>
-            Os passos a seguir mostram o que deve ser seguido para definir os
-            requisitos de software de um projeto.
-            <br />
-            <li class="mx-1">
-              <strong>Discutir o projeto com os interessados</strong>: Conhecer
-              clientes, usuários finais e até patrocinadores. Conversar com eles
-              sobre a expectativa do projeto. E deixar claro que, nem todos os
-              requisitos citados nas conversas, são viáveis para o projeto.
-            </li>
-            <li class="mx-1">
-              <strong>Definir o público</strong>: Saber exatamente quem vai usar
-              o software para que ele seja adaptado a essas pessoas.
-            </li>
-            <li class="mx-1">
-              <strong>Determinar o escopo do projeto</strong>: determinar e
-              definir quais elementos estarão presentes e envolvidos no projeto.
-            </li>
-            <li class="mx-1">
-              <strong>Manter as coisas simples</strong>: os requisitos devem ser
-              sempre objetivos, claros e diretos mesmo que o projeto seja
-              complexo.
-            </li>
-            <li class="mx-1">
-              <strong>Usar linguagem clara e precisa</strong>: ser o mais
-              preciso possível ajuda a evitar contratempos ao longo do projeto.
-              A equipe de desenvolvimento deve ter um bom entendimento de todos
-              os requisitos.
-            </li>
-            <li class="mx-1">
-              <strong>Acompanhar os requisitos</strong>: todos os requisitos
-              devem ser acompanhados de maneira cuidadosa para que atendam as
-              necessidades do cliente e usuário. Evita retrabalho, pois é
-              possível corrigir erros o mais rápido possível.
-            </li>
-            <li class="mx-1">
-              <strong>Documentar todas as alterações</strong>: à medida que o
-              projeto evolui os requisitos de software podem evoluir. Então
-              documentá-los é tão importante. É preciso que a equipe de
-              desenvolvimento tenha ciência que nem tudo sairá como planejado.
-            </li>
-            <li class="mx-1">
-              <strong
-                >Delimitar uma conexão entre cada requisito e a finalidade do
-                software</strong
-              >: é preciso e necessário que cada requisito esteja associado ao
-              principal objetivo do sistema que está em desenvolvimento. Isso
-              faz com que o cliente fique satisfeito com o produto final.
-            </li>
-            <li class="mx-1">
-              <strong>Criar documentação de especificação de requisitos</strong
-              >: o documento de requisitos é fundamental no desenvolvimento de
-              um sistema. Ele é elaborado para servir como resumo do projeto,
-              contendo pontos essenciais como: escopo do projeto, as definições
-              necessárias e personas. Além disso, os requisitos funcionais e não
-              funcionais.
-            </li>
-          </p>
-
-          <p>
-            Os requisitos de softwares são classificados em requisitos não
-            funcionais e requisitos funcionais.
-          </p>
-        </div>
+    <!--Parallax-->
+    <div class="parallax background-parallax1">
+      <div class="cubeBlack">
+        <p><b>DEFINIÇÕES MAIS IMPORTANTES</b></p>
+        <p>
+          <b>Dado pessoal:</b> Informação relacionada a pessoa natural
+          identificada ou identificável.
+        </p>
+        <p>
+          <b> Dado pessoal sensível:</b> Dados sobre origem racial ou étnica,
+          convicção religiosa, opinião política, filiação a sindicato ou a
+          organização de caráter religioso, filosófico ou político, dado
+          referente à saúde ou à vida sexual, dado genético ou biométrico.
+        </p>
+        <p>
+          <b>Tratamento:</b> Toda operação realizada com dados pessoais, como
+          coleta, produção, recepção, classificação, utilização, acesso,
+          reprodução, transmissão, distribuição, processamento, arquivamento,
+          armazenamento, eliminação, avaliação ou controle da informação,
+          modificação, comunicação, transferência, difusão ou extração.
+        </p>
+        <p>
+          Imagine que você está criando um jogo digital e quer que ele seja um
+          sucesso entre os jogadores. Agora, com a LGPD, você precisa pensar em
+          como lidar com as informações dos jogadores desde o início.
+        </p>
+        <p>
+          Por exemplo, se os jogadores precisam criar uma conta no seu jogo,
+          você vai pedir o nome deles, e-mail, talvez até a idade. A LGPD diz
+          que você precisa ser claro com os jogadores sobre por que está pedindo
+          esses dados e o que vai fazer com eles. E mais, você só pode pedir
+          informações que são realmente necessárias para o jogo funcionar.
+        </p>
       </div>
-    </section>
+      <!-- End BlackBox -->
+    </div>
+    <!-- End Parallax -->
 
     <!--Section-->
     <section class="container course">
       <div class="section">
         <div class="contentSection">
-          <!--sub Subtitulo-->
-          <h1 class="text-subtitle2 blue mx-5" id="requisitos-funcionais">
-            Requisitos funcionais
-          </h1>
-
           <p>
-            Os requisitos funcionais devem descrever de uma maneira clara e
-            explícita todas as funcionalidades que o sistema contém.
-            <br />
-            <li class="mx-1">
-              É necessário que os requisitos funcionais possuam atributos que o
-              identifiquem;
-            </li>
-            <li class="mx-1">
-              A completude é um atributo de um requisito funcional, que se
-              refere a definição de todos os serviços do sistema;
-            </li>
-            <li class="mx-1">
-              O atributo de consistência diz respeito a não contradição das
-              definições do sistema.
-            </li>
+            <b
+              >Aqui estão algumas coisas que você, como desenvolvedor de jogos,
+              precisa fazer devido à LGPD:</b
+            >
           </p>
-
-          <img
-            class="w-75 m-auto"
-            src="./img/ue1/Imagem 2.png"
-            alt="Em síntese, os requisitos funcionais devem apresentar características funcionais do sistema, como por exemplo: criar conta, fazer login, ver perfil, trocar avatar, entre outros. Para que a equipe de desenvolvimento consiga assim atender as necessidades dos possíveis usuários do jogo digital, tais necessidades são feitas por meio de solicitação deles no sistema."
-          />
-
           <p>
-            A seguir separamos alguns exemplos de requisitos funcionais no
-            desenvolvimento de um jogo digital:
-            <br />
-            <li class="mx-1">
-              Opção de escolha do idioma, disponível na tela de Opções(Options)
-              antes do jogo iniciar.
-            </li>
-            <li class="mx-1">
-              Permissão ao usuário escolher os níveis de dificuldade “fácil”,
-              “normal” e “difícil” através da tela de Opções antes de o jogo
-              iniciar.
-            </li>
-            <li class="mx-1">
-              Configurações do áudio utilizando recursos de teclas de “ativar”
-              ou “desativar” o som através da tela de Opções.
-            </li>
+            <b>Pedir permissão:</b> Você tem que explicar para os jogadores por
+            que precisa dos dados deles e pedir permissão para usar esses dados.
+            Se eles são menores de idade, você vai precisar da permissão dos
+            pais ou responsáveis.
           </p>
-
-          <!--Div de aviso com alerta-->
-          <div class="atencion my-3 mx-1">
-            <img src="./img/global/icons/atencion.png" />
-            <p>
-              Um requisito funcional não é uma funcionalidade, mas uma
-              necessidade funcional, ou seja, uma função que o software deve
-              atender. Nisso, uma funcionalidade pode requerer um ou mais
-              requisitos funcionais.
-            </p>
-          </div>
+          <p>
+            <b>Proteger os Dados:</b> Você tem que garantir que as informações
+            dos jogadores estejam seguras, para que ninguém não autorizado possa
+            pegá-las.
+          </p>
+          <p>
+            <b>Ser transparente:</b> Se os jogadores quiserem saber quais dados
+            você tem sobre eles, você precisa mostrar. E se eles pedirem para
+            apagar ou mudar alguma coisa, você tem que fazer isso.
+          </p>
+          <p>
+            <b>Pensar Antes de Compartilhar:</b> Se você quiser compartilhar os
+            dados dos jogadores com outra empresa, como um estúdio que ajuda a
+            melhorar o jogo, você precisa ter certeza de que essa empresa também
+            vai seguir as regras da LGPD.
+          </p>
+          <p>
+            <b>Ter um 'Encarregado':</b> É uma boa ideia ter alguém na equipe
+            que entenda bem essas regras e possa garantir que o jogo esteja
+            seguindo todas elas.
+          </p>
+          <p>
+            Então, a LGPD faz com que você pense mais sobre como e por que está
+            usando as informações dos jogadores. Isso pode dar um pouco mais de
+            trabalho, mas também ajuda a criar confiança com os jogadores,
+            porque eles sabem que o jogo deles está protegendo as informações
+            deles. E jogadores que confiam no jogo são mais propensos a
+            continuar jogando e a recomendar para os amigos.
+          </p>
+          <p>
+            Para testar os seus conhecimentos, te desafio a colocar a mão na
+            massa. Observe as orientações abaixo e vamos nessa!
+          </p>
+          <table class="greenTable">
+            <thead>
+              <tr>
+                <th class="darkGreenTh8">TESTE OS SEUS CONHECIMENTOS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="greenTd"><b>Levará em média:</b> 25min</td>
+              </tr>
+              <tr>
+                <td class="greenTd">
+                  <b>O desafio é:</b>
+                  Projetar uma tela de registro para um jogo fictício estilo
+                  Battle Royale no qual o jogador pode interagir com outros
+                  usuários para formar equipes e lutar contra hordas inimigas. 
+                  <br />
+                  <br />
+                  Deve-se incluir campos para coletar informações essenciais,
+                  como nome de usuário, e-mail e senha. Após projetar a tela,
+                  identifique quais dados são pessoais e sensíveis explicando
+                  como eles podem ser protegidos durante a transmissão e
+                  armazenamento.
+                </td>
+              </tr>
+              <tr>
+                <td class="greenTd">
+                  <b>Em seguida:</b>  Identifique as informações sensíveis e
+                  explique, em um pequeno texto, a necessidade do uso de cada
+                  dado. Você também pode aproveitar para trocar ideias com
+                  outros estudantes ou profissionais da área e incrementar sua
+                  ideia.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Como você já sabe, o não cumprimento das disposições da LGPD pode
+            resultar em sanções e penalidades, destacando a importância de os
+            desenvolvedores estarem alinhados com as práticas de proteção de
+            dados pessoais estabelecidas por essa legislação. Sabendo disso,
+            responda:
+          </p>
 
           <!-- inicio questão 1 -->
           <div class="marginVertical">
@@ -503,8 +476,8 @@
               <div class="question-description-container">
                 <p>QUESTÃO 1</p>
                 <p>
-                  Marque a alternativa que contém APENAS requisitos funcionais
-                  do sistema de um jogo digital.
+                  Sobre a coleta de dados em jogos digitais, o que a LGPD exige
+                  dos desenvolvedores?
                 </p>
               </div>
 
@@ -575,7 +548,8 @@
                   </td>
                   <td>
                     <label for="q1-option-1">
-                      Política de reembolso, sistema de pontuação, usabilidade.
+                      Coletar o máximo de dados possível para personalizar a
+                      experiência do jogador.
                     </label>
                   </td>
                 </tr>
@@ -590,7 +564,8 @@
                   </td>
                   <td>
                     <label for="q1-option-2">
-                      Usabilidade, horários de trabalho, compatibilidade.
+                      Informar os jogadores sobre a coleta de dados e obter seu
+                      consentimento explícito.
                     </label>
                   </td>
                 </tr>
@@ -605,7 +580,8 @@
                   </td>
                   <td>
                     <label for="q1-option-3">
-                      Configuração de áudio, legendas, escolha de idiomas.
+                      Coletar dados sem consentimento, desde que sejam usados
+                      apenas para melhorias no jogo.
                     </label>
                   </td>
                 </tr>
@@ -620,7 +596,8 @@
                   </td>
                   <td>
                     <label for="q1-option-4">
-                      Custo de produção, modos de jogo, níveis de dificuldade.
+                      Coletar dados pessoais sem informar os jogadores sobre
+                      como esses dados serão utilizados.
                     </label>
                   </td>
                 </tr>
@@ -637,107 +614,75 @@
             </div>
           </div>
           <!-- fim questão 1 -->
-        </div>
-      </div>
-    </section>
-
-    <!--Section-->
-    <section class="container course">
-      <div class="section">
-        <div class="contentSection">
-          <!--sub Subtitulo-->
-          <h1 class="text-subtitle2 blue mx-5" id="requisitos-nao-funcionais">
-            Requisitos não funcionais
-          </h1>
-
           <p>
-            Os requisitos não funcionais são aqueles que descrevem restrições ao
-            sistema e aspectos de qualidade, considerados importantes, e que não
-            estão relacionados à funcionalidade.
+            Se uma empresa sofrer um vazamento de dados, as consequências podem
+            ser significativas, tanto em termos legais quanto em termos de
+            reputação. Algumas das principais repercussões incluem:
+          </p>
+          <p>
+            <b>Sanções Legais:</b> Dependendo da legislação de proteção de dados
+            do país em que a empresa opera, pode haver penalidades legais
+            substanciais por violações de privacidade. Por exemplo, a Lei Geral
+            de Proteção de Dados (LGPD) no Brasil e o Regulamento Geral de
+            Proteção de Dados (GDPR) na União Europeia estabelecem multas
+            significativas para empresas que não protegem adequadamente os dados
+            pessoais.
+          </p>
+          <p>
+            <b>Danos à Reputação:</b> Um vazamento de dados pode resultar em uma
+            perda significativa de confiança por parte dos clientes e do público
+            em geral. Isso pode afetar a reputação da empresa a longo prazo,
+            prejudicando a sua imagem de marca e impactando negativamente nas
+            relações comerciais.
+          </p>
+          <p>
+            <b>Perda de Clientes:</b> Os clientes podem optar por encerrar seus
+            relacionamentos com a empresa se sentirem que a segurança de seus
+            dados não está garantida. Isso pode resultar em uma perda
+            substancial de receita e na dificuldade de conquistar novos
+            clientes.
+          </p>
+          <p>
+            <b>Ações Judiciais:</b> Indivíduos afetados pelo vazamento de dados
+            podem entrar com ações judiciais contra a empresa, buscando
+            compensação por danos financeiros ou morais causados pela exposição
+            não autorizada de suas informações pessoais.
+          </p>
+          <p>
+            <b>Custos Operacionais Adicionais:</b> A empresa pode enfrentar
+            custos significativos para investigar e remediar o vazamento de
+            dados, implementar medidas de segurança adicionais e cumprir
+            requisitos legais, como notificar autoridades reguladoras e
+            indivíduos afetados.
+          </p>
+          <p>
+            <b>Requisitos Regulatórios:</b> As autoridades regulatórias podem
+            impor requisitos específicos à empresa afetada, como auditorias de
+            segurança de dados, para garantir que medidas apropriadas sejam
+            tomadas para evitar futuros incidentes.
           </p>
 
           <p>
-            Em um processo de desenvolvimento de um jogo digital, os requisitos
-            não funcionais não irão descrever o que o sistema fará, mas sim,
-            como será feito. Eles estabelecem como o sistema de um jogo irá se
-            comportar em determinadas situações.
+            Portanto, é crucial que as empresas adotem práticas robustas de
+            segurança de dados, implementem medidas preventivas e estejam
+            preparadas para responder eficientemente em caso de vazamento de
+            dados, a fim de minimizar as consequências adversas. 
           </p>
 
           <p>
-            Um exemplo de um requisito não funcional de um jogo digital é sobre
-            qual plataforma o jogo será desenvolvido.
+            Agora que compreendemos as sérias consequências de um vazamento de
+            dados para uma empresa, convido você a responder a seguinte
+            pergunta: 
           </p>
-
-          <p>
-            O requisito não funcional possui categorias imprescindíveis de
-            conhecê-las para haver uma melhor organização do projeto.
-          </p>
-
-          <p>
-            A seguir algumas categorias as quais os requisitos não funcionais
-            são classificados:
-          </p>
-
-          <div class="container-slides-image">
-            <img
-              src="./img/global/icons/back-button.svg"
-              onclick="imagemAnterior(interableImages1)"
-            />
-            <img
-              id="interable1"
-              class="slide-image"
-              src="./img/ue1/Slide 1.png"
-            />
-            <img
-              src="./img/global/icons/next-button.svg"
-              onclick="proximaImagem(interableImages1)"
-            />
-          </div>
-
-          <!--Div de aviso com lâmpada-->
-          <div class="atencion my-3 mx-3">
-            <img src="./img/global/icons/lightbulb.png" />
-            <p>
-              Algumas informações devem estar presentes na definição de um
-              requisito não funcional, mesmo não sendo uma regra obrigatória.
-              Pode-se considerar alguns itens que devem ser discriminados no
-              documento, tais como: nome ou descrição do requisito;
-              categoria;data de criação; pessoa que criou o documento; data da
-              última alteração; descrição detalhada.
-            </p>
-          </div>
-          <!--TODO - Vídeo-->
-          <div class="videoContainer marginVertical">
-            <div class="videoFrame">
-              <iframe
-                src="https://youtube.com/embed/1f1EahyOcHk"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-          gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
 
           <!-- inicio questão 2 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question2-box-correct">
               <div class="question-description-container">
                 <p>QUESTÃO 2</p>
-                <p>Verdadeiro ou Falso</p>
-              </div>
-
-              <div class="question-description-container">
-                <p></p>
-                <p>Avalie se a afirmação a seguir é verdadeira ou falsa.</p>
-              </div>
-
-              <div class="question-description-container">
-                <p></p>
                 <p>
-                  Os requisitos não funcionais possuem categorias fundamentais
-                  para organização do projeto.
+                  Qual dos seguintes cenários é um exemplo de um ataque de
+                  negação de serviço (DoS)?
                 </p>
               </div>
 
@@ -807,7 +752,11 @@
                     />
                   </td>
                   <td>
-                    <label for="q2-option-1"> Verdadeiro </label>
+                    <label for="q2-option-1">
+                      Um usuário de um jogo online recebe um e-mail falso
+                      solicitando que ele atualize suas informações de
+                      pagamento.
+                    </label>
                   </td>
                 </tr>
                 <tr>
@@ -820,7 +769,43 @@
                     />
                   </td>
                   <td>
-                    <label for="q2-option-2"> Falso </label>
+                    <label for="q2-option-2">
+                      Um invasor obtém acesso à conta de um usuário de um jogo
+                      online e usa isso para roubar seus itens virtuais.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-3"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-3">
+                      Um site de jogos online fica indisponível porque um
+                      invasor sobrecarregou seus servidores com tráfego
+                      malicioso.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-4"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-4">
+                      As informações pessoais dos usuários de um site de jogos
+                      online são publicadas na internet sem o seu consentimento.
+                    </label>
                   </td>
                 </tr>
               </table>
@@ -836,183 +821,688 @@
             </div>
           </div>
           <!-- fim questão 2 -->
-
-          <!-- inicio questão 3 -->
-          <div class="marginVertical">
-            <div id="q1" class="myt-3">
-              <div class="question-box-container" id="question4-box-correct">
-                <div class="question-description-container">
-                  <p>QUESTÃO 3</p>
-                  <p class="my-1">
-                    Escolha a opção CORRETA que valida a sentença a seguir:
-                  </p>
-                </div>
-
-                <div class="question-description-container q3-sq1">
-                  <p></p>
-                  <p style="line-height: 28px">
-                    A atividade de realizar testes de desempenho e usabilidade
-                    do sistema de jogos é uma técnica utilizada para identificar
-                    <span
-                      id="q3-sq1-block-1"
-                      class="block"
-                      style="cursor: pointer"
-                      onclick="unselectCheckFromCompleteTypeQuestion(this, question3.subQuestions[0])"
-                      >_________________________.
-                    </span>
-                  </p>
-                </div>
-
-                <div class="question-select-type-container q3-sq1-options">
-                  <div class="question-select-type-opt">
-                    <label
-                      for="sq1-saida"
-                      class="question-select-type-opt-label"
-                      >Requisitos de Software</label
-                    >
-                    <input
-                      id="sq1-saida"
-                      type="checkbox"
-                      class="question-select-type-opt-input"
-                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
-                    />
-                  </div>
-
-                  <div class="question-select-type-opt">
-                    <label
-                      for="sq1-entrada"
-                      class="question-select-type-opt-label"
-                      >Requisitos de hardware</label
-                    >
-                    <input
-                      id="sq1-entrada"
-                      type="checkbox"
-                      class="question-select-type-opt-input"
-                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
-                    />
-                  </div>
-
-                  <div class="question-select-type-opt">
-                    <label
-                      for="sq1-pinceis-virtuais"
-                      class="question-select-type-opt-label"
-                      >Requisitos não funcionais</label
-                    >
-                    <input
-                      id="sq1-pinceis-virtuais"
-                      type="checkbox"
-                      class="question-select-type-opt-input"
-                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
-                    />
-                  </div>
-                </div>
-
-                <div
-                  class="question-box-correct-container feedback-container"
-                  id="q3-sq1-box-feedback"
-                >
-                  <div class="question-box-title">
-                    <p class="feedback-title">Muito bem!</p>
-
-                    <svg
-                      class="feedback-success-icon"
-                      style="position: absolute; right: 32px"
-                      width="19"
-                      height="14"
-                      viewBox="0 0 19 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
-                        fill="#436900"
-                      />
-                    </svg>
-
-                    <svg
-                      class="feedback-error-icon"
-                      style="position: absolute; right: 32px"
-                      width="19"
-                      height="19"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
-                        fill="#93000A"
-                      />
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
-                        fill="#93000A"
-                      />
-                    </svg>
-                  </div>
-
-                  <div class="question-box-text">
-                    <span class="feedback-message">
-                      O Windows é um sistema operacional, então não pode ser
-                      considerado um hardware.
-                    </span>
-                  </div>
-                </div>
-
-                <div class="w-full flex justify-center">
-                  <div
-                    class="button-send-responses"
-                    onclick="handleSubmitCompleteTypeQuestion(question3)"
-                  >
-                    Enviar resposta
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- fim questão 3 -->
-          </div>
         </div>
       </div>
     </section>
 
-    <section>
+    <!--Section-->
+    <section class="container course">
       <div class="section">
         <div class="contentSection">
-          <div class="espaceTitle" id="Recapitulando"></div>
-          <h1 class="text-Title light-orange">Recapitulando</h1>
+          <h1 class="text-Title light-orange" id="user-profiles">
+            Perfis de usuários
+          </h1>
 
           <p>
-            Nessa unidade você pode estudar sobre os tipos de requisitos
-            necessários para o desenvolvimento de jogos digitais, verificando
-            que tais requisitos são extremamente importantes. Pois, a partir do
-            conhecimento dos requisitos funcionais e não funcionais para iniciar
-            a fase de pré-produção de um jogo.
+            Os perfis de usuários nos jogos desempenham um papel fundamental na
+            experiência do jogador, pois proporcionam personalização e progresso
+            individualizado. Eles permitem que os jogadores acompanhem seu
+            desenvolvimento, conquistas e desafios superados, criando um senso
+            de realização e motivação contínua. 
           </p>
 
           <p>
-            Compreender os tipos de requisitos permite uma definição clara e
-            abrangente do escopo do projeto de jogo, estabelecendo as bases para
-            a sua concepção e implementação de forma adequada. Portanto, o
-            conhecimento e a consideração cuidadosa dos requisitos funcionais e
-            não funcionais são passos essenciais na fase de pré-produção de um
-            jogo, contribuindo para o sucesso do projeto como um todo.
+            Além disso, os perfis de usuários facilitam a interação social
+            dentro dos jogos, promovendo a formação de comunidades e amizades
+            virtuais. Com isso, tornam-se uma ferramenta poderosa para engajar
+            os jogadores e garantir que eles se sintam parte de um mundo virtual
+            envolvente e significativo. Para melhor exemplificar esse conteúdo,
+            assista ao vídeo a seguir:
           </p>
 
-          <div class="espaceTitle" id="SoluçãoDoProblematizando"></div>
-          <div class="flex justify-center align-center w-full">
-            <img src="./img/global/icons/greenCheck.png" />
-            <h3 class="px-3 green">Solução do problematizando</h3>
-          </div>
-
-          <!--TODO - Vídeo-->
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
-                src="https://youtube.com/embed/I1eOgztHKDQ"
+                src="https://youtube.com/embed/NJYFY7mVY84"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <p>
+            É importante identificar os diferentes perfis de usuários em um
+            sistema de informação, como administradores, funcionários, clientes,
+            fornecedores, etc. Cada perfil pode ter necessidades e privilégios
+            específicos, exigindo diferentes controles de segurança para
+            proteger as informações.
+          </p>
+          <br />
+          <b
+            >Necessidades e requisitos de segurança específicos para cada
+            perfil:
+          </b>
+          <p>
+            Cada perfil de usuário pode ter necessidades específicas de
+            segurança. Por exemplo, os administradores podem precisar de acesso
+            privilegiado para gerenciar o sistema, enquanto os clientes podem
+            exigir proteção de dados pessoais. Compreender as necessidades de
+            segurança de cada perfil é fundamental para implementar os controles
+            apropriados e garantir a proteção adequada das informações. 
+          </p>
+          <br />
+          <b>Gerenciamento de acesso e autenticação de usuários: </b>
+          <p>
+            O gerenciamento de acesso é essencial para garantir que apenas
+            usuários autorizados tenham acesso às informações. Isso inclui a
+            implementação de controles de autenticação robustos, como senhas
+            fortes, autenticação de dois fatores e gerenciamento adequado de
+            credenciais. Além disso, é necessário ter um processo de concessão e
+            revogação de privilégios de acesso para garantir que os usuários
+            tenham apenas as permissões necessárias para desempenhar suas
+            funções.
+          </p>
+          <br />
+          <b>Segurança em dispositivos e contas de usuários: </b>
+          <p>
+            A segurança dos dispositivos e das contas dos usuários é crucial
+            para proteger as informações. Isso envolve a aplicação de medidas
+            como criptografia de dados, atualizações regulares de software,
+            proteção contra malware e acesso seguro a partir de dispositivos
+            remotos. Além disso, é importante incentivar os usuários a adotar
+            boas práticas de segurança, como não compartilhar senhas, fazer
+            backup regularmente e utilizar soluções de segurança confiáveis.
+          </p>
+          <br />
+          <b
+            >Educação e conscientização dos usuários sobre segurança da
+            informação:</b
+          >
+          <p>
+            A educação e conscientização dos usuários são elementos-chave na
+            segurança da informação. Os usuários devem ser treinados para
+            reconhecer ameaças, como phishing, engenharia social e práticas
+            inseguras. Eles devem ser informados sobre as políticas de
+            segurança, os riscos associados a comportamentos inadequados e as
+            medidas que devem tomar para proteger as informações. A
+            conscientização contínua é fundamental para garantir que os usuários
+            sejam parceiros ativos na proteção dos dados e na prevenção de
+            incidentes de segurança.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="cryptography">
+            Criptografia
+          </h1>
+          <p>
+            A criptografia desempenha um papel crucial tanto em softwares quanto
+            em jogos, garantindo a segurança e a integridade dos dados sensíveis
+            dos usuários. Ela protege informações pessoais, como senhas e
+            informações de pagamento, contra acessos não autorizados e ataques
+            cibernéticos. Além disso, em jogos, a criptografia é essencial para
+            prevenir trapaças e hacks que prejudicam a experiência de jogo
+            justa. 
+          </p>
+          <p>
+            Ao assegurar a confidencialidade e a autenticidade dos dados, a
+            criptografia não apenas protege os usuários, mas também promove a
+            confiança e a longevidade dos softwares e jogos, tornando-os mais
+            seguros e confiáveis para todos. Clique e assista ao vídeo a seguir
+            para melhor fixação do conteúdo. 
+          </p>
+
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://youtube.com/embed/PU3rziL0yYU"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Parallax-->
+    <div class="parallax background-parallax2">
+      <div class="cubeBlack">
+        <p>
+          <b>Principais Vulnerabilidades e ataques comuns à criptografia:</b>
+          <br />
+          <li class="mx-1">
+            <b>Ataque de força bruta:</b> Nesse tipo de ataque, o invasor tenta
+            todas as combinações possíveis de chaves para decifrar os dados.
+            Esse método pode ser eficaz contra chaves fracas ou senhas curtas.
+          </li>
+          <br />
+          <li class="mx-1">
+            <b>Ataque de dicionário:</b> Nesse ataque, o invasor utiliza uma
+            lista de palavras comuns (dicionário) para tentar decifrar a chave
+            ou a senha. Esse método é eficaz contra senhas fracas que estão
+            presentes em dicionários comumente usados.
+          </li>
+          <br />
+          <li class="mx-1">
+            <b>Ataque de criptoanálise:</b> Esse tipo de ataque envolve a
+            análise do algoritmo criptográfico usado para identificar fraquezas
+            que possam ser exploradas para quebrar a criptografia de forma mais
+            rápida e eficiente.
+          </li>
+          <br />
+          <li class="mx-1">
+            <b>Ataque de texto simples conhecido:</b>
+            Nesse ataque, o invasor possui conhecimento sobre partes do texto
+            original e os textos cifrados correspondentes. Com base nessa
+            informação, ele tenta deduzir informações sobre a chave ou o
+            algoritmo criptográfico usado.
+          </li>
+          <br />
+          <li class="mx-1">
+            <b>Ataque de homem no meio (Man-in-the-Middle):</b>
+            Nesse tipo de ataque, um terceiro intercepta a comunicação entre
+            duas partes legítimas e se posiciona como intermediário. Isso
+            permite ao invasor capturar informações, modificar mensagens ou até
+            mesmo realizar ataques de criptoanálise em tempo real.
+          </li>
+          <br />
+          <li class="mx-1">
+            <b>Ataque de colisão:</b> Esse tipo de ataque ocorre quando dois
+            conjuntos diferentes de dados resultam na mesma função hash
+            criptográfica. Isso pode ser explorado para comprometer a
+            integridade dos dados ou para falsificar informações.
+          </li>
+        </p>
+      </div>
+      <!-- End BlackBox -->
+    </div>
+    <!-- End Parallax -->
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <b>Vamos testar, mais uma vez, seus conhecimentos:</b>
+
+          <!-- inicio questão 3 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question1-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 3</p>
+                <p>Verdadeiro ou Falso</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>Avalie se a afirmação a seguir é verdadeira ou falsa.</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>
+                  Quando dois conjuntos de dados distintos resultam numa mesma
+                  função hash criptografada, esse ataque se chama
+                  <b>Man-in-the-Middle.</b>
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q3-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-1"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-1">Falso</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-2"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-2">Verdadeiro</label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question3)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 3 -->
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h2 class="text-subtitle1 dark-orange mx-3" id="caesar-cipher">
+            Cifra de César
+          </h2>
+          <p>
+            A Cifra de César é como uma mensagem secreta passada em código entre
+            amigos, onde cada letra é substituída por outra que aparece um certo
+            número de posições à frente no alfabeto. Imaginem que vocês querem
+            esconder a palavra "FESTA" de olhares curiosos e decidem que cada
+            letra será trocada pela terceira letra seguinte. Assim, "F" vira
+            "I", "E" vira "H", e a palavra se transforma em "IHVWD". Parece
+            simples, mas esse método foi revolucionário na época de Júlio César,
+            que o utilizava para enviar mensagens militares confidenciais.
+            Agora, vamos mergulhar nessa técnica antiga, entender como ela deu
+            início ao fascinante mundo da criptografia e por que, mesmo sendo um
+            sistema básico, é um excelente ponto de partida para compreender
+            como protegemos informações no mundo digital.
+          </p>
+
+          <img
+            class="w-50 m-auto"
+            src="./img/ue1/imagem2.jpg"
+            alt="Moeda decodificadora da cifra de César. Objeto metálico com dois discos, como moedas sobrepostas, em cada um tem as letras maiúsculas do alfabeto romano."
+          />
+
+          <b>Como funciona</b>
+          <p>
+            <b>Escolha um Número -</b> "Decida o número de posições que cada
+            letra será deslocada no alfabeto. Este número é conhecido como a
+            'chave'."
+          </p>
+          <p>
+            <b>Desloque o alfabeto -</b>
+            "Com base na chave, desloque todas as letras do alfabeto para a
+            esquerda ou direita. Por exemplo, com uma chave 3, A se tornar D, B
+            se torna E, e assim por diante. 
+          </p>
+
+          <!--TODO IMAGEM-->
+
+          <img
+            class="w-50 m-auto"
+            src="./img/ue1/"
+            alt=" Duas sequências alfabéticas ilustrando como funciona o deslocamento da letra na cifra de César."
+          />
+
+          <table class="greenTable">
+            <thead>
+              <tr>
+                <th class="darkGreenTh8">Exemplo Prático:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="greenTh8"><b>Mensagem Original:</b></td>
+              </tr>
+              <tr>
+                <td class="greenTd">"ATAQUE AO AMANHECER"</td>
+              </tr>
+              <tr>
+                <td class="greenTh8"><b>Chave Escolhida:</b></td>
+              </tr>
+              <tr>
+                <td class="greenTd">3</td>
+              </tr>
+              <tr>
+                <td class="greenTh8"><b>Mensagem Codificada:</b></td>
+              </tr>
+              <tr>
+                <td class="greenTd">"DWDTXH DR DPDKHFHU"</td>
+              </tr>
+              <tr>
+                <td class="greenTh8"><b>Decifrando a Mensagem:</b></td>
+              </tr>
+              <tr>
+                <td class="greenTd">
+                  Para decifrar, simplesmente desloque as letras no sentido
+                  oposto usando a mesma chave.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h2 class="text-subtitle1 dark-orange mx-3" id="security-policies">
+            Políticas de segurança da informação
+          </h2>
+          <p>
+            Vamos imaginar que os dados de uma empresa são como um castelo
+            medieval e os hackers são como os invasores querendo roubar os
+            tesouros dentro dele. As políticas de segurança da informação são
+            como as regras que o rei estabelece para proteger seu castelo e seu
+            tesouro.
+          </p>
+          <p>
+            Cada castelo (ou empresa) pode precisar de regras diferentes. Alguns
+            castelos podem estar em áreas perigosas e precisam de defesas mais
+            fortes. Outros podem ter tesouros mais valiosos que precisam de
+            proteção extra. Portanto, as políticas de segurança da informação
+            são adaptadas às necessidades e aos requisitos de cada castelo.
+            Essas regras são como o escudo que protege o castelo e garante que
+            os tesouros permaneçam seguros.
+          </p>
+          <!--TODO GIF-->
+          <img
+            class="w-50 m-auto"
+            src="./img/ue1/"
+            alt="Na animação percebemos uma batalha medieval onde um guerreiro salva com uma expressão de ira com seu escudo e espada contra o oponente. A proteção dos nossos dados e da empresa precisam ser realizados com esse mesmo empenho."
+          />
+          <b>Vejamos alguns dos modelos amplamente utilizados incluem:</b>
+          <p>
+            <b>Modelo baseado em padrões e regulamentações:</b>
+            Nesse modelo, as políticas de segurança são desenvolvidas com base
+            em padrões reconhecidos por entidades governamentais ou setoriais,
+            além de regulamentações aplicáveis. Uma das mais conhecidas é a
+            norma ISO/IEC 27002 é um padrão internacional usado como referência
+            para controles quando se implementa um sistema de gerenciamento de
+            segurança da informação, incorporando controles de acesso a dados,
+            controle criptográfico de dados confidenciais e gerenciamento de
+            chaves. Esse padrão fornece diretrizes detalhadas sobre os
+            requisitos de segurança e podem servir como base para a criação das
+            políticas.
+          </p>
+          <p>
+            <b>Modelo baseado em frameworks de boas práticas:</b> Esse modelo
+            envolve a adoção de frameworks de boas práticas, como o COBIT
+            (Control Objectives for Information and Related Technologies) e o
+            CIS Controls (Center for Internet Security), para desenvolver as
+            políticas de segurança. Esses frameworks fornecem uma estrutura
+            abrangente para a governança e segurança da informação, ajudando na
+            criação de políticas alinhadas às melhores práticas da indústria.
+          </p>
+          <img
+            class="w-50 m-auto"
+            src="./img/ue1/imagem3.png"
+            alt="Na figura são apresentados os cinco princípios do Framework de boas práticas COBIT. Sendo eles, 1. Satisfazer as partes interessadas, 2. Cobrir a organização de ponta a ponta, 3. Aplicar um framework integrado e único. 4. Possibilitar uma visão holística, 5. Separar governança e gerenciamento."
+          />
+          <p>
+            <b>Modelo adaptado à organização:</b> Nesse modelo, as políticas de
+            segurança são desenvolvidas levando em consideração os objetivos,
+            necessidades e cultura específicos da organização. É feita uma
+            análise de riscos e requisitos internos para identificar as áreas
+            críticas de segurança e criar políticas personalizadas que atendam
+            às demandas da organização.
+          </p>
+          <p>
+            Então, já aprendeu bastante coisa, não é?! Para testar ainda mais os
+            seus conhecimentos, responda a questão a seguir:
+          </p>
+          <!-- inicio questão 4 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question2-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 4</p>
+                <p>
+                  O que caracteriza o modelo de segurança da informação baseado
+                  em padrões e regulamentações?
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q4-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q4-option-1"
+                      type="radio"
+                      name="q4-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q4-option-1">
+                      Este modelo depende principalmente das necessidades e
+                      estrutura específicas da organização.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q4-option-2"
+                      type="radio"
+                      name="q4-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q4-option-2">
+                      Este modelo segue práticas recomendadas estabelecidas por
+                      organizações de segurança da informação reconhecidas.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q4-option-3"
+                      type="radio"
+                      name="q4-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q4-option-3">
+                      Este modelo se conforma a padrões e regulamentos
+                      estabelecidos por órgãos de governo ou organizações
+                      setoriais.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q4-option-4"
+                      type="radio"
+                      name="q4-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q4-option-4">
+                      A prescrição de boas práticas. O framework mais conhecido
+                      é o COBIT.
+                    </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question4)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <p>
+            Independentemente do modelo adotado, é importante que as políticas
+            de segurança da informação sejam claras, abrangentes, atualizadas
+            regularmente e comunicadas de forma eficaz a todos os funcionários e
+            usuários envolvidos. Elas devem ser adaptadas às características e
+            requisitos da organização, levando em consideração a natureza de
+            suas operações, o ambiente tecnológico e as ameaças relevantes.
+          </p>
+          <!-- fim questão 4 -->
+        </div>
+      </div>
+    </section>
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="recap">Recapitulando</h1>
+          <p>
+            Ao longo desta aula, compreendemos os principais conceitos
+            relacionados ao tema Segurança da Informação. Conhecemos os seus
+            pilares e a importância de se implantar uma política de segurança da
+            informação na organização. Aprendemos sobre a LGPD e como pode ser
+            usada nos jogos para garantir a proteção de dados dos jogadores.
+            Compreendemos a importância da criptografia, pois, esses conceitos
+            podem garantir segurança tanto para os ativos organizacionais,
+            quanto aos usuários dos sistemas da empresa.
+          </p>
+          <p>
+            Investir no conhecimento e na aplicação de estratégias de segurança
+            da informação é crucial atualmente porque isso nos ajuda a proteger
+            nossos dados pessoais e sensíveis, evitando que caiam em mãos
+            erradas e sejam utilizados de forma maliciosa. Além disso, ao
+            entender a importância dos perfis de usuários, podemos adotar
+            medidas específicas para garantir que apenas pessoas autorizadas
+            tenham acesso a determinadas informações, diminuindo o risco de
+            ataques e violações de privacidade. 
+          </p>
+          <p>
+            A criptografia é uma ferramenta essencial para proteger nossos dados
+            em trânsito e armazenados, tornando-os inelegíveis para qualquer
+            pessoa não autorizada que tente interceptá-los. Por fim, as
+            políticas de segurança definem as regras e práticas que devem ser
+            seguidas para manter um ambiente seguro, auxiliando na
+            conscientização dos colaboradores e promovendo uma cultura
+            organizacional voltada para a proteção dos ativos digitais. 
+          </p>
+          <p>
+            Ao investir nesses aspectos, podemos construir uma forte defesa
+            contra ameaças cibernéticas e garantir a confidencialidade,
+            integridade e disponibilidade dos nossos dados, tanto em nível
+            pessoal quanto empresarial.
+          </p>
+          <div class="flex justify-center align-center w-full myt-3">
+            <img src="./img/global/icons/greenCheck.png" />
+            <h3 class="px-3 green" id="SoluçãoDoProblematizando">
+              Solução do problematizando
+            </h3>
+          </div>
+
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://youtube.com/embed/PU3rziL0yYU"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media;

@@ -37,6 +37,29 @@
   background-color: rgba(255, 255, 255, 0.12);
 }
 
+.greenTh8 {
+  color: #1a1827;
+  background-color: #a2f3c7;
+  padding: 10px;
+  padding-left: 32px;
+  border: 1px solid #a2f3c7;
+}
+
+.darkGreenTh8 {
+  color: white;
+  background-color: #2ab863;
+  padding: 10px;
+  padding-left: 32px;
+  text-align: center;
+  border: 1px solid #2ab863;
+}
+
+.darkGreenTd {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #42c87e;
+}
+
 .greenTh {
   color: #1a1827;
   background-color: #a2f3c7;

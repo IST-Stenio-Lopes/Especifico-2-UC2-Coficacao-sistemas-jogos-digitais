@@ -1,15 +1,14 @@
-
-.background-parallax1{
-  background-image: url('../img/ue1/parallax/Imagem\ 1.png');
+.background-parallax1 {
+  background-image: url("../img/ue1/parallax1.jpg");
 }
 .background-parallax2 {
-  background-image: url('../img/ue1/parallax/Imagem\ 2.png');
+  background-image: url("../img/ue1/parallax2.jpg");
 }
 
-#background-light-yellow{
+#background-light-yellow {
   background-color: rgba(255, 199, 0, 0.22);
 }
 
-area{
+area {
   cursor: pointer;
 }
