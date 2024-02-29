@@ -1,77 +1,89 @@
 var question1 = {
-    type: "RADIO",
-    title: "Verdadeiro ou Falso",
-    description:
-      "Avalie se a afirmação a seguir é verdadeira ou falsa.",
-    feedbacks: [
-      {
-        optionId: "q1-option-1",
-        feedBackId: "q1-box-feedback",
-        title: "Ops",
-        message:
-          "A etapa em que os personagens e objetos criados em 3D ganham movimento é a animação.",
-        type: "error"
-      },
-      {
-        optionId: "q1-option-2",
-        feedBackId: "q1-box-feedback",
-        title: "Parabéns",
-        message:
-          "Você acertou! A texturização serve para dar mais vida e realismo aos objetos e personagens.",
-        type: "success"
-      },
-    ],
+  type: "RADIO",
+  title: "QUESTÃO 1",
+  description:
+    "O que caracteriza o modelo de segurança da informação baseado em padrões e regulamentações?",
+  feedbacks: [
+    {
+      optionId: "q1-option-1",
+      feedBackId: "q1-box-feedback",
+      title: "Errado!",
+      message:
+        "O padrão Builder é sim um padrão criacional. Sua característica é permitir a construção de objetos complexos passo a passo, isolando a complexidade.",
+      type: "error",
+    },
+    {
+      optionId: "q1-option-2",
+      feedBackId: "q1-box-feedback",
+      title: "Exato!",
+      message:
+        "O Mediator é, na verdade, um padrão de projetos comportamental.",
+      type: "success",
+    },
+    {
+      optionId: "q1-option-3",
+      feedBackId: "q1-box-feedback",
+      title: "Errado!",
+      message: "O padrão factory é um clássico padrão criacional.",
+      type: "error",
+    },
+    {
+      optionId: "q1-option-4",
+      feedBackId: "q1-box-feedback",
+      title: "Errado!",
+      message:
+        "O Singleton é um padrão criacional que garante que uma classe tenha apenas uma instância e fornece um ponto de acesso global a ela.",
+      type: "error",
+    },
+  ],
 };
 
 var question2 = {
-    type: "COMPLETE",
-    title:
-      "Escolha a palavra que é a resposta correta para completar as sentenças a seguir:",
-    subQuestions: [
-      {
-        subQuestionId: "q2-sq1",
-        title:
-          "1. Microfone, mouse, webcam são exemplos de periférico de _________",
-        description: "",
-        feedbackEmpty: {
-          feedBackId: "q2-sq1-box-feedback",
-          title: "OPS!",
-          message: "Complete todos os campos da frase.",
-          type: "error",
-        },
-        feedBackElementsId: ["q2-sq1-box-feedback"],
-        userAnswers: [],
-        rightAnswers: [
-          {
-            id: "q2-sq1-block-1",
-            value: "Pincéis virtuais",
-            feedbacks: [
-              {
-                feedBackId: "q2-sq1-box-feedback",
-                title: "Você acertou",
-                message:
-                  "Pois é na produção multimídia que tudo que será implementado, é produzido.",
-                type: "success",
-                value: "Uma sequência direta"
-              },
-              {
-                feedBackId: "q2-sq1-box-feedback",
-                title: "Ops",
-                message: "O processo de implementação é totalmente relacionado a produção multimídia.",
-                type: "error",
-                value: "Independente"
-              },
-              {
-                feedBackId: "q2-sq1-box-feedback",
-                title: "Atenção",
-                message:
-                  "A implementação é feita depois da produção multimídia.",
-                type: "error",
-                value: "Realizado antes"
-              },
-            ],
-          },
-        ],
-      },
-    ],
+  type: "RADIO",
+  title: "QUESTÃO 2 - Avalie se a afirmação a seguir é verdadeira ou falsa.",
+  description:
+    "O Padrão Singleton garante que uma classe tenha apenas uma instância e fornece um ponto de acesso global a ela.",
+  feedbacks: [
+    {
+      optionId: "q2-option-1",
+      feedBackId: "q2-box-feedback",
+      title: "OPS!",
+      message:
+        "De fato, o padrão Singleton garante que apenas uma instância seja criada para uma classe.",
+      type: "error",
+    },
+    {
+      optionId: "q2-option-2",
+      feedBackId: "q2-box-feedback",
+      title: "Exato!",
+      message:
+        "O Padrão Singleton de fato garante que uma classe tenha apenas uma instância e fornece um ponto de acesso global a ela.",
+      type: "success",
+    },
+  ],
+};
+
+var question3 = {
+  type: "RADIO",
+  title: "QUESTÃO 3 - Avalie se a afirmação a seguir é verdadeira ou falsa.",
+  description:
+    "O Padrão Factory é um padrão criacional que usa métodos de fábrica para lidar com o processo de criação de objetos, permitindo que uma classe delegue a instanciamento para subclasses.",
+  feedbacks: [
+    {
+      optionId: "q3-option-1",
+      feedBackId: "q3-box-feedback",
+      title: "OPS!",
+      message:
+        "A afirmativa é verdadeira, pois o padrão Factory usa métodos para lidar com o processo de criação de objetos.",
+      type: "error",
+    },
+    {
+      optionId: "q3-option-2",
+      feedBackId: "q3-box-feedback",
+      title: "Exato!",
+      message:
+        "O Padrão Factory é um padrão criacional que usa métodos de fábrica para lidar com o processo de criação de objetos, permitindo que uma classe delegue a instanciamento para subclasses.",
+      type: "success",
+    },
+  ],
 };

@@ -142,14 +142,3 @@ var question4 = {
     },
   ],
 };
-
-var interableImages1 = {
-  //objeto para controle da função de interação de imagems
-  images: [
-    "./img/ue1/Slide 1.png",
-    "./img/ue1/Slide 2.png",
-    "./img/ue1/Slide 3.png",
-  ], //as src das imagens que serão interadas
-  htmlImageId: "interable1", //o id da tag img que está sendo exibido no html da página
-  index: 0, //o current index referente a qual imagem está sendo exibida no momento
-};
