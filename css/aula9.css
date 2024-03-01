@@ -1,35 +1,35 @@
 .boxPurple {
   width: 100%;
   margin: 64px auto;
-  color: #C18CC9;
+  color: #c18cc9;
   max-width: 900px;
-  border: 2px solid #C18CC9;
+  border: 2px solid #c18cc9;
   border-radius: 8px;
   padding: 1.5rem 0.75rem;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: rgba(255,255,255,0.12);
+  background-color: rgba(255, 255, 255, 0.12);
 }
-  
-  .textFinish {
-    font-weight: 700;
-    font-size: 1.1em;
-    line-height: 24px;
-  }
-  
-  .textFinish2 {
-    font-weight: 400;
-    font-size: 1em;
-    color: #ffffff;
-    line-height: 24px;
-  }
-  
-  .dark-mode .boxPurple {
-    color: #A42AB8;
-    border-color: #A42AB8;
-  }
-  
-  .dark-mode .textFinish2 {
-    color: #1A1827;
-  }
+
+.textFinish {
+  font-weight: 700;
+  font-size: 1.1em;
+  line-height: 24px;
+}
+
+.textFinish2 {
+  font-weight: 400;
+  font-size: 1em;
+  color: #ffffff;
+  line-height: 24px;
+}
+
+.dark-mode .boxPurple {
+  color: #a42ab8;
+  border-color: #a42ab8;
+}
+
+.dark-mode .textFinish2 {
+  color: #1a1827;
+}
