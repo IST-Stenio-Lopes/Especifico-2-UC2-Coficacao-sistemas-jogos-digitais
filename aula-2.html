@@ -228,7 +228,7 @@
           </div>
           <img
             class="w-75 m-auto"
-            src=""
+            src="./img/ue2/imagem1.jpg"
             alt="Na imagem, uma tabela que apresenta conceitos de “Padrões de Projeto”. 23 Padrões de Projeto segundo a Gang of Four."
           />
           <p>
@@ -369,16 +369,16 @@
             pode fazer com que eles se comportem de maneira diferente, como
             fugir ou parar de atacar.
           </li>
-          <!--TODO IMAGE-->
-          <img class="w-75 m-auto" src="./img/ue2/" alt="" />
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem4.png" alt="" />
           <p>
             Em seguida, devemos criar uma classe Observer, vamos dar o nome
             Enemy para representar os inimigos. Essa classe deve implementar um
             método OnDefeated() que será chamado quando o personagem principal
             notificar os observadores.
           </p>
-          <!--TODO IMAGE-->
-          <img class="w-75 m-auto" src="./img/ue2/" alt="" />
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem5.png" alt="" />
           <p>
             Agora sim, quando um inimigo for derrotado, ele chamará o método
             NotifyEnemiesDefeated() do personagem principal, que por sua vez
@@ -696,20 +696,24 @@
             Primeiro criamos uma interface de nome IWeaponBehavior que conta com
             o método Attack().
           </p>
-          <!--TODO IMAGE-->
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem10.png" alt="" />
           <p>
             A seguir, vamos implementar duas classes concretas para os
             comportamentos de duas armas, uma espada e um machado. Cada uma
             implementando a interface IWeaponBehavior.
           </p>
-          <!--TODO IMAGE-->
-          <!--TODO IMAGE-->
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem11.png" alt="" />
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem12.png" alt="" />
           <p>
             A classe Character representa um personagem no jogo e possui um
             método SetWeaponBehavior() para definir o comportamento da arma e um
             método Attack() para realizar o ataque com a arma atual.
           </p>
-          <!--TODO IMAGE-->
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem13.png" alt="" />
           <p>
             Por fim, para testar a implementação do Padrão Strategy, vamos
             implementar a classe Game. Em seu método Start(), criamos uma
@@ -718,8 +722,10 @@
             realizado o ataque com a espada, caso acione o botão A, realiza o
             ataque com o machado.
           </p>
-          <!--TODO IMAGE-->
-          <!--TODO IMAGE-->
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem14.png" alt="" />
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem15.png" alt="" />
           <img
             class="w-75 m-auto"
             src="./img/ue2/imagem16.jpg"
@@ -913,20 +919,25 @@
             Primeiro devemos criar a interface IVisitor que define os métodos
             Visit() para cada tipo de visitante (ação) no jogo.
           </p>
-          <!--TODO IMAGE-->
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem18.png" alt="" />
           <p>
             Em seguida, temos a classe abstrata Personagem, que representa a
             classe base para os elementos visitáveis (personagens) no jogo.
           </p>
-          <!--TODO IMAGE-->
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem19.png" alt="" />
           <p>
             Então, cada personagem (Hero, Monster, NPC) implementa o método
             Accept(), que permite que um visitante seja aceito e chame o método
             de visita correspondente.
           </p>
-          <!--TODO IMAGE-->
-          <!--TODO IMAGE-->
-          <!--TODO IMAGE-->
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem20.png" alt="" />
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem21.png" alt="" />
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem22.png" alt="" />
           <p>
             Agora, vamos criar uma implementação concreta do visitante (ação),
             chamaremos essa classe de ActionVisitor, ela possui os métodos de
@@ -934,7 +945,8 @@
             visita de "atacar" implementada para o herói e o monstro, para o
             NPC, a ação definida é “negociar”.
           </p>
-          <!--TODO IMAGE-->
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem23.png" alt="" />
           <p>
             Na classe Game, no método Start(), devemos criar instâncias dos
             personagens (hero, monster, npc) e do visitante (ActionVisitor). Em
@@ -942,7 +954,8 @@
             visitante como parâmetro. Isso permite que cada personagem execute a
             ação apropriada definida pelo visitante.
           </p>
-          <!--TODO IMAGE-->
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem24.png" alt="" />
           <p>
             Percebeu como o padrão Visitor permite implementar ações específicas
             de interação entre os personagens de forma flexível e modular. É
@@ -1113,8 +1126,10 @@
             permite notificar eventos, como movimentos, ataques, mensagens,
             entre outros.
           </p>
-          <!--TODO IMAGE-->
-          <!--TODO IMAGE-->
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem27.png" alt="" />
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem28.png" alt="" />
           <p>
             A seguir, criaremos a classe Player, esta representa o jogador no
             jogo. Durante a inicialização, o jogador é registrado no mediador,
@@ -1122,13 +1137,15 @@
             eventos relevantes. No exemplo, temos um método MoveTo que simula o
             movimento do jogador para uma nova posição.
           </p>
-          <!--TODO IMAGE-->
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem29.png" alt="" />
           <p>
             Na classe Game, durante o início do jogo, é obtida uma referência ao
             GameMediator. Os jogadores são criados e inicializados com seus
             respectivos IDs e o mediador.
           </p>
-          <!--TODO IMAGE-->
+          <!--TODO ALT-->
+          <img class="w-75 m-auto" src="./img/ue2/imagem30.png" alt="" />
           <p>
             No exemplo de implementação dentro do método Update, quando as
             teclas A ou D são pressionadas, o método NotifyMovement do mediador
