@@ -56,6 +56,10 @@ sub {
   font-size: 0.7rem;
 }
 
+ol li::marker {
+  font-weight: bold;
+}
+
 .empty-btn {
   background-color: transparent;
   border: 0;
