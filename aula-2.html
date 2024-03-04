@@ -329,46 +329,56 @@
             os observadores.
           </p>
           <p><b>Cada um desses métodos tem sua importância:</b></p>
-          <li class="my-1 mx-1">
-            <b>Registro dos observadores -</b> Quando um novo inimigo aparece no
-            jogo, ele precisa saber o que está acontecendo com o personagem
-            principal, certo? Por exemplo, se o personagem principal derrota um
-            chefe importante, talvez todos os inimigos menores fujam ou percam
-            força.
-          </li>
-          <li class="my-1 mx-2">
-            O método RegisterEnemy é como dar um "follow" no personagem
-            principal. Assim como você segue alguém nas redes sociais para
-            receber atualizações, os inimigos "seguem" o personagem para saber o
-            que ele está fazendo. Quando você chama RegisterEnemy, você está
-            basicamente dizendo: "Ei, você precisa ficar de olho nesse herói!"
-          </li>
-          <li class="my-1 mx-1">
-            <b>Remover observadores -</b> Agora, imagine que um inimigo foi
-            derrotado ou saiu de cena. Não faz sentido ele continuar recebendo
-            atualizações do personagem principal, certo? Seria como continuar
-            recebendo notificações de alguém que você não segue mais.
-          </li>
-          <li class="my-1 mx-2">
-            O método UnregisterEnemy é como dar "unfollow". Ele serve para
-            dizer: "Ok, você não precisa mais saber o que o herói está fazendo".
-            Isso é importante para manter tudo organizado e para que o jogo não
-            gaste energia enviando mensagens para inimigos que não estão mais no
-            jogo.
-          </li>
-          <li class="my-1 mx-1">
-            <b>Notificar observadores -</b> Finalmente, quando algo importante
-            acontece, como o personagem principal derrotando todos os inimigos,
-            todos que estão "seguindo" o herói precisa saber. Isso pode mudar a
-            forma como eles agem no jogo.
-          </li>
-          <li class="my-1 mx-2">
-            O método NotifyEnemiesDefeated é como fazer uma postagem para todos
-            os seus seguidores. Ele percorre a lista de inimigos que estão
-            registrados e avisa cada um deles com a mensagem "OnDefeated". Isso
-            pode fazer com que eles se comportem de maneira diferente, como
-            fugir ou parar de atacar.
-          </li>
+          <ul class="mx-1">
+            <li class="my-1">
+              <b>Registro dos observadores -</b> Quando um novo inimigo aparece
+              no jogo, ele precisa saber o que está acontecendo com o personagem
+              principal, certo? Por exemplo, se o personagem principal derrota
+              um chefe importante, talvez todos os inimigos menores fujam ou
+              percam força.
+              <ul class="mx-1">
+                <li class="my-1">
+                  O método RegisterEnemy é como dar um "follow" no personagem
+                  principal. Assim como você segue alguém nas redes sociais para
+                  receber atualizações, os inimigos "seguem" o personagem para
+                  saber o que ele está fazendo. Quando você chama RegisterEnemy,
+                  você está basicamente dizendo: "Ei, você precisa ficar de olho
+                  nesse herói!"
+                </li>
+              </ul>
+            </li>
+            <li class="my-1">
+              <b>Remover observadores -</b> Agora, imagine que um inimigo foi
+              derrotado ou saiu de cena. Não faz sentido ele continuar recebendo
+              atualizações do personagem principal, certo? Seria como continuar
+              recebendo notificações de alguém que você não segue mais.
+              <ul class="mx-1">
+                <li class="my-1">
+                  O método UnregisterEnemy é como dar "unfollow". Ele serve para
+                  dizer: "Ok, você não precisa mais saber o que o herói está
+                  fazendo". Isso é importante para manter tudo organizado e para
+                  que o jogo não gaste energia enviando mensagens para inimigos
+                  que não estão mais no jogo.
+                </li>
+              </ul>
+            </li>
+
+            <li class="my-1">
+              <b>Notificar observadores -</b> Finalmente, quando algo importante
+              acontece, como o personagem principal derrotando todos os
+              inimigos, todos que estão "seguindo" o herói precisa saber. Isso
+              pode mudar a forma como eles agem no jogo.
+              <ul class="mx-1">
+                <li class="my-1">
+                  O método NotifyEnemiesDefeated é como fazer uma postagem para
+                  todos os seus seguidores. Ele percorre a lista de inimigos que
+                  estão registrados e avisa cada um deles com a mensagem
+                  "OnDefeated". Isso pode fazer com que eles se comportem de
+                  maneira diferente, como fugir ou parar de atacar.
+                </li>
+              </ul>
+            </li>
+          </ul>
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem4.png" alt="" />
           <p>
