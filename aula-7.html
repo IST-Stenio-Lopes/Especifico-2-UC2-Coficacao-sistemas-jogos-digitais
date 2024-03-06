@@ -48,35 +48,40 @@
           <a class="listPanel" href="#contextualizing">
             <li>1.0 Contextualizando</li>
           </a>
-          <a class="listPanel" href="#integracao">
-            <li>2.0 Integração de sistemas</li>
+          <a class="listPanel" href="#introduction">
+            <li>2.0 Introdução</li>
           </a>
-          <a class="listPanel" href="#instalacao">
-            <li>3.0 Instalação</li>
+          <a class="listPanel" href="#components">
+            <li>3.0 Componentes</li>
           </a>
-          <a class="listPanel" href="#configuracao">
-            <li>4.0 Configuração</li>
+          <a class="listPanel" href="#creating-scripts">
+            <li>4.0 Criando Scripts</li>
           </a>
-          <ul type="1" style="margin-left: 20px">
-            <a class="listPanel" href="#criar-conta">
-              <li>4.1 Criar uma conta no itch.io</li>
-            </a>
-            <a class="listPanel" href="#criar-projeto">
-              <li>4.2 Criar um projeto</li>
-            </a>
-            <a class="listPanel" href="#configurar-projeto">
-              <li>4.3 Configurar o projeto</li>
-            </a>
-            <a class="listPanel" href="#adicionando-arquivo">
-              <li>4.4 Adicionando o arquivo</li>
-            </a>
-            <a class="listPanel" href="#detalhes-projeto">
-              <li>4.5 Detalhes do projeto</li>
-            </a>
-            <a class="listPanel" href="#publicacao">
-              <li>4.6 Publicação</li>
+          <ul type="1" class="mx-1">
+            <a class="listPanel" href="#x-ray">
+              <li>4.1 Raio X de um arquivo Script</li>
             </a>
           </ul>
+          <a class="listPanel" href="#controlling-game-object">
+            <li>5.0 Controlando um Game Object</li>
+          </a>
+          <ul type="1" class="mx-1">
+            <a class="listPanel" href="#importance-components">
+              <li>5.1 Importância dos Componentes</li>
+            </a>
+            <a class="listPanel" href="#structure">
+              <li>5.2 Estrutura</li>
+            </a>
+            <a class="listPanel" href="#relationship-components">
+              <li>5.3 Relação entre Componentes</li>
+            </a>
+          </ul>
+          <a class="listPanel" href="#recap">
+            <li>6.0 Recapitulando</li>
+          </a>
+          <a class="listPanel" href="#problem-solution">
+            <li>7.0 Solução do problematizando</li>
+          </a>
         </ul>
       </div>
       <button onclick="changeTheme()" class="accordion">
@@ -141,12 +146,13 @@
           <div class="box-unit-number">
             <span> 7 </span>
           </div>
-          <div class="titleHeader">Configuração</div>
+          <div class="titleHeader">Programação Orientada a Componentes</div>
         </div>
         <div>
           <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
           <p class="text-DescriptUnit">
-            Aplicar os procedimentos de publicação de jogos digitais.
+            Analisar programação de componentes no desenvolvimento de jogos
+            digitais.
           </p>
         </div>
         <div>
@@ -167,11 +173,10 @@
             </h3>
           </div>
 
-          <!--TODO - Vídeo-->
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
-                src="https://www.youtube.com/embed/dS6OJAFUhac"
+                src="https://www.youtube.com/embed/Saio2x84HN4"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -187,10 +192,7 @@
               id="help"
               style="margin-right: 20px"
             />
-            <p>
-              Quais os principais cuidados que mariana precisa ter para publicar
-              seu jogo com sucesso.
-            </p>
+            <p>Como utilizar componentes para desenvolver jogos?</p>
           </div>
         </div>
       </div>
@@ -199,66 +201,153 @@
     <section class="container course">
       <div class="section">
         <div class="contentSection">
-          <h1 class="text-Title light-orange" id="integracao">
-            Integração de sistemas
-          </h1>
-
+          <h1 class="text-Title light-orange" id="introduction">Introdução</h1>
           <p>
-            A integração de sistema refere-se à compatibilidade e integração do
-            jogo com o sistema operacional ou plataforma em que será executado,
-            como PC, console, dispositivo móvel, entre outros. Ocorrendo antes
-            da instalação e configuração de um jogo digital, envolvendo também a
-            união dos diferentes componentes do jogo em um único sistema
-            funcionando de maneira harmoniosa e sem erros.
+            Imagine que você está construindo um jogo na Unity, com vários
+            personagens, objetos interativos e inimigos. Você percebe que muitos
+            desses elementos compartilham características e comportamentos
+            semelhantes, como a movimentação dos personagens ou a colisão dos
+            objetos. 
           </p>
-
           <p>
-            Isso inclui a otimização do código do jogo para funcionar
-            corretamente com as especificidades do sistema operacional ou
-            plataforma, aproveitando seus recursos e funcionalidades.
+            Aqui é onde a Programação Orientada a Componentes (POC) entra em
+            ação! Em vez de programar cada entidade individualmente, você pode
+            criar componentes autônomos e reutilizáveis, como "Movimentação" ou
+            "Colisor", e adicioná-los aos objetos que precisam dessas
+            funcionalidades. 
           </p>
-
           <p>
-            Por exemplo, para um jogo de PC, a integração de sistema envolve
-            garantir que o jogo seja compatível com diferentes versões do
-            sistema operacional Windows, macOS ou Linux, e também que possa ser
-            executado em diferentes configurações de hardware, como
-            processadores, placas de vídeo, memória RAM etc. Além disso, a
-            integração de sistema pode incluir a otimização do desempenho do
-            jogo, para garantir que ele execute suavemente em uma variedade de
-            configurações de hardware.
+            Isso torna o código mais organizado, eficiente e fácil de modificar.
+            Assim, você pode focar em construir uma experiência de jogo
+            incrível, sabendo que a POC facilitará a gestão de comportamentos
+            complexos em seu projeto.
           </p>
-
           <p>
-            Da mesma forma, para jogos em consoles, como PlayStation, Xbox ou
-            Nintendo Switch, a integração de sistema envolve garantir que o jogo
-            seja compatível com as especificidades do hardware e do sistema
-            operacional dessas plataformas, como a arquitetura do processador, a
-            quantidade de memória disponível, os controles específicos do
-            console, entre outros.
+            Programação Orientada a Componentes, ou POC, é como um grande
+            quebra-cabeças de programação. Imagine que cada parte de um software
+            (como um jogo) é um pedaço de um quebra-cabeças - nós chamamos esses
+            pedaços de "componentes". Cada componente tem seu próprio
+            comportamento e sua própria "cara" - ou seja, ele tem uma função
+            específica e sabe exatamente como interagir com os outros
+            componentes. 
           </p>
-
           <p>
-            No caso de jogos para dispositivos móveis, a integração de sistema
-            pode envolver a otimização do jogo para diferentes sistemas
-            operacionais móveis, como iOS, Android, ou até mesmo diferentes
-            versões desses sistemas operacionais, e também para diferentes
-            tamanhos e resoluções de tela de dispositivos móveis.
+            Esses componentes são como peças de encaixe: eles são autônomos, o
+            que significa que cada um funciona sozinho, e também são
+            reutilizáveis, podendo ser usados em várias partes diferentes do
+            software. 
           </p>
-
           <p>
-            Após a integração de sistemas, é feita uma revisão final para
-            garantir que todos os elementos estejam funcionando de maneira
-            correta e que não haja erros ou problemas de desempenho. Caso sejam
-            encontrados problemas, eles serão resolvidos antes do lançamento do
-            jogo.
+            Assim como as peças de LEGO, você pode juntar esses componentes de
+            diferentes maneiras para criar coisas mais complexas.
           </p>
-
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://youtube.com/embed/MldB5z-RHTQ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+              gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
           <p>
-            Por fim, a integração de sistemas é um passo que ajuda a garantir
-            que todos os elementos individuais do jogo funcionem em conjunto
-            para proporcionar uma experiência de jogo envolvente e sem problemas
-            para os jogadores.
+            Em um jogo, vários personagens e objetos podem ter comportamentos e
+            características parecidos. Então, em vez de programar cada um do
+            zero, podemos usar a POC para criar componentes reutilizáveis que
+            podem ser usados em vários lugares. Isso nos ajuda a economizar
+            tempo e torna o nosso código mais organizado e fácil de entender.
+          </p>
+          <img
+            class="w-75 m-auto"
+            src="./img/ue7/imagem1.jpg"
+            alt="Na imagem, uma montagem da cabeça do Darth Vader, personagem clássico do universo Star Wars, feito a partir das peças de encaixe LEGO."
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="components">Componentes</h1>
+          <p>
+            Componentes na Unity são elementos fundamentais que definem o
+            comportamento e as características dos Game Objects. Eles são como
+            blocos de construção que podem ser adicionados a um Game Object para
+            dotá-lo de funcionalidades específicas. Essencialmente, enquanto um
+            Game Object serve como um contêiner, os componentes são as peças
+            individuais que determinam o que cada Game Object pode fazer e como
+            se comporta no mundo do jogo.
+          </p>
+          <img
+            class="w-75 m-auto"
+            src="./img/ue7/imagem2.png"
+            alt="Na imagem, quatro tipos diferentes de GameObject: um personagem, uma luz, um carro  e uma fonte de áudio."
+          />
+          <p>
+            Os Game Objects constituem a fundação de qualquer criação dentro da
+            Unity, atuando como elementos cruciais em qualquer projeto de jogo.
+            Eles servem como contêineres fundamentais para uma infinidade de
+            elementos e funções que definem a experiência do jogo. 
+          </p>
+          <p>
+            Esses objetos podem incorporar uma vasta gama de entidades, desde
+            personagens jogáveis e adversários até objetos colecionáveis,
+            elementos de cenário, câmeras e fontes de luz. 
+          </p>
+          <p>
+            Além disso, eles podem abarcar tanto componentes que interagem
+            diretamente com o usuário quanto elementos estáticos que enriquecem
+            o ambiente do jogo. Portanto, os Game Objects são componentes
+            versáteis e indispensáveis na arquitetura e no desenvolvimento de
+            jogos na plataforma Unity.
+          </p>
+          <p>
+            Cada Game Object em Unity começa como um objeto vazio, sem
+            propriedades ou funções específicas. A adição de componentes a esses
+            objetos é o que os torna úteis. Por exemplo, adicionar um componente
+            de renderização de malha transforma um objeto vazio em um objeto
+            visível. Adicionar um componente de áudio permite que ele emita
+            sons.
+          </p>
+          <p>
+            Na imagem abaixo, por exemplo, vemos um objeto cúbico sólido possui
+            um componente de Filtro de Malha (Mesh Filter) e Renderizador de
+            Malha(Mesh Renderer) para desenhar a superfície do cubo, e um
+            componente de Colisor de Caixa (Box Collider) para representar o
+            volume sólido do objeto em termos físicos.
+          </p>
+          <img
+            class="w-75 m-auto"
+            src="./img/ue7/imagem3.jpg"
+            alt="Na imagem, um cubo com textura de tijolos, em uma tela da Unity. Na aba Inspector, todos os componentes associados a ele."
+          />
+          <div class="atencion my-3 mx-1">
+            <img src="./img/global/icons/atencion.png" />
+            <p>
+              Um GameObject sempre tem um componente Transform acoplado (que
+              representa a posição e a orientação), e este não pode ser
+              removido. Outros componentes, que fornecem funcionalidades ao
+              objeto, podem ser adicionados através do menu de Componentes no
+              editor ou por meio de um script. Além disso, há uma variedade de
+              objetos pré-fabricados úteis (como formas primitivas, câmeras,
+              entre outros) disponíveis no menu GameObject > Objeto 3D.
+            </p>
+          </div>
+          <p>
+            Os componentes variam amplamente em função e complexidade. Eles
+            podem ser simples, como colisores e luzes, ou complexos, como
+            scripts personalizados escritos em C#. Outros exemplos incluem
+            componentes para renderização, física, animação, e lógica de jogo.
+          </p>
+          <p>
+            Um dos aspectos mais poderosos dos componentes é a capacidade de
+            adicionar scripts personalizados. Isso permite aos desenvolvedores
+            criar comportamentos e interações específicas para seus jogos,
+            tornando cada Game Object único.
           </p>
         </div>
       </div>
@@ -267,170 +356,126 @@
     <section class="container course">
       <div class="section">
         <div class="contentSection">
-          <h1 class="text-Title light-orange" id="instalacao">Instalação</h1>
-
+          <h1 class="text-Title light-orange" id="creating-scripts">
+            Criando Scripts
+          </h1>
           <p>
-            A instalação de um jogo digital refere-se ao processo de transferir
-            e configurar todos os arquivos necessários para que o jogo possa ser
-            executado no computador ou dispositivo em que o jogo será jogado.
+            Diferente de muitos outros ativos, os scripts são frequentemente
+            desenvolvidos diretamente no Unity. É possível criar um novo script
+            utilizando o menu Criar, localizado na parte superior esquerda do
+            painel Projeto, ou escolhendo Ativos > Criar > Script C# no menu
+            principal.
           </p>
-
           <p>
-            Existem jogos digitais que são projetados para serem instalados e
-            executados no computador e existem jogos que são jogados diretamente
-            no navegador sem precisar de instalação.
+            Quando um novo script é criado, ele aparece na pasta que estiver
+            selecionada no painel Projeto. O nome do arquivo do script
+            recém-criado estará em destaque, permitindo que você digite um novo
+            nome para ele.
           </p>
-
-          <p>
-            Os jogos que são instalados no computador geralmente têm gráficos
-            mais avançados, som mais detalhado e requerem mais recursos do
-            sistema, como espaço de armazenamento e memória. Esses jogos
-            geralmente oferecem uma experiência mais imersiva, mas exigem mais
-            trabalho para instalar e manter.
-          </p>
-
           <img
             class="w-75 m-auto"
-            src="./img/ue7/Imagem 1.png"
-            alt="Imagem mostrando uma barra sendo preenchida representando o processo de instalação do jogo."
+            src="./img/ue7/imagem4.jpg"
+            alt="Na imagem, uma lista de tipos de componentes que podem ser utilizados na Unity."
           />
-
           <p>
-            É dever do desenvolvedor testá-lo antes de liberar acesso ao público
-            e cada tipo de jogo tem suas vantagens e desvantagens referentes a
-            forma de instalação. A instalação de um jogo pode estar diretamente
-            ligada aos meios de publicação, pois é durante o processo de
-            publicação que o desenvolvedor decide como o jogo será distribuído e
-            disponibilizado para os jogadores.
+            A hora de inserir o nome para o Script é no momento de sua criação,
+            em vez de fazer isso posteriormente. Pois o nome dado neste momento,
+            passa a ser também o nome da classe.
           </p>
-
+          <h2 class="text-subtitle1 dark-orange mx-3" id="x-ray">
+            Raio X de um arquivo Script
+          </h2>
           <p>
-            Quando um desenvolvedor decide publicar seu jogo em uma plataforma
-            online, por exemplo, ele precisará seguir as diretrizes dela e
-            fornecer informações sobre o jogo, como uma descrição, capturas de
-            tela e um vídeo de gameplay. Além disso, o desenvolvedor precisará
-            fornecer um arquivo de instalação do jogo que seja compatível com a
-            plataforma de distribuição escolhida.
+            Para abrir um script, basta clicar duas vezes nele, prontamente será
+            aberto em um editor de texto. Por default, a Unity abrirá o script
+            no Visual Studio, é possível configurar qual editor de código você
+            deseja usar. O arquivo de script, quando criado, se parece com a
+            imagem a seguir.
           </p>
-
-          <p>
-            Esse processo deve ser simples e intuitivo para os jogadores, e o
-            desenvolvedor deve garantir que o jogo seja instalado corretamente e
-            que todos os arquivos necessários sejam baixados e instalados no
-            dispositivo do jogador.
-          </p>
-
-          <p>
-            Normalmente, a instalação envolve:
-            <br />
-            <li class="mx-1">
-              A cópia de arquivos do disco ou download de uma plataforma de
-              distribuição digital, como a Steam;
-            </li>
-            <li class="mx-1">
-              A configuração de opções e configurações do jogo.
-            </li>
-            <li class="mx-1">
-              Durante o processo de instalação, podem ser instalados arquivos
-              adicionais, como bibliotecas de gráficos ou som, ou atualizações
-              para o jogo, dependendo da versão do jogo que está sendo
-              instalada.
-            </li>
-            <li class="mx-1">
-              Em alguns casos, a instalação também pode incluir a ativação do
-              jogo, o que envolve inserir uma chave de produto ou fazer login
-              com uma conta associada ao jogo.
-            </li>
-          </p>
-
-          <p>
-            Uma vez concluída a instalação, o jogo estará pronto para ser
-            jogado. O processo de instalação pode variar dependendo do
-            dispositivo em que o jogo será instalado e do método de distribuição
-            escolhido pelo desenvolvedor do jogo. No entanto, geralmente, o
-            processo de instalação segue alguns passos básicos, que são:
-          </p>
-
-          <p>
-            <li class="mx-1">
-              <strong>Baixar o jogo</strong>: O primeiro passo é baixar o
-              arquivo de instalação do jogo. Isso pode ser feito através de uma
-              plataforma de distribuição de jogos, como a Steam ou a Epic Games
-              Store, ou diretamente do site do desenvolvedor.
-            </li>
-            <li class="mx-1">
-              <strong>Executar o arquivo de instalação</strong>: Depois que o
-              arquivo de instalação é baixado, o próximo passo é executá-lo.
-              Isso geralmente envolve clicar duas vezes no arquivo de instalação
-              baixado.
-            </li>
-            <li class="mx-1">
-              <strong>Aceitar os termos e condições</strong>: Antes de instalar
-              o jogo, é comum ser solicitado a aceitar os termos e condições do
-              desenvolvedor. Esses termos podem incluir informações sobre como o
-              jogo pode ser usado, regras de conduta para os jogadores e
-              políticas de privacidade.
-            </li>
-            <li class="mx-1">
-              <strong>Escolher a localização da instalação</strong>: É possível
-              escolher onde o jogo será instalado em seu dispositivo. Se você
-              não escolher um local específico, o jogo será instalado na pasta
-              padrão de jogos em seu computador.
-            </li>
-            <li class="mx-1">
-              <strong>Aguardar o processo de instalação</strong>: Após
-              selecionar a localização da instalação, o processo de instalação
-              do jogo começará. Esse processo pode levar alguns minutos ou mais,
-              dependendo do tamanho do jogo e da velocidade do seu dispositivo.
-            </li>
-            <li class="mx-1">
-              <strong>Finalizar a instalação</strong>: Quando a instalação
-              estiver concluída, você poderá ser solicitado a realizar outras
-              configurações, como selecionar a qualidade gráfica ou escolher um
-              idioma. Depois de concluir essas etapas, o jogo estará pronto para
-              ser jogado.
-            </li>
-          </p>
-
-          <p>
-            Além disso, o processo de desinstalação também é importante, pois
-            permite que os jogadores removam o jogo de seu dispositivo se
-            decidirem que não desejam mais jogá-lo. Normalmente, o processo de
-            desinstalação é simples e envolve acessar o painel de controle do
-            sistema operacional ou a plataforma de distribuição do jogo e
-            selecionar a opção de desinstalar.
-          </p>
-
           <img
             class="w-75 m-auto"
-            src="./img/ue7/Imagem 2.png"
-            alt="Imagem mostra o caminho de opções para realizar a desinstalação de um jogo na Steam, que é Gerenciar e depois Desinstalar."
+            src="./img/ue7/imagem5.png"
+            alt="Na imagem, uma lista de tipos de componentes que podem ser utilizados na Unity."
           />
-
           <p>
-            O desenvolvedor do jogo deve garantir que o processo de instalação
-            seja simples e intuitivo e que todos os arquivos necessários sejam
-            baixados e instalados corretamente no dispositivo do jogador. Além
-            disso, é importante fornecer instruções claras sobre como instalar e
-            desinstalar o jogo, bem como suporte ao cliente para ajudar os
-            jogadores que possam encontrar problemas durante o processo de
-            instalação.
+            Um script estabelece sua ligação com as funcionalidades internas do
+            Unity através da implementação de uma classe derivada da classe
+            interna denominada <b>MonoBehaviour.</b> 
           </p>
-
+          <p>
+            Uma classe pode ser vista como um tipo de molde para criar um novo
+            tipo de Componente, que por sua vez pode ser acoplado a GameObjects.
+            Sempre que você vincula um componente de script a um GameObject, uma
+            nova instância do objeto definida pelo modelo (blueprint) é criada. 
+          </p>
+          <p>
+            O nome da classe deriva do nome que você escolheu ao criar o
+            arquivo. Para que o componente de script possa ser adicionado a um
+            GameObject, é necessário que o nome da classe e o nome do arquivo
+            sejam idênticos.
+          </p>
+          <p>
+            Na Unity, as funções <b>Update</b> e <b>Start</b> são usadas em
+            scripts para controlar o comportamento dos GameObjects. Aqui está
+            uma explicação detalhada em tópicos para cada uma delas:
+          </p>
+          <p><b>Função Start</b></p>
+          <ul class="mx-2">
+            <li class="my-1">
+              <b>Inicialização Única:</b> Executada apenas uma vez, quando o
+              script é ativado pela primeira vez.
+            </li>
+            <li class="my-1">
+              <b>Configuração Inicial:</b> Ideal para definir valores iniciais
+              de variáveis, carregar dados, ou realizar configurações
+              necessárias antes do início do jogo.
+            </li>
+            <li class="my-1">
+              <b>Executada Antes do Primeiro Update:</b> Garante que qualquer
+              configuração feita em Start esteja pronta antes do início das
+              atualizações de quadro.
+            </li>
+          </ul>
+          <p><b>Função Update</b></p>
+          <ul class="mx-2">
+            <li class="my-1">
+              <b>Execução Contínua:</b> Chamada uma vez a cada quadro, o que a
+              torna ideal para controlar a lógica de jogo continua, como
+              movimentos e interações.
+            </li>
+            <li class="my-1">
+              <b>Sensível ao Tempo de Quadro:</b> Como é chamada a cada quadro,
+              a frequência de execução pode variar. Geralmente, é utilizada
+              junto com Time.deltaTime para garantir movimentos suaves e
+              consistentes.
+            </li>
+            <li class="my-1">
+              <b>Resposta a Eventos em Tempo Real:</b> Útil para verificar
+              entradas do usuário, atualizações de estados ou outras condições
+              que mudam constantemente ao longo do jogo.
+            </li>
+          </ul>
+          <p>
+            Cada uma dessas funções tem um propósito específico e é essencial
+            para o desenvolvimento de jogos na Unity, facilitando a organização
+            do código e garantindo que a lógica do jogo funcione da maneira
+            esperada.
+          </p>
           <!-- inicio questão 1 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question1-box-correct">
               <div class="question-description-container">
                 <p>QUESTÃO 1</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
                 <p>Avalie se a afirmação a seguir é verdadeira ou falsa.</p>
               </div>
 
               <div class="question-description-container">
                 <p></p>
-                <p>
-                  O processo de instalação pode variar dependendo do dispositivo
-                  em que o jogo será instalado.
-                </p>
+                <p>A função Start é chamada uma vez a cada quadro.</p>
               </div>
 
               <div
@@ -499,7 +544,7 @@
                     />
                   </td>
                   <td>
-                    <label for="q1-option-1"> Verdadeiro </label>
+                    <label for="q1-option-1">Verdadeiro</label>
                   </td>
                 </tr>
                 <tr>
@@ -512,7 +557,7 @@
                     />
                   </td>
                   <td>
-                    <label for="q1-option-2"> Falso </label>
+                    <label for="q1-option-2">Falso</label>
                   </td>
                 </tr>
               </table>
@@ -535,460 +580,99 @@
     <section class="container course">
       <div class="section">
         <div class="contentSection">
-          <h1 class="text-Title light-orange" id="configuracao">
-            Configuração
+          <h1 class="text-Title light-orange" id="controlling-game-object">
+            Controlando um Game Object
           </h1>
-
           <p>
-            Depois que a plataforma de publicação de um jogo digital é
-            escolhida, o processo de configuração começa com a criação de uma
-            conta de desenvolvedor na plataforma escolhida. Em seguida, é
-            necessário seguir as diretrizes da plataforma para a preparação do
-            jogo para publicação.
+            Como foi visto na seção anterior, um script define somente um
+            esqueleto para um Componente e, assim, nenhum código será ativado
+            até que uma instância do script seja anexada a um GameObject.
           </p>
-
           <p>
-            Isso pode incluir a preparação de arquivos e materiais promocionais,
-            a criação de uma página de informações sobre o jogo e a definição de
-            preços e opções de distribuição.
+            Para demonstrar isso, vamos anexar o script ao Game Object Cubo.
+            Basta arrastá-lo para o objeto. Prontamente, o script já aparecerá
+            entre os componentes desse Game Object.
           </p>
-
-          <p>
-            Também é importante configurar a forma como o jogo será monetizado,
-            seja por meio de vendas diretas, assinaturas, compras no aplicativo
-            ou publicidade. É necessário definir as políticas de privacidade e
-            termos de serviço do jogo, além de garantir que o conteúdo esteja em
-            conformidade com as diretrizes da plataforma em relação a conteúdo
-            ofensivo ou inapropriado.
-          </p>
-
-          <p>
-            Para ficar ainda melhor de você entender, vamos falar como é na
-            prática, acompanhe agora como é a configuração para publicar um jogo
-            na plataforma online do itch.io. O itch.io é uma plataforma de
-            distribuição digital de jogos independente, onde desenvolvedores
-            podem publicar seus jogos para venda ou download gratuito. Neste
-            tutorial, a seguir vamos explicar detalhadamente como configurar e
-            publicar um jogo nessa plataforma.
-          </p>
-
           <img
             class="w-75 m-auto"
-            src="./img/ue7/Imagem 3.png"
-            alt="Imagem da página do itch.io, mostrando capas de vários jogos já publicados na plataforma."
+            src="./img/ue7/imagem6.png"
+            alt="Na imagem, a tela da Unity, com um cubo na aba Scene. Uma seta que sai de um arquivo de script até o cubo."
           />
-        </div>
-      </div>
-    </section>
-
-    <section class="container course">
-      <div class="section">
-        <div class="contentSection">
-          <!--Subtitulo-->
-          <h1 class="text-subtitle1 dark-orange mx-3" id="criar-conta">
-            Criar uma conta no itch.io
-          </h1>
-
           <p>
-            Para começar, você precisa criar uma conta no itch.io. Para fazer
-            isso, vá para o site itch.io e clique em "Register" no canto
-            superior direito da tela, indo para a página como a imagem a seguir.
+            Vamos alterar o método Start() desse script, para vermos uma mudança
+            de comportamento sutil do Game Object. A saída será verificada na
+            aba Console da Unity, conforme apresentado na sequência a seguir.
+            (1) Insere no método Start a função Debug.Log(), é utilizada para
+            exibir mensagens no console do Unity para fins de depuração e
+            diagnóstico. (2) dar o Play na Unity e, por fim, (3) ver a saída na
+            aba console.
           </p>
-
           <img
             class="w-75 m-auto"
-            src="./img/ue7/Imagem 4.png"
-            alt="Tela inicial do itch.io"
+            src="./img/ue7/imagem7.png"
+            alt="Print de tela da Unity com passo a passo mudança de comportamento sutil do Game Object."
           />
-
+          <h2
+            class="text-subtitle1 dark-orange mx-3"
+            id="importance-components"
+          >
+            Importância dos Componentes
+          </h2>
           <p>
-            Nessa tela, preencha os campos necessários, como nome de usuário
-            (username), endereço de e-mail(email address) e senha(password).
-            Então, concordando, aceite os termos de serviço marcando a opção “I
-            accept the Term of Service”. Depois clique em "Create account" para
-            finalizar essa etapa.
+            Ao combinar diferentes componentes, os desenvolvedores podem
+            construir cenários complexos e personagens interativos. Por exemplo,
+            um personagem jogável pode ter componentes para controle de
+            movimento, animação, colisão, saúde, e muitos outros.
           </p>
-
-          <!--Div de aviso com alerta-->
-          <div class="atencion my-3 mx-1">
-            <img src="./img/global/icons/atencion.png" />
-            <p>
-              Depois de terminar o registro é muito importante que você entre no
-              email registrado e faça a verificação de conta, pois sem essa
-              verificação não será possível enviar o arquivo do jogo para a
-              plataforma.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container course">
-      <div class="section">
-        <div class="contentSection">
-          <!--Subtitulo-->
-          <h1 class="text-subtitle1 dark-orange mx-3" id="criar-projeto">
-            Criar um projeto
-          </h1>
-
           <p>
-            Depois de se registrar no itch.io, você precisa criar um projeto
-            para o seu jogo. Para isso, clique em “Dashboard” na guia principal
-            do site no canto superior direito e depois em "Create new project"
-            localizado no centro como na imagem a seguir. 
+            Os componentes são reutilizáveis, o que significa que o mesmo tipo
+            de componente pode ser adicionado a diferentes Game Objects. Isso
+            promove eficiência e consistência no desenvolvimento de jogos.
           </p>
-
-          <img
-            class="w-75 m-auto"
-            src="./img/ue7/Imagem 5.png"
-            alt="Tela guia principal do site."
-          />
-
           <p>
-            Preencha os campos necessários, como nome do projeto e descrição.
-            Você também pode adicionar uma imagem de capa para o seu projeto,
-            clicando em "Choose file" abaixo de "Cover image".
+            Componentes são cruciais para a criação de uma gameplay dinâmica e
+            interativa. Eles respondem a eventos de entrada, interagem com
+            outros objetos e controlam a lógica do jogo.
           </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="container course">
-      <div class="section">
-        <div class="contentSection">
-          <!--Subtitulo-->
-          <h1 class="text-subtitle1 dark-orange mx-3" id="configurar-projeto">
-            Configurar o projeto
-          </h1>
-
           <p>
-            Depois de criar o projeto, você precisa configurá-lo. Na página de
-            configurações, você pode colocar qual é o título do projeto em
-            “Title”, e um pouco mais abaixo é a caixa de texto onde você pode
-            fazer uma breve descrição sobre o jogo em “Short description or
-            tagline”, então em “Classification” é onde informamos qual é a
-            classificação do projeto, se é só um jogo, um pacote de ferramentas,
-            recursos, livro etc. Como você pode ver a seguir na imagem 6.
+            Em resumo, os componentes são vitais no desenvolvimento de jogos com
+            a Unity, proporcionando a flexibilidade e a funcionalidade
+            necessárias para trazer os Game Objects e, por extensão, o mundo do
+            jogo à vida. Eles são a essência do que torna a Unity uma ferramenta
+            tão poderosa e versátil para criadores de jogos de todos os níveis.
           </p>
-
-          <img
-            class="w-75 m-auto"
-            src="./img/ue7/Imagem 6.png"
-            alt="Tela da página de configurações."
-          />
-
-          <p>
-            Ainda sobre a imagem 6, escolhemos o tipo do projeto em “Kind of
-            project”, aqui é definido que tipo de arquivo será disponibilizado,
-            se será em html, como os jogos de navegador, ou se é baixável
-            (downloadable), isto é, se o jogador precisará baixar o executável
-            do jogo para joga-lo, entre outros tipos. Em sequência, temos o
-            “Release status”, para descrever o estágio do projeto, se ele já
-            está completo ou em desenvolvimento, por exemplo.
-          </p>
-
-          <p>
-            Ao lado você pode adicionar uma imagem para ser a capa do jogo na
-            plataforma com o botão “Upload Cover Image”, logo abaixo temos o
-            lugar onde colocamos o link para o trailer do projeto ou vídeo de
-            gameplay do jogo e em seguida podemos adicionar imagens e capturas
-            de tela com o botão “Add screenshots”.
-          </p>
-
-          <p>
-            Você também pode definir o preço do seu jogo e escolher se deseja
-            permitir que os jogadores façam doações ou não nessa parte mostrada
-            na imagem a seguir.
-          </p>
-
-          <img
-            class="w-75 m-auto"
-            src="./img/ue7/Imagem 7.png"
-            alt="Tela para trailer do projeto ou vídeo de gameplay do jogo."
-          />
-        </div>
-      </div>
-    </section>
-
-    <section class="container course">
-      <div class="section">
-        <div class="contentSection">
-          <!--Subtitulo-->
-          <h1 class="text-subtitle1 dark-orange mx-3" id="adicionando-arquivo">
-            Adicionando o arquivo
-          </h1>
-
-          <p>
-            Para adicionar o jogo ao seu projeto, clique em "Upload files" e
-            escolha o arquivo do jogo ou pasta. Certifique-se de que o arquivo
-            do jogo esteja no formato correto para o itch.io, que pode ser um
-            arquivo ZIP, EXE, DMG ou APK contendo o executável do jogo para que
-            o jogador baixo e jogue, ou dependendo do tipo do projeto que você
-            escolheu anteriormente em “kind of project”, você deve colocar um
-            arquivo .ZIP, contendo os arquivos que a engine exportou para HTML,
-            sendo obrigatório a presença do arquivo chamado index.html, que é
-            criado automaticamente no processo de exportação do jogo, assim, os
-            jogadores poderão jogá-lo diretamente no navegador.
-          </p>
-
-          <img
-            class="w-75 m-auto"
-            src="./img/ue7/Imagem 8.png"
-            alt="Tela para Uploads."
-          />
-
-          <!--Div de aviso com alerta-->
-          <div class="atencion my-3 mx-1">
-            <img src="./img/global/icons/atencion.png" />
-            <p>
-              O tamanho máximo do arquivo para fazer o upload permitido pelo
-              itch.io é de até 1 GB (um gigabyte).
-            </p>
-          </div>
-
-          <p>
-            Dependendo do tipo de projeto escolhido, como o tipo HTML, pode
-            haver outras opções disponíveis, referente a resolução de execução
-            do jogo no navegador, na primeira opção recomenda-se que mantenha a
-            opção de “Embed in page” para o jogo ficar melhor incorporado a
-            página.
-          </p>
-
-          <p>
-            Já na segundo opção, é onde você escolhe se quer definir manualmente
-            o tamanho da tela de visão do jogo, por padrão a escolha é "Manually
-            set size” como verá na próxima imagem e serve para definir
-            manualmente, mas caso o jogo tenha sido exportado como HTML da
-            Unity, então o mais recomendado é escolher a outra opção chamada
-            “Auto-detect size” que define o tamanho automaticamente.
-          </p>
-
-          <p>
-            Caso escolha por definir manualmente, no “Width” se trata da largura
-            da tela e o “Height” a altura, então antes de preencher tenha
-            certeza desses valores para não causar problemas de resolução
-            durante o jogo.
-          </p>
-
-          <img
-            class="w-75 m-auto"
-            src="./img/ue7/Imagem 9.png"
-            alt="Tela Embed options."
-          />
-
-          <p>As “Frame options” são opcionais e fazem o seguinte.</p>
-
-          <p>
-            <strong>Mobile friendly</strong>: Esta opção permite que o conteúdo
-            do seu projeto seja executado em dispositivos móveis com resolução
-            menor e suporte a toque. Isso torna o seu projeto mais acessível a
-            usuários que acessam a partir de smartphones ou tablets.
-          </p>
-
-          <p>
-            <strong>Automatically start on page load</strong>: Esta opção faz
-            com que o seu projeto comece a ser executado automaticamente quando
-            a página é carregada. No entanto, ela não é recomendada para jogos
-            em Unity, pois pode causar atrasos no carregamento da página.
-          </p>
-
-          <p>
-            <strong>Fullscreen button</strong>: Esta opção adiciona um botão no
-            canto inferior direito do quadro que permite ao usuário visualizar o
-            conteúdo em tela cheia. Isso pode melhorar a experiência do usuário,
-            especialmente se o conteúdo é gráfico ou visual.
-          </p>
-
-          <p>
-            <strong>Enable scrollbars</strong>: Esta opção permite que barras de
-            rolagem sejam adicionadas ao quadro que contém o seu projeto. Isso é
-            útil se o conteúdo do projeto for maior do que a área disponível no
-            quadro, permitindo que os usuários rolem para ver o conteúdo
-            adicional.
-          </p>
-
-          <p>
-            <strong>SharedArrayBuffer support</strong>: Esta opção é
-            experimental e pode quebrar partes da página ou do projeto. Ela só
-            deve ser ativada se você souber que precisa dela. O
-            SharedArrayBuffer é uma maneira de compartilhar dados de JavaScript
-            em uma página. Se você estiver usando essa funcionalidade em seu
-            projeto, poderá habilitar essa opção.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="container course">
-      <div class="section">
-        <div class="contentSection">
-          <!--Subtitulo-->
-          <h1 class="text-subtitle1 dark-orange mx-3" id="detalhes-projeto">
-            Detalhes do projeto
-          </h1>
-
-          <p>
-            Logo após fazer o upload do projeto, vamos descrevê-lo em um breve
-            resumo na parte de “Description”, que no caso de um jogo,
-            recomenda-se fazer uma descrição com informações sobre o tema do
-            jogo, a mecânica principal com as regras para vencer no jogo.
-          </p>
-
-          <img
-            class="w-75 m-auto"
-            src="./img/ue7/Imagem 10.png"
-            alt="Tela Details."
-          />
-
-          <p>
-            Ainda sobre a imagem 10, em “Genre” você define o tipo de jogo que
-            está publicando. Algumas opções comuns de gênero são ação, aventura,
-            estratégia, RPG, simulação, entre outras. Escolher um gênero ajuda a
-            categorizar o jogo e torná-lo mais fácil de encontrar para jogadores
-            que procuram por um determinado tipo de jogo. Já em “Tags”, defina
-            palavras-chave que descrevem o jogo de uma forma mais específica do
-            que o gênero. As tags ajudam a identificar características
-            específicas do jogo que podem não ser imediatamente aparentes a
-            partir do gênero. Por exemplo, se o jogo for um RPG de fantasia com
-            elementos de estratégia, as tags podem incluir "fantasia", "RPG",
-            "estratégia", "magia" e assim por diante.
-          </p>
-
-          <p>Seguindo com a configuração, você terá as seguintes opções:</p>
-
-          <img
-            class="w-75 m-auto"
-            src="./img/ue7/Imagem 11.png"
-            alt="Tela Details."
-          />
-
-          <p>
-            Nessa parte, em “App store links” você pode adicionar os links para
-            outras plataformas que o jogo já estiver disponível, como Google
-            Play, App Store ou Steam. Isso pode ajudar os jogadores a encontrar
-            e baixar o jogo em outras plataformas.
-          </p>
-
-          <p>
-            Já em “Custom noun”, é um campo opcional onde você pode adicionar um
-            substantivo personalizado para descrever o jogo. Isso pode ser usado
-            em vez do nome do jogo em certas partes do site, como na seção "Você
-            pode gostar também" na página de um jogo. Por exemplo, se o jogo for
-            chamado "The Adventures of John", o substantivo personalizado pode
-            ser "aventuras" para tornar a descrição mais genérica e atraente
-            para jogadores que gostam de jogos de aventura.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="container course">
-      <div class="section">
-        <div class="contentSection">
-          <!--Subtitulo-->
-          <h1 class="text-subtitle1 dark-orange mx-3" id="publicacao">
-            Publicação
-          </h1>
-
-          <p>Agora chegamos na última etapa do processo</p>
-
-          <img
-            class="w-75 m-auto"
-            src="./img/ue7/Imagem 12.png"
-            alt="Tela de última etapa do processo."
-          />
-
-          <p>
-            Explicando cada opção, começamos com “Community”, este recurso
-            permite que os usuários postem comentários e discutam sobre o jogo
-            na página do projeto. Isso pode ajudar a construir uma comunidade em
-            torno do jogo e fornecer feedback aos desenvolvedores, suas opções
-            são:
-          </p>
-
-          <p>
-            <strong>Disabled</strong>: Estas opções permitem que você desative a
-            funcionalidade de comentários ou discussões, se desejar. Isso pode
-            ser útil se você não quiser permitir comentários ou discussões na
-            página do projeto.
-          </p>
-
-          <p>
-            <strong>Comments</strong>: Esta opção permite que os usuários postem
-            comentários na parte inferior da página do projeto. Os comentários
-            podem ser organizados em uma discussão com threads aninhados para
-            facilitar a leitura e a resposta.
-          </p>
-
-          <p>
-            <strong>Discussion board</strong>: Esta opção adiciona uma página de
-            comunidade dedicada ao projeto, com categorias, threads, respostas e
-            mais recursos para facilitar a discussão e o engajamento.
-          </p>
-
-          <p>
-            Agora em “Visibility & Access", permite que você controle quem pode
-            ver a página do projeto enquanto você está trabalhando nele ou após
-            a publicação, suas opções são:
-          </p>
-
-          <p>
-            <strong>Draft</strong>: Esta opção permite que você crie um rascunho
-            da página do projeto para revisão antes de torná-lo público. Somente
-            as pessoas autorizadas que têm permissão para editar o projeto
-            poderão visualizar o rascunho.
-          </p>
-
-          <p>
-            <strong>Restricted</strong>: Esta opção permite que somente
-            proprietários e pessoas autorizadas vejam a página do projeto.
-          </p>
-
-          <p>
-            <strong>Public</strong>: Esta opção torna a página do projeto
-            visível para qualquer pessoa que visite o site itch.io.
-          </p>
-
-          <p>
-            E finalmente, depois de configurar o jogo, você pode enfim
-            publicá-lo clicando no botão "Save" na parte inferior da página de
-            configurações do jogo. Se o seu jogo for gratuito, ele será
-            publicado imediatamente. Se o seu jogo for pago, você precisará
-            definir as informações de pagamento antes que ele seja publicado.
-          </p>
-
-          <p>
-            Este é o processo básico para configurar e publicar um jogo no
-            itch.io. Lembre-se de que você pode personalizar ainda mais o seu
-            jogo e o projeto, adicionando informações como vídeos, links para
-            redes sociais e outras informações sobre o jogo, além das formas de
-            pagamento.
-          </p>
-
-          <!--TODO - Vídeo-->
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
-                src="https://youtube.com/embed/EGYQJFtHr8A"
+                src="https://www.youtube.com/embed/y6oHi6bur_8"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-            gyroscope; picture-in-picture"
+                                      gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
             </div>
           </div>
-
-          <!-- inicio questão 2 -->
+          <p>
+            Os componentes são reutilizáveis e podem ser adicionados a qualquer
+            GameObject para proporcionar a funcionalidade desejada. Isso permite
+            um alto grau de modularidade e reutilização de código, já que um
+            único componente pode ser usado em vários GameObjects.
+          </p>
           <div class="marginVertical">
             <div class="question-box-container" id="question2-box-correct">
               <div class="question-description-container">
                 <p>QUESTÃO 2</p>
-                <p>
-                  Marque a opção CORRETA sobre qual é o primeiro passo no
-                  processo de configuração para publicar um jogo em uma
-                  plataforma online, como o itch.io?
-                </p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>Avalie se a afirmação a seguir é verdadeira ou falsa.</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>Em Unity, cada GameObject pode ter apenas um componente?</p>
               </div>
 
               <div
@@ -1057,9 +741,7 @@
                     />
                   </td>
                   <td>
-                    <label for="q2-option-1">
-                      Configurar a monetização do jogo
-                    </label>
+                    <label for="q2-option-1">Falso</label>
                   </td>
                 </tr>
                 <tr>
@@ -1072,39 +754,7 @@
                     />
                   </td>
                   <td>
-                    <label for="q2-option-2">
-                      Criar uma página de informações sobre o jogo
-                    </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                      id="q2-option-3"
-                      type="radio"
-                      name="q2-myRadios"
-                      class="question-type-one-radio"
-                    />
-                  </td>
-                  <td>
-                    <label for="q2-option-3">
-                      Criar uma conta de desenvolvedor na plataforma escolhida
-                    </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                      id="q2-option-4"
-                      type="radio"
-                      name="q2-myRadios"
-                      class="question-type-one-radio"
-                    />
-                  </td>
-                  <td>
-                    <label for="q2-option-4">
-                      Preparar arquivos e materiais promocionais
-                    </label>
+                    <label for="q2-option-2">Verdadeiro</label>
                   </td>
                 </tr>
               </table>
@@ -1119,207 +769,451 @@
               </div>
             </div>
           </div>
-          <!-- fim questão 2 -->
-
+          <h2 class="text-subtitle1 dark-orange mx-3" id="structure">
+            Estrutura
+          </h2>
+          <p>
+            Um GameObject em Unity é basicamente um contêiner que mantém um
+            conjunto de componentes juntos. Cada GameObject pode ter qualquer
+            número de componentes e a funcionalidade de um GameObject é
+            determinada pela combinação de componentes que ele possui. 
+          </p>
+          <p>
+            Por exemplo, um GameObject representando um personagem no jogo pode
+            ter um componente de renderização para a aparência do personagem, um
+            componente de script para o comportamento do personagem, um
+            componente de colisor para lidar com a detecção de colisão, e assim
+            por diante.
+          </p>
+          <img
+            class="w-75 m-auto"
+            src="./img/ue7/imagem8.png"
+            alt="Na imagem, a tela capturada demonstrando como o  GameObjects encapsulam os componentes de um elemento."
+          />
           <!-- inicio questão 3 -->
           <div class="marginVertical">
-            <div id="q1" class="myt-3">
-              <div class="question-box-container" id="question4-box-correct">
-                <div class="question-description-container">
-                  <p>QUESTÃO 3</p>
-                  <p class="my-1">
-                    Escolha a opção CORRETA que valida a sentença a seguir:
-                  </p>
-                </div>
+            <div class="question-box-container" id="question3-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 3</p>
+              </div>
 
-                <div class="question-description-container q3-sq1">
-                  <p></p>
-                  <p style="line-height: 28px">
-                    O desenvolvedor deve garantir que na etapa de
-                    <span
-                      id="q3-sq1-block-1"
-                      class="block"
-                      style="cursor: pointer"
-                      onclick="unselectCheckFromCompleteTypeQuestion(this, question3.subQuestions[0])"
-                      >___________________
-                    </span>
-                    , o jogador tenha facilidade em abrir e executar o jogo sem
-                    erros depois de instalado.
-                  </p>
-                </div>
+              <div class="question-description-container">
+                <p></p>
+                <p>Na engine de jogos Unity, o que é um GameObject?</p>
+              </div>
 
-                <div class="question-select-type-container q3-sq1-options">
-                  <div class="question-select-type-opt">
-                    <label
-                      for="sq1-saida"
-                      class="question-select-type-opt-label"
-                      >Instalação</label
-                    >
-                    <input
-                      id="sq1-saida"
-                      type="checkbox"
-                      class="question-select-type-opt-input"
-                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
-                    />
-                  </div>
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q3-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
 
-                  <div class="question-select-type-opt">
-                    <label
-                      for="sq1-entrada"
-                      class="question-select-type-opt-label"
-                      >Integração de sistemas</label
-                    >
-                    <input
-                      id="sq1-entrada"
-                      type="checkbox"
-                      class="question-select-type-opt-input"
-                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
-                    />
-                  </div>
-
-                  <div class="question-select-type-opt">
-                    <label
-                      for="sq1-pinceis-virtuais"
-                      class="question-select-type-opt-label"
-                      >Configuração</label
-                    >
-                    <input
-                      id="sq1-pinceis-virtuais"
-                      type="checkbox"
-                      class="question-select-type-opt-input"
-                      onchange="handleSelectOptionCompleteTypeQuestion(this, question3.subQuestions[0])"
-                    />
-                  </div>
-                </div>
-
-                <div
-                  class="question-box-correct-container feedback-container"
-                  id="q3-sq1-box-feedback"
-                >
-                  <div class="question-box-title">
-                    <p class="feedback-title">Muito bem!</p>
-
-                    <svg
-                      class="feedback-success-icon"
-                      style="position: absolute; right: 32px"
-                      width="19"
-                      height="14"
-                      viewBox="0 0 19 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
-                        fill="#436900"
-                      />
-                    </svg>
-
-                    <svg
-                      class="feedback-error-icon"
-                      style="position: absolute; right: 32px"
-                      width="19"
-                      height="19"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
-                        fill="#93000A"
-                      />
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
-                        fill="#93000A"
-                      />
-                    </svg>
-                  </div>
-
-                  <div class="question-box-text">
-                    <span class="feedback-message">
-                      O Windows é um sistema operacional, então não pode ser
-                      considerado um hardware.
-                    </span>
-                  </div>
-                </div>
-
-                <div class="w-full flex justify-center">
-                  <div
-                    class="button-send-responses"
-                    onclick="handleSubmitCompleteTypeQuestion(question3)"
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    Enviar resposta
-                  </div>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
                 </div>
               </div>
             </div>
-            <!-- fim questão 3 -->
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-1"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-1"
+                      >Uma ferramenta de desenvolvimento de jogos.</label
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-2"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-2">Um tipo de componente.</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-3"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-3"
+                      >Um contêiner que mantém um conjunto de componentes
+                      juntos.</label
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-4"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-4"
+                      >Uma linguagem de programação.</label
+                    >
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question3)"
+              >
+                Enviar resposta
+              </div>
+            </div>
           </div>
+          <!-- fim questão 3 -->
+          <div class="atencion my-3 mx-1">
+            <img src="./img/global/icons/atencion.png" />
+            <p>
+              A principal vantagem do pensamento orientado a componentes é a
+              otimização da reusabilidade do trabalho. Indo além do resultado do
+              uso do modelo OO, a CO permite o uso de aplicações "prontas" como
+              módulos para novos e maiores projetos.
+              <br /><br />
+              <img
+                class="w-full"
+                src="./img/ue7/imagem9.jpg"
+                alt="Na imagem, uma série de engrenagens em um fundo azul. Ilustração que remete a tecnologia."
+              />
+            </p>
+          </div>
+          <h2
+            class="text-subtitle1 dark-orange mx-3"
+            id="relationship-components"
+          >
+            Relação entre Componentes
+          </h2>
+          <p>
+            Os componentes em Unity podem interagir uns com os outros de várias
+            maneiras. Um componente pode acessar e manipular os dados de outro
+            componente no mesmo GameObject usando o sistema de mensagens da
+            Unity. Além disso, um componente pode também acessar e manipular os
+            componentes de outros GameObjects através do sistema de referência
+            de Unity.
+          </p>
+          <p>
+            Se você chegou até aqui é porque entende, que na Unity, tudo no
+            cenário do jogo é um GameObject. Esses GameObjects se tornam
+            funcionais quando lhes são adicionados componentes. Os componentes,
+            por sua vez, podem ser visuais, como MeshRenderer ou SpriteRenderer,
+            ou lógicos, como Scripts, Rigidbody, Collider, entre outros.
+          </p>
+          <p>
+            Scripts em C# são usados para adicionar lógica aos GameObjects. Eles
+            podem acessar e modificar outros componentes no mesmo GameObject ou
+            em outros GameObjects. Por exemplo, um script pode alterar a posição
+            de um GameObject usando seu componente Transform, ou controlar a
+            animação através de um Animator componente.
+          </p>
+          <p>
+            Assim, componentes comunicam-se usando referências. Um script pode
+            obter uma referência a um componente usando métodos como
+            GetComponent<>(). É comum usar scripts para habilitar/desabilitar
+            componentes, como desligar um Collider durante uma animação
+            específica.
+          </p>
+          <p>
+            Eventos e delegados são usados para criar uma comunicação mais
+            sofisticada e desacoplada entre componentes. Eles permitem que
+            componentes 'escutem' por certos eventos e reajam a eles, sem
+            necessitar uma referência direta entre eles.
+          </p>
+          <p>
+            GameObjects podem ser organizados em uma hierarquia parent-child,
+            onde transformações aplicadas ao objeto pai (parent) afetam os
+            objetos filhos (children). Isso é útil para agrupar componentes
+            visuais e lógicos de uma maneira que mantenha a cena organizada e
+            eficiente.
+          </p>
+          <p>
+            No exemplo do <b>jogo da Amélia</b> que estamos usando nessa aula, o
+            personagem principal tem um componente de script que controla sua
+            movimentação. Este componente pode interagir com o componente de
+            colisão do personagem para verificar se o personagem está em contato
+            com o chão antes de permitir que o personagem pule, por exemplo.
+            Assim, diferentes componentes podem trabalhar juntos para criar
+            comportamentos complexos.
+          </p>
+          <p>
+            Ao finalizar estes exercícios, você terá uma melhor compreensão de
+            como a Programação Orientada a Componentes funciona na prática e
+            como você pode usá-la para melhorar a estrutura e a reutilização do
+            código em seus projetos de Unity.
+          </p>
+          <!-- inicio questão 4 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question4-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 4</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>
+                  Quais são as características da Programação Orientada a
+                  Componentes em Unity?
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q4-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q4-option-1"
+                      type="radio"
+                      name="q4-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q4-option-1"
+                      >Cada GameObject pode ter apenas um componente.</label
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q4-option-2"
+                      type="radio"
+                      name="q4-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q4-option-2"
+                      >Componentes são módulos autônomos e reutilizáveis.</label
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q4-option-3"
+                      type="radio"
+                      name="q4-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q4-option-3"
+                      >A POC não permite a interação entre diferentes
+                      componentes em um GameObject.</label
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q4-option-4"
+                      type="radio"
+                      name="q4-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q4-option-4"
+                      >A funcionalidade de um GameObject não é determinada pela
+                      combinação de componentes que ele possui.</label
+                    >
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question4)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 4 -->
         </div>
       </div>
     </section>
 
-    <section>
+    <!--Section-->
+    <section class="container course">
       <div class="section">
         <div class="contentSection">
-          <h1 class="text-Title light-orange" id="Recapitulando">
-            Recapitulando
-          </h1>
-
+          <h1 class="text-Title light-orange" id="recap">Recapitulando</h1>
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/keEPKhSyT98"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                      gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
           <p>
-            Nessa unidade, falamos sobre como a integração de sistemas, a
-            instalação e a configuração de publicação são processos cruciais no
-            desenvolvimento e lançamento de um jogo.
+            Nessa aula você aprendeu que a Programação Orientada a Componentes
+            (POC) é um método de desenvolvimento de software que envolve a
+            construção de um programa a partir de peças individuais chamadas
+            "componentes". 
           </p>
-
           <p>
-            A integração de sistemas visa garantir a compatibilidade e
-            integração adequadas do jogo com o sistema operacional ou plataforma
-            em que será executado, enquanto a instalação e a configuração de
-            publicação são etapas importantes para garantir que o jogo possa ser
-            instalado e disponibilizado aos jogadores de forma eficiente e
-            protegida.
+            Cada componente é como uma peça de LEGO: é autônomo, tem um
+            comportamento e uma interface bem definidos, e pode ser usado em
+            várias partes diferentes do software. 
           </p>
-
           <p>
-            O sucesso desses processos contribui para a qualidade e
-            acessibilidade do jogo aos jogadores. Assim, é importante que os
-            desenvolvedores de jogos dediquem tempo e recursos adequados para
-            garantir uma integração de sistemas suave, instalação correta e
-            configuração de publicação adequada para seus jogos. Esta é uma
-            parte essencial do ciclo de desenvolvimento de jogos, desde a
-            criação até a disponibilização para os jogadores.
+            Componentes podem ser combinados e interagir uns com os outros para
+            criar sistemas mais complexos, o que torna o código mais fácil de
+            gerenciar e reutilizar. Isso é especialmente útil em ambientes como
+            a Unity, onde os componentes são a base para a funcionalidade de
+            todos os objetos do jogo, permitindo que desenvolvedores criem jogos
+            complexos de forma eficiente e organizada.
           </p>
-
-          <p>
-            Com todos esses processos bem feitos, os jogadores podem desfrutar
-            de uma experiência de jogo suave e sem problemas em suas plataformas
-            preferidas. Consequentemente, isso pode levar a uma maior satisfação
-            dos jogadores, uma base de jogadores mais ampla e um maior sucesso
-            comercial do jogo.
-          </p>
-
-          <div class="flex justify-center align-center w-full">
+          <img
+            class="w-75 m-auto"
+            src="./img/ue7/gif1.gif"
+            alt="Na animação, dois dinossauros e um boneco de lego se movimentando como se estivessem dançando e se divertindo."
+          />
+          <div class="flex justify-center align-center w-full myt-3">
             <img src="./img/global/icons/greenCheck.png" />
-            <h3 class="px-3 green" id="SoluçãoDoProblematizando">
+            <h3 class="px-3 green" id="problem-solution">
               Solução do problematizando
             </h3>
           </div>
 
-          <!--TODO - Vídeo-->
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
-                src="https://youtube.com/embed/kHg6bpT9eyc"
+                src="https://youtube.com/embed/FKGTtOjhWbQ"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-            gyroscope; picture-in-picture"
+                  gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
             </div>
