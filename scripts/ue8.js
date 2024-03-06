@@ -1,92 +1,112 @@
 var question1 = {
-    type: "RADIO",
-    title: "Qual das opções abaixo corresponde à janela que exibe mensagens de depuração, avisos e erros do jogo na Unity?",
-    description: "",
-    feedbacks: [
-      {
-        optionId: "q1-option-1",
-        feedBackId: "q1-box-feedback",
-        title: "OPS!",
-        message:
-          "Esses aspectos devem ser avaliados e validados antes mesmo do processo de publicação.",
-        type: "error",
-      },
-      {
-        optionId: "q1-option-2",
-        feedBackId: "q1-box-feedback",
-        title: "Você acertou",
-        message:
-          "Mostra que você compreendeu que o principal foco da validação de publicação é verificar a conformidade com as leis e regulamentos para publicação.",
-        type: "success",
-      },
-      {
-        optionId: "q1-option-3",
-        feedBackId: "q1-box-feedback",
-        title: "Não é isso",
-        message:
-          "Mesmo que esses aspectos também sejam importantes, esse não é o foco principal da validação e publicação.",
-        type: "error",
-      },
-      {
-        optionId: "q1-option-4",
-        feedBackId: "q1-box-feedback",
-        title: "Atenção",
-        message:
-            "Mesmo que isso possa interessar aos desenvolvedores, não é o objetivo da validação de publicação.",
-        type: "error",
-      },
-    ],
+  type: "RADIO",
+  title: "QUESTÃO 1",
+  description:
+    "Qual das seguintes afirmações é verdadeira sobre classes e objetos?",
+  feedbacks: [
+    {
+      optionId: "q1-option-1",
+      feedBackId: "q1-box-feedback",
+      title: "OPS!",
+      message: "O objeto é que instancia uma classe.",
+      type: "error",
+    },
+    {
+      optionId: "q1-option-2",
+      feedBackId: "q1-box-feedback",
+      title: "OPS!",
+      message: "As classes é que são planos para a criação de objetos.",
+      type: "error",
+    },
+    {
+      optionId: "q1-option-3",
+      feedBackId: "q1-box-feedback",
+      title: "Exato!",
+      message:
+        "Uma classe define os atributos e comportamentos que um objeto deve ter.",
+      type: "success",
+    },
+    {
+      optionId: "q1-option-4",
+      feedBackId: "q1-box-feedback",
+      title: "OPS!",
+      message: "Objetos podem ter atributos ou comportamentos.",
+      type: "error",
+    },
+  ],
 };
 
 var question2 = {
-    type: "COMPLETE",
-    title:
-      "Escolha a palavra que é a resposta correta para completar as sentenças a seguir:",
-    subQuestions: [
-      {
-        subQuestionId: "q2-sq1",
-        title:
-          "1. Microfone, mouse, webcam são exemplos de periférico de _________",
-        description: "",
-        feedbackEmpty: {
-          feedBackId: "q2-sq1-box-feedback",
-          title: "OPS!",
-          message: "Complete todos os campos da frase.",
-          type: "error",
-        },
-        feedBackElementsId: ["q2-sq1-box-feedback"],
-        userAnswers: [],
-        rightAnswers: [
-          {
-            id: "q2-sq1-block-1",
-            value: "Pincéis virtuais",
-            feedbacks: [
-              {
-                feedBackId: "q2-sq1-box-feedback",
-                title: "Você acertou",
-                message:
-                  "Você acertou, mostra que prestou atenção ao assunto.",
-                type: "success",
-                value: "A validação"
-              },
-              {
-                feedBackId: "q2-sq1-box-feedback",
-                title: "Não é isso",
-                message: "Pois a documentação acontece justamente após a realização desses testes.",
-                type: "error",
-                value: "A documentação"
-              },
-              {
-                feedBackId: "q2-sq1-box-feedback",
-                title: "Atenção",
-                message:
-                  "A análise de plataformas está inserida no processo de validação, que é o requerido para publicação do jogo.",
-                type: "error",
-                value: "A análise de plataformas"
-              },
-            ],
-          },
-        ],
-      },
-    ],
+  type: "RADIO",
+  title: "QUESTÃO 2 - Avalie se a afirmação a seguir é verdadeira ou falsa.",
+  description:
+    "Em Programação Orientada a Objetos, a herança permite que uma classe herde todos os atributos e métodos de outra classe, mas a classe filha não pode ter atributos ou métodos adicionais próprios.",
+  feedbacks: [
+    {
+      optionId: "q2-option-1",
+      feedBackId: "q2-box-feedback",
+      title: "Exato!",
+      message:
+        "A classe filha também pode definir seus próprios atributos e métodos adicionais.",
+      type: "success",
+    },
+    {
+      optionId: "q2-option-2",
+      feedBackId: "q2-box-feedback",
+      title: "OPS!",
+      message:
+        "Na verdade, a classe filha também pode definir seus próprios atributos e métodos adicionais.",
+      type: "error",
+    },
+  ],
+};
+
+var question3 = {
+  type: "RADIO",
+  title: "QUESTÃO 3 - Avalie se a afirmação a seguir é verdadeira ou falsa.",
+  description:
+    "Em Programação Orientada a Objetos, o polimorfismo permite que métodos com o mesmo nome tenham comportamentos diferentes dependendo da classe do objeto que os está chamando.",
+  feedbacks: [
+    {
+      optionId: "q3-option-1",
+      feedBackId: "q3-box-feedback",
+      title: "OPS!",
+      message:
+        "O polimorfismo é um conceito que permite que métodos com o mesmo nome tenham comportamentos diferentes.",
+      type: "error",
+    },
+    {
+      optionId: "q3-option-2",
+      feedBackId: "q3-box-feedback",
+      title: "Exato!",
+      message:
+        "O polimorfismo é um conceito fundamental da Programação Orientada a Objetos que permite que métodos com o mesmo nome tenham comportamentos diferentes dependendo da classe do objeto que os está chamando.",
+      type: "success",
+    },
+  ],
+};
+
+var question4 = {
+  type: "RADIO",
+  title: "QUESTÃO 4 - Avalie se a afirmação a seguir é verdadeira ou falsa.",
+  description:
+    "Em Programação Orientada a Objetos, o encapsulamento é um princípio de POO que permite que uma classe herde atributos e métodos de outra classe.",
+  feedbacks: [
+    {
+      optionId: "q4-option-1",
+      feedBackId: "q4-box-feedback",
+      title: "Exato!",
+      message:
+        "Muito bem, você está atento! Essa definição se refere ao princípio da Herança em POO",
+      type: "success",
+    },
+    {
+      optionId: "q4-option-2",
+      feedBackId: "q4-box-feedback",
+      title: "OPS!",
+      message:
+        "É melhor você rever o material! O princípio do encapsulamento refere-se à prática de ocultar os detalhes internos do funcionamento de um objeto e expor apenas aquelas partes que são seguras e necessárias para a interação externa.",
+      type: "error",
+    },
+  ],
 };

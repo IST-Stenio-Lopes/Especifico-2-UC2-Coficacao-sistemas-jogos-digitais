@@ -134,10 +134,11 @@ ol li::marker {
   display: flex;
   flex-direction: column;
 }
+
 p {
   font-family: "Poppins" !important;
   margin: 10px 0px;
-  font-weight: 300;
+  font-weight: normal;
 }
 
 .section {
