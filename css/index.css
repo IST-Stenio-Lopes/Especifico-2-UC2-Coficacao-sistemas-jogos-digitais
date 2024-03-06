@@ -374,12 +374,12 @@ p {
   flex-direction: column;
   align-items: center;
 }
+
 .dicas {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: 20px auto;
 }
 
 .dicas img {
@@ -392,7 +392,6 @@ p {
   justify-content: flex-start;
   align-items: flex-start;
   border: 1px solid #ffc700;
-  margin: 32px 0;
   border-radius: 8px;
   padding: 20px;
 }
