@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogos Digitais - SENAI EAD</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="SENAISP" />
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/aula9.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./scripts/select.js" defer></script>
+    <link rel="stylesheet" href="./css/global/question.css" />
+    <script src="./scripts/questions.js"></script>
+    <script src="./scripts/ue9.js"></script>
+    <script src="./scripts/index.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a onclick="openNav()"
+        ><img src="./img/global/icons/menu.png" class="logoJogos"
+      /></a>
+      <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+      <div></div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <button onclick="openList()" class="accordion">
+        <img src="./img/global/icons/summary.svg" style="margin-right: 10px" />
+        <p>Sumário</p>
+      </button>
+      <div class="panel" id="panelBtn">
+        <ul type="1">
+          <a class="listPanel" href="#contextualizing">
+            <li>1.0 Contextualizando</li>
+          </a>
+          <a class="listPanel" href="#relacao-clientes">
+            <li>2.0 Relação com clientes internos e externos</li>
+          </a>
+          <a class="listPanel" href="#relacao-subordinados">
+            <li>3.0 Relação com subordinados</li>
+          </a>
+        </ul>
+      </div>
+      <button onclick="changeTheme()" class="accordion">
+        <img
+          src="./img/global/icons/themeIcon.svg"
+          style="margin-right: 10px"
+          alt="Alterar tema"
+        />
+        <p>Alterar tema</p>
+      </button>
+      <button onclick="changeGray()" class="accordion">
+        <img
+          src="./img/global/icons/scaleGrayIcon.svg"
+          style="margin-right: 10px"
+          alt="Escala de Cinza"
+        />
+        <p>Escala de Cinza</p>
+      </button>
+      <button onclick="carregarFichaTecnica()" class="accordion">
+        <img
+          src="img\global\icons\lab_profile.svg"
+          style="margin-right: 10px"
+          alt="Ficha Técnica"
+        />
+        <p>Ficha Técnica</p>
+      </button>
+      <div class="accordion2">
+        <div style="display: flex">
+          <img
+            src="./img/global/icons/textIcon.svg"
+            style="margin-right: 10px"
+            alt="Tamanho da fonte"
+          />
+          <p>Tamanho da fonte</p>
+        </div>
+        <div>
+          <button
+            name="decrease-font"
+            id="decrease-font"
+            title="Diminuir fonte"
+          >
+            A -
+          </button>
+          <button
+            name="increase-font"
+            id="increase-font"
+            title="Aumentar fonte"
+          >
+            A +
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <header class="homePage">
+      <div class="header-title">
+        <div>
+          <h2 class="text-Course">Curso Técnico em</h2>
+          <h1 class="text-NameCourse">Jogos Digitais</h1>
+        </div>
+        <div id="containerBoxTitle">
+          <div class="box-unit-number">
+            <span> 9 </span>
+          </div>
+          <div class="titleHeader">Relações Institucionais</div>
+        </div>
+        <div>
+          <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
+          <p class="text-DescriptUnit">
+            Motivar seus pares para a amabilidade nas relações profissionais,
+            por meio da prática do diálogo, da empatia, da tolerância, do
+            altruísmo, da modéstia e da gratidão.
+          </p>
+        </div>
+        <div>
+          <p class="text-LetsLearn">Vamos iniciar os estudos!</p>
+          <a class="btnPlay" href="#contextualizing">Play</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <div>
+            <h1 class="text-Title light-orange" id="contextualizing">
+              Contextualizando
+            </h1>
+            <h3 class="text-Course">
+              Assista ao vídeo abaixo para uma introdução aos seus estudos
+            </h3>
+          </div>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/pIasFV761Io"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                                          gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="dicas">
+            <img src="./img/global/icons/help.png" id="help" />
+            <p>
+              De que maneira Maria pode acabar com esse desconforto gerado na
+              equipe e ainda lidar de forma efetiva com as preocupações do
+              cliente?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="relacao-clientes">
+            Relação com clientes internos e externos
+          </h1>
+
+          <p>
+            A relação com clientes internos e externos é um aspecto crítico no
+            desenvolvimento de jogos, uma indústria que é altamente dependente
+            de feedbacks e interações com os jogadores. É importante para os
+            desenvolvedores de jogos valorizar e investir em uma comunicação
+            aberta, colaborativa e positiva com todos os envolvidos no processo
+            de desenvolvimento de jogos.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue9/Imagem 1.jpg"
+            alt="Na imagem temos três pessoas em uma reunião conversando, com duas delas sendo clientes que aparentam estar felizes com a reunião."
+          />
+
+          <p>
+            A ideia por trás do conceito de cliente interno é que os
+            departamentos e funcionários de uma organização devem tratar uns aos
+            outros como clientes, fornecendo produtos e serviços de qualidade
+            para atender às suas necessidades e expectativas. Isso implica em
+            uma abordagem orientada para o serviço, onde os departamentos e
+            funcionários trabalham em conjunto para garantir a satisfação dos
+            colegas de trabalho, facilitando o fluxo eficiente de trabalho e a
+            obtenção de resultados.
+          </p>
+
+          <p>
+            No desenvolvimento de jogos, os clientes internos podem se referir
+            aos membros da equipe, como programadores, artistas, designers,
+            escritores e outros profissionais envolvidos na criação do jogo. Os
+            clientes externos são os jogadores, que são os consumidores finais
+            do produto.
+          </p>
+
+          <p>
+            A relação com clientes internos é fundamental para garantir a
+            colaboração efetiva dentro da equipe de desenvolvimento do jogo.
+            Isso envolve a comunicação clara e aberta, a compreensão das
+            necessidades e expectativas de cada membro da equipe e a garantia de
+            que todos estão trabalhando em prol dos mesmos objetivos.
+          </p>
+
+          <p>
+            Uma boa relação com clientes internos permite a troca de ideias,
+            feedback construtivo e a resolução de conflitos de forma saudável, o
+            que pode resultar em uma maior eficiência e qualidade do trabalho
+            produzido.
+          </p>
+
+          <p>
+            Por outro lado, a relação com clientes externos, que muitas vezes
+            são os próprios jogadores, é essencial para o sucesso do jogo no
+            mercado. Os jogadores são os consumidores finais do jogo e têm
+            expectativas específicas em relação à jogabilidade, à experiência do
+            usuário, aos recursos do jogo e ao suporte ao cliente.
+          </p>
+
+          <p>
+            Os desenvolvedores de jogos precisam estar atentos aos feedbacks dos
+            jogadores, sejam eles positivos ou negativos, e utilizar essas
+            informações para melhorar continuamente o jogo e atender às
+            necessidades dos jogadores.
+          </p>
+
+          <p>
+            Além disso, a relação com clientes externos também envolve a
+            comunicação de informações importantes, como:
+            <br />
+            <li class="mx-1">atualizações de jogos;</li>
+            <li class="mx-1">correções de bugs;</li>
+            <li class="mx-1">eventos especiais e promoções.</li>
+          </p>
+
+          <p>
+            Os desenvolvedores de jogos podem interagir com os jogadores por
+            meio de:
+            <br />
+            <li class="mx-1">fóruns online;</li>
+            <li class="mx-1">redes sociais;</li>
+            <li class="mx-1">
+              e-mails, canais de suporte ao cliente e outras formas de
+              comunicação direta e indireta.
+            </li>
+          </p>
+
+          <p>
+            Uma relação positiva com esses clientes é fundamental para construir
+            uma base de jogadores fiel e engajada, que possa promover o jogo
+            para outros jogadores e gerar boca a boca positivo. Por outro lado,
+            uma relação negativa com os clientes externos pode resultar em má
+            reputação do jogo, baixas vendas e até mesmo o fracasso comercial do
+            jogo.
+          </p>
+
+          <p>
+            Em resumo, a relação com clientes internos e externos no
+            desenvolvimento de jogos é crucial para garantir a colaboração
+            eficaz da equipe de desenvolvimento e atender às expectativas dos
+            jogadores, resultando em um jogo de alta qualidade, com uma base de
+            jogadores satisfeita e engajada.
+          </p>
+
+          <!-- inicio questão 1 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question1-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 1</p>
+                <p>Avalie se a afirmação a seguir é verdadeira ou falsa.</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>
+                  Os clientes internos em um contexto de desenvolvimento de
+                  jogos são os jogadores, que são os consumidores finais do
+                  produto.
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q1-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-1"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-1"> Verdadeiro </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-2"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-2"> Falso </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question1)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 1 -->
+        </div>
+      </div>
+    </section>
+
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="relacao-subordinados">
+            Relação com subordinados
+          </h1>
+
+          <p>
+            A relação com subordinados no desenvolvimento de jogos refere-se à
+            dinâmica e interação entre os líderes e os membros da equipe em um
+            projeto de criação de jogos. É uma parte essencial do gerenciamento
+            de projetos de desenvolvimento de jogos e desempenha um papel
+            fundamental no sucesso do projeto. A relação adequada com os
+            subordinados pode influenciar significativamente a motivação,
+            produtividade, criatividade e bem-estar dos membros da equipe, e,
+            consequentemente, afetar a qualidade do jogo final.
+          </p>
+
+          <p>
+            Uma boa relação com subordinados é baseada em respeito, comunicação
+            aberta e honesta, confiança mútua e reconhecimento do valor e
+            contribuição de cada membro da equipe. Ao cultivar uma relação
+            positiva com seus subordinados, você estará promovendo um ambiente
+            de trabalho saudável e produtivo.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue9/Imagem 2.jpg"
+            alt="Chefe e subordinado tendo uma reunião, cada um sentado em uma cadeira de frente um para outro sendo separado por uma mesa pequena de escritório."
+          />
+
+          <p>
+            Uma relação saudável e eficaz com os subordinados no desenvolvimento
+            de jogos envolve vários aspectos importantes:
+            <br />
+            <li class="mx-1">
+              <strong>Comunicação clara:</strong> É essencial que os líderes de
+              equipe estabeleçam uma comunicação clara e aberta com seus
+              subordinados. Isso inclui a definição clara de metas, expectativas
+              e responsabilidades, bem como a disponibilidade para ouvir e
+              responder às preocupações e ideias dos membros da equipe.
+            </li>
+            <li class="mx-1">
+              <strong>Liderança inspiradora:</strong> Líderes eficazes no
+              desenvolvimento de jogos inspiram e motivam sua equipe. Eles
+              fornecem orientação, feedback construtivo e reconhecimento pelo
+              trabalho bem feito. Eles também promovem um ambiente de trabalho
+              positivo e inclusivo, onde os membros da equipe se sintam
+              valorizados e encorajados a contribuir com suas habilidades e
+              conhecimentos.
+            </li>
+            <li class="mx-1">
+              <strong>Gestão de conflitos:</strong> Conflitos podem surgir em
+              qualquer projeto de desenvolvimento de jogos, e é importante que
+              os líderes saibam como gerenciá-los adequadamente. Isso inclui a
+              capacidade de resolver conflitos de forma justa e equitativa,
+              ouvindo todas as partes envolvidas e buscando soluções
+              construtivas.
+            </li>
+            <li class="mx-1">
+              <strong>Desenvolvimento de habilidades:</strong> Líderes de equipe
+              no desenvolvimento de jogos devem investir no desenvolvimento de
+              habilidades dos membros de sua equipe, oferecendo treinamentos,
+              oportunidades de aprendizado e feedback sobre o desempenho. Isso
+              ajuda a aprimorar as habilidades da equipe, tornando-os mais
+              proficientes em suas funções e contribuindo para o sucesso do
+              projeto.
+            </li>
+            <li class="mx-1">
+              <strong>Reconhecimento e recompensa:</strong> É importante que os
+              líderes reconheçam e recompensem os esforços e conquistas dos
+              membros da equipe. Isso pode ser feito por meio de feedback
+              positivo, elogios públicos, promoções, aumento salarial ou outras
+              formas de reconhecimento, o que pode aumentar a motivação e o
+              engajamento dos membros da equipe.
+            </li>
+          </p>
+
+          <p>
+            Uma relação positiva e saudável com os subordinados no
+            desenvolvimento de jogos pode criar um ambiente de trabalho
+            colaborativo, inspirador e produtivo, o que pode levar a um melhor
+            desempenho da equipe e ao desenvolvimento de jogos de alta
+            qualidade.
+          </p>
+
+          <p>
+            A relação com subordinados no desenvolvimento de jogos é um aspecto
+            crucial para o sucesso de um projeto de criação de jogos. Além dos
+            pontos mencionados anteriormente, aqui estão mais algumas
+            considerações importantes:
+            <br />
+            <li class="mx-1">
+              <strong>Capacitação da equipe:</strong> Líderes eficazes no
+              desenvolvimento de jogos capacitam sua equipe, dando-lhes
+              autonomia e permitindo que tomem decisões e contribuam com suas
+              ideias. Isso ajuda a construir confiança e incentiva a
+              criatividade e inovação da equipe.
+            </li>
+            <li class="mx-1">
+              <strong>Orientação e mentoria:</strong> Líderes podem atuar como
+              mentores, fornecendo orientação e suporte aos membros da equipe,
+              especialmente aos mais novos ou menos experientes. Isso pode
+              incluir compartilhar conhecimentos, fornecer feedback construtivo
+              e ajudar na resolução de desafios.
+            </li>
+            <li class="mx-1">
+              <strong>Gerenciamento de expectativas:</strong> É importante que
+              os líderes estabeleçam expectativas realistas e alcançáveis para a
+              equipe, levando em consideração os recursos disponíveis, prazos e
+              metas do projeto. Isso evita sobrecarregar a equipe e permite que
+              eles trabalhem de forma mais eficaz.
+            </li>
+            <li class="mx-1">
+              <strong>Reconhecimento do trabalho em equipe:</strong> Jogos são
+              projetos complexos que geralmente envolvem uma equipe
+              diversificada de profissionais, como artistas, programadores,
+              designers e escritores, entre outros. É fundamental que os líderes
+              valorizem e promovam o trabalho em equipe, reconhecendo a
+              contribuição de cada membro e incentivando a colaboração e a
+              sinergia entre as diferentes áreas.
+            </li>
+            <li class="mx-1">
+              <strong>Respeito e diversidade:</strong> Líderes de equipe devem
+              promover um ambiente de trabalho respeitoso e inclusivo, onde
+              todos os membros da equipe se sintam valorizados,
+              independentemente de sua origem, identidade de gênero, orientação
+              sexual, etnia, religião ou outras características pessoais. A
+              diversidade na equipe pode levar a uma maior criatividade e
+              inovação nos jogos desenvolvidos.
+            </li>
+          </p>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/AS9Fk-DAVSw"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                                                    gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <p>
+            Em resumo, uma relação saudável com os subordinados no
+            desenvolvimento de jogos envolve uma comunicação clara, liderança
+            inspiradora, gestão de conflitos, desenvolvimento de habilidades,
+            reconhecimento e recompensa, empoderamento da equipe, orientação e
+            mentoria, gerenciamento de expectativas, valorização do trabalho em
+            equipe, e respeito à diversidade.
+          </p>
+
+          <p>
+            Uma equipe bem liderada e motivada pode criar jogos de alta
+            qualidade e alcançar o sucesso no competitivo mercado de
+            desenvolvimento de jogos.
+          </p>
+
+          <!-- inicio questão 2 -->
+          <div class="marginVertical">
+            <div id="q1" class="myt-3">
+              <div class="question-box-container" id="question4-box-correct">
+                <div class="question-description-container">
+                  <p>QUESTÃO 2</p>
+                  <p class="my-1">
+                    Escolha a opção CORRETA que valida a sentença a seguir:
+                  </p>
+                </div>
+
+                <div class="question-description-container q2-sq1">
+                  <p></p>
+                  <p style="line-height: 28px">
+                    Líderes de equipe devem promover um ambiente de trabalho
+                    respeitoso e inclusivo, pois a
+                    <span
+                      id="q2-sq1-block-1"
+                      class="block"
+                      style="cursor: pointer"
+                      onclick="unselectCheckFromCompleteTypeQuestion(this, question2.subQuestions[0])"
+                      >____________________
+                    </span>
+                    pode influenciar significativamente a motivação,
+                    produtividade, criatividade e bem-estar dos membros da
+                    equipe.
+                  </p>
+                </div>
+
+                <div class="question-select-type-container q2-sq1-options">
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-saida"
+                      class="question-select-type-opt-label"
+                      >Relação com clientes internos</label
+                    >
+                    <input
+                      id="sq1-saida"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question2.subQuestions[0])"
+                    />
+                  </div>
+
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-entrada"
+                      class="question-select-type-opt-label"
+                      >Relação com clientes externos</label
+                    >
+                    <input
+                      id="sq1-entrada"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question2.subQuestions[0])"
+                    />
+                  </div>
+
+                  <div class="question-select-type-opt">
+                    <label
+                      for="sq1-pinceis-virtuais"
+                      class="question-select-type-opt-label"
+                      >Relação com subordinados</label
+                    >
+                    <input
+                      id="sq1-pinceis-virtuais"
+                      type="checkbox"
+                      class="question-select-type-opt-input"
+                      onchange="handleSelectOptionCompleteTypeQuestion(this, question2.subQuestions[0])"
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="question-box-correct-container feedback-container"
+                  id="q2-sq1-box-feedback"
+                >
+                  <div class="question-box-title">
+                    <p class="feedback-title">Muito bem!</p>
+
+                    <svg
+                      class="feedback-success-icon"
+                      style="position: absolute; right: 32px"
+                      width="19"
+                      height="14"
+                      viewBox="0 0 19 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                        fill="#436900"
+                      />
+                    </svg>
+
+                    <svg
+                      class="feedback-error-icon"
+                      style="position: absolute; right: 32px"
+                      width="19"
+                      height="19"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                        fill="#93000A"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                        fill="#93000A"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="question-box-text">
+                    <span class="feedback-message">
+                      O Windows é um sistema operacional, então não pode ser
+                      considerado um hardware.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="w-full flex justify-center">
+                  <div
+                    class="button-send-responses"
+                    onclick="handleSubmitCompleteTypeQuestion(question2)"
+                  >
+                    Enviar resposta
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- fim questão 2 -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section">
+        <div class="contentSection">
+          <h1 class="text-Title light-orange" id="Recapitulando">
+            Recapitulando
+          </h1>
+
+          <p>
+            Nessa unidade foi abordado sobre a importância da relação com
+            clientes internos e externos é fundamental no desenvolvimento de
+            jogos. Os clientes internos referem-se aos membros da equipe de
+            desenvolvimento, e uma abordagem orientada para o serviço, com
+            comunicação clara e colaboração efetiva, é essencial para garantir a
+            satisfação dos colegas de trabalho e a qualidade do trabalho
+            produzido. Os clientes externos são os jogadores, consumidores
+            finais do jogo, e sua opinião é crucial para o sucesso do jogo no
+            mercado. Os desenvolvedores de jogos precisam estar atentos aos
+            feedbacks dos jogadores, utilizar essas informações para melhorar o
+            jogo e construir uma base de jogadores fiel e engajada.
+          </p>
+
+          <p>
+            Também foi falado sobre a relação com subordinados no
+            desenvolvimento de jogos é essencial para o gerenciamento de
+            projetos e o sucesso do jogo. Comunicação clara, liderança
+            inspiradora, gestão de conflitos e desenvolvimento de habilidades
+            são aspectos importantes dessa relação. Líderes de equipe devem
+            estabelecer uma comunicação clara e aberta, motivar a equipe,
+            resolver conflitos de forma construtiva e investir no
+            desenvolvimento das habilidades dos membros da equipe.
+          </p>
+
+          <div class="flex justify-center align-center w-75">
+            <img src="./img/global/icons/greenCheck.png" />
+            <h3 class="px-3 green" id="SoluçãoDoProblematizando">
+              Solução do problematizando
+            </h3>
+          </div>
+
+          <!--TODO - Vídeo-->
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/EzMHfQGb2oQ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                                                    gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="boxPurple">
+            <svg
+              width="60"
+              height="59"
+              viewBox="0 0 60 59"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M51.3836 24.4531H47.2383C47.0458 24.4585 46.863 24.5337 46.7288 24.6628C46.5946 24.792 46.5195 24.9648 46.5195 25.1448C46.5195 25.3247 46.5946 25.4976 46.7288 25.6267C46.863 25.7559 47.0458 25.8311 47.2383 25.8364H51.3836C51.5762 25.8311 51.759 25.7559 51.8932 25.6267C52.0274 25.4976 52.1024 25.3247 52.1024 25.1448C52.1024 24.9648 52.0274 24.792 51.8932 24.6628C51.759 24.5337 51.5762 24.4585 51.3836 24.4531Z"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="0.59"
+              />
+              <path
+                d="M46.8104 22.5606L50.6386 21.0826C50.8148 21.0092 50.9534 20.8744 51.0248 20.7069C51.0963 20.5395 51.095 20.3526 51.0212 20.1861C50.9474 20.0196 50.8069 19.8865 50.6296 19.8152C50.4524 19.7439 50.2523 19.74 50.072 19.8044L46.2439 21.2854C46.1514 21.3184 46.067 21.3684 45.9955 21.4324C45.9241 21.4965 45.8671 21.5732 45.828 21.6581C45.7888 21.743 45.7683 21.8344 45.7676 21.9269C45.7669 22.0193 45.786 22.111 45.8239 22.1964C45.8618 22.2819 45.9176 22.3593 45.988 22.4243C46.0585 22.4892 46.1422 22.5403 46.2342 22.5746C46.3261 22.6088 46.4245 22.6255 46.5235 22.6236C46.6224 22.6217 46.72 22.6013 46.8104 22.5637V22.5606Z"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="0.59"
+              />
+              <path
+                d="M48.1887 15.9142C48.0497 15.7847 47.8613 15.7119 47.6649 15.7119C47.4686 15.7119 47.2802 15.7847 47.1412 15.9142L44.2112 18.6507C44.0774 18.7814 44.0037 18.9558 44.0059 19.1366C44.0081 19.3175 44.086 19.4903 44.2229 19.6181C44.3598 19.746 44.5448 19.8187 44.7384 19.8208C44.932 19.8228 45.1187 19.754 45.2587 19.629L48.1887 16.8925C48.3274 16.7627 48.4053 16.5868 48.4053 16.4034C48.4053 16.22 48.3274 16.044 48.1887 15.9142Z"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="0.59"
+              />
+              <path
+                d="M30.4624 43.1569L29.1313 38.4612C29.489 38.1258 29.7716 37.7271 29.9625 37.2885C30.1534 36.8498 30.2489 36.3801 30.2433 35.9066C30.2281 34.012 28.5674 32.4106 26.5415 32.3368C25.769 32.3081 25.0051 32.497 24.3491 32.8791C23.6931 33.2612 23.1754 33.8187 22.8631 34.4792C22.5509 35.1397 22.4586 35.8727 22.5983 36.5828C22.738 37.293 23.1031 37.9475 23.6463 38.4612L22.3152 43.1569C22.2651 43.3381 22.26 43.5276 22.3002 43.7109C22.3404 43.8942 22.425 44.0665 22.5473 44.2147C22.6697 44.3629 22.8267 44.4831 23.0063 44.566C23.1859 44.6489 23.3835 44.6924 23.5838 44.6932H29.1951C29.3955 44.6924 29.593 44.6489 29.7726 44.566C29.9522 44.4831 30.1092 44.3629 30.2316 44.2147C30.3539 44.0665 30.4385 43.8942 30.4787 43.7109C30.5189 43.5276 30.5138 43.3381 30.4637 43.1569H30.4624ZM23.8016 43.313L25.1044 38.7187C25.1634 38.5088 25.1612 38.288 25.098 38.0791C25.0349 37.8702 24.913 37.6809 24.7452 37.5308C24.3987 37.2191 24.1619 36.8164 24.0662 36.3761C23.9704 35.9358 24.0202 35.4787 24.209 35.0655C24.3978 34.6522 24.7166 34.3023 25.1231 34.0621C25.5297 33.822 26.0048 33.7029 26.4855 33.7208C27.0929 33.7492 27.6659 33.992 28.0888 34.4001C28.5117 34.8082 28.7529 35.3511 28.7635 35.9189C28.767 36.22 28.7041 36.5185 28.5788 36.7959C28.4535 37.0733 28.2684 37.3237 28.0351 37.5315C27.8664 37.681 27.7438 37.87 27.6799 38.0788C27.6161 38.2876 27.6133 38.5086 27.6719 38.7187L28.9747 43.3136L23.8016 43.313Z"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="0.59"
+              />
+              <path
+                d="M42.1302 24.4772H17.9165V18.5844C17.9189 16.5883 18.7688 14.6745 20.2798 13.2627C21.7907 11.851 23.8395 11.0564 25.9768 11.0534H26.7992C28.9371 11.0556 30.9867 11.8498 32.4984 13.2617C34.01 14.6735 34.8604 16.5878 34.8628 18.5844V19.0416C34.8644 19.6605 35.1283 20.2536 35.5969 20.6913C36.0654 21.1289 36.7005 21.3754 37.3632 21.3769H39.0232C39.6859 21.3754 40.321 21.1289 40.7895 20.6913C41.2581 20.2536 41.522 19.6605 41.5236 19.0416V18.0283C41.5229 14.4219 39.9887 10.9633 37.2584 8.41309C34.5281 5.86285 30.8252 4.42969 26.9637 4.42871H25.8123C21.9502 4.42871 18.2462 5.86144 15.515 8.41178C12.7839 10.9621 11.2492 14.4212 11.2485 18.0283V24.4772H10.6458C9.91124 24.4778 9.20699 24.7506 8.68754 25.2356C8.16809 25.7206 7.87587 26.3783 7.875 27.0643V37.6244C7.87587 42.12 9.78858 46.4312 13.1925 49.6098C16.5963 52.7885 21.2126 54.5742 26.0261 54.5744H26.7499C31.5634 54.5742 36.1797 52.7885 39.5835 49.6098C42.9874 46.4312 44.9001 42.12 44.901 37.6244V27.0643C44.9001 26.3783 44.6079 25.7206 44.0885 25.2356C43.569 24.7506 42.8648 24.4778 42.1302 24.4772ZM12.7296 18.0283C12.7296 11.2906 18.5981 5.80956 25.8123 5.80956H26.9637C34.1779 5.80956 40.0464 11.2906 40.0464 18.0283V19.0416C40.0461 19.2949 39.9381 19.5376 39.7463 19.7165C39.5544 19.8955 39.2944 19.996 39.0232 19.996H37.3651C37.0942 19.9957 36.8345 19.895 36.643 19.7161C36.4514 19.5372 36.3436 19.2946 36.3433 19.0416V18.5844C36.3433 13.6682 32.0618 9.67004 26.7986 9.67004H25.9761C20.7122 9.67004 16.4314 13.6688 16.4314 18.5844V24.4772H12.7296V18.0283ZM43.4199 37.6244C43.4199 46.2094 35.9419 53.1936 26.7499 53.1936H26.0261C16.8341 53.1936 9.35612 46.2094 9.35612 37.6244V27.0643C9.35664 26.7451 9.4927 26.4391 9.73447 26.2134C9.97623 25.9877 10.304 25.8608 10.6458 25.8605H42.1302C42.472 25.8608 42.7998 25.9877 43.0415 26.2134C43.2833 26.4391 43.4194 26.7451 43.4199 27.0643V37.6244Z"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="0.59"
+              />
+            </svg>
+            <p class="textFinish">
+              Avance e eleve suas habilidades no mundo dos jogos digitais
+            </p>
+            <p class="textFinish2">
+              Continue estudando e desbloqueie novos níveis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="containerFooter row">
+      <button class="row empty-btn" type="button" onclick="carregarHTML(8)">
+        <img class="arrowImg" src="img/global/icons/previusclass.png" />
+        <p class="btnDesafio">Desafio anterior</p>
+      </button>
+      <div class="row disable">
+        <!-- Button Removed -->
+      </div>
+    </div>
+  </body>
+</html>
