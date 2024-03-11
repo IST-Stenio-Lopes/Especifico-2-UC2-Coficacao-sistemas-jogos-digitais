@@ -49,38 +49,56 @@
           <a class="listPanel" href="#contextualizing">
             <li>1.0 Contextualizando</li>
           </a>
-          <a class="listPanel" href="#historic">
-            <li>2.0 Histórico</li>
+          <a class="listPanel" href="#database">
+            <li>2.0 Bancos de dados</li>
           </a>
-          <a class="listPanel" href="#ide">
-            <li>3.0 Ambiente de Desenvolvimento Integrado (IDE)</li>
-          </a>
-          <a class="listPanel" href="#installation">
-            <li>4.0 Instalação</li>
-          </a>
-          <a class="listPanel" href="#documentation">
-            <li>5.0 Documentação</li>
-          </a>
-          <a class="listPanel" href="#applications">
-            <li>6.0 Aplicações</li>
-          </a>
-          <a class="listPanel" href="#good-habits">
-            <li>7.0 Boas práticas</li>
-          </a>
-          <a class="listPanel" href="#frameworks">
-            <li>8.0 Frameworks</li>
-          </a>
-          <a class="listPanel" href="#libraries">
-            <li>9.0 Bibliotecas</li>
-          </a>
-          <a class="listPanel" href="#tools">
-            <li>10.0 Ferramentas</li>
-          </a>
+          <ul type="1" class="mx-1">
+            <a class="listPanel" href="#SQLite">
+              <li>2.1 SQLite</li>
+            </a>
+            <a class="listPanel" href="#firebase">
+              <li>2.2 Firebase</li>
+            </a>
+            <a class="listPanel" href="#postgreSQL">
+              <li>2.3 PostgreSQL</li>
+            </a>
+            <a class="listPanel" href="#amazon-DynamoDB">
+              <li>2.4 Amazon DynamoDB</li>
+            </a>
+            <a class="listPanel" href="#data-access">
+              <li>2.5 Acesso a dados</li>
+            </a>
+            <a class="listPanel mx-1" href="#installation">
+              <li>2.5.1 Instalação do DB Browser</li>
+            </a>
+            <a class="listPanel mx-1" href="#addSQLite">
+              <li>2.5.2 Adicionar o SQLite a um projeto Unity</li>
+            </a>
+            <a class="listPanel mx-1" href="#create-connection-script">
+              <li>2.5.3 Fazer um script de conexão</li>
+            </a>
+            <a class="listPanel" href="#files">
+              <li>2.6 Arquivos</li>
+            </a>
+            <a class="listPanel mx-1" href="#playerprefs">
+              <li>2.6.1 PlayerPrefs</li>
+            </a>
+            <!--TODO ADICIONAR TÓPICO NO CONTEÚDO-->
+            <a class="listPanel mx-1" href="#practical-example">
+              <li>2.6.2 Exemplo prático</li>
+            </a>
+            <a class="listPanel mx-1" href="#text-files">
+              <li>2.6.3 Arquivos de texto</li>
+            </a>
+            <a class="listPanel mx-1" href="#serialization">
+              <li>2.6.4 Serialização</li>
+            </a>
+          </ul>
           <a class="listPanel" href="#recap">
-            <li>11.0 Recapitulando</li>
+            <li>3.0 Recapitulando</li>
           </a>
           <a class="listPanel" href="#problem-solution">
-            <li>12.0 Solução do problematizando</li>
+            <li>4.0 Solução do problematizando</li>
           </a>
         </ul>
       </div>
@@ -139,18 +157,21 @@
     <header class="homePage">
       <div class="header-title">
         <div>
-          <h2 class="text-Course">Curso Técnico em</h2>
+          <h1 class="text-Course">Curso Técnico em</h1>
           <h1 class="text-NameCourse">Jogos Digitais</h1>
         </div>
         <div id="containerBoxTitle">
           <div class="box-unit-number">
             <span> 10 </span>
           </div>
-          <div class="titleHeader"></div>
+          <div class="titleHeader">Lidando com dados em jogos</div>
         </div>
         <div>
           <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
-          <p class="text-DescriptUnit"></p>
+          <p class="text-DescriptUnit">
+            Reconhecer as linguagens de programação utilizadas para o
+            desenvolvimento de jogos digitais.
+          </p>
         </div>
         <div>
           <p class="text-LetsLearn">Vamos iniciar os estudos?</p>
@@ -167,15 +188,15 @@
             <h1 class="text-Title light-orange" id="contextualizing">
               Contextualizando
             </h1>
-            <h3 class="text-Course">
+            <p class="contextualizing-text">
               Assista ao vídeo abaixo para uma introdução aos seus estudos
-            </h3>
+            </p>
           </div>
 
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
-                src="https://www.youtube.com/embed/"
+                src="https://www.youtube.com/embed/amOou3YCjik"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -184,9 +205,13 @@
               ></iframe>
             </div>
           </div>
+
           <div class="dicas">
             <img src="./img/global/icons/help.png" id="help" />
-            <p></p>
+            <p>
+              Quais os principais conceitos que se deve saber para lidar com
+              dados em jogos?
+            </p>
           </div>
         </div>
       </div>
@@ -196,7 +221,1330 @@
     <section class="container course">
       <div class="section">
         <div class="contentSection">
+          <h1 class="text-Title light-orange" id="database">Bancos de dados</h1>
+
+          <p>
+            Banco de Dados é um conceito fundamental na tecnologia da
+            informação, referindo-se a sistemas organizados para coletar,
+            armazenar, gerenciar e recuperar dados de maneira eficiente. 
+          </p>
+
+          <p>
+            Esses sistemas são compostos por dados organizados em tabelas, onde
+            cada tabela possui registros (linhas) e campos (colunas). Existem
+            diferentes tipos de bancos de dados, como os relacionais, que usam
+            tabelas e são baseados em um modelo relacional, e os Não Relacionais
+            ou NoSQL, que armazenam dados em formatos variados como documentos e
+            grafos.
+          </p>
+
+          <p>
+            Nos Jogos Digitais, os bancos de dados desempenham um papel crucial.
+            Eles são usados para armazenar uma ampla gama de dados, desde
+            informações do jogador, como progresso no jogo e preferências, até
+            detalhes complexos do mundo do jogo, como NPCs e missões. 
+          </p>
+
+          <p>
+            Esses bancos de dados permitem atualizações em tempo real,
+            gerenciando mudanças no estado do jogo e facilitando interações
+            complexas entre jogadores e elementos do jogo. Assim, eles são
+            essenciais para proporcionar uma experiência de jogo dinâmica e
+            interativa.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem1.jpg"
+            alt="Na imagem, a captura da tela de Inventário do jogo New World."
+          />
+
+          <p>
+            Além disso, os bancos de dados em jogos digitais são fundamentais
+            para a personalização da experiência do jogador. Eles permitem a
+            criação de experiências de jogo personalizadas através da análise
+            dos dados dos jogadores, compreendendo seus comportamentos e
+            preferências. 
+          </p>
+
+          <p>
+            Essa análise pode ser utilizada para aprimorar o jogo, ajustando-o
+            às necessidades e gostos dos usuários. No contexto de jogos, os
+            Sistemas de Gerenciamento de Banco de Dados (SGBDs) desempenham um
+            papel crucial na armazenagem e manipulação de dados. 
+          </p>
+
+          <p>
+            Vamos explorar quatro SGBDs populares - SQLite, Firebase, PostgreSQL
+            e Amazon DynamoDB - analisando brevemente cada um deles e discutindo
+            seus pontos fortes e fracos.
+          </p>
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="SQLite">SQLite</h2>
+
+          <p>
+            SQLite é um SGBD leve que é incorporado diretamente no programa. Não
+            requer um servidor separado de banco de dados e é amplamente
+            utilizado em aplicações móveis e jogos para armazenar dados
+            localmente.
+          </p>
+
+          <!--TODO TROCAR POR IMAGEM COM FUNDO-->
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem2.png"
+            alt="Na imagem, o logotipo do Sistema Gerenciador de Bancos de dados SQLite, uma forma azul com uma pena e o texto SQLite compõem o logo."
+          />
+
+          <!--PONTOS FORTES E FRACOS-->
+          <div class="box box-green">
+            <img src="./img/global/icons/thumbsUp.svg" />
+            <span class="dark-green font-small"
+              >Pontos <b class="font-medium">Fortes</b></span
+            >
+            <ul class="mx-2">
+              <li>
+                <b>Leveza e Simplicidade:</b> Ideal para aplicações menores e
+                jogos que não exigem uma infraestrutura complexa de banco de
+                dados.
+              </li>
+              <li class="my-1">
+                <b>Fácil de Implementar:</b> Integra-se facilmente em aplicações
+                devido à sua natureza incorporada.
+              </li>
+              <li class="my-1">
+                <b>Baixo Custo de Manutenção:</b> Não necessita de administração
+                contínua.
+              </li>
+            </ul>
+          </div>
+
+          <div class="box box-red">
+            <img src="./img/global/icons/thumbsDown.svg" />
+            <span class="red font-small"
+              >Pontos <b class="font-medium">Fracos</b></span
+            >
+            <ul class="mx-2">
+              <li>
+                <b>Limitações em Escalabilidade:</b>  Não é ideal para
+                aplicações que exigem grande escalabilidade ou alto volume de
+                transações simultâneas.
+              </li>
+              <li class="my-1">
+                <b>Menos Recursos:</b>  Oferece menos recursos em comparação com
+                sistemas de banco de dados mais robustos.
+              </li>
+            </ul>
+          </div>
+          <!--FIM DOS PONTOS FORTES E FRACOS-->
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="firebase">
+            Firebase
+          </h2>
+
+          <p>
+            Firebase, oferecido pelo Google, é uma plataforma para o
+            desenvolvimento de aplicações web e móveis, que inclui um banco de
+            dados em tempo real e um banco de dados baseado em documentos
+            (Firestore).
+          </p>
+
+          <!--TODO TROCAR POR IMAGEM COM FUNDO-->
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem3.png"
+            alt="Na imagem, o logotipo do Sistema Gerenciador de Bancos de dados Firebase, Formas geométricas em tons de amarelo e laranja sugerem o desenho de um fogo."
+          />
+
+          <!--PONTOS FORTES E FRACOS-->
+          <div class="box box-green">
+            <img src="./img/global/icons/thumbsUp.svg" />
+            <span class="dark-green font-small"
+              >Pontos <b class="font-medium">Fortes</b></span
+            >
+            <ul class="mx-2">
+              <li>
+                <b>Sincronização em Tempo Real:</b> Excelente para jogos que
+                necessitam de atualizações de dados em tempo real.
+              </li>
+              <li class="my-1">
+                <b>Escala Automática:</b> Gerenciamento de escalabilidade sem a
+                necessidade de intervenção manual.
+              </li>
+              <li class="my-1">
+                <b>Integração com Serviços Google:</b> Facilita a integração com
+                outros serviços e funcionalidades do Google.
+              </li>
+            </ul>
+          </div>
+
+          <div class="box box-red">
+            <img src="./img/global/icons/thumbsDown.svg" />
+            <span class="red font-small"
+              >Pontos <b class="font-medium">Fracos</b></span
+            >
+            <ul class="mx-2">
+              <li>
+                <b>Custo em Escala:</b> Pode se tornar caro à medida que a
+                aplicação cresce.
+              </li>
+              <li class="my-1">
+                <b>Limitações de Consulta:</b> O Firebase possui algumas
+                restrições quanto à complexidade das consultas que podem ser
+                realizadas.
+              </li>
+            </ul>
+          </div>
+          <!--FIM DOS PONTOS FORTES E FRACOS-->
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="postgreSQL">
+            PostgreSQL
+          </h2>
+
+          <p>
+            PostgreSQL é um poderoso SGBD objeto-relacional de código aberto,
+            conhecido por sua robustez, extensibilidade e conformidade com
+            padrões SQL.
+          </p>
+
+          <!--TODO TROCAR POR IMAGEM COM FUNDO-->
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem4.png"
+            alt="Na imagem, o logotipo do Sistema Gerenciador de Bancos de dados PostGreSQL, a composição é formada pelo desenho da cabeça de um elefante em azul e o nome do banco de dados."
+          />
+
+          <!--PONTOS FORTES E FRACOS-->
+          <div class="box box-green">
+            <img src="./img/global/icons/thumbsUp.svg" />
+            <span class="dark-green font-small"
+              >Pontos <b class="font-medium">Fortes</b></span
+            >
+            <ul class="mx-2">
+              <li>
+                <b>Recursos Avançados:</b> Suporta uma ampla gama de tipos de
+                dados e operações avançadas.
+              </li>
+              <li class="my-1">
+                <b>Extensível:</b> Permite a criação de tipos de dados, funções
+                e outros elementos personalizados.
+              </li>
+              <li class="my-1">
+                <b>Alta Performance:</b> Excelente desempenho em operações
+                complexas e grandes volumes de dados.
+              </li>
+            </ul>
+          </div>
+
+          <div class="box box-red">
+            <img src="./img/global/icons/thumbsDown.svg" />
+            <span class="red font-small"
+              >Pontos <b class="font-medium">Fracos</b></span
+            >
+            <ul class="mx-2">
+              <li>
+                <b>Complexidade:</b> Pode ser mais complexo de configurar e
+                gerenciar em comparação com opções mais simples.
+              </li>
+              <li class="my-1">
+                <b>Uso de Recursos:</b> Pode ser mais exigente em termos de
+                recursos do sistema.
+              </li>
+            </ul>
+          </div>
+          <!--FIM DOS PONTOS FORTES E FRACOS-->
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="amazon-DynamoDB">
+            Amazon DynamoDB
+          </h2>
+
+          <p>
+            Amazon DynamoDB é um serviço de banco de dados NoSQL oferecido pela
+            Amazon Web Services, projetado para oferecer desempenho em escala
+            com latência mínima.
+          </p>
+
+          <!--TODO TROCAR POR IMAGEM COM FUNDO-->
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem5.png"
+            alt="Na imagem, o logotipo do Sistema Gerenciador de Bancos de dados DynamoDB."
+          />
+
+          <!--PONTOS FORTES E FRACOS-->
+          <div class="box box-green">
+            <img src="./img/global/icons/thumbsUp.svg" />
+            <span class="dark-green font-small"
+              >Pontos <b class="font-medium">Fortes</b></span
+            >
+            <ul class="mx-2">
+              <li>
+                <b>Alta Escalabilidade e Performance:</b> Ideal para aplicações
+                que necessitam de alta performance e escalabilidade automática.
+              </li>
+              <li class="my-1">
+                <b>Gerenciado pela AWS:</b> Elimina a necessidade de
+                gerenciamento de infraestrutura.
+              </li>
+              <li class="my-1">
+                <b>Flexibilidade:</b> Suporta tanto o modelo de documento quanto
+                o de chave-valor.
+              </li>
+            </ul>
+          </div>
+
+          <div class="box box-red">
+            <img src="./img/global/icons/thumbsDown.svg" />
+            <span class="red font-small"
+              >Pontos <b class="font-medium">Fracos</b></span
+            >
+            <ul class="mx-2">
+              <li>
+                <b>Custo Variável:</b> O modelo de precificação pode ser
+                complexo e potencialmente caro com base no uso.
+              </li>
+              <li class="my-1">
+                <b>Curva de Aprendizado:</b> Pode exigir um entendimento mais
+                aprofundado de NoSQL e da arquitetura da AWS.
+              </li>
+            </ul>
+          </div>
+          <!--FIM DOS PONTOS FORTES E FRACOS-->
+
+          <p>
+            Cada um desses SGBDs têm características únicas que os tornam
+            adequados para diferentes tipos de jogos e requisitos de
+            desenvolvimento. A escolha do SGBD certo dependerá das necessidades
+            específicas do jogo, como escala, tipo de dados e operações
+            necessárias, além de considerações de custo e infraestrutura.
+          </p>
+
+          <p>
+            Agora, para testar os seus conhecimentos, responda a seguinte
+            questão:
+          </p>
+
+          <!-- inicio questão 1 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question1-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 1</p>
+                <p>Verdadeiro ou Falso</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>
+                  Firebase, DynamoDB e PostGreSQL, são exemplos de SGBDs que
+                  podem ser usados no desenvolvimento de jogos.
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q1-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-1"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-1">Falso</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-2"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-2">Verdadeiro</label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question1)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 1 -->
+        </div>
+      </div>
+    </section>
+
+    <!--Parallax-->
+    <div class="parallax background-parallax1">
+      <div class="cubeBlack">
+        <h2 class="text-subtitle1 dark-orange mx-3" id="data-access">
+          Acesso a dados
+        </h2>
+
+        <p>
+          O acesso a dados refere-se ao processo de recuperação, manipulação,
+          inserção e atualização de dados armazenados em sistemas de
+          armazenamento, como bancos de dados. Neste contexto, um Sistema de
+          Gerenciamento de Banco de Dados (SGBD) é crucial, pois oferece uma
+          interface eficiente e segura para interagir com esses dados. 
+        </p>
+
+        <p>
+          Utilizando um SGBD, é possível gerenciar de forma eficaz grandes
+          volumes de informações, garantindo a integridade, confiabilidade e
+          segurança dos dados. 
+        </p>
+
+        <p>
+          Além disso, os SGBDs facilitam a organização e a recuperação de dados,
+          permitindo que usuários e aplicativos acessem as informações de
+          maneira rápida e conveniente, o que é essencial para suportar uma
+          ampla gama de operações de negócios e decisões informadas.
+        </p>
+
+        <p>
+          A eficiência no acesso a dados proporcionada por um SGBD é, portanto,
+          um elemento fundamental na infraestrutura de TI de qualquer
+          organização, impactando diretamente na produtividade e no sucesso
+          operacional.
+        </p>
+      </div>
+      <!-- End BlackBox -->
+    </div>
+    <!-- End Parallax -->
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <p><b>Conectar projeto da Unity com o banco SQLite</b></p>
+
+          <p>
+            Para alcançar o objetivo desta seção que é demonstrar a conexão de
+            um projeto da Unity com um banco de dados SQLite, seguiremos alguns
+            passos juntos:
+          </p>
+
+          <div class="item">
+            <span class="number">1</span>
+            <span class="dash"></span>
+            <span class="description">Instalar o DB Browser for SQLite;</span>
+          </div>
+
+          <div class="item">
+            <span class="number">2</span>
+            <span class="dash"></span>
+            <span class="description"
+              >Adicionar o SQLite a um projeto da Unity;</span
+            >
+          </div>
+
+          <div class="item">
+            <span class="number">3</span>
+            <span class="dash"></span>
+            <span class="description">Fazer um script de conexão.</span>
+          </div>
+
+          <h3 class="text-subtitle2 blue mx-5" id="installation">
+            Instalação do DB Browser
+          </h3>
+
+          <p>
+            O DB Browser for SQLite é uma ferramenta visual de código aberto
+            projetada para criar, projetar e editar arquivos de banco de dados
+            compatíveis com SQLite. SQLite é um motor de banco de dados
+            relacional leve que é usado em uma ampla variedade de aplicações,
+            incluindo muitos jogos e aplicativos móveis, devido à sua
+            simplicidade e eficiência.
+          </p>
+
+          <p>
+            Para instalar o DB Browser, siga o
+            <a target="_blank" href="https://sqlitebrowser.org/dl/"
+              >https://sqlitebrowser.org/dl/</a
+            >, para acessar a página de Download. Nela, você deve escolher a
+            versão do software que se adequa ao seu sistema operacional.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem6.jpg"
+            alt="Na imagem, a tela de download do DB Browser, uma lista com diversas versões possíveis para se instalar."
+          />
+
+          <p>
+            Após baixar o instalador, execute sua instalação seguindo para as
+            próximas etapas até que o processo de instalação tenha sido
+            terminado.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem7.jpg"
+            alt="Na imagem, a tela de instalação do DB Browser. Tela tradicional com mensagem de boas vindas em inglês e o botão “Next” em destaque."
+          />
+
+          <p>
+            Pronto, o DB Browser está devidamente instalado e nós podemos ir
+            para a etapa de inserir o SQLite na Unity.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem8.jpg"
+            alt="Na imagem, a tela principal do DB Browser. Com suas diversas abas para gerenciamento de bases de dados."
+          />
+
+          <h3 class="text-subtitle2 blue mx-5" id="addSQLite">
+            Adicionar o SQLite a um projeto Unity
+          </h3>
+
+          <p>
+            Para cumprir mais esta etapa, temos que, primeiramente, acessar o
+            website
+            <a target="_blank" href="https://sqlite.org/download.html"
+              >https://sqlite.org/download.html</a
+            >. Nessa página, vamos fazer o download dos binários pré-compilados
+            para o sistema Operacional que você usa em seu computador.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem9.jpg"
+            alt="Na imagem, uma lista de links para download do SQLite para diversos sistemas operacionais, Android, LInux, Mac e Windows."
+          />
+
+          <p>
+            Após feito o Download, extrair os arquivos do arquivo compactado.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem10.jpg"
+            alt="Na imagem, os dois arquivos binários SQLite descompactados."
+          />
+
+          <p>
+            Na Unity, você deve criar uma pasta chamada Plugins na aba Project.
+            Após isso, arraste os arquivos sqlite3.def e sqlite3.dll para o
+            diretório. Conforme apresentado na imagem abaixo.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem11.jpg"
+            alt="Na imagem, Os dois binários SQLite para windows inseridos na pasta Plugins de um projeto da Unity."
+          />
+
+          <p>
+            Para finalizar a configuração, é necessário inserir o arquivo
+            Mono.Data.Sqlite.dll na pasta Plugins. Para isso, basta seguir o
+            caminho:
+          </p>
+
+          <div class="atencion my-3">
+            <p>
+              C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Data\
+              MonoBleedingEdge\lib\mono\unityjit-win32.
+            </p>
+          </div>
+
+          <p>
+            Depois, só arrastar o arquivo Mono.Data.Sqlite.dll para a pasta
+            Plugins.
+          </p>
+
+          <p>
+            Pronto, chegamos ao fim de mais uma etapa. Na terceira e última
+            etapa, veremos como fazer, via código, a inserção de dados vindos da
+            Unity, para um banco de dados SQL.
+          </p>
+
+          <h3 class="text-subtitle2 blue mx-5" id="create-connection-script">
+            Fazer um script de conexão
+          </h3>
+
+          <p>
+            Para criar o script de conexão com o banco, vamos lançar mão de um
+            poderoso recurso da Unity, as bibliotecas. As bibliotecas na Unity
+            são conjuntos de funcionalidades ou códigos pré-escritos que você
+            pode incluir em seus projetos para estender as capacidades padrão da
+            Unity. 
+          </p>
+
+          <p>
+            A maioria das bibliotecas para lidar com SGBDs já está disponível na
+            Unity. No quadro abaixo:
+          </p>
+
+          <table class="greenTable">
+            <thead>
+              <tr>
+                <th class="greenTh8"><b>Biblioteca</b></th>
+                <th class="greenTh8"><b>Descrição</b></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="greenTd">Mono.Data.Sqlite</td>
+                <td class="greenTd">
+                  Fornece uma interface para o banco de dados SQLite, que é um
+                  sistema de banco de dados SQL embutido que é muito popular
+                  para aplicações móveis e de desktop.
+                </td>
+              </tr>
+              <tr>
+                <td class="greenTd">Mono.Data.Sql</td>
+                <td class="greenTd">
+                  Esta biblioteca fornece uma interface para o SQL Server, que é
+                  um sistema de gerenciamento de banco de dados relacional
+                  desenvolvido pela Microsoft.
+                </td>
+              </tr>
+              <tr>
+                <td class="greenTd">Mono.Data.PostgreSql</td>
+                <td class="greenTd">
+                  Esta biblioteca fornece uma interface para o PostgreSQL, que é
+                  um poderoso sistema de gerenciamento de banco de dados
+                  relacional de código aberto.
+                </td>
+              </tr>
+              <tr>
+                <td class="greenTd">Mono.Data.MySql</td>
+                <td class="greenTd">
+                  Esta biblioteca fornece uma interface para o MySQL, que é
+                  outro sistema de gerenciamento de banco de dados relacional de
+                  código aberto muito popular.
+                </td>
+              </tr>
+              <tr>
+                <td class="greenTd">Mono.Data.Tds</td>
+                <td class="greenTd">
+                  Esta biblioteca fornece uma implementação do protocolo TDS
+                  (Tabular Data Stream), que é usado pelo SQL Server e pelo
+                  Sybase ASE.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            A seguir, assista ao vídeo no qual nós vamos, passo a passo, criar
+            um código para inserção de itens de inventário de um jogo fictício.
+            Para isso, temos que entender como a Unity usa bibliotecas para
+            acessar os recursos de bancos de dados.
+          </p>
+
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://youtube.com/embed/fL_-BBTbOeA"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                  gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- inicio questão 2 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question2-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 2</p>
+                <p>Verdadeiro ou Falso</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>
+                  O Banco de dados SQLite é o mais indicado para jogos que
+                  salvam seus dados na nuvem.
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q2-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-1"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-1">Falso</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-2"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-2">Verdadeiro</label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question2)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 2 -->
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="files">Arquivos</h2>
+
+          <p>
+            O armazenamento de dados é uma parte essencial do desenvolvimento de
+            jogos, especialmente para salvar o progresso do jogador,
+            configurações, e outros tipos de dados persistentes. 
+          </p>
+
+          <p>
+            A Unity oferece várias técnicas para armazenar dados em arquivos,
+            sendo as mais comuns o uso de PlayerPrefs, arquivos de texto e
+            serialização.
+          </p>
+
+          <h3 class="text-subtitle2 blue mx-5" id="playerprefs">
+            1. PlayerPrefs
+          </h3>
+
+          <p>
+            PlayerPrefs é um sistema de armazenamento de dados simples e rápido
+            disponibilizado pela Unity. É ideal para armazenar pequenos volumes
+            de dados, como preferências do usuário, configurações de jogo, e
+            pontuações.
+          </p>
+
+          <!--TODO TABELA YELLOW-->
+
+          <p>
+            Digamos que temos um jogo no qual um personagem se movimenta
+            lateralmente e deve coletar as moedas que aparecem na tela. Nada de
+            extraordinário, não é? Acontece, que a cada vez que o projeto da
+            Unity é executado, todas as ações do Player são também resetadas,
+            nenhum ponto de score fica contabilizado entre execuções.
+          </p>
+
+          <p>
+            Agora, vamos demonstrar como usar o recurso PlayerPrefs para guardar
+            as informações de Scores, assim, sempre que o jogo reiniciar, a
+            pontuação do jogador é recuperada.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem12.png"
+            alt="Na imagem, um personagem que é apenas uma bolinha com olhos pretos, e quatro circulos amarelos representando moedas."
+          />
+
+          <p>
+            Na configuração do player temos como componentes adicionais, um
+            colisor (aqui um colisor circular), um Rigidbody 2D e dois scripts,
+            os quais vamos ver em detalhes a seguir, um deles controla a
+            movimentação, o outro, controla a coleta de moedas.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem13.png"
+            alt="Na imagem, a configuração do player na aba Inspector, temos os componentes tradicionais, Transform e Sprite Renderer, adicionalmente, circle collider 2D, RigidBody2d e dois scripts."
+          />
+
+          <p>
+            A configuração da moeda tem duas alterações, uma é a inserção do
+            Circle Collider 2D, deve ser marcado is Trigger, para que assim seja
+            identificada a sobreposição entre a moeda e o player. Deve ser
+            criada uma Tag “Moeda”, essa será atribuída a todas as moedas do
+            jogo, e servirá para identificá-las no script.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem14.png"
+            alt="#DescriçãoDaImagem:  Na imagem, a configuração da moeda. na aba Inspector, temos os componentes tradicionais, Transform e Sprite Renderer, adicionalmente, circle collider 2D."
+          />
+
+          <p>
+            O Script de movimentação do player deve ficar como se apresenta na
+            figura a seguir.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem15.png"
+            alt="Na imagem, o script de movimentação do Player. É declarada uma variável chamada speed do tipo float. E, no método Update() é implementada a lógica para movimentação horizontal do player."
+          />
+
+          <p>
+            O script de coleta das moedas deve ser escrito da seguinte forma:
+            Nele chamamos a variável “score” no método Start(). Para que, assim
+            que o jogo seja iniciado, o Score seja exibido no console da Unity.
+          </p>
+
+          <p>
+            Dentro da função OnTriggerEnter2D, a lógica é a seguinte, caso o
+            player encoste em um outro objeto cuja tag é “Moeda”, o objeto é
+            destruído, e o score é incrementado em mais um. Esta alteração é
+            exibida na aba console.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem16.png"
+            alt="Na imagem, o script de coleta das moedas. É declarada uma variável chamada score do tipo inteiro. E, no método que controla a colisão, o score é incrementado a medida que a moeda é destruída."
+          />
+
+          <p>
+            Ao executar o jogo, quando o personagem coleta as moedas, esse
+            registro é feito na variável “score” e é exibido no console,
+            conforme pode ser visto na figura abaixo. 
+          </p>
+
+          <p>
+            Entretanto, caso o jogo seja executado novamente, esse score é
+            zerado, e a contagem reinicia.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem17.png"
+            alt="Na imagem, o personagem ao lado da aba console com a pontuação registrada após coletar todas as moedas."
+          />
+
+          <p>
+            Para garantir que o score da partida seja contabilizado e seja
+            “lembrado” da próxima vez que o jogador executar o jogo, inserimos o
+            PlayerPrefs como apresentado na figura abaixo, ou seja, no momento
+            da colisão entre o player e a moeda./p>
+          </p>
+
+          <p>
+            Para demonstrar que o score ficou guardado, capturamos o conteúdo de
+            Player Prefs no método Start.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem18.png"
+            alt="Na imagem, o script de coleta das moedas é alterado para usar o PlayerPrefs para guardar o score em arquivo."
+          />
+
+          <p>
+            Assim, mesmo que o jogo pare de ser executado e depois volte a
+            rodar, o score ficou armazenado no arquivo do PlayerPrefs.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue10/imagem19.png"
+            alt="Na imagem, o player ao lado da aba console, já apresentando o valor de score persistido em PlayerPrefs."
+          />
+
+          <p>
+            <b>Limitações -</b> Não é seguro para dados sensíveis, pois os dados
+            não são criptografados e podem ser facilmente acessados e
+            modificados.
+          </p>
+
+          <p>
+            Não é adequado para armazenar grandes volumes de dados ou dados
+            complexos.
+          </p>
+
+          <h3 class="text-subtitle2 blue mx-5" id="text-files">
+            2. Arquivos de texto
+          </h3>
+
+          <p>
+            A leitura e escrita de arquivos de texto é uma forma mais flexível e
+            controlável de armazenar dados. Essa técnica é útil para salvar
+            estruturas de dados mais complexas, como inventários ou
+            configurações detalhadas do jogador.
+          </p>
+
+          <p>
+            <b>Como Funciona -</b> Pode-se usar System.IO para criar, ler e
+            escrever em arquivos de texto, como .txt ou .json.
+          </p>
+
+          <p>
+            <b>Considerações -</b> É mais flexível que PlayerPrefs e permite o
+            armazenamento de dados estruturados de maneira customizada. Requer
+            mais gerenciamento manual, como a definição de caminhos de arquivos
+            e o tratamento de exceções.
+          </p>
+
+          <h3 class="text-subtitle2 blue mx-5" id="serialization">
+            3. Serialização
+          </h3>
+
+          <p>
+            A serialização é o processo de transformar objetos em um formato que
+            pode ser facilmente armazenado ou transmitido e posteriormente
+            reconstruído. Na Unity, a serialização é comumente usada para salvar
+            o estado do jogo, como a posição do jogador e o estado do
+            inventário.
+          </p>
+
+          <p>
+            <b>Como Funciona -</b> A Unity oferece JsonUtility para serialização
+            e desserialização de objetos em formato JSON. Também é possível usar
+            serialização binária para uma abordagem mais segura e menos legível.
+          </p>
+
+          <p>
+            <b>Considerações -</b> Permite o armazenamento de dados complexos e
+            de objetos inteiros. Requer atenção quanto à estrutura dos objetos a
+            serem serializados, principalmente no que diz respeito à
+            compatibilidade e à segurança de tipos.
+          </p>
+
+          <!-- inicio questão 3 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question1-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 3</p>
+                <p>
+                  Qual das seguintes opções é um banco de dados que pode ser
+                  usado para trabalhar com bancos de dados em um jogo?
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q3-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-1"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-1"> Firebase </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-2"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-2"> Photoshop </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-3"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-3"> Unity3D </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-4"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-4"> Visual Studio </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question3)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 3 -->
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
           <h1 class="text-Title light-orange" id="recap">Recapitulando</h1>
+
+          <p>
+            E aí, vamos recapitular o que aprendemos nessa aventura pelo mundo
+            dos bancos de dados em jogos. 
+          </p>
+
+          <p>
+            Primeiro, descobrimos que o acesso a dados é como encontrar o
+            tesouro escondido em um jogo, onde o tesouro são as informações que
+            guardamos e recuperamos. 
+          </p>
+
+          <p>
+            Os bancos de dados são os mapas que nos ajudam a encontrar esses
+            tesouros, sejam eles pequenas bibliotecas pessoais como SQLite ou
+            enormes bibliotecas online como Firebase.
+          </p>
+
+          <p>
+            Depois, exploramos o mundo dos arquivos, que são como os diferentes
+            personagens, cenários e itens do nosso jogo. Cada um tem um papel a
+            desempenhar, seja um script C# dando as ordens, um arquivo de imagem
+            criando o visual ou um arquivo de som adicionando a trilha sonora. 
+          </p>
+
+          <p>
+            E, claro, não podemos esquecer as bibliotecas e ferramentas, nossos
+            superpoderes de desenvolvedor de jogos. Elas nos ajudam a criar
+            coisas incríveis mais rápido e mais fácil, como um herói de jogo
+            voando através de um nível.
+          </p>
+
+          <p>
+            Então, é isso aí, pessoal! Mantenham essas lições em mente enquanto
+            criam seus próprios jogos épicos. Até a próxima!
+          </p>
+
+          <!-- inicio questão 4 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question4-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 4</p>
+                <p>
+                  Quais das opções é uma ferramenta que pode ser usada para
+                  trabalhar com bancos de dados em jogos digitais?
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q4-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q4-option-1"
+                      type="radio"
+                      name="q4-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q4-option-1"> SQLite </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q4-option-2"
+                      type="radio"
+                      name="q4-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q4-option-2"> Adobe Illustrator </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q4-option-3"
+                      type="radio"
+                      name="q4-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q4-option-3"> JavaScript </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q4-option-4"
+                      type="radio"
+                      name="q4-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q4-option-4"> Blender </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question4)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 4 -->
+
           <div class="flex justify-center align-center w-full myt-3">
             <img src="./img/global/icons/greenCheck.png" />
             <h3 class="px-3 green" id="problem-solution">
@@ -207,7 +1555,7 @@
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
-                src="https://youtube.com/embed/"
+                src="https://youtube.com/embed/EzMHfQGb2oQ"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media;

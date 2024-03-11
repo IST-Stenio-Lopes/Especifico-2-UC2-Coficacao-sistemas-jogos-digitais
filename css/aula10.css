@@ -1,0 +1,37 @@
+.background-parallax1 {
+  background-image: url("../img/ue10/parallax1.jpg");
+}
+
+.box {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 18px;
+  gap: 10px;
+  border-radius: 8px;
+  border: 2px solid;
+  background-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2.5rem;
+}
+
+.box-green {
+  border-color: #436900;
+}
+
+.box-red {
+  border-color: #e51a1a;
+}
+
+.font-small {
+  font-size: 1.25em;
+}
+
+.font-medium {
+  font-size: 1.5em;
+}
+
+.box span {
+  line-height: 100%;
+}

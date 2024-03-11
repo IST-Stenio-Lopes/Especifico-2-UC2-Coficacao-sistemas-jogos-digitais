@@ -259,6 +259,14 @@ p {
   color: #33c173;
 }
 
+.red {
+  color: #e51a1a;
+}
+
+.dark-green {
+  color: #436900;
+}
+
 .blue {
   color: #33b7e5;
 }
@@ -908,6 +916,12 @@ h3 {
 }
 
 .text-Course {
+  font-size: 1.375em;
+  font-weight: normal;
+  color: white;
+}
+
+.contextualizing-text {
   font-size: 1.375em;
   font-weight: normal;
 }
