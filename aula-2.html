@@ -286,7 +286,7 @@
             funcionam, apenas precisam saber que vão receber uma notificação
             quando algo importante acontecer.
           </p>
-          <b>Exemplo prático</b>
+          <strong>Exemplo prático</strong>
           <p>
             Você sabe o que são jogos no estilo “Beat 'em up”? Este é um gênero
             de jogo que se tornou popular nas décadas de 1980 e 1990,
@@ -325,14 +325,14 @@
             Essa classe deve conter métodos para registrar, remover e notificar
             os observadores.
           </p>
-          <p><b>Cada um desses métodos tem sua importância:</b></p>
-          <ul class="mx-1">
+          <p><strong>Cada um desses métodos tem sua importância:</strong></p>
+          <ul class="mx-2">
             <li class="my-1">
-              <b>Registro dos observadores -</b> Quando um novo inimigo aparece
-              no jogo, ele precisa saber o que está acontecendo com o personagem
-              principal, certo? Por exemplo, se o personagem principal derrota
-              um chefe importante, talvez todos os inimigos menores fujam ou
-              percam força.
+              <strong>Registro dos observadores -</strong> Quando um novo
+              inimigo aparece no jogo, ele precisa saber o que está acontecendo
+              com o personagem principal, certo? Por exemplo, se o personagem
+              principal derrota um chefe importante, talvez todos os inimigos
+              menores fujam ou percam força.
               <ul class="mx-1">
                 <li class="my-1">
                   O método RegisterEnemy é como dar um "follow" no personagem
@@ -345,10 +345,11 @@
               </ul>
             </li>
             <li class="my-1">
-              <b>Remover observadores -</b> Agora, imagine que um inimigo foi
-              derrotado ou saiu de cena. Não faz sentido ele continuar recebendo
-              atualizações do personagem principal, certo? Seria como continuar
-              recebendo notificações de alguém que você não segue mais.
+              <strong>Remover observadores -</strong> Agora, imagine que um
+              inimigo foi derrotado ou saiu de cena. Não faz sentido ele
+              continuar recebendo atualizações do personagem principal, certo?
+              Seria como continuar recebendo notificações de alguém que você não
+              segue mais.
               <ul class="mx-1">
                 <li class="my-1">
                   O método UnregisterEnemy é como dar "unfollow". Ele serve para
@@ -361,10 +362,10 @@
             </li>
 
             <li class="my-1">
-              <b>Notificar observadores -</b> Finalmente, quando algo importante
-              acontece, como o personagem principal derrotando todos os
-              inimigos, todos que estão "seguindo" o herói precisa saber. Isso
-              pode mudar a forma como eles agem no jogo.
+              <strong>Notificar observadores -</strong> Finalmente, quando algo
+              importante acontece, como o personagem principal derrotando todos
+              os inimigos, todos que estão "seguindo" o herói precisa saber.
+              Isso pode mudar a forma como eles agem no jogo.
               <ul class="mx-1">
                 <li class="my-1">
                   O método NotifyEnemiesDefeated é como fazer uma postagem para
@@ -623,27 +624,28 @@
     <div class="parallax background-parallax1">
       <div class="cubeBlack">
         <p>
-          <b>Flexibilidade de Comportamentos:</b> Permite que objetos tenham
-          comportamentos variáveis que podem ser alterados em tempo de execução,
-          o que é ideal para personagens de jogos com múltiplas habilidades ou
-          estados.
+          <strong>Flexibilidade de Comportamentos:</strong> Permite que objetos
+          tenham comportamentos variáveis que podem ser alterados em tempo de
+          execução, o que é ideal para personagens de jogos com múltiplas
+          habilidades ou estados.
         </p>
         <p>
-          <b> Facilita a Manutenção:</b> Ao separar as estratégias em classes
-          distintas, o código fica mais organizado. Isso significa que adicionar
-          novas estratégias ou modificar as existentes não requer alterações nas
-          classes principais, facilitando a manutenção e a expansão do jogo.
+          <strong> Facilita a Manutenção:</strong> Ao separar as estratégias em
+          classes distintas, o código fica mais organizado. Isso significa que
+          adicionar novas estratégias ou modificar as existentes não requer
+          alterações nas classes principais, facilitando a manutenção e a
+          expansão do jogo.
         </p>
         <p>
-          <b>Reuso de Código:</b> Como as estratégias são encapsuladas em suas
-          próprias classes, elas podem ser reutilizadas em diferentes contextos
-          dentro do jogo, evitando duplicação de código e possíveis erros.
-          Princípio da Responsabilidade Única: Cada estratégia tem uma única
-          responsabilidade, o que alinha o design do software ao Princípio da
-          Responsabilidade Única, melhorando a qualidade do código.
+          <strong>Reuso de Código:</strong> Como as estratégias são encapsuladas
+          em suas próprias classes, elas podem ser reutilizadas em diferentes
+          contextos dentro do jogo, evitando duplicação de código e possíveis
+          erros. Princípio da Responsabilidade Única: Cada estratégia tem uma
+          única responsabilidade, o que alinha o design do software ao Princípio
+          da Responsabilidade Única, melhorando a qualidade do código.
         </p>
         <p>
-          <b>Testabilidade:</b> Com estratégias claramente definidas e
+          <strong>Testabilidade:</strong> Com estratégias claramente definidas e
           separadas, torna-se mais fácil escrever testes automatizados para cada
           comportamento, garantindo que mudanças no jogo não quebrem
           funcionalidades existentes.
@@ -663,7 +665,7 @@
     <section class="container course">
       <div class="section">
         <div class="contentSection">
-          <p><b>Exemplo prático</b></p>
+          <p><strong>Exemplo prático</strong></p>
           <p>
             Donkey Kong Country, o icônico jogo do Super Nintendo, apresenta um
             elemento de design de jogo que se alinha perfeitamente com o Padrão
@@ -698,7 +700,7 @@
             código no qual o padrão Strategy vai nos ajudar a usar essas armas
             em momentos alternados.
           </p>
-          <p><b>Vamos para o código:</b></p>
+          <p><strong>Vamos para o código:</strong></p>
           <p>
             Primeiro criamos uma interface de nome IWeaponBehavior que conta com
             o método Attack().

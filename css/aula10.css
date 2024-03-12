@@ -14,24 +14,91 @@
   background-color: rgba(255, 255, 255, 0.12);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   margin-bottom: 2.5rem;
+  width: 100%;
 }
 
 .box-green {
-  border-color: #436900;
+  margin-top: 2.5rem;
+  border-color: #85d322;
+}
+
+.box-green svg,
+.font-green {
+  color: #85d322;
 }
 
 .box-red {
-  border-color: #e51a1a;
+  border-color: #ff3030;
 }
 
-.font-small {
-  font-size: 1.25em;
+.box-red svg,
+.font-red {
+  color: #ff3030;
 }
 
-.font-medium {
+.font-green,
+.font-red {
   font-size: 1.5em;
 }
 
 .box span {
   line-height: 100%;
+}
+
+.dark-mode .box-green {
+  border-color: #429a0c;
+}
+
+.dark-mode .box-green svg,
+.dark-mode .font-green {
+  color: #429a0c;
+}
+
+.dark-mode .box-red {
+  border-color: #e51a1a;
+}
+
+.dark-mode .box-red svg,
+.dark-mode .font-red {
+  color: #e51a1a;
+}
+
+.box-armazenamento {
+  width: 100%;
+  align-items: center;
+  margin: 40px auto;
+  width: 100%;
+}
+
+.box-yellow-dark {
+  color: #1a1827;
+  background-color: #fff5cc;
+  padding: 0.5rem 1rem;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  border-bottom: 1px solid #ffc700;
+  display: flex;
+}
+
+.box-yellow-light {
+  color: #1a1827;
+  background-color: #fffbeb;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5rem;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  border-bottom: 1px solid #ffc700;
+}
+
+.box-white-smoke {
+  border-radius: 0.5rem;
+  background-color: #f5f5f5;
+  padding: 1.125rem 1rem;
+  align-items: center;
+  gap: 0.625rem;
+  color: #1a1827;
+  margin: 16px 60px auto;
 }

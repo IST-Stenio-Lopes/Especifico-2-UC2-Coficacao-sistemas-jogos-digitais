@@ -259,14 +259,6 @@ p {
   color: #33c173;
 }
 
-.red {
-  color: #e51a1a;
-}
-
-.dark-green {
-  color: #436900;
-}
-
 .blue {
   color: #33b7e5;
 }
@@ -404,7 +396,9 @@ p {
   border: 1px solid #ffc700;
   border-radius: 8px;
   padding: 20px;
+  width: 100%;
 }
+
 .atencion p {
   margin: 0px;
   margin-left: 15px;

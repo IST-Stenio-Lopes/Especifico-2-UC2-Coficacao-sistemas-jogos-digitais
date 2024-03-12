@@ -43,7 +43,9 @@
   background-color: #a2f3c7;
   padding: 10px;
   padding-left: 32px;
-  border: 1px solid #a2f3c7;
+  border-bottom: 1px solid #42c87e;
+  border-left: 1px solid #42c87e;
+  text-align: center;
 }
 
 .darkGreenTh8 {

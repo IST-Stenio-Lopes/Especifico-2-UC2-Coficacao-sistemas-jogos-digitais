@@ -389,22 +389,26 @@
             deseja usar. O arquivo de script, quando criado, se parece com a
             imagem a seguir.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue7/imagem5.png"
             alt="Na imagem, uma lista de tipos de componentes que podem ser utilizados na Unity."
           />
+
           <p>
             Um script estabelece sua ligação com as funcionalidades internas do
             Unity através da implementação de uma classe derivada da classe
-            interna denominada <b>MonoBehaviour.</b> 
+            interna denominada <strong>MonoBehaviour.</strong>
           </p>
+
           <p>
             Uma classe pode ser vista como um tipo de molde para criar um novo
             tipo de Componente, que por sua vez pode ser acoplado a GameObjects.
             Sempre que você vincula um componente de script a um GameObject, uma
-            nova instância do objeto definida pelo modelo (blueprint) é criada. 
+            nova instância do objeto definida pelo modelo (blueprint) é criada.
           </p>
+
           <p>
             O nome da classe deriva do nome que você escolheu ao criar o
             arquivo. Para que o componente de script possa ser adicionado a um
@@ -412,44 +416,45 @@
             sejam idênticos.
           </p>
           <p>
-            Na Unity, as funções <b>Update</b> e <b>Start</b> são usadas em
-            scripts para controlar o comportamento dos GameObjects. Aqui está
-            uma explicação detalhada em tópicos para cada uma delas:
+            Na Unity, as funções <strong>Update</strong> e
+            <strong>Start</strong> são usadas em scripts para controlar o
+            comportamento dos GameObjects. Aqui está uma explicação detalhada em
+            tópicos para cada uma delas:
           </p>
-          <p><b>Função Start</b></p>
+          <p><strong>Função Start</strong></p>
           <ul class="mx-2">
             <li class="my-1">
-              <b>Inicialização Única:</b> Executada apenas uma vez, quando o
-              script é ativado pela primeira vez.
+              <strong>Inicialização Única:</strong> Executada apenas uma vez,
+              quando o script é ativado pela primeira vez.
             </li>
             <li class="my-1">
-              <b>Configuração Inicial:</b> Ideal para definir valores iniciais
-              de variáveis, carregar dados, ou realizar configurações
+              <strong>Configuração Inicial:</strong> Ideal para definir valores
+              iniciais de variáveis, carregar dados, ou realizar configurações
               necessárias antes do início do jogo.
             </li>
             <li class="my-1">
-              <b>Executada Antes do Primeiro Update:</b> Garante que qualquer
-              configuração feita em Start esteja pronta antes do início das
-              atualizações de quadro.
+              <strong>Executada Antes do Primeiro Update:</strong> Garante que
+              qualquer configuração feita em Start esteja pronta antes do início
+              das atualizações de quadro.
             </li>
           </ul>
-          <p><b>Função Update</b></p>
+          <p><strong>Função Update</strong></p>
           <ul class="mx-2">
             <li class="my-1">
-              <b>Execução Contínua:</b> Chamada uma vez a cada quadro, o que a
-              torna ideal para controlar a lógica de jogo continua, como
+              <strong>Execução Contínua:</strong> Chamada uma vez a cada quadro,
+              o que a torna ideal para controlar a lógica de jogo continua, como
               movimentos e interações.
             </li>
             <li class="my-1">
-              <b>Sensível ao Tempo de Quadro:</b> Como é chamada a cada quadro,
-              a frequência de execução pode variar. Geralmente, é utilizada
-              junto com Time.deltaTime para garantir movimentos suaves e
-              consistentes.
+              <strong>Sensível ao Tempo de Quadro:</strong> Como é chamada a
+              cada quadro, a frequência de execução pode variar. Geralmente, é
+              utilizada junto com Time.deltaTime para garantir movimentos suaves
+              e consistentes.
             </li>
             <li class="my-1">
-              <b>Resposta a Eventos em Tempo Real:</b> Útil para verificar
-              entradas do usuário, atualizações de estados ou outras condições
-              que mudam constantemente ao longo do jogo.
+              <strong>Resposta a Eventos em Tempo Real:</strong> Útil para
+              verificar entradas do usuário, atualizações de estados ou outras
+              condições que mudam constantemente ao longo do jogo.
             </li>
           </ul>
           <p>
@@ -992,15 +997,17 @@
             visuais e lógicos de uma maneira que mantenha a cena organizada e
             eficiente.
           </p>
+
           <p>
-            No exemplo do <b>jogo da Amélia</b> que estamos usando nessa aula, o
-            personagem principal tem um componente de script que controla sua
-            movimentação. Este componente pode interagir com o componente de
-            colisão do personagem para verificar se o personagem está em contato
-            com o chão antes de permitir que o personagem pule, por exemplo.
-            Assim, diferentes componentes podem trabalhar juntos para criar
-            comportamentos complexos.
+            No exemplo do <strong>jogo da Amélia</strong> que estamos usando
+            nessa aula, o personagem principal tem um componente de script que
+            controla sua movimentação. Este componente pode interagir com o
+            componente de colisão do personagem para verificar se o personagem
+            está em contato com o chão antes de permitir que o personagem pule,
+            por exemplo. Assim, diferentes componentes podem trabalhar juntos
+            para criar comportamentos complexos.
           </p>
+
           <p>
             Ao finalizar estes exercícios, você terá uma melhor compreensão de
             como a Programação Orientada a Componentes funciona na prática e

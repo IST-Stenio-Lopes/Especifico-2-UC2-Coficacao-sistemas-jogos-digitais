@@ -250,33 +250,35 @@
           </p>
           <ul class="mx-2">
             <li class="my-1">
-              <b>Adapter</b> pode ser usado para integrar bibliotecas de
-              terceiros de maneira que pareçam nativas ao motor do jogo;
+              <strong>Adapter</strong> pode ser usado para integrar bibliotecas
+              de terceiros de maneira que pareçam nativas ao motor do jogo;
             </li>
             <li class="my-1">
-              <b>Bridge</b> separa a abstração das implementações de gráficos,
-              permitindo que diferentes plataformas de hardware sejam suportadas
-              sem alterar o nível mais alto do código do jogo;
+              <strong>Bridge</strong> separa a abstração das implementações de
+              gráficos, permitindo que diferentes plataformas de hardware sejam
+              suportadas sem alterar o nível mais alto do código do jogo;
             </li>
             <li class="my-1">
-              <b>Composite</b> permite tratar grupos de objetos (como grupos de
-              personagens ou partes de um nível) de maneira uniforme, enquanto;
+              <strong>Composite</strong> permite tratar grupos de objetos (como
+              grupos de personagens ou partes de um nível) de maneira uniforme,
+              enquanto;
             </li>
             <li class="my-1">
-              <b>Decorator</b> adiciona responsabilidades adicionais aos objetos
-              do jogo sem alterar seu código;
+              <strong>Decorator</strong> adiciona responsabilidades adicionais
+              aos objetos do jogo sem alterar seu código;
             </li>
             <li class="my-1">
-              <b>Facade</b> simplifica a interface complexa de um motor de jogo;
+              <strong>Facade</strong> simplifica a interface complexa de um
+              motor de jogo;
             </li>
             <li class="my-1">
-              <b>Flyweight</b> ajuda a gerenciar a memória eficientemente ao
-              compartilhar objetos comuns como texturas ou modelos de
-              personagens;
+              <strong>Flyweight</strong> ajuda a gerenciar a memória
+              eficientemente ao compartilhar objetos comuns como texturas ou
+              modelos de personagens;
             </li>
             <li class="my-1">
-              <b>Proxy</b> controla o acesso a elementos como conteúdo de jogo
-              pesado que pode precisar ser carregado sob demanda.
+              <strong>Proxy</strong> controla o acesso a elementos como conteúdo
+              de jogo pesado que pode precisar ser carregado sob demanda.
             </li>
           </ul>
           <p>
@@ -303,14 +305,14 @@
           />
           <p>
             No mundo da programação, temos algo parecido chamado
-            <b>Padrão Decorator.</b> É como os encantamentos no seu jogo. Quando
-            usamos o Padrão Decorator, estamos basicamente adicionando
-            "encantamentos" ou melhorias extras aos nossos objetos.
+            <strong>Padrão Decorator.</strong> É como os encantamentos no seu
+            jogo. Quando usamos o Padrão Decorator, estamos basicamente
+            adicionando "encantamentos" ou melhorias extras aos nossos objetos.
           </p>
           <p>
-            <b>Cenário básico:</b> Você tem uma classe à qual deseja adicionar
-            alguns comportamentos de maneira flexível sem modificar a classe
-            original.
+            <strong>Cenário básico:</strong> Você tem uma classe à qual deseja
+            adicionar alguns comportamentos de maneira flexível sem modificar a
+            classe original.
           </p>
           <img
             class="w-75 m-auto"
@@ -323,7 +325,7 @@
             novos elementos à sua armadura. Esses elementos expandem a
             experiência do personagem.
           </p>
-          <p><b>Mãos no código</b></p>
+          <p><strong>Mãos no código</strong></p>
           <p>
             Para começar, é bom criarmos uma interface IArmor que define o
             comportamento básico de uma armadura.
@@ -569,11 +571,11 @@
             forma significativa.
           </p>
           <p>
-            No jogo clássico <b>Metal slug</b>, o personagem principal Morden
-            deve libertar os prisioneiros de guerra. Ao longo das fases, o
-            jogador pode obter veículos de combate, um avião, um tanque, etc. O
-            que permite que Morden possa mudar de modos de locomoção ao longo do
-            do jogo é a aplicação bem sucedida do padrão de projetos Adapter.
+            No jogo clássico <strong>Metal slug</strong>, o personagem principal
+            Morden deve libertar os prisioneiros de guerra. Ao longo das fases,
+            o jogador pode obter veículos de combate, um avião, um tanque, etc.
+            O que permite que Morden possa mudar de modos de locomoção ao longo
+            do do jogo é a aplicação bem sucedida do padrão de projetos Adapter.
           </p>
           <img
             class="w-75 m-auto"
@@ -604,20 +606,22 @@
               <tr>
                 <th class="dark-orange" colspan="2">
                   Target
-                  <b style="font-size: 0.875rem; font-weight: 500">(Alvo)</b>
+                  <strong style="font-size: 0.875rem; font-weight: 500"
+                    >(Alvo)</strong
+                  >
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
-                  <b class="dark-orange wd-60">No código:</b>
+                  <strong class="dark-orange wd-60">No código:</strong>
                 </td>
                 <td>IEnemy</td>
               </tr>
               <tr>
                 <td>
-                  <b class="dark-orange wd-60">Papel:</b>
+                  <strong class="dark-orange wd-60">Papel:</strong>
                 </td>
                 <td>
                   O Target é a interface que define como os clientes esperam
@@ -634,8 +638,8 @@
               <tr>
                 <th class="dark-orange" colspan="2">
                   Adapter
-                  <b style="font-size: 0.875rem; font-weight: 500"
-                    >(Adaptador)</b
+                  <strong style="font-size: 0.875rem; font-weight: 500"
+                    >(Adaptador)</strong
                   >
                 </th>
               </tr>
@@ -643,13 +647,13 @@
             <tbody>
               <tr>
                 <td>
-                  <b class="dark-orange wd-60">No código:</b>
+                  <strong class="dark-orange wd-60">No código:</strong>
                 </td>
                 <td>EnemyAdapter</td>
               </tr>
               <tr>
                 <td>
-                  <b class="dark-orange wd-60">Papel:</b>
+                  <strong class="dark-orange wd-60">Papel:</strong>
                 </td>
                 <td>
                   O Adapter é a classe que faz a ponte entre o Target e o
@@ -668,8 +672,8 @@
               <tr>
                 <th class="dark-orange" colspan="2">
                   Adaptee
-                  <b style="font-size: 0.875rem; font-weight: 500"
-                    >(Adaptado)</b
+                  <strong style="font-size: 0.875rem; font-weight: 500"
+                    >(Adaptado)</strong
                   >
                 </th>
               </tr>
@@ -677,13 +681,13 @@
             <tbody>
               <tr>
                 <td>
-                  <b class="dark-orange wd-60">No código:</b>
+                  <strong class="dark-orange wd-60">No código:</strong>
                 </td>
                 <td>EnemyWizard</td>
               </tr>
               <tr>
                 <td>
-                  <b class="dark-orange wd-60">Papel:</b>
+                  <strong class="dark-orange wd-60">Papel:</strong>
                 </td>
                 <td>
                   O Adaptee é a classe existente que queremos usar no sistema,
@@ -735,11 +739,11 @@
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue4/imagem17.png" alt="" />
           <p>
-            Neste script <b>Unity Game</b>, quando o método Start é chamado (o
-            que acontece no início da cena), um novo EnemyWizard é criado. Em
-            seguida, um EnemyAdapter é criado, passando o EnemyWizard como
-            argumento. Quando chamamos Attack no wizardAdapter, o EnemyWizard
-            executa seu método CastSpell por meio do Adapter.
+            Neste script <strong>Unity Game</strong>, quando o método Start é
+            chamado (o que acontece no início da cena), um novo EnemyWizard é
+            criado. Em seguida, um EnemyAdapter é criado, passando o EnemyWizard
+            como argumento. Quando chamamos Attack no wizardAdapter, o
+            EnemyWizard executa seu método CastSpell por meio do Adapter.
           </p>
           <p>
             Este exemplo mostra como você pode usar o padrão Adapter para
