@@ -286,6 +286,7 @@ p {
   cursor: pointer;
   text-decoration: none !important;
   max-width: 250px;
+  font-weight: bold;
 }
 .btnPlay:hover {
   background: #c77626;
