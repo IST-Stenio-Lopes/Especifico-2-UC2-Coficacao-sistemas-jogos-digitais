@@ -556,6 +556,17 @@ th:first-child {
   padding: 20px;
 }
 
+.border-orange {
+  border-radius: 0.5rem;
+  border: 1px solid #ef8e2e;
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidenav {

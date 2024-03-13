@@ -146,11 +146,13 @@
           <div class="box-unit-number">
             <span> 12 </span>
           </div>
-          <div class="titleHeader"></div>
+          <div class="titleHeader">Banco de Dados</div>
         </div>
         <div>
           <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
-          <p class="text-DescriptUnit"></p>
+          <p class="text-DescriptUnit">
+            Aplicar técnicas de banco de dados e segurança da informação.
+          </p>
         </div>
         <div>
           <p class="text-LetsLearn">Vamos iniciar os estudos?</p>
@@ -175,7 +177,7 @@
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
-                src="https://www.youtube.com/embed/"
+                src="https://www.youtube.com/embed/CPChe8KdEBk"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -184,9 +186,13 @@
               ></iframe>
             </div>
           </div>
+
           <div class="dicas">
             <img src="./img/global/icons/help.png" id="help" />
-            <p></p>
+            <p>
+              Qual a importância dos bancos de dados para os sistemas e os jogos
+              digitais?
+            </p>
           </div>
         </div>
       </div>
@@ -196,7 +202,1353 @@
     <section class="container course">
       <div class="section">
         <div class="contentSection">
+          <h1 class="text-Title light-orange" id="">Banco de dados</h1>
+          <p>
+            Bancos de dados são sistemas essenciais para armazenar, gerenciar e
+            recuperar informações de maneira organizada, desempenhando um papel
+            crucial em diversas áreas da tecnologia e negócios.
+          </p>
+
+          <p>
+            Eles são tipicamente estruturados em tabelas contendo linhas e
+            colunas, e podem ser classificados em dois tipos principais:
+            relacionais, que utilizam tabelas para armazenar dados e relações
+            (como MySQL e PostgreSQL), e Não Relacionais ou NoSQL, projetados
+            para dados não estruturados ou semi-estruturados, como os bancos de
+            dados de documentos (MongoDB) e chave-valor (Redis).
+          </p>
+
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://www.youtube.com/embed/ltyxCwO6X8g"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="">SGBD</h2>
+
+          <p>
+            Um Sistema de Gerenciamento de Banco de Dados (SGBD) é um software
+            que fornece os meios para armazenar, modificar, extrair e consultar
+            dados em um banco de dados. 
+          </p>
+          <p>
+            Tecnicamente, SGBDs são cruciais para o gerenciamento de dados,
+            oferecendo uma interface entre os dados armazenados e os aplicativos
+            ou usuários que precisam acessar esses dados. Os principais
+            componentes de um SGBD incluem:
+          </p>
+          <ol class="mx-1">
+            <li>
+              Motor de Banco de Dados: O núcleo do sistema, responsável por
+              armazenar, processar e proteger os dados.
+            </li>
+
+            <li>
+              Linguagem de Manipulação de Dados (DML): Permite aos usuários
+              inserir, atualizar, deletar e consultar dados.
+            </li>
+
+            <li>
+              Linguagem de Definição de Dados (DDL): Usada para definir e
+              modificar a estrutura do banco de dados.
+            </li>
+
+            <li>
+              Mecanismos de Transação: Garantem a integridade dos dados,
+              assegurando que todas as operações de banco de dados sejam
+              completas e consistentes.
+            </li>
+
+            <li>
+              Segurança: Sistemas de controle de acesso para gerenciar quem pode
+              acessar quais dados e de que maneira.
+            </li>
+
+            <li>
+              Backup e Recuperação: Funcionalidades para proteger os dados
+              contra perda ou danos.
+            </li>
+          </ol>
+
+          <p>
+            Os SGBDs desempenham um papel fundamental em muitos sistemas de TI,
+            oferecendo uma maneira eficiente e segura de gerenciar grandes
+            volumes de dados. Eles suportam a integração com várias aplicações e
+            usuários, possibilitando operações complexas de dados e análises.
+          </p>
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="">
+            Principais SGBDs
+          </h2>
+
+          <h3 class="text-subtitle2 blue mx-5" id="">Oracle Database</h3>
+
+          <p>
+            Amplamente usado em grandes empresas e organizações, conhecido por
+            sua robustez, segurança e recursos para lidar com grandes volumes de
+            dados.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem1.png"
+            alt="Na imagem, o logotipo do SGBD Oracle."
+          />
+
+          <h3 class="text-subtitle2 blue mx-5" id="">MySQL</h3>
+
+          <p>
+            Um dos sistemas de gerenciamento de banco de dados relacionais mais
+            populares do mundo, conhecido por sua facilidade de uso e
+            eficiência. Amplamente usado na web, é uma escolha comum para
+            sistemas de gestão de conteúdo e aplicações web.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem2.jpg"
+            alt="Na imagem, o logotipo do SGBD MySQL."
+          />
+
+          <h3 class="text-subtitle2 blue mx-5" id="">Microsoft SQL Server</h3>
+
+          <p>
+            Um SGBD robusto e seguro, popular em ambientes empresariais,
+            oferecendo uma gama de ferramentas para análise de dados,
+            inteligência de negócios e aplicações baseadas em nuvem.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem3.png"
+            alt="Na imagem, o logotipo do SGBD Microsoft SQL Server."
+          />
+
+          <h3 class="text-subtitle2 blue mx-5" id="">PostgreSQL</h3>
+
+          <p>
+            Um sistema de gerenciamento de banco de dados objeto-relacional de
+            código aberto, conhecido por sua conformidade com padrões,
+            extensibilidade e suporte a dados espaciais, sendo uma escolha
+            popular para sistemas que necessitam de um tratamento complexo de
+            dados.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem4.jpg"
+            alt="Na imagem, o logotipo do PostgreSQL."
+          />
+
+          <p>
+            Cada um desses SGBDs têm suas próprias características e pontos
+            fortes, tornando-os adequados para diferentes tipos de aplicações e
+            requisitos de negócios. A escolha de um SGBD geralmente depende das
+            necessidades específicas do projeto, como escalabilidade, segurança,
+            facilidade de uso e custo.
+          </p>
+
+          <!-- inicio questão 1 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question1-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 1</p>
+                <p>
+                  Qual é a função primária de um Sistema de Gerenciamento de
+                  Banco de Dados (SGBD)?
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q1-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-1"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-1"> Processamento de Texto </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-2"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-2">
+                      Gerenciamento de Recursos do Sistema
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-3"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-3">
+                      Armazenamento, Recuperação e Gerenciamento de Dados
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-4"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-4"> Renderização Gráfica </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question1)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 1 -->
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="">
+            Instalando o SGBD MySQL
+          </h2>
+
+          <p>
+            Nesta seção, vamos aprender juntos a instalar o MySQL no computador.
+            Siga os passos a seguir:
+          </p>
+
+          <p>
+            <strong>Passo 1 - Baixar o instalador do MySQL.</strong> Basta
+            entrar no site oficial
+            <a target="_blank" href="https://dev.mysql.com/downloads/installer/"
+              >https://dev.mysql.com/downloads/installer/</a
+            >
+            e clicar e escolher um dos tipos de Download, caso você deseje
+            baixar todas as dependências ao longo da instalação, siga como na
+            imagem a seguir.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem5.png"
+            alt="Na imagem, O Print da tela de download do MySQL Installer. Temos duas opções de download."
+          />
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem6.png"
+            alt="Na imagem, um print da tela de Download do MySQL, uma seta rosa apontando para o link de download."
+          />
+
+          <p>
+            <strong>Passo 2 - Instalação.</strong> Vá até o local de salvamento
+            do arquivo e inicie execute o instalador. Antes deve dar permissão
+            para que o MySQL seja instalado no sistema operacional. Das opções
+            que forem apresentadas, escolha a Full, pois vai instalar além do
+            MySQL, o Workbench, para desenvolvermos nossos bancos e consultas.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem7.png"
+            alt="Na imagem, um print da tela de para escolha de setup do MySQL. Nela tem algumas opções de instalação."
+          />
+
+          <p>
+            <strong>Passo 3 - Confirmar a execução.</strong> O Instalador lista
+            todos os recursos que serão instalados. A partir daqui, basta seguir
+            os passos normais para instalação de qualquer programa, neste
+            momento clique em executar.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem8.png"
+            alt="Na imagem, um print da tela de para escolha de setup do MySQL. Nela tem algumas opções de instalação."
+          />
+
+          <p>
+            <strong>Passo 4 - Inserir uma conta.</strong> Neste momento, você
+            deve criar uma senha de Root. O usuário Root tem o maior nível de
+            privilégio em um sistema. Certifique-se de colocar uma senha que
+            possa lembrar posteriormente. Também é possível criar contas de
+            usuários adicionais.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem9.png"
+            alt="Na imagem, a tela para criação da senha para o usuário Root, também vemos uma seção para criação de outros usuários."
+          />
+
+          <p>
+            <strong>Passo 5 - Conecte-se ao server.</strong> Após instalado o
+            MySQL server, é preciso fazer a comunicação com o cliente. Aqui,
+            basta inserir a senha de Root criada anteriormente e clicar em
+            Check. Se tudo estiver correto, você pode prosseguir com a
+            configuração.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem10.png"
+            alt="Na imagem, um print da tela de para escolha de setup do MySQL. Nela tem algumas opções de instalação."
+          />
+
+          <p>
+            <strong>Passo 6 - Iniciando o MySQL WorkBench.</strong> MySQL
+            Workbench é uma ferramenta de design de banco de dados visual que
+            integra desenvolvimento SQL, administração, design de banco de
+            dados, criação e manutenção em um único ambiente de desenvolvimento
+            integrado para o sistema de banco de dados MySQL. Para criar uma
+            nova conexão, basta clicar no ícone +.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem11.png"
+            alt="Na imagem, um print da tela principal do MySQL WorkBench."
+          />
+
+          <p>
+            <strong>Passo 7 - Configurar a nova conexão.</strong> Nesta tela,
+            você deve nomear essa nova conexão, aqui colocamos EstudosDB. Também
+            pode testar a conexão, ou simplesmente, clicar em ok para criar a
+            conexão.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem12.png"
+            alt="Na imagem, um print da tela Para configurar novas conexões no MySQL Workbench."
+          />
+
+          <p>
+            <strong>Passo 8 - RaioX da tela inicial do Workbench.</strong> Na
+            tela inicial do MySQL Workbench, temos algumas abas muito
+            importantes.
+          </p>
+
+          <ol class="mx-1">
+            <li>
+              <strong>Aba Query</strong> - Nela são escritas os nossos scripts e
+              consultas
+            </li>
+            <li>
+              <strong>Aba Administration</strong> - Nela temos um painel para
+              executar ações de gerenciamento tanto dos bancos de dados quanto
+              dos usuários.
+            </li>
+            <li>
+              <strong>Aba Schemas</strong> - No MySQL Workbench, os bancos de
+              dados são chamados Schemas, nesta aba são listados todos os bancos
+              que temos conexões, criados ou não por nós.
+            </li>
+            <li>
+              <strong>Aba Output</strong> - Nesta aba é onde são exibidos os
+              resultados das nossas consultas.
+            </li>
+          </ol>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem13.png"
+            alt="Na imagem, print da tela inicial do MySQL Workbench com suas abas principais numeradas."
+          />
+
+          <p>
+            <strong>Passo 9 - Criar nosso primeiro Banco de dados. </strong
+            >Agora podemos criar nosso primeiro banco de dados. O Workbench nos
+            permite criar de forma fácil clicando com o botão direito do mouse
+            na Aba Schemas e escolhendo a opção “Create Schema”. Aqui, vamos
+            usar um comando que será explorado melhor mais a frente nesta aula,
+            o CREATE DATABASE “nome_do_Banco”.
+          </p>
+
+          <p>
+            Aqui você deve trocar o conteúdo entre aspas pelo nome do banco que
+            você quer criar.
+          </p>
+
+          <p>
+            Para se certificar que o Workbench criou o banco, basta clicar com o
+            botão direito do mouse na aba Schemas e escolher “Refresh All”.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem14.png"
+            alt="Na imagem, o print da tela do MySQL Workbench. Na aba Query, está escrito o comando CREATE DATABASE GameNave."
+          />
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="">
+            Structured Query Language SQL
+          </h2>
+
+          <p>
+            A linguagem de consulta SQL (Structured Query Language) é
+            fundamental para interagir com bancos de dados relacionais,
+            permitindo a criação, manipulação e gestão de dados.
+          </p>
+
+          <p>
+            A integridade e a segurança dos dados são aspectos vitais,
+            envolvendo mecanismos para garantir a precisão e consistência dos
+            dados, além de protegê-los contra acessos não autorizados por meio
+            de controle de acesso e criptografia.
+          </p>
+
+          <p>
+            Além disso, estratégias de backup e recuperação são fundamentais
+            para proteger dados contra perda ou dano.
+          </p>
+
+          <p>
+            Bancos de dados têm uma ampla aplicação prática, sendo utilizados em
+            diversos setores como negócios, finanças, saúde, educação, além de
+            serem cruciais em jogos digitais, e aplicações web e mobile para
+            armazenar dados de usuários e gerenciar interações online.
+          </p>
+
+          <p>
+            Este conhecimento é indispensável para profissionais de TI,
+            desenvolvedores de software, e analistas de dados, permitindo o
+            desenvolvimento de soluções eficientes e seguras para o
+            armazenamento e gerenciamento de dados.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem15.png"
+            alt="Na imagem, os subconjuntos e comandos SQL."
+          />
+
+          <p>
+            Os comandos SQL são categorizados em diferentes tipos, com cada tipo
+            tendo um conjunto de comandos para realizar tarefas específicas.
+            Vamos listar os principais comandos SQL e suas funções:
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Parallax-->
+    <div class="parallax background-parallax1">
+      <div class="cubeBlack">
+        <ol class="mx-2">
+          <li class="my-1">
+            <strong>DDL (Data Definition Language)</strong>
+            <br />
+            Esses comandos são usados para definir a estrutura do banco de
+            dados.
+            <ul class="mx-2">
+              <li>
+                <strong>CREATE:</strong> Cria novas tabelas, views, índices,
+                etc. Ex: CREATE TABLE.
+              </li>
+              <li>
+                <strong>ALTER:</strong> Modifica a estrutura de uma tabela
+                existente, como adicionar ou remover colunas. Ex: ALTER TABLE
+              </li>
+              <li>
+                <strong>DROP:</strong> Remove objetos do banco de dados, como
+                tabelas, índices, etc. Ex: DROP TABLE.
+              </li>
+              <li>
+                <strong>TRUNCATE:</strong> Remove todos os registros de uma
+                tabela, resetando os contadores de identidade, mas mantém a
+                estrutura da tabela. Ex: TRUNCATE TABLE.
+              </li>
+            </ul>
+          </li>
+
+          <li class="my-1">
+            <strong>DML (Data Manipulation Language)</strong>
+            <br />
+            Esses comandos são utilizados para manipular os dados armazenados.
+            <ul class="mx-2">
+              <li>
+                <strong>SELECT:</strong> Recupera dados de uma ou mais tabelas.
+                Ex: SELECT * FROM table_name.
+              </li>
+              <li>
+                <strong>INSERT:</strong> Insere dados em uma tabela. Ex: INSERT
+                INTO table_name.
+              </li>
+              <li>
+                <strong>UPDATE:</strong> Modifica os dados existentes em uma
+                tabela. Ex: UPDATE table_name SET column_name = value.
+              </li>
+              <li>
+                <strong>DELETE:</strong> Remove dados de uma tabela. Ex: DELETE
+                FROM table_name.
+              </li>
+            </ul>
+          </li>
+
+          <li class="my-1">
+            <strong>DCL (Data Control Language)</strong>
+            <br />
+            Comandos para controlar o acesso aos dados no banco de dados.
+            <ul class="mx-2">
+              <li>
+                <strong>GRANT:</strong> Concede privilégios de acesso a
+                usuários. Ex: GRANT SELECT ON table_name TO user_name.
+              </li>
+              <li>
+                <strong>REVOKE:</strong> Remove privilégios de acesso. Ex:
+                REVOKE SELECT ON table_name FROM user_name.
+              </li>
+            </ul>
+          </li>
+
+          <li class="my-1">
+            <strong>DTL (Data Transaction Language)</strong>
+            <br />
+            Comandos para gerenciar transações no banco de dados.
+            <ul class="mx-2">
+              <li>
+                <strong>COMMIT:</strong> Finaliza a transação atual e torna
+                permanentes todas as mudanças realizadas durante a transação.
+                Ex: COMMIT.
+              </li>
+              <li>
+                <strong>ROLLBACK:</strong> Desfaz todas as mudanças feitas na
+                transação atual. Ex: ROLLBACK.
+              </li>
+              <li>
+                <strong>SAVEPOINT:</strong> Define pontos dentro de uma
+                transação para os quais você pode reverter. Ex: SAVEPOINT
+                savepoint_name.
+              </li>
+              <li>
+                <strong>SET TRANSACTION:</strong> Define as propriedades da
+                transação atual. Ex: SET TRANSACTION.
+              </li>
+            </ul>
+          </li>
+
+          <li class="my-1">
+            <strong>Outros Comandos Úteis</strong>
+            <ul class="mx-2">
+              <li>
+                <strong>USE:</strong> Escolhe o banco de dados com o qual
+                trabalhar. Ex: USE database_name.
+              </li>
+              <li>
+                <strong>DESCRIBE:</strong> Exibe a estrutura de uma tabela. Ex:
+                DESCRIBE table_name.
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+      <!-- End BlackBox -->
+    </div>
+    <!-- End Parallax -->
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <p>
+            Cada um desses comandos desempenha um papel crucial no gerenciamento
+            e manipulação de dados em bancos de dados relacionais.
+          </p>
+
+          <p>
+            A escolha e utilização adequadas desses comandos dependem das
+            necessidades específicas de cada tarefa ou aplicação.
+          </p>
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="">Tipos de dados</h2>
+
+          <p>
+            Nos bancos de dados, cada coluna de uma tabela é designada para
+            armazenar um tipo específico de dado. Os tipos de dados ajudam a
+            definir a natureza dos dados que podem ser armazenados em cada campo
+            e como eles podem ser manipulados. Alguns dos tipos de dados mais
+            comuns incluem:
+          </p>
+
+          <ul class="mx-2 my-1">
+            <li><strong>INT (Integer):</strong> Para números inteiros.</li>
+            <li>
+              <strong>VARCHAR (Variable Character):</strong> Para texto ou
+              caracteres alfanuméricos. Requer um limite de comprimento
+              especificado.
+            </li>
+            <li><strong>TEXT:</strong> Para strings de texto longas.</li>
+            <li><strong>DATE/TIME:</strong> Para datas e/ou horários.</li>
+            <li>
+              <strong>FLOAT/DOUBLE:</strong> Para números com casas decimais.
+            </li>
+            <li><strong>BOOLEAN:</strong> Para valores verdadeiro ou falso.</li>
+          </ul>
+
+          <p>
+            Cada sistema de gerenciamento de banco de dados pode ter variações e
+            tipos de dados adicionais. A escolha do tipo de dado correto é
+            crucial para a eficiência do banco de dados, otimizando o
+            armazenamento e a velocidade das operações de dados.
+          </p>
+
+          <div class="atencion my-3">
+            <img src="./img/global/icons/lightbulb.png" />
+            <p>
+              A linguagem SQL (Structured Query Language) foi desenvolvida na
+              década de 1970 pelos cientistas da computação Donald D. Chamberlin
+              e Raymond F. Boyce na IBM. Eles estavam trabalhando no projeto
+              System R, um sistema de gerenciamento de banco de dados, e criaram
+              uma linguagem de consulta para esse sistema chamada SEQUEL
+              (Structured English Query Language), que mais tarde foi renomeada
+              para SQL.
+            </p>
+          </div>
+
+          <!-- inicio questão 2 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question2-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 2</p>
+                <p>
+                  Em um banco de dados SQL, que tipo de dado seria mais
+                  apropriado para armazenar um endereço de email?
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q2-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-1"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-1"> INT </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-2"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-2"> FLOAT </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-3"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-3"> VARCHAR </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-4"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-4"> BOOL </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question2)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 2 -->
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="">
+            Manipulação de dados
+          </h2>
+
+          <p>
+            Todos os exemplos desta aula são feitos utilizando SQL (Structured
+            Query Language).
+          </p>
+
+          <p>
+            Certifique-se que está utilizando um SGBD (Sistema de Gerenciamento
+            de Banco de Dados) que trabalhe com essa linguagem. Existem várias
+            ferramentas de bancos de dados disponíveis no mercado.
+          </p>
+
+          <p>
+            Entretanto, no vídeo a seguir, para nosso aprendizado, utilizaremos
+            o simulador online de bancos de dados
+            <a target="_blank" href="https://sqliteonline.com/"
+              >https://sqliteonline.com/</a
+            >.
+          </p>
+
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://youtube.com/embed/3_0zf7m0B7w"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                  gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <p>
+            Agora, para testar os seus conhecimentos, responda à questão a
+            seguir:
+          </p>
+
+          <!-- inicio questão 3 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question1-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 3</p>
+                <p>O que significa a sigla SQL em banco de dados?</p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q3-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-1"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-1"> Sequential Query Language </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-2"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-2"> Standard Query Language </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-3"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-3"> Structured Query Language </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-4"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-4"> Simple Query Language </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question3)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 3 -->
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="">
+            Relacionamentos em Banco de dados
+          </h2>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem16.png"
+            alt="Na imagem, uma tirinha clássica do mundo NERD sobre o relacionamento de um Banco de Dados. “Os programadores entenderão” (risos)"
+          />
+
+          <p>
+            Relacionamentos em bancos de dados são fundamentais para a
+            organização e estruturação de dados em um sistema de banco de dados
+            relacional.
+          </p>
+
+          <p>
+            Esses relacionamentos são usados para associar dados em uma tabela
+            com dados em outra, permitindo que um sistema de banco de dados
+            manipule e recupere informações de maneira eficiente e
+            significativa. Vamos explorar mais a fundo esse conceito.
+          </p>
+
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://youtube.com/embed/rcORuOa7lxc"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                  gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <h3 class="text-subtitle2 blue mx-5" id="">
+            Tipos de relacionamentos
+          </h3>
+
+          <p>
+            Os relacionamentos em bancos de dados relacionais são geralmente
+            categorizados em três tipos:
+          </p>
+
+          <h4 class="text-subtitle3 blue mx-6">
+            Relacionamento Um-para-Um (1:1):
+          </h4>
+
+          <ul class="mx-2">
+            <li>
+              <strong>Definição:</strong> Cada registro em uma tabela está
+              associado a no máximo um registro em outra tabela.
+            </li>
+            <li>
+              <strong>Exemplo:</strong> Uma tabela de Usuários e uma tabela de
+              Detalhes_Usuários, onde cada usuário tem exatamente um conjunto de
+              detalhes associados.
+            </li>
+          </ul>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem17.jpg"
+            alt="Na imagem, uma modelagem conceitual do relacionamento Um-para-um."
+          />
+
+          <h4 class="text-subtitle3 blue mx-6">
+            Relacionamento Um-para-Muitos (1:N):
+          </h4>
+
+          <ul class="mx-2">
+            <li>
+              <strong>Definição:</strong> Um registro em uma tabela pode estar
+              associado a vários registros em outra tabela.
+            </li>
+            <li>
+              <strong>Exemplo:</strong> Uma tabela de Departamentos e uma tabela
+              de Funcionários, onde um departamento pode ter vários
+              funcionários, mas cada funcionário pertence a apenas um
+              departamento.
+            </li>
+          </ul>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem18.jpg"
+            alt="Na imagem, uma modelagem conceitual do relacionamento Um-para-muitos."
+          />
+
+          <h4 class="text-subtitle3 blue mx-6">
+            Relacionamento Um-para-Muitos (N:N):
+          </h4>
+
+          <ul class="mx-2">
+            <li>
+              <strong>Definição:</strong> Registros em uma tabela podem estar
+              associados a múltiplos registros em outra tabela e vice-versa.
+            </li>
+            <li>
+              <strong>Exemplo:</strong> Uma tabela de Jogadores e uma tabela de
+              Guildas, onde jogadores podem participar de várias guildas (grupos
+              de jogadores), e cada guilda pode ter vários jogadores. Esse tipo
+              de relacionamento geralmente requer uma tabela intermediária
+              (também conhecida como tabela de junção) para gerenciar as
+              associações.
+            </li>
+          </ul>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem19.jpg"
+            alt="Na imagem, uma modelagem conceitual do relacionamento de muitos para muitos."
+          />
+
+          <p>
+            Os relacionamentos são estabelecidos usando chaves estrangeiras,
+            colunas em uma tabela que faz referência às chaves primárias de
+            outras tabelas.
+          </p>
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="">Índices</h2>
+
+          <p>
+            Imagina ter um livro de mil páginas o qual você quer encontrar uma
+            informação muito importante, mas o mesmo não tem um índice?
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/gif1.gif"
+            alt="Na animação, o personagem Bob Esponja, com um óculos de leitura, buscando alguma informação em um livro."
+          />
+
+          <p>
+            Da mesma forma que nos livros, índices são estruturas utilizadas
+            para melhorar o desempenho das consultas em um Banco de Dados. Eles
+            permitem a rápida localização de registros com base em determinadas
+            colunas.
+          </p>
+
+          <p>
+            Quando um índice é criado em uma coluna, o Banco de Dados mantém uma
+            estrutura organizada para essa coluna, permitindo a recuperação mais
+            eficiente dos dados.
+          </p>
+
+          <p>
+            Exemplo de como criar um índice. Suponha que temos uma tabela
+            Clientes com uma coluna “nome” e queremos criar um índice para essa
+            coluna. Basta fazer:
+          </p>
+
+          <div class="border-orange my-2">
+            <p>CREATE INDEX idx_nome ON Clientes (nome);</p>
+          </div>
+
+          <p>
+            O comando CREATE INDEX usado logo acima cria um índice chamado
+            "idx_nome" na tabela "Clientes" para a coluna "nome".
+          </p>
+
+          <p>
+            Isso melhora a velocidade de consultas que envolvam a busca pelo
+            nome dos clientes. Da mesma forma que os índices melhoram a
+            velocidade das buscas, porém sua implantação pode acarretar em maior
+            uso de armazenamento.
+          </p>
+
+          <div class="atencion my-3">
+            <img src="./img/global/icons/atencion.png" />
+            <p>
+              Antes de mergulhar em aspectos mais avançados, certifique-se de
+              ter uma compreensão sólida dos conceitos básicos de bancos de
+              dados, como tabelas, registros, campos, chaves primárias e
+              estrangeiras.
+            </p>
+          </div>
+
+          <p>Vamos aprimorar o conhecimento? Responda a questão a seguir!</p>
+
+          <!-- inicio questão 4 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question4-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 4</p>
+                <p>Verdadeiro ou Falso</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>
+                  Um índice em um banco de dados é uma estrutura de dados que
+                  melhora a velocidade das operações, mas pode resultar em maior
+                  uso do armazenamento de dados.
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q4-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q4-option-1"
+                      type="radio"
+                      name="q4-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q4-option-1">Falso</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q4-option-2"
+                      type="radio"
+                      name="q4-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q4-option-2">Verdadeiro</label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question4)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 4 -->
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="">Conexões</h2>
+
+          <p>
+            Conexões em banco de dados referem-se à comunicação estabelecida
+            entre um aplicativo ou sistema e o banco de dados. 
+          </p>
+
+          <p>
+            Uma conexão é estabelecida para permitir o acesso, a recuperação e a
+            manipulação dos dados armazenados no banco de dados.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue12/imagem20.png"
+            alt="Na imagem, um conceito de um sistema (software) interagindo com um banco de dados."
+          />
+
+          <p>
+            Quando um aplicativo precisa interagir com um banco de dados, ele
+            estabelece uma conexão usando um conjunto de informações de conexão,
+            como o nome do servidor, a porta de comunicação, o nome do banco de
+            dados, o nome de usuário e a senha.
+          </p>
+
+          <p>
+            Essas informações são fornecidas para autenticar e autorizar o
+            acesso ao banco de dados.
+          </p>
+
+          <p>
+            As conexões em banco de dados são geralmente gerenciadas por um
+            sistema de gerenciamento de banco de dados (SGBD), que controla o
+            número máximo de conexões simultâneas, gerencia os recursos
+            necessários para cada conexão e garante a segurança e a integridade
+            dos dados durante as operações.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
           <h1 class="text-Title light-orange" id="recap">Recapitulando</h1>
+
+          <p>
+            Nesta aula aprendemos sobre manipulação de dados, relacionamento
+            entre entidades, tipos de dados utilizados nos Sistemas de
+            gerenciamento de banco de dados atuais.
+          </p>
+
+          <p>
+            Também aprendemos sobre índices, utilizando a metáfora de um livro
+            que tem em seu sumário, um bom índice para encontrar informações
+            importantes de forma rápida. E, por fim, aprendemos como se dá a
+            conexão dos bancos de dados com os sistemas que consomem seus
+            recursos.
+          </p>
+
           <div class="flex justify-center align-center w-full myt-3">
             <img src="./img/global/icons/greenCheck.png" />
             <h3 class="px-3 green" id="problem-solution">
@@ -207,7 +1559,7 @@
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
-                src="https://youtube.com/embed/"
+                src="https://youtube.com/embed/mLm3ZdPECv8"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media;
