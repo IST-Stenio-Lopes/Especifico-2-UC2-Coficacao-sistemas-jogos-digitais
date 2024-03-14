@@ -49,38 +49,72 @@
           <a class="listPanel" href="#contextualizing">
             <li>1.0 Contextualizando</li>
           </a>
-          <a class="listPanel" href="#historic">
-            <li>2.0 Histórico</li>
+          <a class="listPanel" href="#agile-methodology">
+            <li>2.0 Metodologia ágil de desenvolvimento</li>
           </a>
-          <a class="listPanel" href="#ide">
-            <li>3.0 Ambiente de Desenvolvimento Integrado (IDE)</li>
-          </a>
-          <a class="listPanel" href="#installation">
-            <li>4.0 Instalação</li>
-          </a>
-          <a class="listPanel" href="#documentation">
-            <li>5.0 Documentação</li>
-          </a>
-          <a class="listPanel" href="#applications">
-            <li>6.0 Aplicações</li>
-          </a>
-          <a class="listPanel" href="#good-habits">
-            <li>7.0 Boas práticas</li>
-          </a>
-          <a class="listPanel" href="#frameworks">
-            <li>8.0 Frameworks</li>
-          </a>
-          <a class="listPanel" href="#libraries">
-            <li>9.0 Bibliotecas</li>
-          </a>
-          <a class="listPanel" href="#tools">
-            <li>10.0 Ferramentas</li>
-          </a>
+          <ul type="1" class="mx-1">
+            <a class="listPanel" href="#manifest">
+              <li>2.1 O manifesto</li>
+            </a>
+            <ul type="1" class="mx-1">
+              <a class="listPanel" href="#core-values">
+                <li>2.1.1 Quatro Valores Fundamentais</li>
+              </a>
+              <a class="listPanel" href="#twelve-principles">
+                <li>2.1.2 Doze Princípios</li>
+              </a>
+              <a class="listPanel" href="#definitions">
+                <li>2.1.3 Definições</li>
+              </a>
+            </ul>
+            <a class="listPanel" href="#kanban">
+              <li>2.2 Kanban</li>
+            </a>
+            <ul type="1" class="mx-1">
+              <a class="listPanel" href="#kanban-game-development">
+                <li>2.2.1 Usando Kanban no Desenvolvimento de Jogos</li>
+              </a>
+            </ul>
+            <a class="listPanel" href="#scrum">
+              <li>2.3 Scrum</li>
+            </a>
+            <ul type="1" class="mx-1">
+              <a class="listPanel" href="#inside-scrum">
+                <li>2.3.1 Por dentro do Scrum</li>
+              </a>
+              <a class="listPanel" href="#scrum-game-development">
+                <li>2.3.2 Usando Scrum no Desenvolvimento de Jogos</li>
+              </a>
+            </ul>
+            <a class="listPanel" href="#sprint">
+              <li>2.4 Sprint</li>
+            </a>
+            <a class="listPanel" href="#lean">
+              <li>2.5 Lean</li>
+            </a>
+            <a class="listPanel" href="#tools">
+              <li>2.6 Ferramentas</li>
+            </a>
+            <ul type="1" class="mx-1">
+              <a class="listPanel" href="#trello">
+                <li>2.6.1 Trello</li>
+              </a>
+              <a class="listPanel" href="#pipefy">
+                <li>2.6.2 Pipefy</li>
+              </a>
+              <a class="listPanel" href="#planning-poker">
+                <li>2.6.3 Planning Poker</li>
+              </a>
+            </ul>
+            <a class="listPanel" href="#applications">
+              <li>2.7 Aplicações</li>
+            </a>
+          </ul>
           <a class="listPanel" href="#recap">
-            <li>11.0 Recapitulando</li>
+            <li>3.0 Recapitulando</li>
           </a>
           <a class="listPanel" href="#problem-solution">
-            <li>12.0 Solução do problematizando</li>
+            <li>4.0 Solução do problematizando</li>
           </a>
         </ul>
       </div>
@@ -146,11 +180,14 @@
           <div class="box-unit-number">
             <span> 13 </span>
           </div>
-          <div class="titleHeader"></div>
+          <div class="titleHeader">Metodologia ágil jogos</div>
         </div>
         <div>
           <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
-          <p class="text-DescriptUnit"></p>
+          <p class="text-DescriptUnit">
+            Reconhecer as linguagens de programação utilizadas para o
+            desenvolvimento de jogos digitais.
+          </p>
         </div>
         <div>
           <p class="text-LetsLearn">Vamos iniciar os estudos?</p>
@@ -175,7 +212,7 @@
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
-                src="https://www.youtube.com/embed/"
+                src="https://www.youtube.com/embed/3ElzTs5Se2k"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -186,7 +223,7 @@
           </div>
           <div class="dicas">
             <img src="./img/global/icons/help.png" id="help" />
-            <p></p>
+            <p>Como aplicar metodologias ágeis no desenvolvimento de jogos?</p>
           </div>
         </div>
       </div>
@@ -196,7 +233,1144 @@
     <section class="container course">
       <div class="section">
         <div class="contentSection">
+          <h1 class="text-Title light-orange" id="agile-methodology">
+            Metodologia ágil de desenvolvimento
+          </h1>
+
+          <p>
+            No mundo acelerado e em constante mudança do desenvolvimento de
+            software, a necessidade de métodos que permitam adaptabilidade,
+            eficiência e colaboração contínua é mais importante do que nunca.
+          </p>
+
+          <p>
+            Nesse contexto, surgem as metodologias ágeis, que têm revolucionado
+            a maneira como os softwares são desenvolvidos e entregues.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue13/imagem1.jpg"
+            alt="Na imagem, uma ilustração simulando pessoas trabalhando em um grande quadro de organização de projetos."
+          />
+
+          <div class="atencion my-3">
+            <img src="./img/global/icons/lightbulb.png" />
+            <p>
+              As metodologias ágeis têm suas raízes no "Manifesto Ágil", um
+              documento publicado em 2001 por um grupo de desenvolvedores
+              insatisfeitos com as abordagens tradicionais de desenvolvimento de
+              software. Eles sentiram que os métodos existentes eram muito
+              rígidos, burocráticos e não conseguiam se adaptar rapidamente às
+              mudanças. Assim, eles propuseram um novo conjunto de princípios
+              que enfatizavam a colaboração, a adaptabilidade e a entrega
+              contínua de software funcional.
+            </p>
+          </div>
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="manifest">
+            O manifesto
+          </h2>
+
+          <p>
+            O Manifesto Ágil é uma declaração que define os princípios
+            fundamentais do desenvolvimento ágil de software.
+          </p>
+
+          <p>
+            Seus criadores, representando várias metodologias ágeis como Scrum,
+            Extreme Programming (XP), Crystal, entre outras, concordaram com um
+            conjunto de valores e princípios que mais tarde ficaram conhecidos
+            como o Manifesto Ágil.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue13/imagem2.png"
+            alt="Na imagem, um infográfico apresentando os manifestos para desenvolvimento ágil de software."
+          />
+
+          <p>
+            O Manifesto Ágil é composto por quatro valores fundamentais e doze
+            princípios.
+          </p>
+
+          <h3 class="text-subtitle2 blue mx-5" id="core-values">
+            Quatro Valores Fundamentais
+          </h3>
+
+          <ol class="mx-1">
+            <li class="my-1">
+              <strong
+                >Indivíduos e Interações Mais que Processos e
+                Ferramentas:</strong
+              >
+              Valoriza mais as pessoas envolvidas no projeto e a forma como elas
+              trabalham juntas do que nos processos ou ferramentas utilizadas. A
+              ideia é que a melhor forma de desenvolver software é através de
+              conversas diretas e colaboração.
+            </li>
+
+            <li class="my-1">
+              <strong
+                >Software Funcionando Mais que Documentação Abrangente:</strong
+              >
+              Embora a documentação seja importante, o principal objetivo é
+              entregar software funcional. O foco está em fornecer um produto
+              que funcione e atenda às necessidades do cliente, em vez de gastar
+              tempo excessivo em documentação detalhada.
+            </li>
+
+            <li class="my-1">
+              <strong
+                >Colaboração com o Cliente Mais que Negociação de
+                Contratos:</strong
+              >
+              A colaboração contínua com o cliente é vista como crucial. O
+              objetivo é criar um ambiente onde o cliente se sinta parte da
+              equipe e possa fazer ajustes e mudanças conforme necessário.
+            </li>
+
+            <li class="my-1">
+              <strong>Responder a Mudanças Mais que Seguir um Plano:</strong>
+              O Manifesto Ágil valoriza a capacidade de responder a mudanças em
+              vez de seguir rigidamente um plano. Isso não significa que o
+              planejamento não é importante, mas sim que deve haver
+              flexibilidade para adaptar-se às mudanças ao longo do projeto.
+            </li>
+          </ol>
+
+          <h3 class="text-subtitle2 blue mx-5" id="twelve-principles">
+            Doze Princípios
+          </h3>
+
+          <ol class="marker-regular" style="margin-inline-start: 2rem">
+            <li>
+              Satisfação do cliente através da entrega contínua de software
+              valioso.
+            </li>
+            <li>
+              Aceitar mudanças nos requisitos, mesmo em estágios avançados do
+              desenvolvimento.
+            </li>
+            <li>
+              Entregar software funcional frequentemente, com preferência para
+              períodos mais curtos.
+            </li>
+            <li>Colaboração diária entre os desenvolvedores e os clientes.</li>
+            <li>
+              Construir projetos em torno de indivíduos motivados, fornecendo o
+              ambiente e o suporte necessário.
+            </li>
+            <li>
+              O método mais eficiente e eficaz de transmitir informações para a
+              equipe de desenvolvimento é através de conversas cara a cara.
+            </li>
+            <li>Software funcional é a principal medida de progresso.</li>
+            <li>Desenvolvimento ágil promove desenvolvimento sustentável.</li>
+            <li>
+              Continuar a prestar atenção à excelência técnica e bom design.
+            </li>
+            <li>
+              Simplicidade — a arte de maximizar a quantidade de trabalho não
+              realizado — é essencial.
+            </li>
+            <li>
+              As melhores arquiteturas, requisitos e designs emergem de equipes
+              auto-organizadas.
+            </li>
+            <li>
+              Em intervalos regulares, a equipe reflete sobre como se tornar
+              mais eficaz e ajustar seu comportamento de acordo.
+            </li>
+          </ol>
+
+          <p>
+            Esses valores e princípios são a base para várias metodologias ágeis
+            de desenvolvimento de software, ajudando equipes e organizações a se
+            adaptarem a mudanças, a colaborar mais efetivamente e a entregarem
+            produtos de maior valor para os clientes.
+          </p>
+
+          <h3 class="text-subtitle2 blue mx-5" id="definitions">Definições</h3>
+
+          <p>
+            As <strong>metodologias ágeis</strong> são um conjunto de princípios
+            para o desenvolvimento de software sob os quais os requisitos e
+            soluções evoluem através da colaboração entre equipes
+            auto-organizadas e multifuncionais. 
+          </p>
+
+          <p>
+            Elas promovem o planejamento adaptativo, a evolução do
+            desenvolvimento, a entrega antecipada e a melhoria contínua, e
+            incentivam uma resposta rápida e flexível à mudança.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue13/imagem3.png"
+            alt="Na imagem, uma mulher apresentando um quadro com os tipos de metodologias ágeis."
+          />
+
+          <p>
+            Existem várias metodologias ágeis, incluindo
+            <strong
+              >Scrum, Kanban, Extreme Programming (XP), Lean e muitas
+              outras. </strong
+            >
+          </p>
+
+          <p>
+            Cada uma tem suas próprias práticas, terminologia e nuances, mas
+            todas compartilham os valores e princípios fundamentais do Manifesto
+            Ágil.
+          </p>
+
+          <p>A seguir vamos conhecer algumas dessas metodologias.</p>
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="kanban">Kanban</h2>
+
+          <p>
+            O <strong>sistema Kanban</strong> foi originalmente desenvolvido na
+            Toyota, no Japão, durante a década de 1940, como uma maneira de
+            gerenciar o fluxo de trabalho e eliminar o desperdício na produção.
+          </p>
+
+          <p>
+            O termo "Kanban" significa "cartão visual" ou "sinal" em japonês, e
+            o sistema foi projetado para visualizar o trabalho, limitar a
+            quantidade de trabalho em progresso e maximizar a eficiência.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue13/imagem4.png"
+            alt="Na imagem, um senhor japonês organizando papéis em uma grande estrutura metálica."
+          />
+
+          <p>
+            Na década de 2000, o <strong>sistema Kanban</strong> começou a ser
+            aplicado ao desenvolvimento de software e se tornou uma das
+            metodologias ágeis mais populares. Ele é valorizado por sua
+            simplicidade, flexibilidade e foco no fluxo contínuo de trabalho.
+            Ela se baseia em vários elementos chave:
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue13/imagem5.jpg"
+            alt="Na imagem, pessoas alegres escrevendo e colocando Post-its em um vidro."
+          />
+
+          <ul class="mx-2">
+            <li class="my-1">
+              <strong>Sistema Visual:</strong> O Kanban utiliza um sistema
+              visual para representar as tarefas e o fluxo de trabalho. Isso
+              torna mais fácil para os membros da equipe visualizar o progresso
+              das tarefas e entender rapidamente o estado geral do projeto.
+            </li>
+            <li class="my-1">
+              <strong>Quadro com Colunas:</strong> O elemento central do Kanban
+              é o quadro, geralmente dividido em colunas que representam
+              diferentes estágios do processo de trabalho, como "Para Fazer",
+              "Em Andamento" e "Concluído". Cada coluna mostra as tarefas em seu
+              respectivo estágio do processo.
+            </li>
+            <li class="my-1">
+              <strong>Separação:</strong> As tarefas são separadas umas das
+              outras e visualmente distribuídas nas colunas apropriadas. Isso
+              ajuda a identificar gargalos no processo e a priorizar as tarefas
+              conforme a necessidade.
+            </li>
+            <li class="my-1">
+              <strong>Cartões:</strong> Cada tarefa ou item de trabalho é
+              representado por um cartão no quadro Kanban. Estes cartões contêm
+              informações importantes sobre a tarefa, como descrição, prazos,
+              responsável pela execução, entre outros. O movimento dos cartões
+              pelas colunas representa o progresso da tarefa através do
+              processo.
+            </li>
+            <li class="my-1">
+              <strong>Limitação do Trabalho em Andamento:</strong> Uma das
+              práticas fundamentais do Kanban é limitar o trabalho em andamento
+              (WIP - Work In Progress). Isso significa definir um número máximo
+              de tarefas que podem estar em cada estágio do processo ao mesmo
+              tempo. O objetivo é evitar o excesso de trabalho e garantir que a
+              equipe se concentre em completar as tarefas atuais antes de
+              iniciar novas.
+            </li>
+          </ul>
+
+          <p>
+            Esses elementos trabalham juntos para criar um ambiente de trabalho
+            mais organizado e eficiente, melhorando a transparência, aumentando
+            a produtividade e facilitando a identificação e resolução de
+            problemas no fluxo de trabalho.
+          </p>
+
+          <h3 class="text-subtitle2 blue mx-5" id="kanban-game-development">
+            Usando Kanban no Desenvolvimento de Jogos
+          </h3>
+
+          <p>
+            No desenvolvimento de jogos, o Kanban pode ser uma ferramenta
+            poderosa para gerenciar e visualizar o fluxo de trabalho. Aqui estão
+            algumas dicas sobre como usá-lo:
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue13/imagem6.png"
+            alt="Na imagem, um quadro com 4 (quatro) colunas: a fazer, em progresso, teste, concluído. Nele estão vários quadrados coloridos que representam os Post-its colados."
+          />
+
+          <ol class="mx-2">
+            <li class="my-1">
+              <strong>Visualize o trabalho:</strong> Crie um quadro Kanban com
+              colunas para cada estágio do processo de desenvolvimento, como "A
+              Fazer", "Em Progresso", "Teste" e "Concluído". Cada tarefa ou
+              recurso é representado por um cartão que se move pelo quadro à
+              medida que avança.
+            </li>
+            <li class="my-1">
+              <strong>Limite o trabalho em progresso:</strong> Para evitar o
+              excesso de tarefas e garantir que cada tarefa receba a atenção
+              adequada, limite o número de cartões que podem estar na coluna "Em
+              Progresso" de uma vez.
+            </li>
+            <li class="my-1">
+              <strong>Gerencie o fluxo:</strong> Preste atenção a como os
+              cartões se movem pelo quadro. Se os cartões estão se acumulando em
+              uma coluna, isso pode indicar um gargalo que precisa ser
+              resolvido.
+            </li>
+
+            <img
+              class="w-75 m-auto"
+              src="./img/ue13/imagem7.png"
+              alt="Na imagem, a movimentação de um item do projeto de uma coluna para outra. O item “Programar magia” saiu da coluna “Em progresso” para coluna “Teste”."
+            />
+
+            <li class="my-1">
+              <strong>Melhore continuamente:</strong> Use reuniões regulares de
+              revisão para refletir sobre o que está funcionando, o que não está
+              e como o processo pode ser melhorado. O objetivo é sempre melhorar
+              a eficiência e a qualidade do trabalho.
+            </li>
+          </ol>
+
+          <p>
+            Lembre-se, o objetivo do Kanban é melhorar a eficiência e a
+            qualidade, não necessariamente acelerar o trabalho. É mais
+            importante fazer o trabalho corretamente e evitar o retrabalho do
+            que fazer as coisas rapidamente. Ainda sobre o método Kanban,
+            responda a questão a seguir:
+          </p>
+
+          <!-- inicio questão 1 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question1-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 1</p>
+                <p>Verdadeiro ou Falso</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>
+                  O Kanban é uma metodologia ágil que usa um quadro para
+                  visualizar o fluxo de trabalho.
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q1-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-1"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-1">Falso</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-2"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-2">Verdadeiro</label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question1)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 1 -->
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="scrum">Scrum</h2>
+
+          <p>
+            O Scrum é uma estrutura de gerenciamento de projetos e
+            desenvolvimento de produtos amplamente utilizada, especialmente em
+            contextos onde os requisitos são rapidamente alterados ou não são
+            completamente conhecidos no início do projeto.
+          </p>
+
+          <p>
+            Desenvolvida inicialmente para projetos de software, ela agora é
+            aplicada em diversos outros campos.
+          </p>
+
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://youtube.com/embed/ZzLWQD83IW8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                  gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <p>
+            O Scrum foi concebido na década de 1980 por Hirotaka Takeuchi e
+            Ikujiro Nonaka, que o descreveram como uma abordagem flexível e
+            holística para o desenvolvimento de produtos. Eles compararam essa
+            abordagem ao jogo de rugby, onde a equipe tenta avançar como uma
+            unidade, passando a bola para trás e para frente - daí o nome
+            "Scrum".
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue13/imagem8.jpg"
+            alt="Na imagem, o momento do “Clinch” (encontro) para que aconteça o Scrum onde basicamente um jogador lança a bola para trás e os jogadores unidos se movimentam para atacar com a bola sendo arrastada com os pés."
+          />
+
+          <p>
+            No início dos anos 90, Ken Schwaber e Jeff Sutherland, dois dos
+            signatários do Manifesto Ágil, formalizaram o método Scrum como uma
+            estrutura para o desenvolvimento de software. Desde então, o Scrum
+            se tornou uma das metodologias ágeis mais populares, usada por
+            equipes em todo o mundo.
+          </p>
+
+          <h3 class="text-subtitle2 blue mx-5" id="inside-scrum">
+            Por dentro do Scrum
+          </h3>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue13/imagem9.png"
+            alt="Na imagem, um gráfico que explica o processo de Scrum em projetos. Sempre existe o Product Owner (Dono do projeto), o Scrum Master (pessoa que coordena os processos para que aconteçam) e a equipe de execução. Existe o Sprint Planning (planejamento das tarefas em menor escala possível) e, após a execução acontece o Sprint Review (Revisão das tarefas realizadas). Ao final acontece o “incremento ao produto”, ou seja, o que foi desenvolvido pode ser utilizado no projeto."
+          />
+
+          <h3 class="text-subtitle2 blue mx-5" id="scrum-game-development">
+            Usando Scrum no Desenvolvimento de Jogos
+          </h3>
+
+          <p>
+            O Scrum é uma ótima opção para o desenvolvimento de jogos, pois
+            permite a flexibilidade necessária em um ambiente criativo e em
+            constante mudança.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue13/imagem10.jpg"
+            alt="Na imagem, uma ilustração de uma equipe trabalhando junta e analisando os Sprints."
+          />
+
+          <p>
+            Lembre-se, o objetivo do Scrum é entregar valor de forma incremental
+            e responder rapidamente às mudanças. Isso é especialmente útil no
+            desenvolvimento de jogos, onde as necessidades e desejos dos
+            jogadores podem mudar rapidamente.
+          </p>
+
+          <!-- inicio questão 2 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question2-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 2</p>
+                <p>Verdadeiro ou Falso</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>
+                  Considerando a origem do Scrum, assinale se a seguinte
+                  afirmação é verdadeira ou falsa: 'O Scrum foi originalmente
+                  desenvolvido na Toyota no Japão'.
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q2-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-1"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-1">Falso</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-2"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-2">Verdadeiro</label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question2)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 2 -->
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="sprint">Sprint</h2>
+
+          <p>
+            Uma Sprint Scrum é um período de tempo definido durante o qual um
+            trabalho específico deve ser concluído e preparado para revisão. As
+            Sprints são a base da metodologia Scrum e são usadas para dividir o
+            desenvolvimento de um produto em partes gerenciáveis.
+          </p>
+
+          <p>
+            Cada Sprint geralmente dura entre uma e quatro semanas, com duas
+            semanas sendo a duração mais comum.
+          </p>
+
+          <p>
+            Durante uma Sprint, a equipe se concentra em completar um conjunto
+            definido de tarefas, que são escolhidas durante a reunião de
+            planejamento da Sprint com base em sua prioridade no backlog do
+            produto.
+          </p>
+
+          <p>
+            Uma Sprint Scrum é composta por vários elementos-chave que ajudam a
+            estruturar o trabalho e garantir que a equipe esteja sempre se
+            movendo em direção aos seus objetivos. Aqui estão os principais
+            elementos de uma Sprint Scrum:
+          </p>
+
+          <p>
+            <strong>Planejamento da Sprint (Sprint Planning):</strong> Esta é
+            uma reunião que ocorre no início de cada Sprint, onde a equipe
+            decide quais itens do backlog do produto serão trabalhados durante a
+            Sprint.  O Product Owner (PO) apresenta os itens do backlog e a
+            equipe discute e decide quais são os mais prioritários e o que pode
+            ser realizado na próxima Sprint.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue13/imagem11.png"
+            alt="Na imagem, um gráfico demonstrando a lista de funções do “Product Owner”."
+          />
+
+          <p>
+            <strong>Backlog da Sprint (Sprint Backlog):</strong> Este é o
+            conjunto de itens do backlog do produto que a equipe se comprometeu
+            a trabalhar durante a Sprint. Pode incluir coisas como novos
+            recursos, correções de bugs, melhorias e outras tarefas relacionadas
+            ao desenvolvimento do produto.
+          </p>
+
+          <p>
+            <strong>Reuniões Diárias (Daily Stand-ups ou Daily Scrum):</strong>
+            Estas são reuniões curtas (geralmente não mais do que 15 minutos)
+            que acontecem todos os dias durante a Sprint. Cada membro da equipe
+            compartilha o que fez no dia anterior, o que planeja fazer no dia
+            seguinte e se há algum obstáculo em seu caminho.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue13/imagem12.png"
+            alt="Na imagem, uma ilustração que demonstra a reunião diária de SCRUM para verificar o andamento das tarefas."
+          />
+
+          <p>
+            <strong>Trabalho em Andamento (Work in Progress):</strong>
+            Este é o trabalho real que a equipe está fazendo durante a Sprint
+            para completar os itens do backlog da Sprint. Isso pode envolver
+            coisas como escrever código, testar funcionalidades, corrigir bugs,
+            criar arte para o jogo, etc.
+          </p>
+
+          <p>
+            <strong>Revisão da Sprint (Sprint Review):</strong>
+            Esta é uma reunião que acontece no final de cada Sprint, onde a
+            equipe apresenta o trabalho que completou durante a Sprint. É uma
+            oportunidade para a equipe receber feedback do Product Owner e de
+            quaisquer outras partes interessadas.
+          </p>
+
+          <p>
+            <strong>Retrospectiva da Sprint (Sprint Retrospective):</strong>
+            Esta é uma reunião que também acontece no final de cada Sprint, após
+            a Revisão da Sprint. É uma oportunidade para a equipe refletir sobre
+            o que correu bem, o que não correu tão bem e o que pode ser
+            melhorado na próxima Sprint.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue13/imagem13.png"
+            alt="Na imagem, uma ilustração que aparece os princípios da “Retrospectiva de uma Sprint”."
+          />
+
+          <p>
+            Esses elementos trabalham juntos para criar um ciclo de trabalho que
+            é altamente focado, iterativo e adaptável, permitindo que a equipe
+            responda rapidamente às mudanças e entregue valor de forma contínua.
+          </p>
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="lean">Lean</h2>
+
+          <p>
+            <strong>A metodologia Lean</strong> é uma abordagem de
+            desenvolvimento que se concentra na criação de valor para o cliente
+            através da eficiência e da eliminação de desperdício.
+          </p>
+
+          <p>
+            Originada no Sistema Toyota de Produção, a filosofia Lean se baseia
+            em cinco princípios: definir valor do ponto de vista do cliente,
+            identificar a cadeia de valor, criar fluxo, estabelecer um sistema
+            pull e buscar a perfeição.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue13/imagem14.jpg"
+            alt="Na imagem, uma imagem de um gestor empilhando blocos de madeira."
+          />
+
+          <p>
+            No Lean, o "desperdício" é qualquer coisa que não agrega valor ao
+            cliente. Isso pode incluir coisas como tarefas desnecessárias,
+            espera, defeitos e excesso de produção. A ideia é maximizar o valor
+            criado enquanto minimiza o desperdício. Isso é feito através de
+            práticas como trabalho em equipe, just-in-time production (produção
+            no momento certo), e kaizen (melhoria contínua).
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue13/imagem15.png"
+            alt="Na imagem, uma ilustração que demonstra a jornada do “Zero Absoluto” (início de qualquer projeto) até o momento Hero (“Herói” ou “Vitória”) que significa a conclusão do projeto."
+          />
+
+          <p>
+            No desenvolvimento de jogos, a metodologia Lean pode ser
+            incrivelmente útil. Por exemplo, em vez de gastar meses
+            desenvolvendo recursos complexos que você acha que os jogadores vão
+            gostar, você pode adotar uma abordagem Lean: crie uma versão mínima
+            viável (MVP) do recurso, lance-a para os jogadores e colete
+            feedback.
+          </p>
+
+          <p>
+            Em seguida, use esse feedback para iterar e melhorar o recurso. Isso
+            não apenas economiza tempo e recursos, mas também garante que você
+            está criando um jogo que os jogadores realmente querem jogar.
+          </p>
+
+          <!-- inicio questão 3 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question3-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 3</p>
+                <p>Verdadeiro ou Falso</p>
+              </div>
+
+              <div class="question-description-container">
+                <p></p>
+                <p>
+                  A metodologia Lean se concentra em maximizar o trabalho, não o
+                  valor para o cliente.
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q3-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-1"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-1">Falso</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-2"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-2">Verdadeiro</label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question3)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 3 -->
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="tools">
+            Ferramentas
+          </h2>
+
+          <p>
+            As empresas de desenvolvimento de jogos têm cada vez mais buscado
+            agilizar seus processos. Para isso, lançam mão de ferramentas que se
+            baseiam em metodologias ágeis.
+          </p>
+
+          <p>
+            A seguir, vamos conhecer 3 ferramentas ágeis que vão ajudar a
+            organizar e otimizar o processo de desenvolvimento.
+          </p>
+
+          <h3 class="text-subtitle2 blue mx-5" id="trello">Trello</h3>
+
+          <p>
+            Ferramenta que funciona como um quadro Kanban. Simples de usar e
+            muito bom para gestão de projetos em equipe.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue13/imagem16.png"
+            alt="Na imagem, uma ilustração de um quadro Kanban na plataforma Trello."
+          />
+
+          <h3 class="text-subtitle2 blue mx-5" id="pipefy">Pipefy</h3>
+
+          <p>
+            Ferramenta ágil para todas as áreas de negócio. Oferece templates
+            prontos para áreas como vendas, marketing, RH, financeiro, TI e
+            gestão de projetos.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue13/imagem17.jpg"
+            alt="Na imagem, uma ilustração de um quadro Kanban na plataforma Pipefy."
+          />
+
+          <h3 class="text-subtitle2 blue mx-5" id="planning-poker">
+            Planning Poker
+          </h3>
+
+          <p>
+            <strong>Planning Poker</strong> é um jogo que as equipes de
+            desenvolvimento jogam para estimar o esforço necessário para
+            implementar diferentes tarefas ou recursos. Cada membro da equipe
+            recebe um conjunto de cartas com números que representam a
+            dificuldade da tarefa.
+          </p>
+
+          <p>
+            Quando uma tarefa é apresentada, cada membro escolhe uma carta que
+            representa sua estimativa de quanto esforço a tarefa exigirá. Todos
+            revelam suas cartas ao mesmo tempo, e se as estimativas variam
+            muito, a equipe discute as razões para as diferenças e faz uma nova
+            rodada de estimativas.
+          </p>
+
+          <p>
+            É uma maneira divertida e eficaz de garantir que todos na equipe
+            tenham uma palavra a dizer na estimativa do trabalho.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue13/imagem18.jpg"
+            alt="Na imagem vemos uma imagem de uma pessoa segurando cartas de baralho representando o nível de dificuldade de uma tarefa."
+          />
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="applications">
+            Aplicações
+          </h2>
+
+          <p>
+            No desenvolvimento de jogos, as metodologias ágeis podem ser
+            particularmente úteis. Os jogos são, por natureza, sistemas
+            complexos que precisam se adaptar e evoluir com base nas
+            expectativas dos jogadores, avanços tecnológicos e tendências do
+            mercado.
+          </p>
+
+          <p>
+            Usando métodos ágeis, os desenvolvedores de jogos podem trabalhar em
+            pequenas iterações, lançando versões iniciais do jogo e coletando
+            feedback dos jogadores. 
+          </p>
+
+          <p>
+            Isso permite que eles ajustem o jogo para atender melhor às
+            necessidades e desejos dos jogadores, em vez de tentar prever tudo
+            no início do projeto.
+          </p>
+
+          <p>
+            Muitos estudos foram empreendidos com a temática de metodologias
+            ágeis no desenvolvimento de jogos digitais:
+          </p>
+
+          <div class="border-orange-type2">
+            <p class="font-box-orange">
+              <strong
+                >Adoção de Metodologias Ágeis para Produção de Jogos Sociais com
+                Times Distribuídos:</strong
+              >
+            </p>
+            <hr class="line-gray" />
+            <p>
+              Este trabalho tem por objetivo relatar as experiências obtidas em
+              uma fábrica de software open-source para desenvolvimento de jogos
+              sociais, adaptando a metodologia Scrum para o processo de
+              desenvolvimento distribuído.
+            </p>
+            <p>
+              Disponível no link:
+              <a
+                target="_blank"
+                href="https://www.cin.ufpe.br/~jeag/papers/SBGames_2011.pdf"
+                >https://www.cin.ufpe.br/~jeag/papers/SBGames_2011.pdf</a
+              >
+            </p>
+          </div>
+
+          <div class="border-orange-type2">
+            <p class="font-box-orange">
+              <strong
+                >Agile game development: lessons learned from software
+                engineering:</strong
+              >
+            </p>
+            <hr class="line-gray" />
+            <p>
+              Este artigo propõe um modelo ágil para desenvolver jogos que
+              simulam práticas profissionais e avaliação de políticas.
+            </p>
+            <p>
+              Disponível no link:
+              <a
+                target="_blank"
+                href="https://web.northeastern.edu/casperharteveld/pubs/Agile_ISAGA2009.pdf"
+                >https://web.northeastern.edu/casperharteveld/pubs/Agile_ISAGA2009.pdf</a
+              >
+            </p>
+          </div>
+
+          <div class="border-orange-type2" style="margin-bottom: 2rem">
+            <p class="font-box-orange">
+              <strong
+                >Software Development Processes for Games: A Systematic
+                Literature Review:</strong
+              >
+            </p>
+            <hr class="line-gray" />
+            <p>
+              Este artigo fez uma revisão em mais de 400 trabalhos que usam
+              modelos de desenvolvimento ágil no desenvolvimento de software.
+              Mostra que a indústria de jogos já usa ostensivamente.
+            </p>
+          </div>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue13/imagem19.jpg"
+            alt="Na imagem vemos uma ilustração de jovens em uma equipe de desenvolvimento de jogos. A imagem é divertida e apresenta pizza, cubo mágico e instrumentos musicais para demonstrar que o processo precisa ser combinado em trabalho e momentos de extravasar as tensões."
+          />
+
+          <p>
+            Além disso, as metodologias ágeis incentivam a colaboração entre
+            designers, desenvolvedores, testadores e até mesmo jogadores, o que
+            pode levar a um jogo mais coeso e bem projetado.
+          </p>
+
+          <p>
+            Em resumo, as metodologias ágeis oferecem uma maneira poderosa de
+            lidar com a incerteza e a mudança no desenvolvimento de jogos,
+            permitindo que as equipes criem jogos melhores e mais envolventes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
           <h1 class="text-Title light-orange" id="recap">Recapitulando</h1>
+
+          <p>
+            Então, nesta aula aprendemos que as metodologias ágeis são como um
+            superpower para desenvolvedores de jogos. Elas permitem que vocês
+            trabalhem de forma mais inteligente, não mais difícil, entregando
+            valor aos jogadores de forma rápida e contínua.
+          </p>
+
+          <p>
+            Em vez de passar anos desenvolvendo um jogo completo e depois
+            lançá-lo esperando que os jogadores gostem, vocês podem lançar
+            versões iniciais, coletar feedback dos jogadores e melhorar o jogo
+            com base nesse feedback. É como se vocês estivessem nivelando o jogo
+            em tempo real.
+          </p>
+
+          <p>
+            Existem várias ferramentas e técnicas que vocês podem usar, como
+            Scrum, Kanban, XP e Lean. Scrum é como um RPG de equipe, Kanban é
+            como um jogo de estratégia em tempo real, Scrum é como um jogo
+            cooperativo e Lean é como um jogo de sobrevivência.
+          </p>
+
+          <p>
+            Cada um tem suas próprias regras e estratégias, mas todos
+            compartilham o mesmo objetivo: entregar um jogo incrível que os
+            jogadores vão adorar.
+          </p>
+
+          <p>
+            E a melhor parte? As metodologias ágeis não são apenas para grandes
+            estúdios. Mesmo se vocês forem um desenvolvedor indie trabalhando em
+            seu quarto, vocês podem usar métodos ágeis para tornar o processo de
+            desenvolvimento mais eficiente e divertido.
+          </p>
+
+          <p>
+            Então, por que não dar uma chance? Quem sabe, vocês podem descobrir
+            que é exatamente o que precisavam para levar o jogo de vocês para o
+            próximo nível.
+          </p>
+
           <div class="flex justify-center align-center w-full myt-3">
             <img src="./img/global/icons/greenCheck.png" />
             <h3 class="px-3 green" id="problem-solution">
@@ -207,7 +1381,7 @@
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
-                src="https://youtube.com/embed/"
+                src="https://youtube.com/embed/-BFt3edALp0"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media;
