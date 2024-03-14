@@ -49,35 +49,65 @@
           <a class="listPanel" href="#contextualizing">
             <li>1.0 Contextualizando</li>
           </a>
-          <a class="listPanel" href="#">
+          <a class="listPanel" href="#database">
             <li>2.0 Banco de dados</li>
           </a>
           <ul type="1" class="mx-1">
-            <a class="listPanel" href="#">
+            <a class="listPanel" href="#sgbd">
               <li>2.1 SGBD</li>
             </a>
-            <a class="listPanel" href="#">
+            <a class="listPanel" href="#main-sgbd">
               <li>2.2 Principais SGBDs</li>
             </a>
-            <a class="listPanel" href="#">
+            <ul type="1" class="mx-1">
+              <a class="listPanel" href="#oracle-database">
+                <li>2.2.1 Oracle Database</li>
+              </a>
+              <a class="listPanel" href="#MySQL">
+                <li>2.2.2 MySQL</li>
+              </a>
+              <a class="listPanel" href="#sql-server">
+                <li>2.2.3 Microsoft SQL Server</li>
+              </a>
+              <a class="listPanel" href="#postgreSQL">
+                <li>2.2.4 PostgreSQL</li>
+              </a>
+            </ul>
+            <a class="listPanel" href="#install-MySQL">
               <li>2.3 Instalando o SGBD MySQL</li>
             </a>
-            <a class="listPanel" href="#">
+            <a class="listPanel" href="#SQL">
               <li>2.4 Structured Query Language SQL</li>
             </a>
-            <a class="listPanel" href="#">
+            <a class="listPanel" href="#data-types">
               <li>2.5 Tipos de dados</li>
             </a>
-            <a class="listPanel" href="#">
+            <a class="listPanel" href="#data-manipulation">
               <li>2.6 Manipulação de dados</li>
             </a>
-            <a class="listPanel" href="#">
+            <a class="listPanel" href="#database-relationships">
               <li>2.7 Relacionamentos em Banco de dados</li>
             </a>
-            <a class="listPanel" href="#">
+            <ul type="1" class="mx-1">
+              <a class="listPanel" href="#types-relationships">
+                <li>2.7.1 Tipos de relacionamentos</li>
+              </a>
+              <ul type="1" class="mx-1">
+                <a class="listPanel" href="#one-to-one">
+                  <li>2.7.1.1 Relacionamento Um-para-Um (1:1):</li>
+                </a>
+                <a class="listPanel" href="#one-to-many">
+                  <li>2.7.1.2 Relacionamento Um-para-Muitos (1:N):</li>
+                </a>
+                <a class="listPanel" href="#many-to-many">
+                  <li>2.7.1.3 Relacionamento Muitos-para-Muitos (N:N):</li>
+                </a>
+              </ul>
+            </ul>
+            <a class="listPanel" href="#indexes">
               <li>2.8 Índices</li>
             </a>
-            <a class="listPanel" href="#">
+            <a class="listPanel" href="#connections">
               <li>2.9 Conexões</li>
             </a>
           </ul>
@@ -207,7 +237,7 @@
     <section class="container course">
       <div class="section">
         <div class="contentSection">
-          <h1 class="text-Title light-orange" id="">Banco de dados</h1>
+          <h1 class="text-Title light-orange" id="database">Banco de dados</h1>
           <p>
             Bancos de dados são sistemas essenciais para armazenar, gerenciar e
             recuperar informações de maneira organizada, desempenhando um papel
@@ -236,7 +266,7 @@
             </div>
           </div>
 
-          <h2 class="text-subtitle1 dark-orange mx-3" id="">SGBD</h2>
+          <h2 class="text-subtitle1 dark-orange mx-3" id="sgbd">SGBD</h2>
 
           <p>
             Um Sistema de Gerenciamento de Banco de Dados (SGBD) é um software
@@ -289,11 +319,13 @@
             usuários, possibilitando operações complexas de dados e análises.
           </p>
 
-          <h2 class="text-subtitle1 dark-orange mx-3" id="">
+          <h2 class="text-subtitle1 dark-orange mx-3" id="main-sgbd">
             Principais SGBDs
           </h2>
 
-          <h3 class="text-subtitle2 blue mx-5" id="">Oracle Database</h3>
+          <h3 class="text-subtitle2 blue mx-5" id="oracle-database">
+            Oracle Database
+          </h3>
 
           <p>
             Amplamente usado em grandes empresas e organizações, conhecido por
@@ -307,7 +339,7 @@
             alt="Na imagem, o logotipo do SGBD Oracle."
           />
 
-          <h3 class="text-subtitle2 blue mx-5" id="">MySQL</h3>
+          <h3 class="text-subtitle2 blue mx-5" id="MySQL">MySQL</h3>
 
           <p>
             Um dos sistemas de gerenciamento de banco de dados relacionais mais
@@ -322,7 +354,9 @@
             alt="Na imagem, o logotipo do SGBD MySQL."
           />
 
-          <h3 class="text-subtitle2 blue mx-5" id="">Microsoft SQL Server</h3>
+          <h3 class="text-subtitle2 blue mx-5" id="sql-server">
+            Microsoft SQL Server
+          </h3>
 
           <p>
             Um SGBD robusto e seguro, popular em ambientes empresariais,
@@ -336,7 +370,7 @@
             alt="Na imagem, o logotipo do SGBD Microsoft SQL Server."
           />
 
-          <h3 class="text-subtitle2 blue mx-5" id="">PostgreSQL</h3>
+          <h3 class="text-subtitle2 blue mx-5" id="postgreSQL">PostgreSQL</h3>
 
           <p>
             Um sistema de gerenciamento de banco de dados objeto-relacional de
@@ -497,7 +531,7 @@
           </div>
           <!-- fim questão 1 -->
 
-          <h2 class="text-subtitle1 dark-orange mx-3" id="">
+          <h2 class="text-subtitle1 dark-orange mx-3" id="install-MySQL">
             Instalando o SGBD MySQL
           </h2>
 
@@ -670,7 +704,7 @@
             alt="Na imagem, o print da tela do MySQL Workbench. Na aba Query, está escrito o comando CREATE DATABASE GameNave."
           />
 
-          <h2 class="text-subtitle1 dark-orange mx-3" id="">
+          <h2 class="text-subtitle1 dark-orange mx-3" id="SQL">
             Structured Query Language SQL
           </h2>
 
@@ -850,7 +884,9 @@
             necessidades específicas de cada tarefa ou aplicação.
           </p>
 
-          <h2 class="text-subtitle1 dark-orange mx-3" id="">Tipos de dados</h2>
+          <h2 class="text-subtitle1 dark-orange mx-3" id="data-types">
+            Tipos de dados
+          </h2>
 
           <p>
             Nos bancos de dados, cada coluna de uma tabela é designada para
@@ -1028,7 +1064,7 @@
           </div>
           <!-- fim questão 2 -->
 
-          <h2 class="text-subtitle1 dark-orange mx-3" id="">
+          <h2 class="text-subtitle1 dark-orange mx-3" id="data-manipulation">
             Manipulação de dados
           </h2>
 
@@ -1199,7 +1235,10 @@
           </div>
           <!-- fim questão 3 -->
 
-          <h2 class="text-subtitle1 dark-orange mx-3" id="">
+          <h2
+            class="text-subtitle1 dark-orange mx-3"
+            id="database-relationships"
+          >
             Relacionamentos em Banco de dados
           </h2>
 
@@ -1235,7 +1274,7 @@
             </div>
           </div>
 
-          <h3 class="text-subtitle2 blue mx-5" id="">
+          <h3 class="text-subtitle2 blue mx-5" id="types-relationships">
             Tipos de relacionamentos
           </h3>
 
@@ -1244,7 +1283,7 @@
             categorizados em três tipos:
           </p>
 
-          <h4 class="text-subtitle3 blue mx-6">
+          <h4 class="text-subtitle3 blue mx-6" id="one-to-one">
             Relacionamento Um-para-Um (1:1):
           </h4>
 
@@ -1266,7 +1305,7 @@
             alt="Na imagem, uma modelagem conceitual do relacionamento Um-para-um."
           />
 
-          <h4 class="text-subtitle3 blue mx-6">
+          <h4 class="text-subtitle3 blue mx-6" id="one-to-many">
             Relacionamento Um-para-Muitos (1:N):
           </h4>
 
@@ -1289,8 +1328,8 @@
             alt="Na imagem, uma modelagem conceitual do relacionamento Um-para-muitos."
           />
 
-          <h4 class="text-subtitle3 blue mx-6">
-            Relacionamento Um-para-Muitos (N:N):
+          <h4 class="text-subtitle3 blue mx-6" id="many-to-many">
+            Relacionamento Muitos-para-Muitos (N:N):
           </h4>
 
           <ul class="mx-2">
@@ -1320,7 +1359,7 @@
             outras tabelas.
           </p>
 
-          <h2 class="text-subtitle1 dark-orange mx-3" id="">Índices</h2>
+          <h2 class="text-subtitle1 dark-orange mx-3" id="indexes">Índices</h2>
 
           <p>
             Imagina ter um livro de mil páginas o qual você quer encontrar uma
@@ -1493,7 +1532,9 @@
           </div>
           <!-- fim questão 4 -->
 
-          <h2 class="text-subtitle1 dark-orange mx-3" id="">Conexões</h2>
+          <h2 class="text-subtitle1 dark-orange mx-3" id="connections">
+            Conexões
+          </h2>
 
           <p>
             Conexões em banco de dados referem-se à comunicação estabelecida
