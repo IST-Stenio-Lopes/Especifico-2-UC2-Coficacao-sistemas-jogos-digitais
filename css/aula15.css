@@ -1,0 +1,37 @@
+.sublist ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+.sublist ol > li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em;
+}
+
+.sublist ol > li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.6em;
+}
+
+.sublist li ol > li {
+  margin: 0;
+}
+
+.sublist li ol > li:before {
+  content: counters(item, ".") " ";
+}
+
+.test-list ol {
+  counter-reset: item;
+}
+.test-list li {
+  display: block;
+}
+.test-list li:before {
+  content: counters(item, ".") " ";
+  counter-increment: item;
+}
