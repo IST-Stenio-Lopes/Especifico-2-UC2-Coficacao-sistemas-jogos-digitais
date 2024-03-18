@@ -1,37 +1,21 @@
-.sublist ol {
-  list-style-type: none;
-  counter-reset: item;
-  margin: 0;
-  padding: 0;
+.container-light {
+  background-color: #fffbeb;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  gap: 1.05rem;
+  width: 100%;
+  color: #1a1827;
+  border-bottom: 1px solid #ef8e2e;
+  display: flex;
+  font-size: 1.25rem;
 }
 
-.sublist ol > li {
-  display: table;
-  counter-increment: item;
-  margin-bottom: 0.6em;
-}
-
-.sublist ol > li:before {
-  content: counters(item, ".") ". ";
-  display: table-cell;
-  padding-right: 0.6em;
-}
-
-.sublist li ol > li {
-  margin: 0;
-}
-
-.sublist li ol > li:before {
-  content: counters(item, ".") " ";
-}
-
-.test-list ol {
-  counter-reset: item;
-}
-.test-list li {
-  display: block;
-}
-.test-list li:before {
-  content: counters(item, ".") " ";
-  counter-increment: item;
+.box-orange {
+  display: flex;
+  width: 100%;
+  padding: 0.75rem 2rem;
+  align-items: flex-start;
+  gap: 0.5rem;
+  border: 1px solid #ef8e2e;
+  flex-direction: column;
 }
