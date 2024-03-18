@@ -19,6 +19,7 @@
 
     <link rel="stylesheet" href="./css/aula16.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/table.css" />
     <link rel="stylesheet" href="./css/global/question.css" />
 
     <script src="./scripts/select.js" defer></script>
@@ -49,38 +50,64 @@
           <a class="listPanel" href="#contextualizing">
             <li>1.0 Contextualizando</li>
           </a>
-          <a class="listPanel" href="#historic">
-            <li>2.0 Histórico</li>
+          <a class="listPanel" href="#digital-game-production">
+            <li>2.0 Produção de jogos digitais</li>
           </a>
-          <a class="listPanel" href="#ide">
-            <li>3.0 Ambiente de Desenvolvimento Integrado (IDE)</li>
-          </a>
-          <a class="listPanel" href="#installation">
-            <li>4.0 Instalação</li>
-          </a>
-          <a class="listPanel" href="#documentation">
-            <li>5.0 Documentação</li>
-          </a>
-          <a class="listPanel" href="#applications">
-            <li>6.0 Aplicações</li>
-          </a>
-          <a class="listPanel" href="#good-habits">
-            <li>7.0 Boas práticas</li>
-          </a>
-          <a class="listPanel" href="#frameworks">
-            <li>8.0 Frameworks</li>
-          </a>
-          <a class="listPanel" href="#libraries">
-            <li>9.0 Bibliotecas</li>
-          </a>
-          <a class="listPanel" href="#tools">
-            <li>10.0 Ferramentas</li>
-          </a>
-          <a class="listPanel" href="#recap">
-            <li>11.0 Recapitulando</li>
-          </a>
+          <ul type="1" class="mx-1">
+            <a class="listPanel" href="#pre-production">
+              <li>2.1 Pré-produção</li>
+            </a>
+            <ul type="1" class="mx-1">
+              <a class="listPanel" href="#diagrams">
+                <li>2.1.1 Diagramas</li>
+              </a>
+              <ul type="1" class="mx-1">
+                <a class="listPanel" href="#dfd">
+                  <li>2.1.1.1 Diagrama de Fluxo de Dados (DFD)</li>
+                </a>
+                <a class="listPanel" href="#class-diagram">
+                  <li>2.1.1.2 Diagrama de Classes</li>
+                </a>
+                <a class="listPanel" href="#sequence-diagram">
+                  <li>2.1.1.3 Diagrama de Sequência</li>
+                </a>
+                <a class="listPanel" href="#state-diagram">
+                  <li>2.1.1.4 Diagrama de Estados</li>
+                </a>
+                <a class="listPanel" href="#navigation-diagram">
+                  <li>2.1.1.5 Diagrama de Navegação</li>
+                </a>
+                <a class="listPanel" href="#component-diagram">
+                  <li>2.1.1.6 Diagrama de Componentes</li>
+                </a>
+                <a class="listPanel" href="#use-case-diagram">
+                  <li>2.1.1.7 Diagrama de Caso de Uso</li>
+                </a>
+              </ul>
+              <a class="listPanel" href="#functional-non-functional">
+                <li>2.1.2 Requisitos funcionais e não funcionais</li>
+              </a>
+              <ul type="1" class="mx-1">
+                <a class="listPanel" href="#functional-requirements">
+                  <li>2.1.2.1 Requisitos funcionais</li>
+                </a>
+                <a class="listPanel" href="#non-functional-requirements">
+                  <li>2.1.2.2 Requisitos não funcionais</li>
+                </a>
+              </ul>
+              <a class="listPanel" href="#gdd">
+                <li>2.1.3 Game Design Document (GDD)</li>
+              </a>
+              <a class="listPanel" href="#one-page">
+                <li>2.1.4 One Page (GDD)</li>
+              </a>
+              <a class="listPanel" href="#gdd10">
+                <li>2.1.5 GDD de 10 Páginas</li>
+              </a>
+            </ul>
+          </ul>
           <a class="listPanel" href="#problem-solution">
-            <li>12.0 Solução do problematizando</li>
+            <li>3.0 Solução do problematizando</li>
           </a>
         </ul>
       </div>
@@ -146,11 +173,13 @@
           <div class="box-unit-number">
             <span> 16 </span>
           </div>
-          <div class="titleHeader"></div>
+          <div class="titleHeader">Pré - Produção</div>
         </div>
         <div>
           <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
-          <p class="text-DescriptUnit"></p>
+          <p class="text-DescriptUnit">
+            Reconhecer o processo de produção de jogos digitais.
+          </p>
         </div>
         <div>
           <p class="text-LetsLearn">Vamos iniciar os estudos?</p>
@@ -172,6 +201,8 @@
             </p>
           </div>
 
+          <!--TODO LINK VÍDEO-->
+
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
@@ -186,7 +217,11 @@
           </div>
           <div class="dicas">
             <img src="./img/global/icons/help.png" id="help" />
-            <p></p>
+            <p>
+              Considere os componentes gerais que um jogo deve possuir, tais
+              como: gênero, público alvo, regras e objetivos, estética de
+              personagens e cenários. Como Yan descreveria o seu jogo?
+            </p>
           </div>
         </div>
       </div>
@@ -196,7 +231,1198 @@
     <section class="container course">
       <div class="section">
         <div class="contentSection">
-          <h1 class="text-Title light-orange" id="recap">Recapitulando</h1>
+          <h1 class="text-Title light-orange" id="digital-game-production">
+            Produção de jogos digitais
+          </h1>
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="pre-production">
+            Pré-produção
+          </h2>
+
+          <p>
+            A pré-produção é uma etapa fundamental no desenvolvimento de jogos
+            digitais, pois é nesse estágio que as bases do jogo são
+            estabelecidas e as decisões cruciais são tomadas. Durante a
+            pré-produção, a equipe de desenvolvimento trabalha na concepção e no
+            planejamento do jogo.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue16/gif1.gif"
+            alt="Na animação um gatinho folheando um livro de estratégia."
+          />
+
+          <p>
+            O primeiro passo da pré-produção é definir o
+            <strong>conceito do jogo.</strong> Isso envolve a criação da ideia
+            central do jogo, a definição do(s) gênero(s), da temática, dos
+            personagens principais e das mecânicas básicas. É importante ter uma
+            visão clara do jogo que será desenvolvido. Dê um clique e assista ao
+            vídeo a seguir para entender melhor a pré-produção.
+          </p>
+
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://youtube.com/embed/Gl0Y5fCLN0U"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <p>
+            Durante a pré-produção, a equipe de desenvolvimento realiza
+            <strong>pesquisas e busca referências</strong> relacionadas ao jogo.
+            Isso pode envolver estudar jogos semelhantes (análise de similares),
+            explorar elementos visuais, sonoros e narrativos que possam ser
+            relevantes para o jogo em desenvolvimento, e até mesmo buscar
+            inspiração em outras mídias e manifestações artísticas, como filmes,
+            livros e quadrinhos.
+          </p>
+
+          <p>
+            Nesta etapa, o <strong>design do jogo</strong> começa a ser
+            elaborado. Isso inclui a definição dos sistemas de jogo, a criação
+            de diagramas de fluxo de jogo, o planejamento dos níveis ou fases, a
+            definição de regras e mecânicas específicas e a concepção de
+            protótipos iniciais. O objetivo é estabelecer as bases para a
+            jogabilidade e a experiência do jogador.
+          </p>
+
+          <p>
+            Durante a pré-produção, também é necessário considerar as
+            <strong>restrições e os requisitos do jogo.</strong> Isso pode
+            incluir limitações técnicas, como a plataforma em que o jogo será
+            lançado, a capacidade de processamento do hardware-alvo, as
+            limitações de orçamento ou de tempo, entre outros fatores que
+            influenciam a produção do jogo.
+          </p>
+
+          <p>
+            Também é importante estabelecer um
+            <strong>plano de produção</strong> detalhado. Isso envolve a
+            definição de marcos, cronogramas, metas e tarefas específicas que
+            precisam ser realizadas ao longo do desenvolvimento do jogo. O
+            planejamento de produção ajuda a garantir que a equipe de
+            desenvolvimento esteja alinhada, que o progresso seja monitorado e
+            que o jogo seja desenvolvido de maneira eficiente.
+          </p>
+
+          <p>
+            Durante a pré-produção, é necessário
+            <strong>montar a equipe de desenvolvimento</strong> adequada para o
+            projeto. Isso pode envolver a contratação de programadores,
+            artistas, designers, compositores e outros profissionais relevantes.
+            É importante ter uma equipe coesa e qualificada para lidar com os
+            diferentes aspectos do desenvolvimento do jogo.
+          </p>
+
+          <p>
+            Por fim, é necessário estabelecer um <strong>orçamento</strong> para
+            o projeto do jogo. Isso envolve a determinação dos custos associados
+            ao desenvolvimento do jogo, como salários da equipe, software,
+            licenças, marketing e outros gastos relacionados. Ter um orçamento
+            definido ajuda a orientar o desenvolvimento do jogo dentro dos
+            limites financeiros estabelecidos.
+          </p>
+
+          <!-- inicio questão 1 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question1-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 1</p>
+                <p>
+                  Qual dos seguintes elementos NÃO faz parte da pré-produção de
+                  um jogo digital?
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q1-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-1"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-1"
+                      >Definição do conceito do jogo</label
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-2"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-2">
+                      Pesquisa e busca de referências relacionadas ao jogo
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-3"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-3">
+                      Desenvolvimento e elaboração do design do jogo
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-4"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-4"
+                      >Produção e lançamento do jogo no mercado.</label
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-5"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-5"
+                      >Montagem da equipe de desenvolvimento adequada</label
+                    >
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question1)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 1 -->
+
+          <h3 class="text-subtitle2 blue mx-5" id="diagrams">Diagramas</h3>
+
+          <p>
+            Os diagramas desempenham um papel importante no desenvolvimento de
+            jogos digitais, pois ajudam a visualizar e comunicar diferentes
+            aspectos do jogo.
+          </p>
+
+          <p>
+            Eles são ferramentas gráficas que representam relações, estruturas e
+            fluxos de informação de forma clara e concisa. Vamos explorar alguns
+            dos diagramas comumente usados em jogos digitais:
+          </p>
+
+          <h4 class="text-subtitle3 blue mx-6" id="dfd">
+            Diagrama de Fluxo de Dados (DFD)
+          </h4>
+
+          <p>
+            O DFD é usado para ilustrar o fluxo de informações dentro do jogo,
+            identificando as entradas, saídas e os processos intermediários. Ele
+            mostra como os dados são coletados, processados e distribuídos entre
+            os diferentes componentes do jogo. O DFD é facilmente elaborado em
+            aplicativos gratuitos como o Lucidchart, MindMeister e o Miro.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue16/imagem1.jpg"
+            alt="Na imagem, um diagrama de fluxo de dados onde temos à esquerda o Jogador, ao centro o Jogo e à direita o Sistema (Jogo)."
+          />
+
+          <h4 class="text-subtitle3 blue mx-6" id="class-diagram">
+            Diagrama de Classes
+          </h4>
+
+          <p>
+            O diagrama de classes é usado para modelar a estrutura de classes e
+            objetos no jogo. Ele mostra as relações entre as classes, seus
+            atributos e métodos, permitindo uma visão geral da estrutura do
+            código. O diagrama de classes auxilia os desenvolvedores a planejar
+            a arquitetura do jogo e entender a relação entre os diferentes
+            componentes.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue16/imagem2.jpg"
+            alt="Na imagem, um diagrama de classes."
+          />
+
+          <h4 class="text-subtitle3 blue mx-6" id="sequence-diagram">
+            Diagrama de Sequência
+          </h4>
+
+          <p>
+            O diagrama de sequência é usado para ilustrar a interação entre
+            objetos e a ordem das operações em uma determinada funcionalidade do
+            jogo.
+          </p>
+
+          <p>
+            Ele mostra como os objetos se comunicam e trocam mensagens ao longo
+            do tempo, permitindo uma compreensão clara do fluxo de execução de
+            um determinado processo ou interação do jogo.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue16/imagem3.jpg"
+            alt="Na imagem, um diagrama de sequência."
+          />
+
+          <h4 class="text-subtitle3 blue mx-6" id="state-diagram">
+            Diagrama de Estados
+          </h4>
+
+          <p>
+            O diagrama de estados é usado para modelar o comportamento de um
+            objeto ou sistema ao longo do tempo.
+          </p>
+
+          <p>
+            Ele mostra os diferentes estados que um objeto pode assumir e as
+            transições entre esses estados. Esse tipo de diagrama é
+            particularmente útil para representar o comportamento de
+            personagens, inimigos, elementos interativos e outros elementos do
+            jogo que possuem estados distintos.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue16/imagem4.jpg"
+            alt="Na imagem, um diagrama de estados."
+          />
+
+          <h4 class="text-subtitle3 blue mx-6" id="navigation-diagram">
+            Diagrama de Navegação
+          </h4>
+
+          <p>
+            O diagrama de navegação é usado para representar a estrutura de
+            menus, telas e fluxo de navegação do jogo.
+          </p>
+
+          <p>
+            Ele mostra como o jogador pode navegar entre diferentes telas,
+            opções e funcionalidades, proporcionando uma visão geral da
+            estrutura de navegação do jogo e ajudando na usabilidade e na
+            experiência do jogador.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue16/imagem5.jpg"
+            alt="Na imagem, um diagrama de navegação."
+          />
+
+          <h4 class="text-subtitle3 blue mx-6" id="component-diagram">
+            Diagrama de Componentes
+          </h4>
+
+          <p>
+            O diagrama de componentes é usado para ilustrar a estrutura de
+            componentes e suas dependências no jogo.
+          </p>
+
+          <p>
+            Ele mostra os diferentes módulos, bibliotecas, APIs e outros
+            componentes do sistema, ajudando a identificar as relações e
+            dependências entre eles.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue16/imagem6.jpg"
+            alt="Na imagem vemos um diagrama de componentes."
+          />
+
+          <h4 class="text-subtitle3 blue mx-6" id="use-case-diagram">
+            Diagrama de Caso de Uso
+          </h4>
+
+          <p>
+            O diagrama de caso de uso é usado para representar as interações
+            entre os atores (jogadores, NPCs, sistemas externos) e as
+            funcionalidades do jogo.
+          </p>
+
+          <p>
+            Ele mostra as diferentes ações que os atores podem realizar no jogo
+            e as respostas do jogo a essas ações.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue16/imagem7.jpg"
+            alt="Na imagem, um diagrama de Casos de Uso."
+          />
+
+          <p>
+            Esses são apenas alguns exemplos de diagramas comumente usados no
+            desenvolvimento de jogos digitais. Cada diagrama serve a um
+            propósito específico e auxilia na compreensão, planejamento e
+            comunicação dos diferentes aspectos do jogo.
+          </p>
+
+          <p>
+            Ao utilizar diagramas, a equipe de desenvolvimento pode visualizar
+            de forma mais clara a estrutura, o fluxo de informações e as
+            interações do jogo, facilitando o processo de desenvolvimento e
+            colaboração entre os membros da equipe.
+          </p>
+
+          <h3 class="text-subtitle2 blue mx-5" id="functional-non-functional">
+            Requisitos funcionais e não funcionais
+          </h3>
+
+          <p>
+            Nos jogos digitais, os requisitos funcionais e não funcionais
+            desempenham um papel crucial no planejamento e desenvolvimento do
+            jogo.
+          </p>
+
+          <p>
+            Esses requisitos definem as funcionalidades específicas que o jogo
+            deve ter (requisitos funcionais) e as características não
+            relacionadas diretamente às funcionalidades, mas que afetam a
+            experiência geral do jogo (requisitos não funcionais).
+          </p>
+
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://youtube.com/embed/bg6niFYqYXQ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+        gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <h4 class="text-subtitle3 blue mx-6" id="functional-requirements">
+            Requisitos funcionais
+          </h4>
+
+          <p>
+            Referem-se às funcionalidades e recursos específicos que o jogo deve
+            oferecer. Eles descrevem o que o jogo precisa fazer e como ele deve
+            se comportar. Alguns exemplos de requisitos funcionais em jogos
+            digitais incluem:
+          </p>
+
+          <ul style="margin-inline-start: 2rem">
+            <li class="my-1">
+              <strong>Mecânicas de jogo:</strong> Definem as regras e interações
+              do jogo, como as ações dos personagens, probabilidades,
+              habilidades, dentre outros.
+            </li>
+            <li class="my-1">
+              <strong>Modos de jogo:</strong> Descrevem os diferentes modos ou
+              tipos de jogos disponíveis, como campanha, multijogador online,
+              cooperativo, jogador contra jogador (PvP), entre outros.
+            </li>
+            <li class="my-1">
+              <strong>Progressão e metas:</strong> Determinam a forma como o
+              jogador avança no jogo, estabelecendo objetivos, recompensas,
+              desbloqueio de novos níveis, habilidades ou itens à medida que
+              progride.
+            </li>
+            <li class="my-1">
+              <strong>Interação com o ambiente:</strong> Define a forma como o
+              jogador pode interagir com o ambiente do jogo, como quebrar
+              objetos, coletar itens, interagir com NPCs (personagens não
+              jogáveis) ou afetar o mundo do jogo.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--Parallax-->
+    <div class="parallax background-parallax1">
+      <div class="cubeBlack">
+        <ul style="margin-inline-start: 2rem">
+          <li class="my-1">
+            <strong>Interface de usuário:</strong> Descreve a forma como os
+            jogadores interagem com o jogo por meio de menus, HUD (Heads-Up
+            Display), controles, botões, opções de personalização e outras
+            interfaces visuais.
+          </li>
+        </ul>
+
+        <h4 class="text-subtitle3 blue mx-6" id="non-functional-requirements">
+          Requisitos não funcionais
+        </h4>
+
+        <p>
+          Os requisitos não funcionais referem-se a aspectos que não estão
+          diretamente relacionados às funcionalidades do jogo, mas que afetam a
+          experiência do jogador, o desempenho e outros atributos do jogo.
+          Alguns exemplos de requisitos não funcionais em jogos digitais
+          incluem:
+        </p>
+
+        <ul style="margin-inline-start: 2rem">
+          <li class="my-1">
+            <strong>Desempenho:</strong> Define requisitos relacionados ao
+            desempenho do jogo, como taxa de quadros por segundo (FPS), tempo de
+            carregamento, otimização de memória e resposta rápida aos comandos
+            do jogador.
+          </li>
+          <li class="my-1">
+            <strong>Gráficos e áudio:</strong> Descreve a qualidade e o estilo
+            visual e sonoro do jogo, incluindo resolução, qualidade das
+            texturas, efeitos visuais, trilha sonora, efeitos sonoros e
+            dublagem.
+          </li>
+          <li class="my-1">
+            <strong>Usabilidade:</strong> Define requisitos relacionados à
+            facilidade de uso e experiência do jogador, como controles
+            intuitivos, interfaces claras, tutoriais, feedback adequado,
+            legibilidade de texto e acessibilidade para diferentes públicos.
+          </li>
+          <li class="my-1">
+            <strong>Confiabilidade:</strong> Descreve a capacidade do jogo de
+            funcionar sem falhas ou problemas técnicos, como crashes,
+            travamentos ou bugs significativos que possam prejudicar a
+            experiência do jogador.
+          </li>
+        </ul>
+      </div>
+      <!-- End BlackBox -->
+    </div>
+    <!-- End Parallax -->
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <ul style="margin-inline-start: 2rem">
+            <li class="my-1">
+              <strong>Segurança:</strong> Define requisitos de segurança para
+              proteger os dados do jogador, prevenir hacks ou trapaças, e
+              garantir a integridade do jogo.
+            </li>
+            <li class="my-1">
+              <strong>Requisitos de plataforma:</strong>Estabelece as restrições
+              e requisitos específicos de plataformas nas quais o jogo será
+              lançado, como requisitos de sistema, suporte a diferentes
+              dispositivos (PC, consoles, dispositivos móveis) e conformidade
+              com as políticas de cada plataforma.
+            </li>
+          </ul>
+
+          <p>
+            A clara definição e documentação dos requisitos funcionais e não
+            funcionais são essenciais para orientar o desenvolvimento do jogo,
+            alinhar as expectativas da equipe de desenvolvimento e garantir que
+            o jogo atenda às necessidades dos jogadores.
+          </p>
+
+          <p>
+            Esses requisitos ajudam a garantir que o jogo seja jogável,
+            agradável, de alta qualidade e atenda aos padrões e expectativas do
+            público-alvo.
+          </p>
+
+          <!-- inicio questão 2 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question2-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 2</p>
+                <p>
+                  Qual das seguintes opções NÃO descreve um requisito funcional
+                  em um jogo digital?
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q2-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-1"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-1"> Interface de usuário </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-2"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-2"> Mecânicas de jogo </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-3"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-3"> Narrativa </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-4"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-4"> Progressão e metas </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question2)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 2 -->
+
+          <h3 class="text-subtitle2 blue mx-5" id="gdd">
+            Game Design Document (GDD)
+          </h3>
+
+          <p>
+            O Game Design Document (GDD), ou Documento de Projeto de Jogo, é um
+            documento detalhado que descreve todos os aspectos do design e
+            desenvolvimento de um jogo.
+          </p>
+
+          <p>
+            Ele serve como um guia abrangente para a equipe de desenvolvimento,
+            fornecendo informações essenciais sobre a visão do jogo, mecânicas,
+            história, personagens, arte, som e muito mais.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue16/imagem8.jpg"
+            alt="Na imagem, mulher projeta jogo de quebra-cabeça"
+          />
+
+          <p>
+            O GDD é uma ferramenta de referência central que ajuda a garantir
+            que todos os membros da equipe estejam alinhados e trabalhem em
+            direção a um objetivo comum. Aqui estão alguns elementos típicos
+            encontrados em um Game Design Document:
+          </p>
+
+          <p>
+            <strong>Visão geral:</strong> O GDD começa com uma visão geral do
+            jogo, incluindo uma sinopse, gênero, público-alvo e principais
+            objetivos do jogo. Isso estabelece o tom e a intenção do jogo.
+          </p>
+
+          <p>
+            <strong>Mecânicas de jogo:</strong> Descreve as mecânicas de jogo,
+            ou seja, as regras e sistemas que governam a jogabilidade. Isso
+            inclui as ações do personagem do jogador, sistema de combate,
+            interações com o ambiente, quebra-cabeças, progressão do jogador,
+            sistema de pontuação, entre outros.
+          </p>
+
+          <p>
+            <strong>História e narrativa:</strong> Apresenta a história do jogo,
+            incluindo personagens, contexto, enredo principal e eventuais
+            ramificações narrativas. Descreve também a forma como a história
+            será contada ao jogador, como cutscenes, diálogos, narrativa
+            emergente ou outros elementos narrativos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Parallax-->
+    <div class="parallax background-parallax1">
+      <div class="cubeBlack">
+        <p>
+          <strong>Personagens:</strong> Detalha os personagens do jogo,
+          incluindo protagonistas, antagonistas, NPCs (personagens não jogáveis)
+          e suas características, histórias, habilidades e interações com o
+          jogador. Isso ajuda a definir a personalidade e o papel dos
+          personagens na experiência do jogo.
+        </p>
+
+        <p>
+          <strong>Arte e design visual:</strong> Aborda a direção artística e o
+          design visual do jogo. Isso inclui descrições de cenários,
+          personagens, objetos, efeitos visuais, estilo de arte, animações e
+          interfaces de usuário. O objetivo é garantir uma estética visual
+          consistente e coerente.
+        </p>
+
+        <p>
+          <strong>Áudio e música:</strong> Descreve a direção sonora do jogo,
+          incluindo efeitos sonoros, trilha sonora, ambientação e qualquer outra
+          forma de áudio presente no jogo. Isso ajuda a estabelecer a atmosfera
+          e a imersão sonora desejada.
+        </p>
+
+        <p>
+          <strong>Fluxo de jogo e progressão:</strong> Descreve a estrutura e o
+          fluxo do jogo, incluindo a progressão do jogador, a divisão em níveis
+          ou fases, a dificuldade, a curva de aprendizado e a sensação geral de
+          progresso.
+        </p>
+
+        <p>
+          <strong>Requisitos técnicos:</strong> Inclui informações sobre os
+          requisitos técnicos do jogo, como plataformas de lançamento, suporte a
+          hardware específico, requisitos de rede, limitações de desempenho e
+          outros aspectos técnicos relevantes.
+        </p>
+
+        <p>
+          <strong>Cronograma e planejamento:</strong> O GDD pode conter um
+          cronograma e um planejamento geral do desenvolvimento do jogo. Isso
+          ajuda a definir marcos, estimativas de tempo e organização das
+          diferentes fases do desenvolvimento.
+        </p>
+      </div>
+      <!-- End BlackBox -->
+    </div>
+    <!-- End Parallax -->
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
+          <p>
+            <strong>Equipe e responsabilidades:</strong> O GDD pode listar os
+            membros da equipe de desenvolvimento, suas responsabilidades e
+            funções específicas no projeto do jogo.
+          </p>
+
+          <p>
+            É importante ressaltar que o conteúdo e a estrutura do GDD podem
+            variar dependendo do estúdio, da equipe de desenvolvimento e da
+            complexidade do jogo. O objetivo principal do GDD é fornecer uma
+            documentação clara e abrangente do design do jogo, permitindo que a
+            equipe de desenvolvimento siga uma visão comum e trabalhe de forma
+            mais eficiente.
+          </p>
+
+          <p>
+            À medida que o desenvolvimento avança, o GDD pode ser atualizado e
+            refinado para refletir as mudanças e os avanços do jogo.
+          </p>
+
+          <p>
+            Seguem abaixo os dois modelos de GDD mais utilizados no mercado:
+          </p>
+
+          <h3 class="text-subtitle2 blue mx-5" id="one-page">One Page (GDD)</h3>
+
+          <p>
+            Documento curto utilizado no mercado para apresentar rapidamente o
+            projeto do jogo a um investidor. Deve conter uma ideia clara sobre o
+            jogo, cujo conteúdo possui informações essenciais: Descrição e
+            objetivos, PUV (Proposta Única de Vendas), Público-Alvo,  Principais
+            Características, Tema e Ambientação, e Mecânicas do Jogo.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue16/imagem9.jpg"
+            alt="Na imagem, One Page GDD"
+          />
+
+          <h3 class="text-subtitle2 blue mx-5" id="gdd10">GDD de 10 Páginas</h3>
+
+          <p>
+            O GDD de 10 páginas é bastante conciso e deve conter apenas os
+            aspectos mais importantes do jogo. Segue abaixo a estrutura
+            tradicional deste formato:
+          </p>
+
+          <div class="border-orange-type2">
+            <ol style="margin-inline-start: 2rem" class="change-orange">
+              <li class="my-1">
+                <strong class="">Capa e Introdução</strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>Nome do jogo, logotipo e detalhes do projeto.</li>
+                  <li>Visão geral do jogo e contexto da história.</li>
+                  <li>
+                    Equipe de desenvolvimento e data de criação do documento.
+                  </li>
+                </ul>
+              </li>
+
+              <li class="my-1">
+                <strong class=""> Resumo do Jogo</strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>
+                    Descrição breve do conceito central e do gênero do jogo.
+                  </li>
+                  <li>Propósito do jogo e público-alvo.</li>
+                  <li>
+                    Objetivos principais do jogador e principais
+                    características.
+                  </li>
+                </ul>
+              </li>
+
+              <li class="my-1">
+                <strong class=""> Mecânicas do Jogo</strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>Descrição das principais mecânicas de jogabilidade.</li>
+                  <li>Como o jogador interage com o mundo do jogo.</li>
+                  <li>
+                    Mecânicas-chave que diferenciam o jogo de outros do mesmo
+                    gênero.
+                  </li>
+                </ul>
+              </li>
+
+              <li class="my-1">
+                <strong class="">Enredo e Personagens</strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>Resumo da história do jogo.</li>
+                  <li>
+                    Descrição dos personagens principais, incluindo protagonista
+                    e antagonista.
+                  </li>
+                  <li>Relações entre os personagens e seus papéis na trama.</li>
+                </ul>
+              </li>
+
+              <li class="my-1">
+                <strong class="">Arte e Design </strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>
+                    Estilo artístico geral do jogo (2D, 3D, pixel art, etc.).
+                  </li>
+                  <li>
+                    Descrição dos principais elementos visuais, como cenários e
+                    personagens.
+                  </li>
+                  <li>
+                    Esboço de possíveis conceitos de arte e referências visuais.
+                  </li>
+                </ul>
+              </li>
+
+              <li class="my-1">
+                <strong class="">Áudio e Trilha Sonora</strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>Descrição da atmosfera sonora do jogo.</li>
+                  <li>Tipos de sons e efeitos sonoros que serão utilizados.</li>
+                  <li>
+                    Possíveis inspirações para a trilha sonora e estilos
+                    musicais.
+                  </li>
+                </ul>
+              </li>
+
+              <li class="my-1">
+                <strong class="">Níveis e Progressão</strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>
+                    Descrição dos diferentes níveis, fases ou capítulos do jogo.
+                  </li>
+                  <li>Progressão do jogador e objetivos em cada nível.</li>
+                  <li>Elementos de desafio e recompensa em cada nível.</li>
+                </ul>
+              </li>
+
+              <li class="my-1">
+                <strong class="">Interface do Usuário</strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>
+                    Descrição da interface do jogador, incluindo menus e HUD.
+                  </li>
+                  <li>Controles e esquema de comandos do jogo.</li>
+                  <li>
+                    Como o jogador navega e interage com os elementos da
+                    interface.
+                  </li>
+                </ul>
+              </li>
+
+              <li class="my-1">
+                <strong class="">Considerações Técnicas</strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>
+                    Plataformas de destino (PC, consoles, dispositivos móveis,
+                    etc.).
+                  </li>
+                  <li>
+                    Requisitos mínimos do sistema e especificações técnicas.
+                  </li>
+                  <li>Considerações sobre otimização e desempenho.</li>
+                </ul>
+              </li>
+
+              <li class="my-1">
+                <strong class="">Cronograma e Orçamento</strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>
+                    Estimativa de tempo para cada fase do desenvolvimento.
+                  </li>
+                  <li>
+                    Orçamento geral do projeto, incluindo recursos humanos e
+                    licenças de software.
+                  </li>
+                  <li>Possíveis planos de lançamento e distribuição.</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+          <p>
+            Vale ressaltar que esse esboço é apenas uma sugestão e pode variar
+            de acordo com o projeto e suas necessidades específicas. Em projetos
+            mais complexos, o GDD pode ser bem mais extenso, detalhando cada
+            aspecto do jogo em páginas adicionais. O importante é que o GDD
+            forneça informações claras e precisas para orientar a equipe de
+            desenvolvimento ao longo do processo de criação do jogo.
+          </p>
+
+          <!-- inicio questão 3 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question1-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 3</p>
+                <p>
+                  Qual é a principal função do Game Design Document (GDD) em um
+                  projeto de desenvolvimento de jogos?
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q3-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-1"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-1">
+                      Descrever os requisitos técnicos e de hardware necessários
+                      para executar o jogo.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-2"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-2">
+                      Listar os membros da equipe de desenvolvimento e suas
+                      funções no projeto.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-3"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-3">
+                      Fornecer uma documentação clara e abrangente do design do
+                      jogo, incluindo visão geral, mecânicas, história,
+                      personagens, arte e som.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-4"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-4">
+                      Definir o cronograma detalhado e as estimativas de tempo
+                      para cada fase do desenvolvimento do jogo.
+                    </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question3)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 3 -->
+        </div>
+      </div>
+    </section>
+
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
           <div class="flex justify-center align-center w-full myt-3">
             <img src="./img/global/icons/greenCheck.png" />
             <h3 class="px-3 green" id="problem-solution">
@@ -204,6 +1430,7 @@
             </h3>
           </div>
 
+          <!--TODO LINK VÍDEO-->
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe

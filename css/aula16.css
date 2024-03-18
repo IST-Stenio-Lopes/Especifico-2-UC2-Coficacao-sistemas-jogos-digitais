@@ -1,0 +1,11 @@
+.change-orange li {
+  color: #ef8e2e;
+}
+
+.change-orange ul li {
+  color: white;
+}
+
+.dark-mode .change-orange ul li {
+  color: black;
+}
