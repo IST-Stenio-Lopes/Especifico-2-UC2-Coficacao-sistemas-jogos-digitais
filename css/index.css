@@ -295,8 +295,13 @@ p {
 .btnPlay:hover {
   background: #c77626;
 }
+
 ul li {
   list-style-type: disc;
+}
+
+.listPanel li {
+  list-style-type: none;
 }
 
 /* iframe{

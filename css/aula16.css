@@ -9,3 +9,11 @@
 .dark-mode .change-orange ul li {
   color: black;
 }
+
+.background-parallax1 {
+  background-image: url("../img/ue16/parallax1.jpg");
+}
+
+.background-parallax2 {
+  background-image: url("../img/ue16/parallax2.jpg");
+}
