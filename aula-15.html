@@ -174,11 +174,10 @@
             </p>
           </div>
 
-          <!--TODO LINK VÍDEO-->
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
-                src="https://www.youtube.com/embed/"
+                src="https://www.youtube.com/embed/mPWwP7e0Oos"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -673,7 +672,151 @@
             necessárias antes do lançamento. Vamos testar seus conhecimentos?
           </p>
 
-          <!--TODO QUESTÃO 1-->
+          <!-- inicio questão 1 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question1-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 1</p>
+                <p>
+                  Qual é a melhor forma de garantir que todas as partes
+                  relevantes de um jogo sejam testadas de forma sistemática?
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q1-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-1"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-1">
+                      Criar casos de teste detalhados que descrevem os cenários
+                      de teste, as etapas a serem executadas e os resultados
+                      esperados.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-2"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-2">
+                      Definir critérios claros de aceitação que definem quando
+                      um teste é considerado bem-sucedido.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-3"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-3">
+                      Defina um cronograma para os testes, incluindo as datas de
+                      início e término, bem como as datas de revisão e correção
+                      de problemas.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-4"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-4">
+                      Todas as alternativas estão corretas.
+                    </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question1)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 1 -->
 
           <h2 class="text-subtitle1 dark-orange mx-3" id="">Produção</h2>
 
@@ -744,7 +887,157 @@
             processo específico de desenvolvimento e lançamento.
           </p>
 
-          <!--TODO QUESTÃO 2-->
+          <!-- inicio questão 2 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question2-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 2</p>
+                <p>
+                  Qual é o objetivo da fase Beta do desenvolvimento de um jogo
+                  digital?
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q2-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-1"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-1">
+                      Testar os principais elementos do jogo, identificar
+                      problemas e receber feedback inicial para orientar o
+                      desenvolvimento futuro.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-2"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-2">
+                      Lançar o jogo para um grupo seleto de jogadores,
+                      conhecidos como Beta Testers, para que eles possam jogar o
+                      jogo em um ambiente real e fornecer feedback detalhado
+                      sobre a jogabilidade, desempenho, bugs e outros aspectos
+                      relevantes.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-3"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-3">
+                      Disponibilizar uma versão reduzida do jogo para os
+                      jogadores experimentarem antes do lançamento completo,
+                      permitindo que eles tenham uma ideia do que esperar em
+                      termos de jogabilidade, gráficos e mecânicas.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q2-option-4"
+                      type="radio"
+                      name="q2-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q2-option-4">
+                      Finalize o desenvolvimento do jogo, implemente todas as
+                      funcionalidades, corrija os bugs significativos e prepare
+                      o jogo para ser distribuído e fabricado em cópias físicas.
+                    </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question2)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 2 -->
 
           <h3 class="text-subtitle2 blue mx-5" id="">Integração</h3>
 
@@ -976,7 +1269,153 @@
             do jogo.
           </p>
 
-          <!--TODO QUESTÃO 3-->
+          <!-- inicio questão 3 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question3-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 3</p>
+                <p>
+                  Qual é uma das principais considerações da publicação de jogos
+                  digitais?
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q3-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-1"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-1">Gráficos e modelos 3D.</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-2"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-2"
+                      >Efeitos sonoros e trilhas sonoras.</label
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-3"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-3">Texturas e materiais.</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-4"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-4">História e enredo do jogo.</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q3-option-5"
+                      type="radio"
+                      name="q3-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q3-option-5">Interfaces de usuário.</label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question3)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 3 -->
 
           <h3 class="text-subtitle2 blue mx-5" id="">Codificação</h3>
 
@@ -1082,7 +1521,154 @@
             uma experiência de jogo coesa e envolvente.
           </p>
 
-          <!--TODO QUESTÃO 4-->
+          <!-- inicio questão 4 -->
+          <div class="marginVertical">
+            <div class="question-box-container" id="question4-box-correct">
+              <div class="question-description-container">
+                <p>QUESTÃO 4</p>
+                <p>
+                  Qual das seguintes afirmações é verdadeira sobre a codificação
+                  em jogos digitais?
+                </p>
+              </div>
+
+              <div
+                class="question-box-correct-container feedback-container"
+                id="q4-box-feedback"
+              >
+                <div class="question-box-title">
+                  <p class="feedback-title"></p>
+
+                  <svg
+                    class="feedback-success-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="14"
+                    viewBox="0 0 19 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
+                      fill="#436900"
+                    />
+                  </svg>
+
+                  <svg
+                    class="feedback-error-icon"
+                    style="position: absolute; right: 32px"
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
+                      fill="#93000A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
+                      fill="#93000A"
+                    />
+                  </svg>
+                </div>
+
+                <div class="question-box-text">
+                  <span class="feedback-message"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-type-one-container">
+              <table id="table-type-two" style="border-collapse: collapse">
+                <tr>
+                  <td>
+                    <input
+                      id="q4-option-1"
+                      type="radio"
+                      name="q4-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q4-option-1">
+                      A codificação não é necessária para lidar com os aspectos
+                      visuais do jogo, pois os motores de jogo cuidam
+                      automaticamente disso.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q4-option-2"
+                      type="radio"
+                      name="q4-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q4-option-2">
+                      A codificação é usada apenas para implementar a física do
+                      jogo e a inteligência artificial dos personagens.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q4-option-3"
+                      type="radio"
+                      name="q4-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q4-option-3">
+                      A escolha da linguagem de programação não tem impacto no
+                      desenvolvimento de jogos, pois todas oferecem recursos
+                      similares.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q4-option-4"
+                      type="radio"
+                      name="q4-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q4-option-4">
+                      A codificação é essencial para criar a lógica, a interação
+                      e o funcionamento do jogo, além de lidar com os aspectos
+                      visuais, interação com o jogador, depuração, otimização e
+                      manutenção.
+                    </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div
+                class="button-send-responses"
+                onclick="handleSubmitRadioTypeQuestion(question4)"
+              >
+                Enviar resposta
+              </div>
+            </div>
+          </div>
+          <!-- fim questão 4 -->
         </div>
       </div>
     </section>
@@ -1111,6 +1697,7 @@
             base na escala do projeto.
           </p>
 
+          <!--TODO LISTA -->
           <div class="border-orange-type2">
             <p class="justify-center flex">Plano de Testes:</p>
 
@@ -1124,7 +1711,7 @@
               <li class="light-orange">
                 <strong>Objetivo</strong>
                 <ol style="margin-inline-start: 2rem">
-                  <li>oi<li>ola</li></li>
+                  <li>oi</li>
                 </ol>
               </li>
 
@@ -1150,7 +1737,8 @@
             </ol>
           </div>
           <ol class="test-list">
-            <li>li element
+            <li>
+              li element
               <ol>
                 <li>sub li element</li>
                 <li>sub li element</li>
@@ -1158,7 +1746,8 @@
               </ol>
             </li>
             <li>li element</li>
-            <li>li element
+            <li>
+              li element
               <ol>
                 <li>sub li element</li>
                 <li>sub li element</li>
@@ -1166,7 +1755,6 @@
               </ol>
             </li>
           </ol>
-          
         </div>
       </div>
     </section>
@@ -1175,7 +1763,6 @@
     <section class="container course">
       <div class="section">
         <div class="contentSection">
-          <h1 class="text-Title light-orange" id="recap">Recapitulando</h1>
           <div class="flex justify-center align-center w-full myt-3">
             <img src="./img/global/icons/greenCheck.png" />
             <h3 class="px-3 green" id="problem-solution">
@@ -1183,12 +1770,10 @@
             </h3>
           </div>
 
-          <!--TODO LINK VÍDEO-->
-
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
-                src="https://youtube.com/embed/"
+                src="https://youtube.com/embed/-b89YBXZHA8"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media;
