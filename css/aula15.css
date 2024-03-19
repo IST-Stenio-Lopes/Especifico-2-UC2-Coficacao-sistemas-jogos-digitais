@@ -1,8 +1,8 @@
 .container-light {
   background-color: #fffbeb;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.25rem;
   align-items: center;
-  gap: 1.05rem;
+  gap: 1rem;
   width: 100%;
   color: #1a1827;
   border-bottom: 1px solid #ef8e2e;
@@ -18,4 +18,55 @@
   gap: 0.5rem;
   border: 1px solid #ef8e2e;
   flex-direction: column;
+}
+
+ol.multilevel-list {
+  counter-reset: level-1;
+  list-style: none;
+}
+
+ol.multilevel-list > li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  padding-bottom: 20px;
+}
+
+ol.multilevel-list > li:before {
+  counter-increment: level-1;
+  content: counter(level-1) ". ";
+  font-weight: bold;
+}
+
+ol.multilevel-list > li::first-line {
+  color: #ef8e2e;
+  font-size: 1.25rem;
+  padding: 5%;
+}
+
+ol.multilevel-list ol {
+  counter-reset: level-2;
+}
+
+ol.multilevel-list ol > li:before {
+  counter-increment: level-2;
+  content: counter(level-1) "." counter(level-2) ". ";
+}
+
+ol.multilevel-list ol > li::first-line {
+  color: #c77626;
+  font-size: 1rem;
+}
+
+.multilevel-list span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.font-space-explorer {
+  color: #ef8e2e;
+  font-size: 1.75em;
+}
+
+ol.multilevel-list ul {
+  margin-inline-start: 1.5rem;
 }
