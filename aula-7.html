@@ -143,12 +143,14 @@
           <h1 class="text-Course">Curso Técnico em</h1>
           <h1 class="text-NameCourse">Jogos Digitais</h1>
         </div>
+
         <div id="containerBoxTitle">
           <div class="box-unit-number">
             <span> 7 </span>
           </div>
           <div class="titleHeader">Programação Orientada a Componentes</div>
         </div>
+
         <div>
           <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
           <p class="text-DescriptUnit">
@@ -156,12 +158,15 @@
             digitais.
           </p>
         </div>
+
         <div>
           <p class="text-LetsLearn">Vamos iniciar os estudos?</p>
           <a class="btnPlay" href="#contextualizing">Play</a>
         </div>
       </div>
     </header>
+
+    <!--Section-->
     <section class="container course">
       <div class="section">
         <div class="contentSection">
@@ -195,30 +200,35 @@
       </div>
     </section>
 
+    <!--Section-->
     <section class="container course">
       <div class="section">
         <div class="contentSection">
           <h1 class="text-Title light-orange" id="introduction">Introdução</h1>
+
           <p>
             Imagine que você está construindo um jogo na Unity, com vários
             personagens, objetos interativos e inimigos. Você percebe que muitos
             desses elementos compartilham características e comportamentos
             semelhantes, como a movimentação dos personagens ou a colisão dos
-            objetos. 
+            objetos.
           </p>
+
           <p>
             Aqui é onde a Programação Orientada a Componentes (POC) entra em
             ação! Em vez de programar cada entidade individualmente, você pode
             criar componentes autônomos e reutilizáveis, como "Movimentação" ou
             "Colisor", e adicioná-los aos objetos que precisam dessas
-            funcionalidades. 
+            funcionalidades.
           </p>
+
           <p>
             Isso torna o código mais organizado, eficiente e fácil de modificar.
             Assim, você pode focar em construir uma experiência de jogo
             incrível, sabendo que a POC facilitará a gestão de comportamentos
             complexos em seu projeto.
           </p>
+
           <p>
             Programação Orientada a Componentes, ou POC, é como um grande
             quebra-cabeças de programação. Imagine que cada parte de um software
@@ -226,18 +236,21 @@
             pedaços de "componentes". Cada componente tem seu próprio
             comportamento e sua própria "cara" - ou seja, ele tem uma função
             específica e sabe exatamente como interagir com os outros
-            componentes. 
+            componentes.
           </p>
+
           <p>
             Esses componentes são como peças de encaixe: eles são autônomos, o
             que significa que cada um funciona sozinho, e também são
             reutilizáveis, podendo ser usados em várias partes diferentes do
-            software. 
+            software.
           </p>
+
           <p>
             Assim como as peças de LEGO, você pode juntar esses componentes de
             diferentes maneiras para criar coisas mais complexas.
           </p>
+
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
@@ -250,6 +263,7 @@
               ></iframe>
             </div>
           </div>
+
           <p>
             Em um jogo, vários personagens e objetos podem ter comportamentos e
             características parecidos. Então, em vez de programar cada um do
@@ -257,6 +271,7 @@
             podem ser usados em vários lugares. Isso nos ajuda a economizar
             tempo e torna o nosso código mais organizado e fácil de entender.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue7/imagem1.jpg"
@@ -266,10 +281,12 @@
       </div>
     </section>
 
+    <!--Section-->
     <section class="container course">
       <div class="section">
         <div class="contentSection">
           <h1 class="text-Title light-orange" id="components">Componentes</h1>
+
           <p>
             Componentes na Unity são elementos fundamentais que definem o
             comportamento e as características dos Game Objects. Eles são como
@@ -279,22 +296,26 @@
             individuais que determinam o que cada Game Object pode fazer e como
             se comporta no mundo do jogo.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue7/imagem2.png"
-            alt="Na imagem, quatro tipos diferentes de GameObject: um personagem, uma luz, um carro  e uma fonte de áudio."
+            alt="Na imagem, quatro tipos diferentes de GameObject: um personagem, uma luz, um carro e uma fonte de áudio."
           />
+
           <p>
             Os Game Objects constituem a fundação de qualquer criação dentro da
             Unity, atuando como elementos cruciais em qualquer projeto de jogo.
             Eles servem como contêineres fundamentais para uma infinidade de
-            elementos e funções que definem a experiência do jogo. 
+            elementos e funções que definem a experiência do jogo.
           </p>
+
           <p>
             Esses objetos podem incorporar uma vasta gama de entidades, desde
             personagens jogáveis e adversários até objetos colecionáveis,
-            elementos de cenário, câmeras e fontes de luz. 
+            elementos de cenário, câmeras e fontes de luz.
           </p>
+
           <p>
             Além disso, eles podem abarcar tanto componentes que interagem
             diretamente com o usuário quanto elementos estáticos que enriquecem
@@ -302,6 +323,7 @@
             versáteis e indispensáveis na arquitetura e no desenvolvimento de
             jogos na plataforma Unity.
           </p>
+
           <p>
             Cada Game Object em Unity começa como um objeto vazio, sem
             propriedades ou funções específicas. A adição de componentes a esses
@@ -310,6 +332,7 @@
             visível. Adicionar um componente de áudio permite que ele emita
             sons.
           </p>
+
           <p>
             Na imagem abaixo, por exemplo, vemos um objeto cúbico sólido possui
             um componente de Filtro de Malha (Mesh Filter) e Renderizador de
@@ -317,11 +340,13 @@
             componente de Colisor de Caixa (Box Collider) para representar o
             volume sólido do objeto em termos físicos.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue7/imagem3.jpg"
             alt="Na imagem, um cubo com textura de tijolos, em uma tela da Unity. Na aba Inspector, todos os componentes associados a ele."
           />
+
           <div class="atencion my-3">
             <img src="./img/global/icons/atencion.png" />
             <p>
@@ -334,12 +359,14 @@
               entre outros) disponíveis no menu GameObject > Objeto 3D.
             </p>
           </div>
+
           <p>
             Os componentes variam amplamente em função e complexidade. Eles
             podem ser simples, como colisores e luzes, ou complexos, como
             scripts personalizados escritos em C#. Outros exemplos incluem
             componentes para renderização, física, animação, e lógica de jogo.
           </p>
+
           <p>
             Um dos aspectos mais poderosos dos componentes é a capacidade de
             adicionar scripts personalizados. Isso permite aos desenvolvedores
@@ -350,12 +377,14 @@
       </div>
     </section>
 
+    <!--Section-->
     <section class="container course">
       <div class="section">
         <div class="contentSection">
           <h1 class="text-Title light-orange" id="creating-scripts">
             Criando Scripts
           </h1>
+
           <p>
             Diferente de muitos outros ativos, os scripts são frequentemente
             desenvolvidos diretamente no Unity. É possível criar um novo script
@@ -363,25 +392,30 @@
             painel Projeto, ou escolhendo Ativos > Criar > Script C# no menu
             principal.
           </p>
+
           <p>
             Quando um novo script é criado, ele aparece na pasta que estiver
             selecionada no painel Projeto. O nome do arquivo do script
             recém-criado estará em destaque, permitindo que você digite um novo
             nome para ele.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue7/imagem4.jpg"
             alt="Na imagem, uma lista de tipos de componentes que podem ser utilizados na Unity."
           />
+
           <p>
             A hora de inserir o nome para o Script é no momento de sua criação,
             em vez de fazer isso posteriormente. Pois o nome dado neste momento,
             passa a ser também o nome da classe.
           </p>
+
           <h2 class="text-subtitle1 dark-orange mx-3" id="x-ray">
             Raio X de um arquivo Script
           </h2>
+
           <p>
             Para abrir um script, basta clicar duas vezes nele, prontamente será
             aberto em um editor de texto. Por default, a Unity abrirá o script
@@ -415,13 +449,16 @@
             GameObject, é necessário que o nome da classe e o nome do arquivo
             sejam idênticos.
           </p>
+
           <p>
             Na Unity, as funções <strong>Update</strong> e
             <strong>Start</strong> são usadas em scripts para controlar o
             comportamento dos GameObjects. Aqui está uma explicação detalhada em
             tópicos para cada uma delas:
           </p>
+
           <p><strong>Função Start</strong></p>
+
           <ul class="mx-2">
             <li class="my-1">
               <strong>Inicialização Única:</strong> Executada apenas uma vez,
@@ -438,7 +475,9 @@
               das atualizações de quadro.
             </li>
           </ul>
+
           <p><strong>Função Update</strong></p>
+
           <ul class="mx-2">
             <li class="my-1">
               <strong>Execução Contínua:</strong> Chamada uma vez a cada quadro,
@@ -457,12 +496,14 @@
               condições que mudam constantemente ao longo do jogo.
             </li>
           </ul>
+
           <p>
             Cada uma dessas funções tem um propósito específico e é essencial
             para o desenvolvimento de jogos na Unity, facilitando a organização
             do código e garantindo que a lógica do jogo funcione da maneira
             esperada.
           </p>
+
           <!-- inicio questão 1 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question1-box-correct">
@@ -585,21 +626,25 @@
           <h1 class="text-Title light-orange" id="controlling-game-object">
             Controlando um Game Object
           </h1>
+
           <p>
             Como foi visto na seção anterior, um script define somente um
             esqueleto para um Componente e, assim, nenhum código será ativado
             até que uma instância do script seja anexada a um GameObject.
           </p>
+
           <p>
             Para demonstrar isso, vamos anexar o script ao Game Object Cubo.
             Basta arrastá-lo para o objeto. Prontamente, o script já aparecerá
             entre os componentes desse Game Object.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue7/imagem6.png"
             alt="Na imagem, a tela da Unity, com um cubo na aba Scene. Uma seta que sai de um arquivo de script até o cubo."
           />
+
           <p>
             Vamos alterar o método Start() desse script, para vermos uma mudança
             de comportamento sutil do Game Object. A saída será verificada na
@@ -609,33 +654,39 @@
             diagnóstico. (2) dar o Play na Unity e, por fim, (3) ver a saída na
             aba console.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue7/imagem7.png"
             alt="Print de tela da Unity com passo a passo mudança de comportamento sutil do Game Object."
           />
+
           <h2
             class="text-subtitle1 dark-orange mx-3"
             id="importance-components"
           >
             Importância dos Componentes
           </h2>
+
           <p>
             Ao combinar diferentes componentes, os desenvolvedores podem
             construir cenários complexos e personagens interativos. Por exemplo,
             um personagem jogável pode ter componentes para controle de
             movimento, animação, colisão, saúde, e muitos outros.
           </p>
+
           <p>
             Os componentes são reutilizáveis, o que significa que o mesmo tipo
             de componente pode ser adicionado a diferentes Game Objects. Isso
             promove eficiência e consistência no desenvolvimento de jogos.
           </p>
+
           <p>
             Componentes são cruciais para a criação de uma gameplay dinâmica e
             interativa. Eles respondem a eventos de entrada, interagem com
             outros objetos e controlam a lógica do jogo.
           </p>
+
           <p>
             Em resumo, os componentes são vitais no desenvolvimento de jogos com
             a Unity, proporcionando a flexibilidade e a funcionalidade
@@ -643,6 +694,7 @@
             jogo à vida. Eles são a essência do que torna a Unity uma ferramenta
             tão poderosa e versátil para criadores de jogos de todos os níveis.
           </p>
+
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
@@ -655,12 +707,14 @@
               ></iframe>
             </div>
           </div>
+
           <p>
             Os componentes são reutilizáveis e podem ser adicionados a qualquer
             GameObject para proporcionar a funcionalidade desejada. Isso permite
             um alto grau de modularidade e reutilização de código, já que um
             único componente pode ser usado em vários GameObjects.
           </p>
+
           <!-- inicio questão 2-->
           <div class="marginVertical">
             <div class="question-box-container" id="question2-box-correct">
@@ -773,15 +827,18 @@
             </div>
           </div>
           <!-- fim questão 2-->
+
           <h2 class="text-subtitle1 dark-orange mx-3" id="structure">
             Estrutura
           </h2>
+
           <p>
             Um GameObject em Unity é basicamente um contêiner que mantém um
             conjunto de componentes juntos. Cada GameObject pode ter qualquer
             número de componentes e a funcionalidade de um GameObject é
-            determinada pela combinação de componentes que ele possui. 
+            determinada pela combinação de componentes que ele possui.
           </p>
+
           <p>
             Por exemplo, um GameObject representando um personagem no jogo pode
             ter um componente de renderização para a aparência do personagem, um
@@ -789,11 +846,13 @@
             componente de colisor para lidar com a detecção de colisão, e assim
             por diante.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue7/imagem8.png"
-            alt="Na imagem, a tela capturada demonstrando como o  GameObjects encapsulam os componentes de um elemento."
+            alt="Na imagem, a tela capturada demonstrando como o GameObjects encapsulam os componentes de um elemento."
           />
+
           <!-- inicio questão 3 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question3-box-correct">
@@ -934,6 +993,7 @@
             </div>
           </div>
           <!-- fim questão 3 -->
+
           <div class="atencion my-3">
             <img src="./img/global/icons/atencion.png" />
             <p>
@@ -942,6 +1002,7 @@
               uso do modelo OO, a CO permite o uso de aplicações "prontas" como
               módulos para novos e maiores projetos.
               <br /><br />
+
               <img
                 class="w-75"
                 src="./img/ue7/imagem9.jpg"
@@ -949,12 +1010,14 @@
               />
             </p>
           </div>
+
           <h2
             class="text-subtitle1 dark-orange mx-3"
             id="relationship-components"
           >
             Relação entre Componentes
           </h2>
+
           <p>
             Os componentes em Unity podem interagir uns com os outros de várias
             maneiras. Um componente pode acessar e manipular os dados de outro
@@ -963,6 +1026,7 @@
             componentes de outros GameObjects através do sistema de referência
             de Unity.
           </p>
+
           <p>
             Se você chegou até aqui é porque entende, que na Unity, tudo no
             cenário do jogo é um GameObject. Esses GameObjects se tornam
@@ -970,6 +1034,7 @@
             por sua vez, podem ser visuais, como MeshRenderer ou SpriteRenderer,
             ou lógicos, como Scripts, Rigidbody, Collider, entre outros.
           </p>
+
           <p>
             Scripts em C# são usados para adicionar lógica aos GameObjects. Eles
             podem acessar e modificar outros componentes no mesmo GameObject ou
@@ -977,19 +1042,22 @@
             de um GameObject usando seu componente Transform, ou controlar a
             animação através de um Animator componente.
           </p>
+
           <p>
             Assim, componentes comunicam-se usando referências. Um script pode
             obter uma referência a um componente usando métodos como
-            GetComponent<>(). É comum usar scripts para habilitar/desabilitar
-            componentes, como desligar um Collider durante uma animação
-            específica.
+            GetComponent&#60;>(). É comum usar scripts para
+            habilitar/desabilitar componentes, como desligar um Collider durante
+            uma animação específica.
           </p>
+
           <p>
             Eventos e delegados são usados para criar uma comunicação mais
             sofisticada e desacoplada entre componentes. Eles permitem que
             componentes 'escutem' por certos eventos e reajam a eles, sem
             necessitar uma referência direta entre eles.
           </p>
+
           <p>
             GameObjects podem ser organizados em uma hierarquia parent-child,
             onde transformações aplicadas ao objeto pai (parent) afetam os
@@ -1014,6 +1082,7 @@
             como você pode usá-la para melhorar a estrutura e a reutilização do
             código em seus projetos de Unity.
           </p>
+
           <!-- inicio questão 4 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question4-box-correct">
@@ -1169,6 +1238,7 @@
       <div class="section">
         <div class="contentSection">
           <h1 class="text-Title light-orange" id="recap">Recapitulando</h1>
+
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
@@ -1181,17 +1251,20 @@
               ></iframe>
             </div>
           </div>
+
           <p>
             Nessa aula você aprendeu que a Programação Orientada a Componentes
             (POC) é um método de desenvolvimento de software que envolve a
             construção de um programa a partir de peças individuais chamadas
-            "componentes". 
+            "componentes".
           </p>
+
           <p>
             Cada componente é como uma peça de LEGO: é autônomo, tem um
             comportamento e uma interface bem definidos, e pode ser usado em
-            várias partes diferentes do software. 
+            várias partes diferentes do software.
           </p>
+
           <p>
             Componentes podem ser combinados e interagir uns com os outros para
             criar sistemas mais complexos, o que torna o código mais fácil de
@@ -1200,11 +1273,13 @@
             todos os objetos do jogo, permitindo que desenvolvedores criem jogos
             complexos de forma eficiente e organizada.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue7/gif1.gif"
             alt="Na animação, dois dinossauros e um boneco de lego se movimentando como se estivessem dançando e se divertindo."
           />
+
           <div class="flex justify-center align-center w-full myt-3">
             <img src="./img/global/icons/greenCheck.png" />
             <h3 class="px-3 green" id="problem-solution">
