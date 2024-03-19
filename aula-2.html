@@ -207,6 +207,7 @@
           <h1 class="text-Title light-orange" id="introduction-design-patterns">
             Introdução aos Padrões de Projeto - Padrões Comportamentais
           </h1>
+
           <p>
             Padrões de projeto, também conhecidos como design patterns, são
             soluções comprovadas e reutilizáveis para problemas recorrentes no
@@ -214,6 +215,7 @@
             vários padrões de projeto que podem ajudar a organizar e estruturar
             o código de maneira eficiente.
           </p>
+
           <div class="atencion my-3">
             <img src="./img/global/icons/book-open.svg" />
             <p>
@@ -223,11 +225,13 @@
               Richard Helm, Ralph Johnson e John Vlissides.
             </p>
           </div>
+
           <img
             class="w-75 m-auto"
             src="./img/ue2/imagem1.jpg"
             alt="Na imagem, uma tabela que apresenta conceitos de “Padrões de Projeto”. 23 Padrões de Projeto segundo a Gang of Four."
           />
+
           <p>
             Os padrões de projeto de comportamento, no contexto da engenharia de
             software, são estratégias e abordagens que visam melhorar a
@@ -243,13 +247,16 @@
             robusto e de fácil manutenção, economizando tempo e recursos no
             processo de desenvolvimento.
           </p>
+
           <p>
             Nesta aula, abordaremos os padrões de projeto Observer, Strategy e
-            Visitor.  
+            Visitor.
           </p>
+
           <h2 class="text-subtitle1 dark-orange mx-3" id="observer">
             Observer
           </h2>
+
           <p>
             O padrão Observer é utilizado quando se precisa manter os objetos
             atualizados quando algo importante ocorre.Imagine que você tem um
@@ -259,6 +266,7 @@
             inscritos são como "jogadores" que querem saber quando há uma
             novidade.
           </p>
+
           <p>
             No mundo da programação de jogos, muitas vezes precisamos de um
             sistema parecido. Por exemplo, digamos que você tenha um personagem
@@ -266,11 +274,13 @@
             cura. O jogo precisa de uma maneira de avisar o personagem que ele
             pegou o item e deve aumentar sua vida.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue2/imagem2.jpg"
             alt="Há um personagem em azul com uma pizza na mão, próximo a coletar um item de cura, simbolizado por uma maleta de primeiros socorros."
           />
+
           <p>
             O Padrão de Projeto Observer é como esse sistema de notificações.
             Ele permite que diferentes partes do seu jogo "assinem" para receber
@@ -280,28 +290,33 @@
             "sujeito". Sempre que o personagem pega o item de cura (o evento), o
             item avisa (notifica) o personagem para ele atualizar sua vida.
           </p>
+
           <p>
             Esse padrão é super útil porque mantém as partes do seu jogo bem
             independentes e organizadas. Elas não precisam saber como as outras
             funcionam, apenas precisam saber que vão receber uma notificação
             quando algo importante acontecer.
           </p>
-          <strong>Exemplo prático</strong>
+
+          <p><strong>Exemplo prático</strong></p>
+
           <p>
             Você sabe o que são jogos no estilo “Beat 'em up”? Este é um gênero
             de jogo que se tornou popular nas décadas de 1980 e 1990,
             especialmente em fliperamas e consoles domésticos. Nesse tipo de
             jogo, o jogador assume o controle de um personagem que deve
-            enfrentar hordas de inimigos em combates corpo a corpo intensos. 
+            enfrentar hordas de inimigos em combates corpo a corpo intensos.
           </p>
+
           <p>
             Nesse estilo, se destacam títulos como: Final Fight, Double Dragon,
             Streets of Rage.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue2/gif1.gif"
-            alt="Animação com um pequeno trecho  do jogo Street of Rage 2 para megadrive. Vemos na imagem uma luta de dois personagens contra seus inimigos."
+            alt="Animação com um pequeno trecho do jogo Street of Rage 2 para megadrive. Vemos na imagem uma luta de dois personagens contra seus inimigos."
           />
           <p>
             Em jogos no estilo Beat ‘em up é comum a mecânica que exige que o
@@ -310,13 +325,15 @@
             'em up com vários inimigos que precisam notificar o personagem
             principal quando estão derrotados para que o jogador possa avançar
             para a próxima fase. Vamos usar o padrão Observer para criar uma
-            comunicação entre os inimigos e o personagem principal. 
+            comunicação entre os inimigos e o personagem principal.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue2/imagem3.png"
             alt="Na imagem, a explicação do conceito de jogos Beat ‘em up. Do lado esquerdo da tela, nosso herói (player) e do lado direito 3 (três) inimigos. Imagem ilustrando uma cena de jogo Beat ‘em up."
           />
+
           <p>
             O código a seguir foi todo implementado utilizando a engine Unity, e
             o editor de código utilizado foi o Visual Studio Code. Primeiro,
@@ -325,7 +342,9 @@
             Essa classe deve conter métodos para registrar, remover e notificar
             os observadores.
           </p>
+
           <p><strong>Cada um desses métodos tem sua importância:</strong></p>
+
           <ul class="mx-2">
             <li class="my-1">
               <strong>Registro dos observadores -</strong> Quando um novo
@@ -377,33 +396,40 @@
               </ul>
             </li>
           </ul>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem4.png" alt="" />
+
           <p>
             Em seguida, devemos criar uma classe Observer, vamos dar o nome
             Enemy para representar os inimigos. Essa classe deve implementar um
             método OnDefeated() que será chamado quando o personagem principal
             notificar os observadores.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem5.png" alt="" />
+
           <p>
             Agora sim, quando um inimigo for derrotado, ele chamará o método
             NotifyEnemiesDefeated() do personagem principal, que por sua vez
             notificará todos os observadores (inimigos) registrados. Cada
             inimigo implementa a ação desejada no método OnDefeated().
           </p>
+
           <p>
             Essa implementação permite que o personagem principal seja
             notificado automaticamente quando todos os inimigos forem
             derrotados, facilitando a progressão do jogo para a próxima fase.
           </p>
+
           <p>
             Em resumo, com o padrão de projetos Observer é possível monitorar o
             comportamento do objeto Player comunicando todos os personagens
             inimigos sempre quando o Player sofrer dano e informando a
-            quantidade de pontos de vida no jogo. 
+            quantidade de pontos de vida no jogo.
           </p>
+
           <div class="atencion my-3">
             <img src="./img/global/icons/lightbulb.png" />
             <p>
@@ -414,31 +440,37 @@
               assinatura da revista, parará de receber as edições futuras.
             </p>
           </div>
+
           <img
             class="w-75 m-auto"
             src="./img/ue2/imagem6.jpg"
             alt="Na imagem, uma ilustração de uma banca de revista."
           />
+
           <h3 class="text-subtitle2 blue mx-5" id="pattern-representation">
             Representação do padrão Observer com diagrama de classes
           </h3>
+
           <p>
             Os diagramas de classe são ferramentas essenciais no desenvolvimento
             de software, especialmente quando se trata de implementar padrões de
-            projeto. 
+            projeto.
           </p>
+
           <p>
             Eles funcionam como um mapa, oferecendo uma visão clara da estrutura
             e do design do sistema antes mesmo de qualquer código ser escrito.
             Ao visualizar as classes, suas responsabilidades, e como elas
             interagem entre si, os desenvolvedores podem entender melhor como
-            implementar um padrão de projeto de forma eficaz. 
+            implementar um padrão de projeto de forma eficaz.
           </p>
+
           <p>
             Isso é crucial para garantir que todos na equipe estejam alinhados e
             compreendam o fluxo de dados e as relações de dependência dentro do
-            aplicativo. 
+            aplicativo.
           </p>
+
           <p>
             Em padrões como o Observer, por exemplo, um diagrama de classe pode
             ilustrar claramente a dinâmica entre os sujeitos (como o personagem
@@ -448,15 +480,18 @@
             de desenvolvimento, mas também serve como uma documentação valiosa
             para referência futura e manutenção do sistema.
           </p>
+
           <p>
             O diagrama de classes que representa o padrão Observer pode ser
             apresentado desta forma:
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue2/imagem7.png"
             alt="Na imagem, um exemplo de Diagrama de classes que representa o padrão Observer."
           />
+
           <!-- inicio questão 1 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question1-box-correct">
@@ -572,9 +607,11 @@
             </div>
           </div>
           <!-- fim questão 1 -->
+
           <h2 class="text-subtitle1 dark-orange mx-3" id="strategy">
             Strategy
           </h2>
+
           <p>
             No mundo dos jogos de RPG, como Final Fantasy ou Pokémon, escolher a
             habilidade certa na hora certa é crucial para vencer as batalhas.
@@ -598,11 +635,13 @@
             ajustando sua estratégia em uma batalha de RPG para enfrentar
             diferentes tipos de oponentes.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue2/imagem8.jpg"
             alt="Na imagem, na imagem dois personagens do jogo Pokemon Go em uma batalha. O dragão (à direita) cospe fogo. Personagem do jogo Pokemon Go Charizard usando 'Flamethrower'."
           />
+
           <p>
             O padrão comportamental Strategy (ou Padrão de Estratégia, em
             inglês) em jogos digitais é uma técnica de design que permite a
@@ -611,6 +650,7 @@
             em que diferentes comportamentos ou estratégias podem ser alternados
             durante a execução do jogo.
           </p>
+
           <p>
             A adoção do Padrão de Projeto Strategy no desenvolvimento de jogos
             digitais traz uma série de benefícios que podem tornar o código mais
@@ -629,6 +669,7 @@
           execução, o que é ideal para personagens de jogos com múltiplas
           habilidades ou estados.
         </p>
+
         <p>
           <strong> Facilita a Manutenção:</strong> Ao separar as estratégias em
           classes distintas, o código fica mais organizado. Isso significa que
@@ -636,6 +677,7 @@
           alterações nas classes principais, facilitando a manutenção e a
           expansão do jogo.
         </p>
+
         <p>
           <strong>Reuso de Código:</strong> Como as estratégias são encapsuladas
           em suas próprias classes, elas podem ser reutilizadas em diferentes
@@ -644,12 +686,14 @@
           única responsabilidade, o que alinha o design do software ao Princípio
           da Responsabilidade Única, melhorando a qualidade do código.
         </p>
+
         <p>
           <strong>Testabilidade:</strong> Com estratégias claramente definidas e
           separadas, torna-se mais fácil escrever testes automatizados para cada
           comportamento, garantindo que mudanças no jogo não quebrem
           funcionalidades existentes.
         </p>
+
         <p>
           Esses benefícios contribuem para um desenvolvimento mais ágil e uma
           base de código que pode se adaptar rapidamente às mudanças, seja para
@@ -666,18 +710,21 @@
       <div class="section">
         <div class="contentSection">
           <p><strong>Exemplo prático</strong></p>
+
           <p>
             Donkey Kong Country, o icônico jogo do Super Nintendo, apresenta um
             elemento de design de jogo que se alinha perfeitamente com o Padrão
             de Projeto Strategy: a capacidade de utilizar diferentes animais
-            aliados, cada um com habilidades únicas. 
+            aliados, cada um com habilidades únicas.
           </p>
+
           <p>
             Assim como no padrão Strategy, onde um objeto pode alterar seu
             comportamento escolhendo entre uma família de algoritmos, os
             jogadores de Donkey Kong Country podem mudar a estratégia de jogo ao
             libertar animais de suas caixas.
           </p>
+
           <p>
             Cada animal aliado funciona como uma estratégia diferente que o
             jogador pode adotar temporariamente, oferecendo novas formas de
@@ -686,11 +733,13 @@
             comportamento de um objeto - neste caso, a forma como o jogador
             avança pelo jogo - proporcionando uma experiência rica e variada.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue2/imagem9.jpg"
             alt="Na imagem, 5 (cinco) caixas de madeira com símbolos impressos neles. Caixas de animais do jogo Donkey Kong Country."
           />
+
           <p>
             Para o exemplo da nossa aula, vamos supor o seguinte cenário:
             imagine que em um jogo de aventura, o nosso personagem possa usar
@@ -700,29 +749,38 @@
             código no qual o padrão Strategy vai nos ajudar a usar essas armas
             em momentos alternados.
           </p>
+
           <p><strong>Vamos para o código:</strong></p>
+
           <p>
             Primeiro criamos uma interface de nome IWeaponBehavior que conta com
             o método Attack().
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem10.png" alt="" />
+
           <p>
             A seguir, vamos implementar duas classes concretas para os
             comportamentos de duas armas, uma espada e um machado. Cada uma
             implementando a interface IWeaponBehavior.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem11.png" alt="" />
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem12.png" alt="" />
+
           <p>
             A classe Character representa um personagem no jogo e possui um
             método SetWeaponBehavior() para definir o comportamento da arma e um
             método Attack() para realizar o ataque com a arma atual.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem13.png" alt="" />
+
           <p>
             Por fim, para testar a implementação do Padrão Strategy, vamos
             implementar a classe Game. Em seu método Start(), criamos uma
@@ -731,19 +789,24 @@
             realizado o ataque com a espada, caso acione o botão A, realiza o
             ataque com o machado.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem14.png" alt="" />
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem15.png" alt="" />
+
           <img
             class="w-75 m-auto"
             src="./img/ue2/imagem16.jpg"
             alt="No gráfico, um modelo de Diagrama de Classes do padrão Strategy, com cores laranja e amarelo."
           />
+
           <p>
             Viu como foi interessante implementar a proposta do Design ao
             desenvolver uma classe capaz de ter muitos comportamentos?
           </p>
+
           <!-- inicio questão 2 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question2-box-correct">
@@ -860,7 +923,9 @@
             </div>
           </div>
           <!-- fim questão 2 -->
+
           <h2 class="text-subtitle1 dark-orange mx-3" id="visitor">Visitor</h2>
+
           <p>
             O Padrão de Projeto Visitor é uma técnica que permite adicionar
             novas operações a objetos sem modificar suas classes, o que é
@@ -877,17 +942,20 @@
             manter o código do jogo limpo e maleável, facilitando a manutenção e
             a expansão do jogo ao longo do tempo.
           </p>
+
           <p>
             Imagine que você está jogando um jogo de RPG. No seu time, você tem
             diferentes tipos de personagens, como guerreiros, magos e clérigos.
             Agora, digamos que um poderoso feiticeiro chamado "Visitor" chega e
             tem a habilidade de dar superpoderes aos seus personagens.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue2/imagem17.png"
             alt="Na imagem vemos uma ilustração de um mago distribuindo poderes aos personagens de um jogo qualquer.  Mago distribuindo poderes para personagens de um jogo de RPG."
           />
+
           <p>
             Mas aqui está a parte legal: o "Visitor" dá um superpoder diferente
             para cada tipo de personagem. Ele dá ao guerreiro uma super espada,
@@ -895,17 +963,20 @@
             encantamentos. O "Visitor" sabe exatamente que superpoder dar para
             cada personagem.
           </p>
+
           <p>
             No mundo da programação, esse é o padrão "Visitor". Ele é como o
             artefato que visita seus objetos e executa alguma operação neles. A
             operação pode ser diferente dependendo do tipo do objeto, assim como
             os superpoderes são diferentes para cada tipo de personagem.
           </p>
+
           <p>
             Então, da próxima vez que você estiver jogando um RPG e um
             personagem estranho aparecer dando superpoderes, lembre-se: isso é
             bem parecido com o padrão "Visitor" na programação!
           </p>
+
           <p>
             Você acabou de entender que o padrão de projeto Visitor pode ser
             usado em jogos digitais para implementar interações complexas entre
@@ -921,32 +992,42 @@
             complexas entre os personagens, tornando o código mais modular e
             flexível.
           </p>
+
           <p>
             Vamos fazer uma implementação do padrão Visitor na engine Unity?
           </p>
+
           <p>
             Primeiro devemos criar a interface IVisitor que define os métodos
             Visit() para cada tipo de visitante (ação) no jogo.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem18.png" alt="" />
+
           <p>
             Em seguida, temos a classe abstrata Personagem, que representa a
             classe base para os elementos visitáveis (personagens) no jogo.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem19.png" alt="" />
+
           <p>
             Então, cada personagem (Hero, Monster, NPC) implementa o método
             Accept(), que permite que um visitante seja aceito e chame o método
             de visita correspondente.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem20.png" alt="" />
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem21.png" alt="" />
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem22.png" alt="" />
+
           <p>
             Agora, vamos criar uma implementação concreta do visitante (ação),
             chamaremos essa classe de ActionVisitor, ela possui os métodos de
@@ -954,8 +1035,10 @@
             visita de "atacar" implementada para o herói e o monstro, para o
             NPC, a ação definida é “negociar”.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem23.png" alt="" />
+
           <p>
             Na classe Game, no método Start(), devemos criar instâncias dos
             personagens (hero, monster, npc) e do visitante (ActionVisitor). Em
@@ -963,8 +1046,10 @@
             visitante como parâmetro. Isso permite que cada personagem execute a
             ação apropriada definida pelo visitante.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem24.png" alt="" />
+
           <p>
             Percebeu como o padrão Visitor permite implementar ações específicas
             de interação entre os personagens de forma flexível e modular. É
@@ -972,14 +1057,17 @@
             modificar a estrutura existente, promovendo a extensibilidade e a
             organização das interações no jogo.
           </p>
+
           <p>
             O Padrão de projeto Visitor pode ser representado pelo diagrama:
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue2/imagem25.jpg"
             alt="Na imagem, um diagrama que representa o padrão Visitor."
           />
+
           <!-- inicio questão 3 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question3-box-correct">
@@ -1096,9 +1184,11 @@
             </div>
           </div>
           <!-- fim questão 3 -->
+
           <h2 class="text-subtitle1 dark-orange mx-3" id="mediator">
             Mediator
           </h2>
+
           <p>
             Imagine que você está jogando um jogo de equipe online, como o
             Fortnite ou o League of Legends. Nesses jogos, a comunicação é super
@@ -1106,11 +1196,13 @@
             diretamente com todos os outros jogadores o tempo todo. Seria uma
             bagunça total!
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue2/imagem26.jpg"
             alt="Na imagem, uma tela capturada do print do gameplay do jogo League of Legends."
           />
+
           <p>
             É aí que entra o "Mediator", ou em português, o "Mediador". No mundo
             dos games, o Mediador seria como o chat do jogo ou o sistema de voz.
@@ -1118,6 +1210,7 @@
             através do chat. O chat recebe as mensagens e as envia para os
             jogadores certos. Isso torna a comunicação muito mais organizada.
           </p>
+
           <p>
             Em programação, o Padrão Mediator faz algo parecido. Ele ajuda a
             organizar a comunicação entre diferentes partes do código, para que
@@ -1129,16 +1222,20 @@
             entre os jogadores, garantindo que as ações de um jogador sejam
             refletidas nos outros e sincronizadas adequadamente.
           </p>
+
           <p>
             Primeiro, devemos escrever a classe GameMediator que age como o
             mediador central entre os jogadores. Ele registra os jogadores e
             permite notificar eventos, como movimentos, ataques, mensagens,
             entre outros.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem27.png" alt="" />
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem28.png" alt="" />
+
           <p>
             A seguir, criaremos a classe Player, esta representa o jogador no
             jogo. Durante a inicialização, o jogador é registrado no mediador,
@@ -1146,27 +1243,33 @@
             eventos relevantes. No exemplo, temos um método MoveTo que simula o
             movimento do jogador para uma nova posição.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem29.png" alt="" />
+
           <p>
             Na classe Game, durante o início do jogo, é obtida uma referência ao
             GameMediator. Os jogadores são criados e inicializados com seus
             respectivos IDs e o mediador.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue2/imagem30.png" alt="" />
+
           <p>
             No exemplo de implementação dentro do método Update, quando as
             teclas A ou D são pressionadas, o método NotifyMovement do mediador
             é chamado, notificando o movimento do jogador de ID 1 para a direita
             ou para a esquerda.
           </p>
+
           <p>
             Em resumo, o padrão Mediator resolve o problema de acoplamento
             excessivo, promovendo a comunicação indireta e centralizada entre
             objetos, reduzindo a dependência direta e melhorando a capacidade de
             manutenção e a flexibilidade do sistema.
           </p>
+
           <div class="atencion my-3">
             <img src="./img/global/icons/atencion.png" />
             <p>
@@ -1177,6 +1280,7 @@
               manter.
             </p>
           </div>
+
           <!-- inicio questão 4 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question4-box-correct">
@@ -1338,6 +1442,7 @@
       <div class="section">
         <div class="contentSection">
           <h1 class="text-Title light-orange" id="recap">Recapitulando</h1>
+
           <p>
             Os padrões de projeto são técnicas de programação que proporcionam
             soluções para problemas comuns no desenvolvimento de software. Os
@@ -1346,6 +1451,7 @@
             entre objetos e classes. Nesta aula, você conheceu três desses
             padrões, observer, strategy e visitor.
           </p>
+
           <div class="flex justify-center align-center w-full myt-3">
             <img src="./img/global/icons/greenCheck.png" />
             <h3 class="px-3 green" id="problem-solution">
