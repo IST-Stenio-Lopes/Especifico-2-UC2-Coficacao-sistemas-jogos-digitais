@@ -128,6 +128,7 @@ td {
   border-radius: 0.5rem;
   box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.12);
+  margin: 1.25rem 0;
 }
 
 .grayTable th,

@@ -191,6 +191,7 @@
           <h1 class="text-Title light-orange" id="structural-patterns">
             Padrões Estruturais
           </h1>
+
           <div class="atencion my-3">
             <img src="./img/global/icons/book-open.svg" />
             <p>
@@ -203,8 +204,13 @@
               os sistemas são concebidos e construídos até hoje.
             </p>
           </div>
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue4/imagem1.jpg" alt="" />
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/imagem1.jpg"
+            alt="Foto do Arquiteto Christopher Alexander, autor dos padrões de design no contexto da Arquitetura. Homem branco, acima dos 60 anos, de camisa azul, e olhando para a esquerda."
+          />
+
           <p>
             Os padrões de projeto estruturais são fundamentais no
             desenvolvimento de software para resolver problemas comuns de
@@ -217,6 +223,7 @@
             estruturais tornam o design geral mais robusto e menos suscetível a
             erros e problemas de compatibilidade.
           </p>
+
           <p>
             Imagine que você está construindo um jogo de aventura épica com
             várias fases e desafios emocionantes. No entanto, à medida que o
@@ -227,6 +234,7 @@
             estrutura do jogo, causando bugs e problemas inesperados. Essa
             confusão desafia a escalabilidade e manutenção do jogo. 
           </p>
+
           <p>
             É aqui que os padrões de projeto estruturais entram em cena como
             verdadeiros mapas que nos guiam por esse labirinto. Eles nos ajudam
@@ -238,16 +246,19 @@
             experiência incrível para os jogadores, enquanto evitamos se perder
             no caos da complexidade.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue4/imagem2.jpg"
             alt="Na imagem vemos 7 Padrões de Projeto estruturais, (1) Adapter com um ícone de tomada elétrica, (2) Bridge, representado por uma ponte, (3) Composite, por uma árvore, (4) Decorator, por um presente, (5) Facade, pela fachada de um prédio, (6) Flyweight, por uma pluma, e (7) Proxy, representado por um escudo."
           />
+
           <p>
             No contexto do desenvolvimento de jogos, os padrões estruturais são
             particularmente úteis devido à complexidade inerente desse tipo de
             sistema e à necessidade de eficiência e flexibilidade. Por exemplo:
           </p>
+
           <ul class="mx-2">
             <li class="my-1">
               <strong>Adapter</strong> pode ser usado para integrar bibliotecas
@@ -281,14 +292,17 @@
               de jogo pesado que pode precisar ser carregado sob demanda.
             </li>
           </ul>
+
           <p>
             Nesta aula, veremos três padrões estruturais: o Decorator, Adapter e
             Facade. Acompanhe os exemplos e faça as atividades para fortalecer o
             conhecimento adquirido.
           </p>
+
           <h2 class="text-subtitle1 dark-orange mx-3" id="decorator">
             Decorator
           </h2>
+
           <p>
             Imagine que você está jogando um jogo de RPG, como The Legend of
             Zelda ou World of Warcraft. Você sabe como você começa com
@@ -298,84 +312,105 @@
             para causar mais dano, ou um encantamento de velocidade às suas
             botas para correr mais rápido.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue4/imagem3.jpg"
             alt="Na imagem vemos o Inventário de itens de Legend of Zelda: Breath of the Wild."
           />
+
           <p>
             No mundo da programação, temos algo parecido chamado
             <strong>Padrão Decorator.</strong> É como os encantamentos no seu
             jogo. Quando usamos o Padrão Decorator, estamos basicamente
             adicionando "encantamentos" ou melhorias extras aos nossos objetos.
           </p>
+
           <p>
             <strong>Cenário básico:</strong> Você tem uma classe à qual deseja
             adicionar alguns comportamentos de maneira flexível sem modificar a
             classe original.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue4/imagem4.jpg"
             alt="A imagem mostra um cavaleiro sem armadura, e ao seu lado, os itens que ele pode agregar."
           />
+
           <p>
             Imagine um jogo de batalhas, no qual o personagem é um cavaleiro que
             inicia com uma armadura padrão e, ao longo do jogo, pode adicionar
             novos elementos à sua armadura. Esses elementos expandem a
             experiência do personagem.
           </p>
+
           <p><strong>Mãos no código</strong></p>
+
           <p>
             Para começar, é bom criarmos uma interface IArmor que define o
             comportamento básico de uma armadura.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue4/imagem5.png" alt="" />
+
           <p>
             Após isso, vamos criar a classe BasicArmor, que representa a
             armadura padrão do cavaleiro.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue4/imagem6.png" alt="" />
+
           <p>
             Agora é a hora de criar o decorator, materializado na classe
             abstrata ArmorDecorator, que servirá como base para os elementos
             adicionais que podem ser decorados na armadura.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue4/imagem7.png" alt="" />
+
           <p>
             Podemos agora criar algumas classes de elementos adicionais que
             podem ser decorados na armadura.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue4/imagem8.png" alt="" />
+
           <p>
             Por fim, podemos usar essas classes para criar diferentes
             combinações de armaduras decoradas.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue4/imagem9.png" alt="" />
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue4/imagem10.png" alt="" />
+
           <p>
             Nesse exemplo, podemos adicionar elementos extras à armadura do
             cavaleiro de forma flexível, combinando diferentes decorações para
             obter um valor de defesa final. O padrão Decorator permite que
             adicionemos funcionalidades extras às classes existentes de forma
-            dinâmica, sem a necessidade de modificar sua estrutura. 
+            dinâmica, sem a necessidade de modificar sua estrutura.
           </p>
+
           <p>
             Pubg é um jogo que traz um bom exemplo de implementação do padrão
             Decorator. Nele, tem armas nas quais pode anexar vários acessórios
             que encontra ao longo da partida, miras, silenciadores, etc,
             modificando as propriedades da arma.
           </p>
+
           <p>
             Agora você já é capaz de implementar novas funcionalidades a um item
             de jogo, parabéns!
           </p>
+
           <!-- inicio questão 1 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question1-box-correct">
@@ -521,7 +556,9 @@
             </div>
           </div>
           <!-- fim questão 1 -->
+
           <h2 class="text-subtitle1 dark-orange mx-3" id="adapter">Adapter</h2>
+
           <p>
             Imagine que você está jogando um jogo como o Pokémon. Você sabe como
             cada Pokémon tem seus próprios movimentos e habilidades, certo?
@@ -530,11 +567,13 @@
             resistente a ataques elétricos. Seria ótimo se o Pikachu pudesse
             usar um ataque de água, não seria?
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue4/imagem11.jpg"
             alt="A Imagem que ilustra o personagem Pokemon GO Pikachu."
           />
+
           <p>
             Na engenharia de software, o padrão Adapter é um padrão de projeto
             estrutural que permite a colaboração entre interfaces incompatíveis.
@@ -551,6 +590,7 @@
             quanto da classe adaptada, ou por composição, onde a "classe
             adapter" contém uma instância da classe adaptada.
           </p>
+
           <p>
             No desenvolvimento de jogos, o padrão Adapter é frequentemente
             utilizado para fazer a ponte entre o motor do jogo e outros sistemas
@@ -563,6 +603,7 @@
             terceiros, possibilitando que o motor do jogo interaja com a
             biblioteca como se fosse uma parte nativa do sistema. 
           </p>
+
           <p>
             Isso é extremamente útil para expandir as capacidades de um jogo,
             como adicionar suporte para novos dispositivos de entrada,
@@ -570,6 +611,7 @@
             a necessidade de reescrever ou alterar o código do motor do jogo de
             forma significativa.
           </p>
+
           <p>
             No jogo clássico <strong>Metal slug</strong>, o personagem principal
             Morden deve libertar os prisioneiros de guerra. Ao longo das fases,
@@ -577,11 +619,13 @@
             O que permite que Morden possa mudar de modos de locomoção ao longo
             do do jogo é a aplicação bem sucedida do padrão de projetos Adapter.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue4/imagem12.jpg"
-            alt="A  Imagem é uma tela capturada do jogo Metal Slug que é uma analogia ao padrão adapter."
+            alt="A Imagem é uma tela capturada do jogo Metal Slug que é uma analogia ao padrão adapter."
           />
+
           <p>
             Para demonstrar esse padrão, vamos aplicar o exemplo de mecânica de
             jogos que possui uma interface de inimigos. Entretanto, há um tipo
@@ -589,18 +633,20 @@
             do método Attack(). Em vez disso, esse inimigo lança Feitiços
             CastSpell().
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue4/imagem13.png"
             alt="Diagrama URL representando as classes e as interfaces para a implementação do Padrão de Projetos Adapter."
           />
+
           <p>
             Como você pode constatar no diagrama UML, no padrão de design
             Adapter, temos três componentes principais: o Target, o Adapter e o
             Adaptee. Vamos explorar cada um deles no contexto do código que
             apresentaremos posteriormente:
           </p>
-          <br />
+
           <table class="grayTable">
             <thead>
               <tr>
@@ -632,7 +678,7 @@
               </tr>
             </tbody>
           </table>
-          <br />
+
           <table class="grayTable">
             <thead>
               <tr>
@@ -666,7 +712,7 @@
               </tr>
             </tbody>
           </table>
-          <br />
+
           <table class="grayTable">
             <thead>
               <tr>
@@ -700,7 +746,7 @@
               </tr>
             </tbody>
           </table>
-          <br />
+
           <p>
             Em resumo, o padrão Adapter é usado para permitir que um objeto
             (Adaptee) com uma interface incompatível (EnemyWizard com
@@ -709,6 +755,7 @@
             tradução, permitindo que o cliente interaja com o Adaptee como se
             fosse um Target.
           </p>
+
           <p>
             Para implementar o padrão Adapter, vamos utilizar a linguagem de
             programação C#, na engine Unity. Como editor de código, indicamos o
@@ -716,28 +763,36 @@
             criaremos uma interface chamada IEnemy, a qual será comum a todos os
             inimigos.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue4/imagem14.png" alt="" />
+
           <p>
             Depois, implementaremos a classe que será adaptada. Aqui, essa
             classe implementa o comportamento do inimigo Mago, que seu ataque é
             diferente dos demais, pois ele lança feitiços.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue4/imagem15.png" alt="" />
+
           <p>
             Então, implementa-se o Adaptador. Essa classe fica entre a interface
             de inimigos, e o inimigo adaptado. Servindo justamente com um
             adaptador do tipo de ataque.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue4/imagem16.png" alt="" />
+
           <p>
             Por fim, implementamos esse código no nosso cliente, ou seja, no
             script do jogo.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue4/imagem17.png" alt="" />
+
           <p>
             Neste script <strong>Unity Game</strong>, quando o método Start é
             chamado (o que acontece no início da cena), um novo EnemyWizard é
@@ -745,6 +800,7 @@
             como argumento. Quando chamamos Attack no wizardAdapter, o
             EnemyWizard executa seu método CastSpell por meio do Adapter.
           </p>
+
           <p>
             Este exemplo mostra como você pode usar o padrão Adapter para
             integrar um objeto com uma interface incompatível (EnemyWizard) em
@@ -753,6 +809,7 @@
             ele seja executado quando a cena começar. Agora para sua melhor
             compreensão, responda a questão abaixo:
           </p>
+
           <!-- inicio questão 2 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question2-box-correct">
@@ -870,7 +927,9 @@
             </div>
           </div>
           <!-- fim questão 2 -->
+
           <h2 class="text-subtitle1 dark-orange mx-3" id="facade">Facade</h2>
+
           <p>
             Na engenharia de software, o padrão Facade é um padrão de projeto
             estrutural que fornece uma interface simplificada para um conjunto
@@ -882,6 +941,7 @@
             permitindo que mudanças internas nos subsistemas ocorram sem
             impactar os clientes que os utilizam.
           </p>
+
           <p>
             No desenvolvimento de jogos, o padrão Facade é utilizado para
             encapsular sistemas complexos como física, renderização ou
@@ -894,17 +954,20 @@
             e no design do jogo, em vez de detalhes de baixo nível dos sistemas
             que estão utilizando.
           </p>
+
           <p>
             Você já jogou algum jogo do tipo RTS (Real-time strategy)? Muitos
             são os títulos nesse estilo, Age of empires, Warhammer, RimWorld,
             etc. Nesse tipo de jogo, estão disponíveis diversos tipos de tropas
             e o objetivo do jogador é se fortalecer para vencer tropas inimigas.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue4/imagem18.jpeg"
             alt="Na Imagem, o Screenshot (captura da tela) do jogo Age of Empires 4."
           />
+
           <p>
             Já pensou a quantidade de operações que são realizadas dentro de um
             centro de comando de um jogo RTS? coletar recursos, produzir
@@ -915,24 +978,30 @@
             operações são executadas, permitindo que o centro de controle apenas
             ordene sua execução.
           </p>
+
           <p>
             Primeiro devemos implementar os subsistemas que o centro de controle
             poderá executar. Para nossa aula, criaremos duas classes, cada uma
             representando um dos subsistemas (coleta de energia e produção de 
             armamentos).
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue4/imagem19.png" alt="" />
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue4/imagem20.png" alt="" />
+
           <p>
             Note que as três classes possuem a mesma estrutura, têm o método
             responsability() que escreve no console o que cada sistema irá
             executar. A seguir, devemos implementar a classe GameFacade que fará
             o papel do nosso centro de controle.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue4/imagem21.png" alt="" />
+
           <p>
             No código do jogo na Unity, podemos criar uma instância da
             GameFacade e chamar o método UpdateGame() para atualizar o jogo.
@@ -941,8 +1010,10 @@
             transparente, permitindo que você se concentre em outras lógicas do
             jogo.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue4/imagem22.png" alt="" />
+
           <p>
             Percebeu que solicitamos ao GameFacade para executar duas operações
             (Coletar energia e produzir armamento)? Cada operação dessas tem um
@@ -951,6 +1022,7 @@
             dessa tarefa. Nem precisamos nos preocupar com a forma que esses
             subsistemas foram implementados. legal, não é?!
           </p>
+
           <!-- inicio questão 3 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question2-box-correct">
@@ -1077,6 +1149,7 @@
       <div class="section">
         <div class="contentSection">
           <h1 class="text-Title light-orange" id="recap">Recapitulando</h1>
+
           <p>
             Os padrões de projeto são técnicas de programação que proporcionam
             soluções para problemas comuns no desenvolvimento de software. Eles
@@ -1084,6 +1157,7 @@
             comunicação entre desenvolvedores, promover o bom design de
             software, deixar o software mais fácil de manter.
           </p>
+
           <p>
             Os padrões de projeto estruturais são fundamentais quando se trata
             de estabelecer e simplificar as relações entre diferentes classes ou
@@ -1094,11 +1168,13 @@
             manter, permitindo que os desenvolvedores se concentrem mais na
             lógica do jogo e menos na estrutura do código.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue4/imagem23.jpg"
             alt="Na imagem, centenas de pecinhas do jogo de encaixe em várias cores."
           />
+
           <div class="flex justify-center align-center w-full myt-3">
             <img src="./img/global/icons/greenCheck.png" />
             <h3 class="px-3 green" id="problem-solution">
