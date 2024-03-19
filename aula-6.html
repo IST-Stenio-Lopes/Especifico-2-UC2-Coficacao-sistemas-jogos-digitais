@@ -189,7 +189,7 @@
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-                                      gyroscope; picture-in-picture"
+                gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
             </div>
@@ -207,6 +207,7 @@
       <div class="section">
         <div class="contentSection">
           <h1 class="text-Title light-orange" id="introduction">Introdução</h1>
+
           <p>
             Os grafos são uma das estruturas de dados mais fundamentais e
             versáteis em ciência da computação e matemática. Eles são usados
@@ -215,11 +216,13 @@
             como links ou arcos). Cada aresta conecta dois vértices, indicando
             uma relação entre eles.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue6/imagem1.png"
             alt="Na imagem, um exemplo de 7 (sete) grafos."
           />
+
           <p>
             Os grafos podem ser categorizados em dois tipos principais: grafos
             direcionados e não direcionados. Em um grafo direcionado, as arestas
@@ -229,11 +232,13 @@
             direcionado, as arestas não têm direção, indicando que a relação é
             bidirecional.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue6/imagem2.png"
             alt="Na imagem, um exemplo de Grafos direcionados e não-direcionados."
           />
+
           <p>
             Os grafos são usados em uma variedade de aplicações em várias
             disciplinas. Em ciência da computação, eles são usados para
@@ -243,11 +248,13 @@
             grafos são usados para representar mapas de níveis, caminhos de IA,
             redes de diálogo, sistemas de missão e muito mais.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue6/imagem3.jpg"
             alt="Na imagem, um exemplo de Rede de co-ocorrências de comentários em notícias."
           />
+
           <p>
             A história do uso de grafos remonta ao século XVIII, quando o
             matemático suíço Leonhard Euler usou um grafo para resolver o famoso
@@ -258,12 +265,13 @@
             arestas representando as pontes. Ao resolver o problema, Euler
             lançou as bases para a teoria dos grafos.
           </p>
-          <!--TODO ADICIONAR IMAGEM-->
+
           <img
             class="w-75 m-auto"
-            src="./img/ue6/imagem4.png"
+            src="./img/ue6/imagem4.jpg"
             alt="Na imagem temos Representação do problema das Pontes de Königsberg."
           />
+
           <div class="atencion my-3">
             <img src="./img/global/icons/book-open.svg" />
             <p>
@@ -284,18 +292,21 @@
       <div class="section">
         <div class="contentSection">
           <h1 class="text-Title light-orange" id="structure">Estrutura</h1>
+
           <p>
             Um grafo é composto por vértices (ou nós) e arestas (ou links). Cada
             aresta conecta dois vértices. Em um grafo direcionado, cada aresta
             tem uma direção, enquanto em um grafo não direcionado, as arestas
             não têm direção.
           </p>
+
           <!--TODO ADICIONAR IMAGEM-->
           <img
             class="w-75 m-auto"
             src="./img/ue6/imagem5.png"
             alt="Na imagem percebemos como são compostos as estruturas de um Grafo."
           />
+
           <!-- inicio questão 1 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question1-box-correct">
@@ -422,6 +433,7 @@
           <h1 class="text-Title light-orange" id="graphs">
             Grafos em jogos digitais
           </h1>
+
           <p>
             São estruturas de dados que representam conexões entre elementos do
             jogo. Essas conexões podem ser usadas para modelar várias interações
@@ -429,52 +441,62 @@
             personagens, hierarquia de itens ou missões, entre outros aspectos
             do jogo.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue6/imagem6.jpg"
             alt="Na imagem, um jogo de quebra-cabeças pensado a partir da teoria dos grafos. "
           />
+
           <p>
             Um grafo é composto por nós (também chamados de vértices) e arestas
             (também chamadas de arcos). Cada nó representa um elemento
             específico do jogo, como uma sala, um personagem, um objeto ou um
             evento, e as arestas representam as conexões entre esses elementos.
           </p>
+
           <p>
             No jogo Binding of Isaac, no qual o jogador navega entre salas onde
             estão as interações do jogo, que podem ser uma loja, uma sala de
             recompensas, um boss em cada andar, uma sala secreta, etc. Cada sala
             dessas, pode ser entendida como um nó do grafo.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue6/imagem7.png"
             alt="Na imagem, parte do jogo Binding of Isaac com a trilha do jogo iniciando da esquerda para direita com blocos cinzas fazendo um caminho."
           />
+
           <p>
             Como você pode ver, em jogos digitais, os grafos são usados para
             representar várias estruturas e sistemas, como mapas de níveis,
             caminhos de IA, redes de diálogo, sistemas de missão e muito mais.
           </p>
+
           <h2 class="text-subtitle1 dark-orange mx-3" id="examples">
             Exemplos
           </h2>
+
           <p>
             Um exemplo clássico de uso de grafos em jogos é o algoritmo A* para
             encontrar o caminho mais curto em um mapa. Outro exemplo é a
             representação de redes de diálogo em jogos de RPG.
           </p>
+
           <p>
             Em jogos, geralmente se quer encontrar o melhor caminho para se
             atingir um objetivo. Não é uma questão apenas de achar o caminho
             mais curto, outras coisas também devem ser pesadas, o tempo de
             viagem, os obstáculos, etc.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue6/imagem8.png"
             alt="Na ilustração, um mapa que demonstra a movimentação de uma estrela (o personagem) rumo ao seu objetivo marcado com um X vermelho."
           />
+
           <p>
             Para encontrar esse caminho podemos usar um algoritmo de busca de
             grafos , que funciona quando o mapa é representado como um grafo. O
@@ -484,25 +506,22 @@
             algoritmo bastante utilizado para encontrar o caminho mais curto
             entre vértices é o algoritmo de Dijkstra (E.W. Dijkstra).
           </p>
+
           <p>
             No gif abaixo, podemos ver a aplicação do Algoritmo A* aplicado para
             localizar caminhos em um labirinto gerado aleatoriamente.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue6/gif1.gif"
             alt="Na ilustração, um mapa que demonstra a movimentação de uma estrela (o personagem) rumo ao seu objetivo marcado com um X vermelho."
           />
-          <p>
-            No vídeo a seguir, é apresentado como se tem usado o algoritmo A*
-            para encontrar o caminho entre dois pontos de um gráfico. Note a
-            utilização de uma heurística que escolhe pontos mais próximos
-            preferencialmente.
-          </p>
-          <!--TODO VÍDEO-->
+
           <h2 class="text-subtitle1 dark-orange mx-3" id="tools">
             Ferramentas
           </h2>
+
           <p>
             Existem várias ferramentas disponíveis para trabalhar com grafos,
             cada uma com suas próprias vantagens e usos específicos. Aqui estão
@@ -510,26 +529,31 @@
             demonstração de como aplicar grafos para projetar comportamentos dos
             elementos dos jogos. 
           </p>
+
           <p>
             <strong>NetworkX:</strong> Esta é uma biblioteca Python que permite
             a criação, manipulação e estudo da estrutura, dinâmica e funções de
             redes complexas.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue6/imagem9.png"
             alt="Na ilustração, a demonstração do Grafo utilizando o software NetworkX."
           />
+
           <p>
             <strong>Gephi:</strong> É uma ferramenta de visualização e
             exploração de redes interativas. Gephi permite aos usuários criar
             grafos e visualizá-los de maneiras úteis e interativas.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue6/imagem10.png"
             alt="Na imagem, a tela capturada da plataforma Gephi."
           />
+
           <p>
             <strong>Graphviz:</strong> Esta é uma ferramenta de software de
             código aberto para a visualização de grafos. Ela permite que os
@@ -537,22 +561,26 @@
             gráficos e fornece várias maneiras de representar grafos
             visualmente.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue6/imagem11.png"
             alt="Na imagem temos a tela capturada da plataforma Graphviz."
           />
+
           <p>
             <strong>Neo4j:</strong> É um sistema de gerenciamento de banco de
             dados gráfico de código aberto, altamente considerado por sua
             escalabilidade e robustez. É uma ótima ferramenta para armazenar e
             consultar dados de grafos em grande escala.
           </p>
+
           <p>
             <strong>Graphonline:</strong> É uma ferramenta open source e free
             disponível na url graphonline.ru. Nela é possível traçar grafos e
             testar os algoritmos.
           </p>
+
           <p>
             No vídeo abaixo, veremos como criar grafos com o auxílio de uma
             ferramenta gráfica. A partir desse conhecimento, é possível aplicar
@@ -560,6 +588,7 @@
             nossos jogos, desde a movimentação dos NPCs, até para planejar o
             level design de nossas fases.
           </p>
+
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
@@ -583,12 +612,14 @@
           <h1 class="text-Title light-orange" id="graphs-game-design">
             Game design com grafos
           </h1>
+
           <p>
             No game design, Os grafos são usados de diversas formas, muitas das
             quais são fundamentais para a criação de experiências de jogo ricas
             e imersivas. Aqui estão algumas das maneiras pelas quais os grafos
             podem ser usados no design de jogos:
           </p>
+
           <p>
             <strong>Pathfinding:</strong> Talvez o uso mais comum de grafos no
             design de jogos seja para o pathfinding, que é o processo de
@@ -596,33 +627,39 @@
             então usar algoritmos como A* ou Dijkstra para encontrar o caminho
             mais eficiente.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue6/imagem12.png"
             alt="Nesta ilustração, uma  representação de uma árvore de decisões."
           />
+
           <p>
             Desta forma, os grafos podem ser usados no design de jogos para
             representar e resolver problemas complexos, como a criação de mapas
             procedurais, a geração de missões e a modelagem de interações entre
             personagens.
           </p>
+
           <p>
             <strong>Design de Níveis:</strong> Os grafos também podem ser usados
             no design de níveis, especialmente em jogos que usam geração de
             níveis procedural (como visto na imagem).
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue6/imagem13.png"
             alt="Nesta ilustração representa o uso de grafos para definir o fluxo dos níveis em um jogo digital."
           />
+
           <p>
             Estes são apenas alguns exemplos de como os grafos podem ser usados
             no design de jogos. A natureza flexível dos grafos como uma
             estrutura de dados os torna uma ferramenta útil para muitos aspectos
             diferentes do design de jogos.
           </p>
+
           <!-- inicio questão 2 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question2-box-correct">
@@ -749,6 +786,7 @@
           <h1 class="text-Title light-orange" id="space-representation">
             Representação Do Espaço
           </h1>
+
           <p>
             Os grafos são uma maneira eficaz de representar o espaço em um jogo.
             Cada nó do grafo pode representar um ponto no espaço do jogo - seja
@@ -759,11 +797,13 @@
             base para muitas das técnicas de navegação e pathfinding usadas nos
             jogos modernos.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue6/imagem14.png"
             alt="Nesta ilustração, a Representação do espaço usando grafos."
           />
+
           <!-- inicio questão 3 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question3-box-correct">
@@ -911,12 +951,14 @@
             </div>
           </div>
           <!-- fim questão 3 -->
+
           <h2
             class="text-subtitle1 dark-orange mx-3"
             id="non-directional-graph"
           >
             Grafo não direcional
           </h2>
+
           <p>
             <strong
               >Um grafo não direcional, ou não orientado, é um tipo de grafo
@@ -927,14 +969,17 @@
             isso poderia representar um mapa onde o jogador pode se mover
             livremente entre as localizações.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue6/imagem15.png"
             alt="Na imagem, o personagem pode transitar por quaisquer um dos nós, sem necessidade de seguir uma sequência."
           />
+
           <h2 class="text-subtitle1 dark-orange mx-3" id="directional-graph">
             Grafo direcional
           </h2>
+
           <p>
             <strong
               >Um grafo direcional, ou orientado, por outro lado, é um grafo
@@ -946,11 +991,13 @@
             em que o jogador pode pular de um penhasco (de A para B), mas não
             pode escalar de volta pelo penhasco (de B para A).
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue6/imagem16.png"
             alt="A imagem representa um jogo plataforma, no qual o personagem só pode seguir um caminho."
           />
+
           <!-- inicio questão 4 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question4-box-correct">
@@ -1063,9 +1110,11 @@
             </div>
           </div>
           <!-- fim questão 4 -->
+
           <h2 class="text-subtitle1 dark-orange mx-3" id="depth-first-search">
             Busca em Profundidade
           </h2>
+
           <p>
             <strong
               >A busca em profundidade é um algoritmo que pode ser usado para
@@ -1077,9 +1126,11 @@
             precisa explorar completamente um caminho antes de seguir para o
             próximo.
           </p>
+
           <h2 class="text-subtitle1 dark-orange mx-3" id="breadth-first-search">
             Busca em Largura
           </h2>
+
           <p>
             <strong
               >A busca em largura é outro algoritmo usado para navegar em um
@@ -1091,6 +1142,7 @@
             pontos, ou para modelar comportamentos de AI, como a propagação de
             um alarme entre guardas.
           </p>
+
           <p>
             A busca em largura e o algoritmo A* são ambos métodos utilizados
             para navegar e buscar caminhos em grafos, mas eles operam com
@@ -1110,11 +1162,13 @@
             eficiência e capacidade de encontrar caminhos ótimos em grafos
             ponderados.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue6/imagem17.png"
             alt=" A imagem representa a utilização de um algoritmo de busca em largura para solucionar o jogo."
           />
+
           <div class="atencion my-3">
             <img src="./img/global/icons/lightbulb.png" />
             <p>
@@ -1125,10 +1179,12 @@
               indústria para pathfinding em jogos.
             </p>
           </div>
+
           <p>
             Agora, para melhor compreensão do conteúdo, responda a questão a
             seguir:
           </p>
+
           <!-- inicio questão 5 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question5-box-correct">
@@ -1259,6 +1315,7 @@
             usados para representar mapas de níveis, caminhos de IA, redes de
             diálogo, sistemas de missão e muito mais em jogos digitais.
           </p>
+
           <div class="flex justify-center align-center w-full myt-3">
             <img src="./img/global/icons/greenCheck.png" />
             <h3 class="px-3 green" id="problem-solution">
