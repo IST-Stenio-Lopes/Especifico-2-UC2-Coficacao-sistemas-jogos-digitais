@@ -125,12 +125,14 @@
           <h1 class="text-Course">Curso Técnico em</h1>
           <h1 class="text-NameCourse">Jogos Digitais</h1>
         </div>
+
         <div id="containerBoxTitle">
           <div class="box-unit-number">
             <span> 3 </span>
           </div>
           <div class="titleHeader">Padrões Criacionais</div>
         </div>
+
         <div>
           <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
           <p class="text-DescriptUnit">
@@ -138,6 +140,7 @@
             projeto.
           </p>
         </div>
+
         <div>
           <p class="text-LetsLearn">Vamos iniciar os estudos?</p>
           <a class="btnPlay" href="#contextualizing">Play</a>
@@ -152,6 +155,7 @@
             <h1 class="text-Title light-orange" id="contextualizing">
               Contextualizando
             </h1>
+
             <p class="contextualizing-text">
               Assista ao vídeo abaixo para uma introdução aos seus estudos
             </p>
@@ -187,6 +191,7 @@
           <h1 class="text-Title light-orange" id="creational-patterns">
             Padrões Criacionais
           </h1>
+
           <p>
             Padrões de projeto, ou design patterns, representam um conjunto de
             práticas consagradas destinadas a resolver dilemas frequentemente
@@ -198,6 +203,7 @@
             utilização de recursos e a flexibilidade do código em jogos
             complexos.
           </p>
+
           <p>
             Esses padrões criacionais são fundamentais para o desenvolvimento de
             jogos, pois permitem aos desenvolvedores concentrar-se na lógica de
@@ -209,6 +215,7 @@
             garantindo que a base do jogo seja tanto escalável quanto
             performática.
           </p>
+
           <div class="atencion my-3">
             <img src="./img/global/icons/lightbulb.png" />
             <p>
@@ -219,11 +226,13 @@
               programação Java.
             </p>
           </div>
+
           <img
             class="w-75 m-auto"
             src="./img/ue3/imagem1.jpg"
             alt="Erich Gamma, um homem de meia idade, usando óculos, dando uma palestra"
           />
+
           <p>
             Na imagem a seguir, apresentamos um resumo dos cinco padrões de
             projeto criacionais.
@@ -234,6 +243,7 @@
             src="./img/ue3/imagem2.png"
             alt="Infográfico contendo os Padrões de Projeto criacionais segundo a Gang of Four."
           />
+
           <!-- inicio questão 1 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question1-box-correct">
@@ -366,21 +376,25 @@
             </div>
           </div>
           <!-- fim questão 1 -->
+
           <p>
             Nesta aula, veremos os padrões criacionais, o Singleton e o Factory.
             Acompanhe os exemplos e faça as atividades para fortalecer o
             conhecimento adquirido.
           </p>
+
           <h2 class="text-subtitle1 dark-orange mx-3" id="singleton">
             Singleton
           </h2>
+
           <p>
             O padrão de design Singleton é uma técnica usada na programação para
             garantir que uma classe tenha apenas uma única instância em todo o
             programa, com um ponto de acesso global a essa instância. Isso é
             útil quando se precisa de um controle rigoroso sobre como e quando
-            um recurso é acessado e compartilhado. 
+            um recurso é acessado e compartilhado.
           </p>
+
           <p>
             Por exemplo, a configuração de um aplicativo muitas vezes é
             gerenciada por um objeto Singleton, pois geralmente existe apenas um
@@ -390,11 +404,13 @@
             múltiplas instâncias e também fornece um método estático que dá
             acesso à única instância criada.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue3/imagem3.png"
             alt="Na imagem temos uma Tirinha para ilustrar quando usar o padrão Singleton."
           />
+
           <p>
             No desenvolvimento de jogos, o padrão Singleton é frequentemente
             utilizado para gerenciar componentes do jogo que são únicos, como o
@@ -409,6 +425,7 @@
             desses componentes críticos fossem criadas e usadas
             inadvertidamente.
           </p>
+
           <p>
             Você já jogou um jogo onde existe apenas um personagem principal ou
             herói? Como o <strong>Super Mario</strong>, por exemplo. Não importa
@@ -422,6 +439,7 @@
             src="./img/ue3/imagem4.jpg"
             alt="Na imagem, o Screenshot (captura de tela) do jogo Super Mario Run."
           />
+
           <p>
             No mundo da programação, temos algo parecido chamado Padrão
             Singleton. É como o Mario em seu jogo. Quando usamos o Padrão
@@ -429,6 +447,7 @@
             determinado tipo em todo o nosso programa, assim como só pode haver
             um Mario no jogo.
           </p>
+
           <p>
             Então, quando precisamos de um objeto que deve ser único e acessível
             de qualquer lugar do nosso código - como um gerenciador de
@@ -436,6 +455,7 @@
             nosso programa fosse um grande jogo, e o Singleton é o nosso Mário,
             sempre lá quando precisamos dele.
           </p>
+
           <p>
             Para exemplificar, vamos pensar em um
             <strong>jogo de vôlei</strong>. Como você sabe, só é permitida uma
@@ -443,31 +463,37 @@
             é mesmo? Para garantir que só terá uma bola instanciada no momento
             da partida, vamos implementar o padrão Singleton, da seguinte forma:
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue3/imagem5.png" alt="" />
+
           <p>
             A classe Ball representa a bola do jogo de vôlei. Aqui, o padrão
             Singleton é implementado usando uma variável estática instance que
             armazena a única instância da bola. O método estático Instance é
             usado para acessar essa instância.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue3/imagem6.png"
             alt="Na imagem, a tela de um jogo clássico para o console Megadrive chamado Vôlei. Conforme o exemplo que apresentamos, não faz parte da regra duas bolas ao mesmo tempo."
           />
+
           <p>
             No método Awake(), verificamos se já existe uma instância da bola.
             Se não existir, definimos a instância atual como a instância única.
             Caso contrário, se já existir uma instância, destruímos o objeto
             atual para garantir que apenas uma bola seja criada por partida.
           </p>
+
           <p>
             Dessa forma, em qualquer parte do jogo que precisarmos acessar a
             bola, basta chamar Ball.Instance para obter a instância única da
             bola. Isso garante que apenas uma bola seja instanciada e utilizada
             durante toda a partida de vôlei.
           </p>
+
           <!-- inicio questão 2 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question2-box-correct">
@@ -583,7 +609,9 @@
             </div>
           </div>
           <!-- fim questão 2 -->
+
           <h2 class="text-subtitle1 dark-orange mx-3" id="factory">Factory</h2>
+
           <p>
             O padrão de design Factory, especificamente o Factory Method, é um
             padrão criacional que define uma interface para criar um objeto, mas
@@ -596,6 +624,7 @@
             produtos são projetadas para serem usadas em conjunto, garantindo
             assim que os clientes usem apenas produtos da mesma família.
           </p>
+
           <p>
             Você já jogou um jogo como <strong>Minecraft</strong> ou
             <strong>Fortnite</strong>, onde você pode criar diferentes itens
@@ -603,16 +632,19 @@
             criar, e o menu cuida do resto, certo? Ele sabe como criar cada tipo
             de item, seja uma espada, uma poção ou um bloco de construção.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue3/imagem7.png"
             alt=" Na imagem, a tela da Galeria de itens do jogo Minecraft."
           />
+
           <p>
             O <strong>Padrão Factory</strong> age como o menu de criação do seu
             jogo. Quando usamos o Padrão Factory, estamos basicamente criando um
             "menu" que sabe como criar diferentes tipos de objetos para nós.
           </p>
+
           <p>
             Digamos que estamos programando um jogo e temos diferentes tipos de
             inimigos. Em vez de criar cada inimigo individualmente, podemos usar
@@ -623,16 +655,19 @@
             diferentes avançam sobre as defesas da casa do player que é feita
             por plantas.
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue3/imagem8.jpg"
             alt="Na imagem temos o Screenshot (tela capturada) do jogo Plants vs Zoombies."
           />
+
           <p>
             O padrão de projeto Factory pode ser usado em jogos para criar
             objetos de forma flexível e encapsulada, permitindo a criação de
             diferentes tipos de objetos de forma centralizada.
           </p>
+
           <p>
             Para a implementação desta aula, imagine um jogo de estratégia onde
             o jogador pode recrutar diferentes tipos de unidades militares, como
@@ -640,46 +675,58 @@
             diretamente no código do jogo, podemos usar o padrão Factory para
             criar as unidades de forma mais modular. Vamos lá!
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue3/imagem9.jpg"
             alt="Na imagem temos três personagens medievais no estilo pixelart."
           />
+
           <p>
             Para isso, podemos ter uma classe abstrata chamada Unit que define a
             interface comum para todas as unidades e subclasses concretas, como
             Soldier, Archer e Knight, que implementam os detalhes específicos de
             cada tipo de unidade.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue3/imagem10.png" alt="" />
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue3/imagem11.png" alt="" />
+
           <p>
             Em seguida, devemos criar uma classe UnitFactory que contém um
             método de fábrica, por exemplo, CreateUnit, que recebe um parâmetro
             indicando o tipo de unidade a ser criada. Com base nesse parâmetro,
             a fábrica cria e retorna a instância apropriada da unidade.
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue3/imagem12.png" alt="" />
+
           <p>
             No código do jogo, podemos usar a fábrica de unidades (UnitFactory)
             para criar instâncias das unidades conforme necessário:
           </p>
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue3/imagem13.png" alt="" />
+
           <!--TODO ALT-->
           <img class="w-75 m-auto" src="./img/ue3/imagem14.png" alt="" />
+
           <p>
             O padrão Factory pode ser representado graficamente pelo diagrama de
             classes a seguir:
           </p>
+
           <img
             class="w-75 m-auto"
             src="./img/ue3/imagem15.png"
             alt="Na imagem temos um exemplo de Diagrama de classes do padrão de projetos Factory."
           />
+
           <!-- inicio questão 3 -->
           <div class="marginVertical">
             <div class="question-box-container" id="question3-box-correct">
@@ -806,6 +853,7 @@
       <div class="section">
         <div class="contentSection">
           <h1 class="text-Title light-orange" id="recap">Recapitulando</h1>
+
           <p>
             Os padrões de projeto são técnicas de programação que proporcionam
             soluções para problemas comuns no desenvolvimento de software. Eles
@@ -813,6 +861,7 @@
             comunicação entre desenvolvedores, promover o bom design de
             software, deixar o software mais fácil de manter.
           </p>
+
           <div class="flex justify-center align-center w-full myt-3">
             <img src="./img/global/icons/greenCheck.png" />
             <h3 class="px-3 green" id="problem-solution">
