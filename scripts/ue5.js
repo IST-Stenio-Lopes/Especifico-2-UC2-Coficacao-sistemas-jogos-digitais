@@ -29,16 +29,16 @@ var question2 = {
     "Todas as decisões em uma árvore de decisão devem ter apenas um resultado possível.",
   feedbacks: [
     {
-      optionId: "q1-option-1",
-      feedBackId: "q1-box-feedback",
+      optionId: "q2-option-1",
+      feedBackId: "q2-box-feedback",
       title: "OPS!",
       message:
         "Em uma árvore de decisão, cada nó de decisão pode ter múltiplos resultados possíveis, dependendo das diferentes opções ou caminhos que podem ser seguidos a partir desse nó.",
       type: "error",
     },
     {
-      optionId: "q1-option-2",
-      feedBackId: "q1-box-feedback",
+      optionId: "q2-option-2",
+      feedBackId: "q2-box-feedback",
       title: "Exato!",
       message:
         "Na verdade, uma árvore pode ter vários resultados possíveis, essa é a finalidade das árvores.",

@@ -150,11 +150,13 @@
           </div>
         </div>
         <div>
-          <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
-          <p class="text-DescriptUnit">
+          <span>
+            <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
+          </span>
+          <span class="text-DescriptUnit">
             Aplicar padrões de projeto conforme especificações técnicas do
             projeto.
-          </p>
+          </span>
         </div>
         <div>
           <p class="text-LetsLearn">Vamos iniciar os estudos?</p>
@@ -345,14 +347,14 @@
 
           <p><strong>Cada um desses métodos tem sua importância:</strong></p>
 
-          <ul class="mx-2">
+          <ul style="margin-inline-start: 2rem">
             <li class="my-1">
               <strong>Registro dos observadores -</strong> Quando um novo
               inimigo aparece no jogo, ele precisa saber o que está acontecendo
               com o personagem principal, certo? Por exemplo, se o personagem
               principal derrota um chefe importante, talvez todos os inimigos
               menores fujam ou percam força.
-              <ul class="mx-1">
+              <ul style="margin-inline-start: 2rem">
                 <li class="my-1">
                   O método RegisterEnemy é como dar um "follow" no personagem
                   principal. Assim como você segue alguém nas redes sociais para
@@ -363,13 +365,14 @@
                 </li>
               </ul>
             </li>
+
             <li class="my-1">
               <strong>Remover observadores -</strong> Agora, imagine que um
               inimigo foi derrotado ou saiu de cena. Não faz sentido ele
               continuar recebendo atualizações do personagem principal, certo?
               Seria como continuar recebendo notificações de alguém que você não
               segue mais.
-              <ul class="mx-1">
+              <ul style="margin-inline-start: 2rem">
                 <li class="my-1">
                   O método UnregisterEnemy é como dar "unfollow". Ele serve para
                   dizer: "Ok, você não precisa mais saber o que o herói está
@@ -385,7 +388,7 @@
               importante acontece, como o personagem principal derrotando todos
               os inimigos, todos que estão "seguindo" o herói precisa saber.
               Isso pode mudar a forma como eles agem no jogo.
-              <ul class="mx-1">
+              <ul style="margin-inline-start: 2rem">
                 <li class="my-1">
                   O método NotifyEnemiesDefeated é como fazer uma postagem para
                   todos os seus seguidores. Ele percorre a lista de inimigos que
@@ -1451,12 +1454,19 @@
             entre objetos e classes. Nesta aula, você conheceu três desses
             padrões, observer, strategy e visitor.
           </p>
+        </div>
+      </div>
+    </section>
 
+    <!--Section-->
+    <section class="container course">
+      <div class="section">
+        <div class="contentSection">
           <div class="flex justify-center align-center w-full myt-3">
             <img src="./img/global/icons/greenCheck.png" />
-            <h3 class="px-3 green" id="problem-solution">
+            <h1 class="px-3 green" id="problem-solution">
               Solução do problematizando
-            </h3>
+            </h1>
           </div>
 
           <div class="videoContainer marginVertical">

@@ -221,10 +221,10 @@ p {
 }
 
 .text-DescriptUnit {
-  margin-top: 5px;
   font-style: normal;
   color: #fff;
 }
+
 .text-LetsLearn {
   font-weight: 300;
   margin: 25px 0px;
@@ -469,6 +469,10 @@ ul li {
 }
 .column50 {
   width: 50%;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 td {

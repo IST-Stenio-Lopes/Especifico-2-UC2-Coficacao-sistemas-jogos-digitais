@@ -95,15 +95,15 @@ var question4 = {
     {
       optionId: "q4-option-2",
       feedBackId: "q4-box-feedback",
-      title: "OPS!",
+      title: "Exato!",
       message:
-        "Parabéns. os componentes são módulos autônomos e reutilizáveis, e a funcionalidade de um GameObject é definida pela combinação de componentes que ele possui",
+        "Parabéns. Os componentes são módulos autônomos e reutilizáveis, e a funcionalidade de um GameObject é definida pela combinação de componentes que ele possui",
       type: "success",
     },
     {
       optionId: "q4-option-3",
       feedBackId: "q4-box-feedback",
-      title: "Resposta correta!",
+      title: "OPS!",
       message:
         "A interação entre diversos componentes representa o quão potentes são os GameObjects. ",
       type: "error",

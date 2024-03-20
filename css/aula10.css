@@ -82,14 +82,10 @@
 .box-yellow-light {
   color: #1a1827;
   background-color: #fffbeb;
-  font-family: "Open Sans";
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.5rem;
   gap: 0.5rem;
   padding: 0.75rem 2rem;
   border-bottom: 1px solid #ffc700;
+  line-height: 1.5rem;
 }
 
 .box-white-smoke {
@@ -99,5 +95,6 @@
   align-items: center;
   gap: 0.625rem;
   color: #1a1827;
-  margin: 16px 60px auto;
+  margin: 16px 39.5px;
+  word-wrap: break-word;
 }
