@@ -467,8 +467,41 @@
             da partida, vamos implementar o padrão Singleton, da seguinte forma:
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue3/imagem5.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue3/imagem5.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - public class Ball : MonoBehaviour{
+              linha 2 - // Variável estática para armazenar a única instância da bola
+              linha 3 - private static Ball instance;
+              linha 4 - linha vazia
+              linha 5 - // Método estático para acessar a instância da bola
+              linha 6 - public static Ball Instance{
+              linha 7 - get{
+              linha 8 - if (instance == null){
+              linha 9 - // Se a instância ainda não foi criada, cria uma nova bola
+              linha 10 - GameObject ballObject = new GameObject(	&#34;Ball	&#34;);
+              linha 11 - instance = ballObject.AddComponent	&#60;Ball&#62;();
+              linha 12 - }
+              linha 13 - return instance;
+              linha 14 - }
+              linha 15 - }
+              linha 16 - linha vazia
+              linha 17 - // Outros métodos e propriedades da bola
+              linha 18 - linha vazia
+              linha 19 - private void Awake() {
+              linha 20 - if (instance == null) {
+              linha 21 - // Se ainda não há uma instância, define esta como a instância única
+              linha 22 - instance = this;
+              linha 23 - }
+              linha 24 - else {
+              linha 25 - // Se já existe uma instância, destrói esta
+              linha 26 - Destroy(gameObject);
+              linha 27 - }
+              linha 28 - }
+              linha 29 - }
+          "
+          />
 
           <p>
             A classe Ball representa a bola do jogo de vôlei. Aqui, o padrão
@@ -692,11 +725,43 @@
             cada tipo de unidade.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue3/imagem10.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue3/imagem10.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - public abstract class Unit{
+              linha 2 - public abstract void Attack();
+              linha 3 - }
+              linha 4 - linha vazia
+              linha 5 - public class Soldier : Unit{
+              linha 6 - public override void Attack(){
+              linha 7 - Debug.Log(&#34;Ataque do soldado!&#34;);
+              linha 8 - }
+              linha 9 -  &#47;&#47; Outros métodos específicos para o soldado
+              linha 10 - }
+              linha 11 - linha vazia
+              linha 12 - public class Archer : Unit{
+              linha 13 - public override void Attack(){
+              linha 14 - Debug.Log(	&#34;Ataque do arqueiro!	&#34;);
+              linha 15 - }
+            "
+          />
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue3/imagem11.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue3/imagem11.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - // Outros métodos específicos para o arqueiro
+              linha 2 - }
+              linha 3 - linha vazia
+              linha 4 - public class Knight : Unit{
+              linha 5 - public override void Attack(){
+              linha 6 - Debug.Log(&#34;Ataque do cavaleiro!	&#34;);
+              linha 7 - }
+              linha 8 - // Outros métodos específicos para o cavaleiro
+              linha 9 - }
+            "
+          />
 
           <p>
             Em seguida, devemos criar uma classe UnitFactory que contém um
@@ -705,19 +770,61 @@
             a fábrica cria e retorna a instância apropriada da unidade.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue3/imagem12.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue3/imagem12.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - public class UnitFactory{
+              linha 2 - public Unit CreateUnit(string unitType){
+              linha 3 - switch (unitType){
+              linha 4 - case 	&#34;Soldier	&#34;:
+              linha 5 - return new Soldier();
+              linha 6 - case 	&#34;Archer	&#34;:
+              linha 7 - return new Archer();
+              linha 8 - case 	&#34;Knight	&#34;:
+              linha 9 - return new Knight();
+              linha 10 - default:
+              linha 11 - throw new ArgumentException(	&#34;Invalid unit type	&#34;);
+              linha 12 - }
+              linha 13 - }
+              linha 14 - }
+            "
+          />
 
           <p>
             No código do jogo, podemos usar a fábrica de unidades (UnitFactory)
             para criar instâncias das unidades conforme necessário:
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue3/imagem13.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue3/imagem13.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - public class Game : MonoBehaviour{
+              linha 2 - private UnitFactory unitFactory;
+              linha 3 - 
+              linha 4 - private void Start(){
+              linha 5 - unitFactory = new UnitFactory();
+              linha 6 - 
+              linha 7 - // Criação de unidades
+              linha 8 - Unit soldier = unitFactory.CreateUnit(&#34;Soldier&#34;);
+              linha 9 - Unit archer = unitFactory.CreateUnit(&#34;Archer&#34;);
+              linha 10 - Unit knight = unitFactory.CreateUnit(&#34;Knight&#34;);
+            "
+          />
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue3/imagem14.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue3/imagem14.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - // Utilização das unidades criadas
+              linha 2 - soldier.Attack();
+              linha 3 - archer.Attack();
+              linha 4 - knight.Attack();
+              linha 5 - }
+              linha 6 - }
+            "
+          />
 
           <p>
             O padrão Factory pode ser representado graficamente pelo diagrama de

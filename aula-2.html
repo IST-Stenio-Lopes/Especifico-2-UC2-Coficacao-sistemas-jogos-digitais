@@ -400,8 +400,30 @@
             </li>
           </ul>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem4.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem4.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+                linha 1 - public class PlayerCharacter : MonoBehaviour{
+                linha 2 - private List&#60;Enemy> enemies = new List&#60;Enemy>();
+                linha 3 - linha vazia
+                linha 4 - public void RegisterEnemy(Enemy enemy){
+                linha 5 - enemies.Add(enemy);
+                linha 6 - }
+                linha 7 - linha vazia
+                linha 8 - public void UnregisterEnemy(Enemy enemy){
+                linha 9 - enemies.Remove(enemy);
+                linha 10 - }
+                linha 11 - linha vazia
+                linha 12 - public void NotifyEnemiesDefeated(){
+                linha 13 - foreach (Enemy enemy in enemies)
+                linha 14 - {
+                linha 15 - enemy.OnDefeated();
+                linha 16 - }
+                linha 17 - }
+                linha 18 - }
+            "
+          />
 
           <p>
             Em seguida, devemos criar uma classe Observer, vamos dar o nome
@@ -410,8 +432,28 @@
             notificar os observadores.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem5.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem5.png"
+            alt=" Imagem do prompt de comando, com o seguinte código:
+            linha 1 - public class Enemy : MonoBehaviour{
+            linha 2 - private PlayerCharacter playerCharacter;
+            linha 3 - linha vazia
+            linha 4 - private void Start(){
+            linha 5 - playerCharacter = FindObjectOfType&#60;PlayerCharacter>();
+            linha 6 - playerCharacter.RegisterEnemy(this);
+            linha 7 - }
+            linha 8 - private void OnDestroy(){
+            linha 9 - if (playerCharacter != null){
+            linha 10 - playerCharacter.UnregisterEnemy(this);
+            linha 11 - }
+            linha 12 - }
+            linha 13 - public void OnDefeated(){
+            linha 14 - Debug.Log(&#34;Ação a ser executada quando o inimigo for derrotado!&#34;);
+            linha 15 - }
+            linha 16 - }
+            "
+          />
 
           <p>
             Agora sim, quando um inimigo for derrotado, ele chamará o método
@@ -760,8 +802,16 @@
             o método Attack().
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem10.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem10.png"
+            alt=" Imagem do prompt de comando, com o seguinte código:
+              linha 1 - // Interface para os comportamentos das armas
+              linha 2 - public interface IWeaponBehavior{
+              linha 3 - void Attack();
+              linha 4 - }
+          "
+          />
 
           <p>
             A seguir, vamos implementar duas classes concretas para os
@@ -769,11 +819,28 @@
             implementando a interface IWeaponBehavior.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem11.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem11.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+            linha 1 - public class SwordBehavior : IWeaponBehavior{
+            linha 2 - public void Attack(){
+            linha 3 - Debug.Log(&#34;Ataque com espada!	&#34;);
+            linha 4 - }
+            linha 5 - }"
+          />
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem12.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem12.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+                  linha 1 - public class AxeBehavior : IWeaponBehavior{
+                  linha 2 - public void Attack(){
+                  linha 3 - Debug.Log(&#34;Ataque com machado!&#34;);
+                  linha 4 - }
+                  linha 5 - }
+          "
+          />
 
           <p>
             A classe Character representa um personagem no jogo e possui um
@@ -781,8 +848,24 @@
             método Attack() para realizar o ataque com a arma atual.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem13.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem13.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+            linha 1 - public class Character : MonoBehaviour{
+            linha 2 - private IWeaponBehavior weaponBehavior;
+            linha 3 - linha vazia
+            linha 4 - public void SetWeaponBehavior(IWeaponBehavior weaponBehavior){
+            linha 5 - this.weaponBehavior = weaponBehavior;
+            linha 6 - }
+            linha 7 - public void Attack() {
+            linha 8 - if (weaponBehavior != null){
+            linha 9 - weaponBehavior.Attack();
+            linha 10 - }
+            linha 11 - }
+            linha 12 - }
+          "
+          />
 
           <p>
             Por fim, para testar a implementação do Padrão Strategy, vamos
@@ -793,11 +876,35 @@
             ataque com o machado.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem14.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+            linha 1 - public class Game : MonoBehaviour&#123;
+            linha 2 - private Character character;
+          "
+          />
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem15.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem15.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+            linha 1 - private void Start(){
+            linha 2 - character = new Character();
+            linha 3 - }
+            linha 4 - void Update(){
+            linha 5 - if (Input.GetKeyDown(KeyCode.S)){
+            linha 6 - character.SetWeaponBehavior(new SwordBehavior());
+            linha 7 - character.Attack();
+            linha 8 - }
+            linha 9 - if (Input.GetKeyDown(KeyCode.A)){
+            linha 10 - character.SetWeaponBehavior(new AxeBehavior());
+            linha 11 - character.Attack();
+            linha 12 - }
+            linha 13 - }
+            linha 14 - &#125;
+          "
+          />
 
           <img
             class="w-75 m-auto"
@@ -1005,16 +1112,32 @@
             Visit() para cada tipo de visitante (ação) no jogo.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem18.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem18.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+            linha 1 - public interface IVisitor{
+            linha 2 - void Visit(Hero hero);
+            linha 3 - void Visit(Monster monster);
+            linha 4 - void Visit(NPC npc);
+            linha 5 - }
+          "
+          />
 
           <p>
             Em seguida, temos a classe abstrata Personagem, que representa a
             classe base para os elementos visitáveis (personagens) no jogo.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem19.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem19.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+            linha 1 - public abstract class Personagem : MonoBehaviour{
+            linha 2 - public abstract void Accept(IVisitor visitor);
+            linha 3 - }
+          "
+          />
 
           <p>
             Então, cada personagem (Hero, Monster, NPC) implementa o método
@@ -1022,14 +1145,41 @@
             de visita correspondente.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem20.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem20.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+            linha 1 - public class Hero : Personagem{ 
+            linha 2 - public override void Accept(IVisitor visitor){
+            linha 3 - visitor.Visit(this);
+            linha 4 - }
+            linha 5 - }
+          "
+          />
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem21.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem21.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+            linha 1 - public class Monster : Personagem{
+            linha 2 - public override void Accept(IVisitor visitor){
+            linha 3 - visitor.Visit(this);
+            linha 4 - }
+            linha 5 - }
+          "
+          />
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem22.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem22.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+            linha 1 - public class NPC : Personagem{
+            linha 2 - public override void Accept(IVisitor visitor){
+            linha 3 - visitor.Visit(this);
+            linha 4 - }
+            linha 5 - }
+          "
+          />
 
           <p>
             Agora, vamos criar uma implementação concreta do visitante (ação),
@@ -1039,8 +1189,25 @@
             NPC, a ação definida é “negociar”.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem23.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem23.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+            linha 1 - public class ActionVisitor : IVisitor{
+            linha 2 - public void Visit(Hero hero){
+            linha 3 - Debug.Log(&#34;Herói atacando!&#34;);
+            linha 4 - }
+            linha 5 - 
+            linha 6 - public void Visit(Monster monster){
+            linha 7 - Debug.Log(&#34;Monstro atacando!&#34;);
+            linha 8 - }
+            linha 9 - 
+            linha 10 - public void Visit(NPC npc){
+            linha 11 - Debug.Log(&#34;NPC negociando!&#34;);
+            linha 12 - }
+            linha 13 - }
+          "
+          />
 
           <p>
             Na classe Game, no método Start(), devemos criar instâncias dos
@@ -1050,9 +1217,27 @@
             ação apropriada definida pelo visitante.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem24.png" alt="" />
-
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem24.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - public class Game : MonoBehaviour
+              linha 2 - {
+              linha 3 - private void Start()
+              linha 4 - {
+              linha 5 - Character hero = new Hero();
+              linha 6 - Character monster = new Monster();
+              linha 7 - Character npc = new NPC();
+              linha 8 - linha vazia
+              linha 9 - IVisitor actionVisitor = new ActionVisitor();
+              linha 10 - linha vazia
+              linha 11 - hero.Accept(actionVisitor);
+              linha 12 - monster.Accept(actionVisitor);
+              linha 13 - npc.Accept(actionVisitor);
+              linha 14 - }
+              linha 15 - }
+          "
+          />
           <p>
             Percebeu como o padrão Visitor permite implementar ações específicas
             de interação entre os personagens de forma flexível e modular. É
@@ -1233,11 +1418,39 @@
             entre outros.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem27.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem27.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+            linha 1 - public class GameMediator : MonoBehaviour&#123;
+            linha 2 - private Dictionary&#60;int, Player> players = new Dictionary&#60;int, 
+            linha 3 - Player>();
+          "
+          />
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem28.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem28.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - public void RegisterPlayer(int playerId, Player player){
+              linha 2 - players.Add(playerId, player);
+              linha 3 - }
+              linha 4 - linha vazia
+              linha 5 - public void UnregisterPlayer(int playerId){
+              linha 6 - players.Remove(playerId);
+              linha 7 - }
+              linha 8 - linha vazia
+              linha 9 - public void NotifyMovement(int playerId, Vector3 newPosition){
+              linha 10 - if (players.ContainsKey(playerId)){
+              linha 11 - Player player = players[playerId];
+              linha 12 - player.MoveTo(newPosition);
+              linha 13 - }
+              linha 14 - }
+              linha 15 - linha vazia
+              linha 16 - // Outros métodos de notificação, como mensagens, ataques, etc.
+              linha 17 - &#125;
+          "
+          />
 
           <p>
             A seguir, criaremos a classe Player, esta representa o jogador no
@@ -1247,8 +1460,28 @@
             movimento do jogador para uma nova posição.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem29.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem29.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+            linha 1 - public class Player : MonoBehaviour{
+            linha 2 - public int playerId;
+            linha 3 - private GameMediator mediator;
+            linha 4 - linha vazia
+            linha 5 - public void Initialize(int playerId, GameMediator mediator){
+            linha 6 - this.playerId = playerId;
+            linha 7 - this.mediator = mediator;
+            linha 8 - mediator.RegisterPlayer(playerId, this);
+            linha 9 - }
+            linha 10 - linha vazia
+            linha 11 - public void MoveTo(Vector3 newPosition){
+            linha 12 - // Lógica de movimento do jogador
+            linha 13 - }
+            linha 14 - linha vazia
+            linha 15 - // Outros métodos do jogador, como atacar, enviar mensagens, etc.
+            linha 16 - }
+          "
+          />
 
           <p>
             Na classe Game, durante o início do jogo, é obtida uma referência ao
@@ -1256,8 +1489,37 @@
             respectivos IDs e o mediador.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue2/imagem30.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue2/imagem30.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+            linha 1 - public class Game : MonoBehaviour{
+            linha 2 - private GameMediator mediator;
+            linha 3 - linha vazia
+            linha 4 - private void Start(){
+            linha 5 - mediator = FindObjectOfType	&#60;GameMediator>();
+            linha 6 - linha vazia
+            linha 7 - // Criar e inicializar os jogadores
+            linha 8 - Player player1 = Instantiate(playerPrefab);
+            linha 9 - player1.Initialize(1, mediator);
+            linha 10 - 
+            linha 11 - Player player2 = Instantiate(playerPrefab);
+            linha 12 - player2.Initialize(2, mediator);
+            linha 13 - }
+            linha 14 - linha vazia
+            linha 15 - private void Update(){
+            linha 16 - // Exemplo de interação do jogador para mover o personagem
+            linha 17 - if (Input.GetKeyDown(KeyCode.A)){
+            linha 18 - mediator.NotifyMovement(1, new Vector3(0, 0, 1));
+            linha 19 - }
+            linha 20 - else if (Input.GetKeyDown(KeyCode.D)) {
+            linha 21 - mediator.NotifyMovement(1, new Vector3(0, 0, -1));
+            linha 22 - }
+            linha 23 - // ...
+            linha 24 - }
+            linha 25 - }
+          "
+          />
 
           <p>
             No exemplo de implementação dentro do método Update, quando as

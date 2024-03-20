@@ -358,16 +358,32 @@
             comportamento básico de uma armadura.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue4/imagem5.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/imagem5.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - public interface IArmor{ 
+              linha 2 - int GetDefense(); 
+              linha 3 - } 
+              "
+          />
 
           <p>
             Após isso, vamos criar a classe BasicArmor, que representa a
             armadura padrão do cavaleiro.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue4/imagem6.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/imagem6.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+            linha 1 - public class BasicArmor : MonoBehaviour, IArmor{
+            linha 2 - public int GetDefense(){
+            linha 3 - return 10; // Valor de defesa da armadura básica
+            linha 4 - }
+            linha 5 - }
+            "
+          />
 
           <p>
             Agora é a hora de criar o decorator, materializado na classe
@@ -375,27 +391,86 @@
             adicionais que podem ser decorados na armadura.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue4/imagem7.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/imagem7.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - public abstract class ArmorDecorator : MonoBehaviour, IArmor{
+              linha 2 - protected IArmor decoratedArmor;
+              linha 3 - linha vazia
+              linha 4 - public void SetDecoratedArmor(IArmor armor){
+              linha 5 - decoratedArmor = armor;
+              linha 6 - }
+              linha 7 - linha vazia
+              linha 8 - public virtual int GetDefense(){
+              linha 9 - return decoratedArmor.GetDefense();
+              linha 10 - }
+              linha 11 - }
+            "
+          />
 
           <p>
             Podemos agora criar algumas classes de elementos adicionais que
             podem ser decorados na armadura.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue4/imagem8.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/imagem8.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - {
+              linha 2 - public override int GetDefense()
+              linha 3 - {
+              linha 4 - return base.GetDefense() + 5; // ganha pontos de defesa pelo revestimento de ferro
+              linha 5 - }
+              linha 6 - }
+              linha 7 - linha vazia
+              linha 8 - public class SpikedShoulders : ArmorDecorator
+              linha 9 - {
+              linha 10 - public override int GetDefense()
+              linha 11 - {
+              linha 12 - return base.GetDefense() + 3; // ganha pontos de defesa pelos ombreiras com pontas
+              linha 13 - }
+              linha 14 - }
+              linha 15 - linha vazia
+              linha 16 - public class EnchantedCloak : ArmorDecorator
+              linha 17 - {
+              linha 18 - public override int GetDefense()
+              linha 19 - {
+              linha 20 - return base.GetDefense() + 7; // ganha pontos de defesa pela capa encantada
+              linha 21 - }
+              linha 22 - }
+            "
+          />
 
           <p>
             Por fim, podemos usar essas classes para criar diferentes
             combinações de armaduras decoradas.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue4/imagem9.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/imagem9.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - BasicArmor basicArmor = new BasicArmor();
+              linha 2 - SpikedShoulders spikedShoulders = new SpikedShoulders();
+              linha 3 - IronPlating ironPlating = new IronPlating();
+            "
+          />
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue4/imagem10.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/imagem10.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - EnchantedCloak enchantedCloak = new EnchantedCloak();
+              linha 2 - linha vazia
+              linha 3 - spikedShoulders.SetDecoratedArmor(basicArmor);
+              linha 4 - ironPlating.SetDecoratedArmor(spikedShoulders);
+              linha 5 - enchantedCloak.SetDecoratedArmor(ironPlating);
+              linha 6 - linha vazia
+              linha 7 - int totalDefense = enchantedCloak.GetDefense(); // Pontos de defesa totais do cavaleiro com a armadura decorada
+            "
+          />
 
           <p>
             Nesse exemplo, podemos adicionar elementos extras à armadura do
@@ -770,8 +845,17 @@
             inimigos.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue4/imagem14.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/imagem14.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - // Interface comum para todos os inimigos
+              linha 2 - public interface IEnemy
+              linha 3 - {
+              linha 4 - void Attack();
+              linha 5 - }
+            "
+          />
 
           <p>
             Depois, implementaremos a classe que será adaptada. Aqui, essa
@@ -779,8 +863,21 @@
             diferente dos demais, pois ele lança feitiços.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue4/imagem15.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/imagem15.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - // Adaptee: Classe específica para um inimigo que lança feitiços
+              linha 2 - public class EnemyWizard
+              linha 3 - {
+              linha 4 - public void CastSpell()
+              linha 5 - {
+              linha 6 - // Implementação específica para lançamento de feitiços
+              linha 7 - Debug.Log(&#34;O inimigo lança um feitiço poderoso.&#34;);
+              linha 8 - }
+              linha 9 - }
+            "
+          />
 
           <p>
             Então, implementa-se o Adaptador. Essa classe fica entre a interface
@@ -788,16 +885,57 @@
             adaptador do tipo de ataque.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue4/imagem16.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/imagem16.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - // Adapter: Adapta o EnemyWizard para a interface IEnemy
+              linha 2 - linha vazia
+              linha 3 - public class EnemyAdapter : IEnemy
+              linha 4 - {
+              linha 5 - private EnemyWizard _wizard;
+              linha 6 - linha vazia
+              linha 7 - public EnemyAdapter(EnemyWizard wizard)
+              linha 8 - {
+              linha 9 - _wizard = wizard;
+              linha 10 - }
+              linha 11 - linha vazia
+              linha 12 - public void Attack()
+              linha 13 - {
+              linha 14 - // Traduz a chamada de Attack para CastSpell
+              linha 15 - _wizard.CastSpell();
+              linha 16 - }
+              linha 17 - }
+            "
+          />
 
           <p>
             Por fim, implementamos esse código no nosso cliente, ou seja, no
             script do jogo.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue4/imagem17.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/imagem17.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - // Script Unity que utiliza o padrão Adapter
+              linha 2 - public class Game : MonoBehaviour
+              linha 3 - {
+              linha 4 - void Start()
+              linha 5 - {
+              linha 6 - // Cria uma instância do Adaptee
+              linha 7 - EnemyWizard wizard = new EnemyWizard();
+              linha 8 - linha vazia
+              linha 9 - // Cria uma instância do Adapter e passa o Adaptee
+              linha 10 - IEnemy wizardAdapter = new EnemyAdapter(wizard);
+              linha 11 - linha vazia
+              linha 12 - // Chama o método Attack do Adapter, que internamente chama CastSpell do
+              linha 13 - Adaptee
+              linha 14 - wizardAdapter.Attack();
+              linha 15 - }
+              linha 16 - }
+            "
+          />
 
           <p>
             Neste script <strong>Unity Game</strong>, quando o método Start é
@@ -992,11 +1130,29 @@
             armamentos).
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue4/imagem19.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/imagem19.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - public class ColetaEnergia{
+              linha 2 - public void responsability() {
+              linha 3 - Debug.Log(&#34;Coletar energia para a base&#34;);
+              linha 4 - }
+              linha 5 - }
+            "
+          />
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue4/imagem20.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/imagem20.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - public class ProduzirArmamento{
+              linha 2 - public void responsability() {
+              linha 3 - Debug.Log(&#34;Produzir armamentos&#34;);
+              linha 4 - }
+              linha 5 - }
+            "
+          />
 
           <p>
             Note que as três classes possuem a mesma estrutura, têm o método
@@ -1005,8 +1161,29 @@
             o papel do nosso centro de controle.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue4/imagem21.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/imagem21.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - public class GameFacade
+              linha 2 - {
+              linha 3 - private ColetaEnergia coletaEnergia;
+              linha 4 - private ProduzirArmamento armamento;
+              linha 5 - linha vazia
+              linha 6 - public GameFacade()
+              linha 7 - {
+              linha 8 - coletaEnergia = new ColetaEnergia();
+              linha 9 - armamento = new ProduzirArmamento();
+              linha 10 - }
+              linha 11 - linha vazia
+              linha 12 - public void UpdateGame()
+              linha 13 - {
+              linha 14 - coletaEnergia.responsability();
+              linha 15 - armamento.responsability();
+              linha 16 - }
+              linha 17 - }
+            "
+          />
 
           <p>
             No código do jogo na Unity, podemos criar uma instância da
@@ -1017,8 +1194,23 @@
             jogo.
           </p>
 
-          <!--TODO ALT-->
-          <img class="w-75 m-auto" src="./img/ue4/imagem22.png" alt="" />
+          <img
+            class="w-75 m-auto"
+            src="./img/ue4/imagem22.png"
+            alt="Imagem do prompt de comando, com o seguinte código:
+              linha 1 - public class Game : MonoBehaviour{
+              linha 2 - private GameFacade gameFacade;
+              linha 3 - linha vazia
+              linha 4 - private void Start() {
+              linha 5 - gameFacade = new GameFacade();
+              linha 6 - }
+              linha 7 - linha vazia
+              linha 8 - private void Update(){
+              linha 9 - gameFacade.UpdateGame();
+              linha 10 - }
+              linha 11 - }
+            "
+          />
 
           <p>
             Percebeu que solicitamos ao GameFacade para executar duas operações
