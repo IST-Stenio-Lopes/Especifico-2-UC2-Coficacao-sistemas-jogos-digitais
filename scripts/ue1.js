@@ -82,7 +82,7 @@ var question2 = {
 
 var question3 = {
   type: "RADIO",
-  title: "QUESTÃO 3",
+  title: "QUESTÃO 3 - Verdadeiro ou Falso",
   description:
     "Quando dois conjuntos de dados distintos resultam numa mesma função hash criptografada, esse ataque se chama Man-in-the-Middle.",
   feedbacks: [

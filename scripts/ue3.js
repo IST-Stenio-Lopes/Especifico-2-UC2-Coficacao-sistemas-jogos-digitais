@@ -2,7 +2,7 @@ var question1 = {
   type: "RADIO",
   title: "QUESTÃO 1",
   description:
-    "O que caracteriza o modelo de segurança da informação baseado em padrões e regulamentações?",
+    "Qual dos seguintes padrões de projeto NÃO é um padrão criacional?",
   feedbacks: [
     {
       optionId: "q1-option-1",

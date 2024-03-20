@@ -83,7 +83,8 @@ var question3 = {
 var question4 = {
   type: "RADIO",
   title: "Questão 4",
-  description: "Na engine de jogos Unity, o que é um GameObject?",
+  description:
+    "Quais são as características da Programação Orientada a Componentes em Unity?",
   feedbacks: [
     {
       optionId: "q4-option-1",

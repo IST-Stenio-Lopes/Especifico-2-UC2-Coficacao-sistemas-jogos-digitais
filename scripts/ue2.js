@@ -1,7 +1,8 @@
 var question1 = {
   type: "RADIO",
-  title: "Verdadeiro ou Falso",
-  description: "Avalie se a afirmação a seguir é verdadeira ou falsa.",
+  title: "QUESTÃO 1 - Avalie se a afirmação a seguir é verdadeira ou falsa.",
+  description:
+    "O padrão de projeto Observer é enquadrado, quanto ao propósito, na categoria criacional.",
   feedbacks: [
     {
       optionId: "q1-option-1",
@@ -24,8 +25,9 @@ var question1 = {
 
 var question2 = {
   type: "RADIO",
-  title: "Verdadeiro ou Falso",
-  description: "Avalie se a afirmação a seguir é verdadeira ou falsa.",
+  title: "QUESTÃO 2 - Avalie se a afirmação a seguir é verdadeira ou falsa.",
+  description:
+    "O Padrão Strategy permite que um objeto mude seu comportamento em tempo de execução, escolhendo entre diferentes algoritmos ou estratégias.",
   feedbacks: [
     {
       optionId: "q2-option-1",
@@ -48,8 +50,9 @@ var question2 = {
 
 var question3 = {
   type: "RADIO",
-  title: "Verdadeiro ou Falso",
-  description: "Avalie se a afirmação a seguir é verdadeira ou falsa.",
+  title: "QUESTÃO 3 - Avalie se a afirmação a seguir é verdadeira ou falsa.",
+  description:
+    "O Padrão Visitor permite que uma nova operação seja executada em um grupo de objetos, sem que esses objetos precisem ser modificados.",
   feedbacks: [
     {
       optionId: "q3-option-1",
@@ -74,7 +77,7 @@ var question4 = {
   type: "RADIO",
   title: "QUESTÃO 4",
   description:
-    "O que caracteriza o modelo de segurança da informação baseado em padrões e regulamentações?",
+    "Qual das seguintes afirmações sobre o padrão de projetos Mediator é verdadeira?",
   feedbacks: [
     {
       optionId: "q4-option-1",
