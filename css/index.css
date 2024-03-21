@@ -592,6 +592,7 @@ th:first-child {
   padding: 1.125rem 1rem;
   gap: 0.625rem;
   margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -1341,4 +1342,8 @@ a:active {
   background-color: transparent;
   border: 0;
   cursor: pointer;
+}
+
+.text-left {
+  text-align: left !important;
 }

@@ -2,7 +2,7 @@
 loadPage();
 var aulaAtual = doLMSGetLessonLocation() || 1;
 var lessonStatus = doLMSGetLessonStatus();
-var lastPage = 9;
+var lastPage = 16;
 
 function updateLessonPage() {
   doLMSSetLessonLocation(aulaAtual);
