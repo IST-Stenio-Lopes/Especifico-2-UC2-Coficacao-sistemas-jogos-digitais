@@ -20,31 +20,71 @@
       rel="stylesheet"
     />
 
+    <!-- Generic CSS -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/global/question.css" />
+
     <!-- SCORM -->
     <script type="text/javascript" src="scripts/APIWrapper.js"></script>
     <script type="text/javascript" src="scripts/SCOFunctions.js"></script>
 
     <!-- Javascript -->
     <script type="text/javascript" src="scripts/index.js"></script>
+    <script src="./scripts/questions.js"></script>
 
     <!-- JQUERY v3.3.1 -->
     <script type="text/javascript" src="scripts/jquery.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* Estilos para exibir o pre-loader */
+      .preloader {
+        background: #1a1827 url(img/global/icons/pre-loader.gif) no-repeat
+          center center;
+        background-size: 8%;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 99999;
+      }
+      .pre-loader-hidden {
+        display: none;
+      }
+    </style>
   </head>
 
   <body onunload="unloadPage();">
-    <div id="root"></div>
+    <div id="preloader1" class="preloader"></div>
+    <div id="root" class="hidden"></div>
     <script>
-      carregarHTML(aulaAtual);
+      var valor = 0;
+
+      document.addEventListener("DOMContentLoaded", function () {
+        carregarHTML(aulaAtual);
+      });
 
       function carregarHTML(id) {
+        document
+          .getElementById("preloader1")
+          .classList.remove("pre-loader-hidden");
+        document.getElementById("root").classList.add("hidden");
         if (id != "x") {
           $(function () {
-            $("#root").load("aula-" + id + ".html#root", () => {
+            $("#root").load("aula-" + id + ".html#root", function () {
+              setTimeout(function () {
+                document.getElementById("root").classList.remove("hidden");
+                document
+                  .getElementById("preloader1")
+                  .classList.add("pre-loader-hidden");
+              }, valor);
+
               aulaAtual = id;
               updateLessonPage();
               changeFontSize();
-              document.body.scrollTop = 0;
-              document.documentElement.scrollTop = 0;
+              window.scrollTo({ top: 0, behavior: "instant" });
             });
           });
         }
