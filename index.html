@@ -85,10 +85,23 @@
         }
       };
 
-      const carregarFichaTecnica = () => {
+      const carregarFichaCreditos = () => {
+        document
+          .getElementById("preloader1")
+          .classList.remove("pre-loader-hidden");
+        document.getElementById("root").classList.add("hidden");
+
         $(() => {
-          $("#root").load("ficha-tecnica.html#root");
-          window.scrollTo({ top: 0, behavior: "instant" });
+          $("#root").load("ficha-creditos.html#root", () => {
+            setTimeout(() => {
+              document.getElementById("root").classList.remove("hidden");
+              document
+                .getElementById("preloader1")
+                .classList.add("pre-loader-hidden");
+            }, valor);
+
+            window.scrollTo({ top: 0, behavior: "instant" });
+          });
         });
       };
 
