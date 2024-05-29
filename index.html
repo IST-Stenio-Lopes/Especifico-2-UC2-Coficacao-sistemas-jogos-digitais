@@ -66,15 +66,17 @@
         carregarHTML(aulaAtual);
       });
 
-      function carregarHTML(id) {
+      const carregarHTML = (id) => {
+
         document
           .getElementById("preloader1")
           .classList.remove("pre-loader-hidden");
         document.getElementById("root").classList.add("hidden");
         if (id != "x") {
-          $(function () {
-            $("#root").load("aula-" + id + ".html#root", function () {
-              setTimeout(function () {
+          $(() => {
+            $("#root").load(`aula-${id}.html#root`, () => {
+              setTimeout(() => {
+
                 document.getElementById("root").classList.remove("hidden");
                 document
                   .getElementById("preloader1")
@@ -88,28 +90,40 @@
             });
           });
         }
-      }
+      };
 
-      function carregarFichaTecnica() {
-        $(function () {
-          $("#root").load("ficha-tecnica.html#root");
+      const carregarFichaCreditos = () => {
+        document
+          .getElementById("preloader1")
+          .classList.remove("pre-loader-hidden");
+        document.getElementById("root").classList.add("hidden");
 
-          window.scrollTo({ top: 0, behavior: "instant" });
+        $(() => {
+          $("#root").load("ficha-creditos.html#root", () => {
+            setTimeout(() => {
+              document.getElementById("root").classList.remove("hidden");
+              document
+                .getElementById("preloader1")
+                .classList.add("pre-loader-hidden");
+            }, valor);
+
+            window.scrollTo({ top: 0, behavior: "instant" });
+          });
         });
-      }
+      };
 
       // ajustes Moodle e T2K
-      setTimeout(function () {
+      setTimeout(() => {
         if (top.document.getElementById("scorm_layout")) {
           top.document.getElementById("scorm_layout").style.height = "100vh";
         }
 
         // Usado no T2K para forçar a saida do LMS e Ajustes de Layout
         if (top.document.getElementById("blsm-qp-exit")) {
-          var parent = top.document.getElementById("blsm-qp-exit");
+          const parent = top.document.getElementById("blsm-qp-exit");
           parent.addEventListener(
             "click",
-            function (event) {
+            (event) => {
               unloadPage();
             },
             true
@@ -122,7 +136,7 @@
             "19px";
           top.document.getElementsByClassName("launcher")[0].style.padding =
             "unset";
-          window.addEventListener("resize", function (e) {
+          window.addEventListener("resize", (e) => {
             top.document.getElementById("scorm_content").style.height =
               "calc(100vh - 30px)";
           });

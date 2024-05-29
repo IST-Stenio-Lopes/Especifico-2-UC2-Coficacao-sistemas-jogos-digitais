@@ -3,6 +3,10 @@
   max-width: 700px;
 }
 
+.list-none {
+  list-style-type: none !important;
+}
+
 .content-ficha {
   display: flex;
   flex-direction: column;
@@ -20,11 +24,11 @@
 .text-name {
   font-size: 1em;
   font-weight: 400;
+  font-style: italic;
 }
 
 .text-profession {
   font-size: 0.875em;
-  font-style: italic;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 1em;
 }
