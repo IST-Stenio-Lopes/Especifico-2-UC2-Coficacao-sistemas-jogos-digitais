@@ -108,7 +108,6 @@
 td,
 .greyTable tbody td:last-child {
   border: none;
-  vertical-align: text-top;
 }
 
 .greyTable tbody td {
