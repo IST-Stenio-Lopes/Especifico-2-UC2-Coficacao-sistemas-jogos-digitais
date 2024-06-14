@@ -1,3 +1,15 @@
+.change-orange li {
+  color: #ef8e2e;
+}
+
+.change-orange ul li {
+  color: #fff;
+}
+
+.dark-mode .change-orange ul li {
+  color: #464742;
+}
+
 .background-parallax1 {
   background-image: url("../img/ue14/parallax1.jpg");
 }

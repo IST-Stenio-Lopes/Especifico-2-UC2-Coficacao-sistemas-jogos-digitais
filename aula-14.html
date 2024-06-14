@@ -16,9 +16,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/global/question.css" />
+
     <link rel="stylesheet" href="./css/aula14.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/table.css" />
+    <link rel="stylesheet" href="./css/global/question.css" />
 
     <script src="./scripts/select.js" defer></script>
     <script src="./scripts/questions.js"></script>
@@ -52,18 +54,55 @@
             <li>2.0 Produção de jogos digitais</li>
           </a>
           <ul type="1" class="mx-1">
-            <a class="listPanel" href="#finishing">
-              <li>2.1 Finalização</li>
+            <a class="listPanel" href="#pre-production">
+              <li>2.1 Pré-produção</li>
             </a>
             <ul type="1" class="mx-1">
-              <a class="listPanel" href="#player-support">
-                <li>2.1.1 Suporte aos jogadores</li>
+              <a class="listPanel" href="#diagrams">
+                <li>2.1.1 Diagramas</li>
               </a>
-              <a class="listPanel" href="#maintenance">
-                <li>2.1.2 Manutenção</li>
+              <ul type="1" class="mx-1">
+                <a class="listPanel" href="#dfd">
+                  <li>2.1.1.1 Diagrama de Fluxo de Dados (DFD)</li>
+                </a>
+                <a class="listPanel" href="#class-diagram">
+                  <li>2.1.1.2 Diagrama de Classes</li>
+                </a>
+                <a class="listPanel" href="#sequence-diagram">
+                  <li>2.1.1.3 Diagrama de Sequência</li>
+                </a>
+                <a class="listPanel" href="#state-diagram">
+                  <li>2.1.1.4 Diagrama de Estados</li>
+                </a>
+                <a class="listPanel" href="#navigation-diagram">
+                  <li>2.1.1.5 Diagrama de Navegação</li>
+                </a>
+                <a class="listPanel" href="#component-diagram">
+                  <li>2.1.1.6 Diagrama de Componentes</li>
+                </a>
+                <a class="listPanel" href="#use-case-diagram">
+                  <li>2.1.1.7 Diagrama de Caso de Uso</li>
+                </a>
+              </ul>
+              <a class="listPanel" href="#functional-non-functional">
+                <li>2.1.2 Requisitos funcionais e não funcionais</li>
               </a>
-              <a class="listPanel" href="#publication">
-                <li>2.1.3 Publicação</li>
+              <ul type="1" class="mx-1">
+                <a class="listPanel" href="#functional-requirements">
+                  <li>2.1.2.1 Requisitos funcionais</li>
+                </a>
+                <a class="listPanel" href="#non-functional-requirements">
+                  <li>2.1.2.2 Requisitos não funcionais</li>
+                </a>
+              </ul>
+              <a class="listPanel" href="#gdd">
+                <li>2.1.3 Game Design Document (GDD)</li>
+              </a>
+              <a class="listPanel" href="#one-page">
+                <li>2.1.4 One Page (GDD)</li>
+              </a>
+              <a class="listPanel" href="#gdd10">
+                <li>2.1.5 GDD de 10 Páginas</li>
               </a>
             </ul>
           </ul>
@@ -134,15 +173,14 @@
           <div class="box-unit-number">
             <span> 14 </span>
           </div>
-          <div class="titleHeader">Pós - produção</div>
+          <div class="titleHeader">Pré - Produção</div>
         </div>
         <div>
           <span>
             <strong class="objectiveLearning">Objetivo de Aprendizagem:</strong>
           </span>
           <span class="text-DescriptUnit">
-            Programar artefatos de integração de elementos multimídia em jogos
-            digitais.
+            Reconhecer o processo de produção de jogos digitais.
           </span>
         </div>
         <div>
@@ -168,7 +206,7 @@
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
-                src="https://www.youtube.com/embed/EWbj7wX57Xg"
+                src="https://www.youtube.com/embed/3bn3asfN_KU"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -177,12 +215,12 @@
               ></iframe>
             </div>
           </div>
-
           <div class="dicas">
             <img src="./img/global/icons/help.png" id="help" />
             <p>
-              Quais as boas práticas de suporte aos jogadores e manutenção do
-              jogo após seu lançamento?
+              Considere os componentes gerais que um jogo deve possuir, tais
+              como: gênero, público alvo, regras e objetivos, estética de
+              personagens e cenários. Como Yan descreveria o seu jogo?
             </p>
           </div>
         </div>
@@ -196,118 +234,101 @@
           <h1 class="text-Title light-orange" id="digital-game-production">
             Produção de jogos digitais
           </h1>
-          <h2 class="text-subtitle1 dark-orange mx-3" id="finishing">
-            Finalização
+
+          <h2 class="text-subtitle1 dark-orange mx-3" id="pre-production">
+            Pré-produção
           </h2>
 
           <p>
-            O processo de finalização no desenvolvimento de jogos digitais é uma
-            etapa fundamental que ocorre após a conclusão da maior parte do
-            trabalho de desenvolvimento do jogo. Nessa fase, o foco está em
-            refinar e polir todos os elementos do jogo, garantindo que ele
-            esteja pronto para ser lançado no mercado e entregue aos jogadores.
+            A pré-produção é uma etapa fundamental no desenvolvimento de jogos
+            digitais, pois é nesse estágio que as bases do jogo são
+            estabelecidas e as decisões cruciais são tomadas. Durante a
+            pré-produção, a equipe de desenvolvimento trabalha na concepção e no
+            planejamento do jogo.
           </p>
 
           <img
             class="w-75 m-auto"
             src="./img/ue14/gif1.gif"
-            alt="Condecoração de Luke e Han Solo no fim de Star Wars - Episódio 4: Uma Nova Esperança."
+            alt="Na animação um gatinho folheando um livro de estratégia."
           />
 
           <p>
-            A finalização envolve uma série de atividades, incluindo testes de
-            qualidade, correção de bugs, ajustes de balanceamento e otimização
-            de desempenho. A seguir analisamos cada uma dessas atividades com
-            mais atenção:
+            O primeiro passo da pré-produção é definir o
+            <strong>conceito do jogo.</strong> Isso envolve a criação da ideia
+            central do jogo, a definição do(s) gênero(s), da temática, dos
+            personagens principais e das mecânicas básicas. É importante ter uma
+            visão clara do jogo que será desenvolvido. Dê um clique e assista ao
+            vídeo a seguir para entender melhor a pré-produção.
+          </p>
+
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://youtube.com/embed/Gl0Y5fCLN0U"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <p>
+            Durante a pré-produção, a equipe de desenvolvimento realiza
+            <strong>pesquisas e busca referências</strong> relacionadas ao jogo.
+            Isso pode envolver estudar jogos semelhantes (análise de similares),
+            explorar elementos visuais, sonoros e narrativos que possam ser
+            relevantes para o jogo em desenvolvimento, e até mesmo buscar
+            inspiração em outras mídias e manifestações artísticas, como filmes,
+            livros e quadrinhos.
           </p>
 
           <p>
-            <strong>Testes de qualidade:</strong> Nesta fase, os testadores
-            jogam o jogo em busca de qualquer problema ou comportamento
-            indesejado. Isso pode incluir falhas técnicas, erros de programação,
-            problemas de jogabilidade, questões de interface do usuário, entre
-            outros.
+            Nesta etapa, o <strong>design do jogo</strong> começa a ser
+            elaborado. Isso inclui a definição dos sistemas de jogo, a criação
+            de diagramas de fluxo de jogo, o planejamento dos níveis ou fases, a
+            definição de regras e mecânicas específicas e a concepção de
+            protótipos iniciais. O objetivo é estabelecer as bases para a
+            jogabilidade e a experiência do jogador.
           </p>
 
           <p>
-            Os testadores documentam cuidadosamente todos os problemas
-            encontrados para que a equipe de desenvolvimento possa corrigi-los.
-            Também conhecido como QA (Quality Assurance), o testador de jogos
-            também fornece feedback aos desenvolvedores sobre a jogabilidade, os
-            gráficos e o áudio.
+            Durante a pré-produção, também é necessário considerar as
+            <strong>restrições e os requisitos do jogo.</strong> Isso pode
+            incluir limitações técnicas, como a plataforma em que o jogo será
+            lançado, a capacidade de processamento do hardware-alvo, as
+            limitações de orçamento ou de tempo, entre outros fatores que
+            influenciam a produção do jogo.
           </p>
 
           <p>
-            O usuário comum que testa o jogo antes de ser lançado ao público é
-            denominado Beta Tester. São figuras importantes para o
-            desenvolvimento de produtos e serviços de alta qualidade.
+            Também é importante estabelecer um
+            <strong>plano de produção</strong> detalhado. Isso envolve a
+            definição de marcos, cronogramas, metas e tarefas específicas que
+            precisam ser realizadas ao longo do desenvolvimento do jogo. O
+            planejamento de produção ajuda a garantir que a equipe de
+            desenvolvimento esteja alinhada, que o progresso seja monitorado e
+            que o jogo seja desenvolvido de maneira eficiente.
           </p>
 
           <p>
-            É importante ressaltar que existem vários tipos diferentes de Beta
-            Testers. Alguns são remunerados, enquanto outros testam produtos ou
-            serviços como voluntários. Alguns Beta Testers são selecionados por
-            desenvolvedores, enquanto outros podem se inscrever para participar
-            de programas de teste beta.
+            Durante a pré-produção, é necessário
+            <strong>montar a equipe de desenvolvimento</strong> adequada para o
+            projeto. Isso pode envolver a contratação de programadores,
+            artistas, designers, compositores e outros profissionais relevantes.
+            É importante ter uma equipe coesa e qualificada para lidar com os
+            diferentes aspectos do desenvolvimento do jogo.
           </p>
 
           <p>
-            <strong>Correção de bugs:</strong> Com base nos relatórios de bugs
-            dos testadores, a equipe de desenvolvimento corrige os problemas
-            identificados.
-          </p>
-
-          <p>
-            Isso envolve depurar o código-fonte, ajustar o comportamento do
-            jogo, consertar elementos gráficos ou sonoros que não estejam
-            funcionando corretamente, entre outras correções necessárias para
-            garantir que o jogo funcione corretamente.
-          </p>
-
-          <p>
-            <strong>Ajustes de balanceamento:</strong> Muitos jogos exigem um
-            ajuste fino para garantir que a jogabilidade seja equilibrada e
-            desafiadora. Isso inclui ajustar a dificuldade, equilibrar as
-            habilidades dos personagens, calibrar os tempos de resposta, ajustar
-            a distribuição de recursos, entre outros aspectos que podem afetar a
-            experiência de jogo.
-          </p>
-
-          <p>
-            Esses ajustes são realizados com base nos feedbacks dos testadores e
-            nas necessidades do público-alvo do jogo.
-          </p>
-
-          <p>
-            <strong>Otimização de desempenho:</strong> Para garantir que o jogo
-            funcione de maneira suave e eficiente em diferentes dispositivos e
-            configurações de hardware, é importante otimizar o desempenho. Isso
-            envolve identificar gargalos de desempenho, reduzir o uso de
-            recursos, melhorar os tempos de carregamento, otimizar a
-            renderização gráfica, entre outros ajustes técnicos para garantir
-            uma experiência de jogo fluida.
-          </p>
-
-          <p>
-            Além de atividades técnicas, a finalização também abrange outros
-            aspectos, como a localização do jogo (tradução para diferentes
-            idiomas), a criação de conteúdo adicional (DLCs - downloadable
-            content) e a preparação para o lançamento e distribuição do jogo.
-            Isso inclui a criação de materiais de marketing, a configuração de
-            plataformas de distribuição (como lojas de aplicativos ou serviços
-            online) e a preparação de campanhas de divulgação.
-          </p>
-
-          <p>
-            O processo de finalização é uma fase intensa que requer uma
-            abordagem meticulosa para garantir que o jogo atenda às expectativas
-            dos jogadores e seja entregue com alta qualidade.
-          </p>
-
-          <p>
-            É importante que todas as etapas sejam cuidadosamente executadas
-            antes do lançamento para garantir uma experiência de jogo
-            satisfatória e minimizar problemas pós-lançamento.
+            Por fim, é necessário estabelecer um <strong>orçamento</strong> para
+            o projeto do jogo. Isso envolve a determinação dos custos associados
+            ao desenvolvimento do jogo, como salários da equipe, software,
+            licenças, marketing e outros gastos relacionados. Ter um orçamento
+            definido ajuda a orientar o desenvolvimento do jogo dentro dos
+            limites financeiros estabelecidos.
           </p>
 
           <!-- inicio questão 1 -->
@@ -316,8 +337,8 @@
               <div class="question-description-container">
                 <p>QUESTÃO 1</p>
                 <p>
-                  Qual das seguintes atividades NÃO faz parte do processo de
-                  finalização no desenvolvimento de jogos digitais?
+                  Qual dos seguintes elementos NÃO faz parte da pré-produção de
+                  um jogo digital?
                 </p>
               </div>
 
@@ -387,7 +408,9 @@
                     />
                   </td>
                   <td>
-                    <label for="q1-option-1"> Testes de qualidade </label>
+                    <label for="q1-option-1"
+                      >Definição do conceito do jogo</label
+                    >
                   </td>
                 </tr>
                 <tr>
@@ -400,7 +423,9 @@
                     />
                   </td>
                   <td>
-                    <label for="q1-option-2"> Correção de bugs </label>
+                    <label for="q1-option-2">
+                      Pesquisa e busca de referências relacionadas ao jogo
+                    </label>
                   </td>
                 </tr>
                 <tr>
@@ -413,7 +438,9 @@
                     />
                   </td>
                   <td>
-                    <label for="q1-option-3"> Ajustes de balanceamento </label>
+                    <label for="q1-option-3">
+                      Desenvolvimento e elaboração do design do jogo
+                    </label>
                   </td>
                 </tr>
                 <tr>
@@ -426,9 +453,24 @@
                     />
                   </td>
                   <td>
-                    <label for="q1-option-4">
-                      Criação de materiais de marketing.
-                    </label>
+                    <label for="q1-option-4"
+                      >Produção e lançamento do jogo no mercado.</label
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      id="q1-option-5"
+                      type="radio"
+                      name="q1-myRadios"
+                      class="question-type-one-radio"
+                    />
+                  </td>
+                  <td>
+                    <label for="q1-option-5"
+                      >Montagem da equipe de desenvolvimento adequada</label
+                    >
                   </td>
                 </tr>
               </table>
@@ -445,39 +487,245 @@
           </div>
           <!-- fim questão 1 -->
 
-          <h3 class="text-subtitle2 blue mx-5" id="player-support">
-            Suporte aos jogadores
+          <h3 class="text-subtitle2 blue mx-5" id="diagrams">Diagramas</h3>
+
+          <p>
+            Os diagramas desempenham um papel importante no desenvolvimento de
+            jogos digitais, pois ajudam a visualizar e comunicar diferentes
+            aspectos do jogo.
+          </p>
+
+          <p>
+            Eles são ferramentas gráficas que representam relações, estruturas e
+            fluxos de informação de forma clara e concisa. Vamos explorar alguns
+            dos diagramas comumente usados em jogos digitais:
+          </p>
+
+          <h4 class="text-subtitle3 blue mx-6" id="dfd">
+            Diagrama de Fluxo de Dados (DFD)
+          </h4>
+
+          <p>
+            O DFD é usado para ilustrar o fluxo de informações dentro do jogo,
+            identificando as entradas, saídas e os processos intermediários. Ele
+            mostra como os dados são coletados, processados e distribuídos entre
+            os diferentes componentes do jogo. O DFD é facilmente elaborado em
+            aplicativos gratuitos como o Lucidchart, MindMeister e o Miro.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue14/imagem1.png"
+            alt="Na imagem, um diagrama de fluxo de dados onde temos à esquerda o Jogador, ao centro o Jogo e à direita o Sistema (Jogo)."
+          />
+
+          <h4 class="text-subtitle3 blue mx-6" id="class-diagram">
+            Diagrama de Classes
+          </h4>
+
+          <p>
+            O diagrama de classes é usado para modelar a estrutura de classes e
+            objetos no jogo. Ele mostra as relações entre as classes, seus
+            atributos e métodos, permitindo uma visão geral da estrutura do
+            código. O diagrama de classes auxilia os desenvolvedores a planejar
+            a arquitetura do jogo e entender a relação entre os diferentes
+            componentes.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue14/imagem2.png"
+            alt="Na imagem, um diagrama de classes."
+          />
+
+          <h4 class="text-subtitle3 blue mx-6" id="sequence-diagram">
+            Diagrama de Sequência
+          </h4>
+
+          <p>
+            O diagrama de sequência é usado para ilustrar a interação entre
+            objetos e a ordem das operações em uma determinada funcionalidade do
+            jogo.
+          </p>
+
+          <p>
+            Ele mostra como os objetos se comunicam e trocam mensagens ao longo
+            do tempo, permitindo uma compreensão clara do fluxo de execução de
+            um determinado processo ou interação do jogo.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue14/imagem3.png"
+            alt="Na imagem, um diagrama de sequência."
+          />
+
+          <h4 class="text-subtitle3 blue mx-6" id="state-diagram">
+            Diagrama de Estados
+          </h4>
+
+          <p>
+            O diagrama de estados é usado para modelar o comportamento de um
+            objeto ou sistema ao longo do tempo.
+          </p>
+
+          <p>
+            Ele mostra os diferentes estados que um objeto pode assumir e as
+            transições entre esses estados. Esse tipo de diagrama é
+            particularmente útil para representar o comportamento de
+            personagens, inimigos, elementos interativos e outros elementos do
+            jogo que possuem estados distintos.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue14/imagem4.png"
+            alt="Na imagem, um diagrama de estados."
+          />
+
+          <h4 class="text-subtitle3 blue mx-6" id="navigation-diagram">
+            Diagrama de Navegação
+          </h4>
+
+          <p>
+            O diagrama de navegação é usado para representar a estrutura de
+            menus, telas e fluxo de navegação do jogo.
+          </p>
+
+          <p>
+            Ele mostra como o jogador pode navegar entre diferentes telas,
+            opções e funcionalidades, proporcionando uma visão geral da
+            estrutura de navegação do jogo e ajudando na usabilidade e na
+            experiência do jogador.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue14/imagem5.png"
+            alt="Na imagem, um diagrama de navegação."
+          />
+
+          <h4 class="text-subtitle3 blue mx-6" id="component-diagram">
+            Diagrama de Componentes
+          </h4>
+
+          <p>
+            O diagrama de componentes é usado para ilustrar a estrutura de
+            componentes e suas dependências no jogo.
+          </p>
+
+          <p>
+            Ele mostra os diferentes módulos, bibliotecas, APIs e outros
+            componentes do sistema, ajudando a identificar as relações e
+            dependências entre eles.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue14/imagem6.png"
+            alt="Na imagem vemos um diagrama de componentes."
+          />
+
+          <h4 class="text-subtitle3 blue mx-6" id="use-case-diagram">
+            Diagrama de Caso de Uso
+          </h4>
+
+          <p>
+            O diagrama de caso de uso é usado para representar as interações
+            entre os atores (jogadores, NPCs, sistemas externos) e as
+            funcionalidades do jogo.
+          </p>
+
+          <p>
+            Ele mostra as diferentes ações que os atores podem realizar no jogo
+            e as respostas do jogo a essas ações.
+          </p>
+
+          <img
+            class="w-75 m-auto"
+            src="./img/ue14/imagem7.png"
+            alt="Na imagem, um diagrama de Casos de Uso."
+          />
+
+          <p>
+            Esses são apenas alguns exemplos de diagramas comumente usados no
+            desenvolvimento de jogos digitais. Cada diagrama serve a um
+            propósito específico e auxilia na compreensão, planejamento e
+            comunicação dos diferentes aspectos do jogo.
+          </p>
+
+          <p>
+            Ao utilizar diagramas, a equipe de desenvolvimento pode visualizar
+            de forma mais clara a estrutura, o fluxo de informações e as
+            interações do jogo, facilitando o processo de desenvolvimento e
+            colaboração entre os membros da equipe.
+          </p>
+
+          <h3 class="text-subtitle2 blue mx-5" id="functional-non-functional">
+            Requisitos funcionais e não funcionais
           </h3>
+
           <p>
-            O suporte aos jogadores desempenha um papel fundamental na indústria
-            do entretenimento interativo, pois garante aos jogadores uma
-            experiência positiva e satisfatória com o jogo e com a empresa
-            desenvolvedora.
+            Nos jogos digitais, os requisitos funcionais e não funcionais
+            desempenham um papel crucial no planejamento e desenvolvimento do
+            jogo.
           </p>
 
           <p>
-            O suporte pode ser oferecido em diferentes formas ao longo do ciclo
-            de vida do jogo, desde o pré-lançamento até o pós-lançamento. Vamos
-            explorar as principais considerações para fornecer suporte ao
-            jogador:
+            Esses requisitos definem as funcionalidades específicas que o jogo
+            deve ter (requisitos funcionais) e as características não
+            relacionadas diretamente às funcionalidades, mas que afetam a
+            experiência geral do jogo (requisitos não funcionais).
           </p>
 
-          <p>
-            <strong>Comunicação pré-lançamento:</strong> Antes do lançamento do
-            jogo, é importante estabelecer canais de comunicação eficazes com os
-            jogadores em potencial. Isso pode ser feito através de blogs,
-            fóruns, redes sociais, newsletters ou até mesmo plataformas de
-            crowdfunding (financiamento coletivo), onde os desenvolvedores podem
-            interagir com os jogadores, responder a perguntas, fornecer
-            atualizações de progresso e receber feedback antecipado.
-          </p>
+          <div class="videoContainer marginVertical">
+            <div class="videoFrame">
+              <iframe
+                src="https://youtube.com/embed/bg6niFYqYXQ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+        gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <h4 class="text-subtitle3 blue mx-6" id="functional-requirements">
+            Requisitos funcionais
+          </h4>
 
           <p>
-            As principais plataformas de financiamento coletivo são o
-            Kickstarter e o Catarse, que possuem um longo histórico de projetos
-            financiados, vide jogos como A Lenda do Herói: o Jogo (R$ 258.487),
-            Shenmue 3 (US$ 6.333,295), e Shovel Knight (US$ 311,502).
+            Referem-se às funcionalidades e recursos específicos que o jogo deve
+            oferecer. Eles descrevem o que o jogo precisa fazer e como ele deve
+            se comportar. Alguns exemplos de requisitos funcionais em jogos
+            digitais incluem:
           </p>
+
+          <ul style="margin-inline-start: 2rem">
+            <li class="my-1">
+              <strong>Mecânicas de jogo:</strong> Definem as regras e interações
+              do jogo, como as ações dos personagens, probabilidades,
+              habilidades, dentre outros.
+            </li>
+            <li class="my-1">
+              <strong>Modos de jogo:</strong> Descrevem os diferentes modos ou
+              tipos de jogos disponíveis, como campanha, multijogador online,
+              cooperativo, jogador contra jogador (PvP), entre outros.
+            </li>
+            <li class="my-1">
+              <strong>Progressão e metas:</strong> Determinam a forma como o
+              jogador avança no jogo, estabelecendo objetivos, recompensas,
+              desbloqueio de novos níveis, habilidades ou itens à medida que
+              progride.
+            </li>
+            <li class="my-1">
+              <strong>Interação com o ambiente:</strong> Define a forma como o
+              jogador pode interagir com o ambiente do jogo, como quebrar
+              objetos, coletar itens, interagir com NPCs (personagens não
+              jogáveis) ou afetar o mundo do jogo.
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -485,52 +733,53 @@
     <!--Parallax-->
     <div class="parallax background-parallax1">
       <div class="cubeBlack">
-        <p>
-          <strong>Suporte técnico:</strong> Durante o jogo, é crucial fornecer
-          suporte técnico eficiente para os jogadores. Isso inclui ajudar os
-          jogadores a solucionar problemas técnicos, como falhas, problemas de
-          desempenho, erros de instalação, entre outros.
-        </p>
+        <ul style="margin-inline-start: 2rem">
+          <li class="my-1">
+            <strong>Interface de usuário:</strong> Descreve a forma como os
+            jogadores interagem com o jogo por meio de menus, HUD (Heads-Up
+            Display), controles, botões, opções de personalização e outras
+            interfaces visuais.
+          </li>
+        </ul>
+
+        <h4 class="text-subtitle3 blue mx-6" id="non-functional-requirements">
+          Requisitos não funcionais
+        </h4>
 
         <p>
-          Uma equipe de suporte deve estar disponível para responder a
-          consultas, fornecer orientações passo a passo e solucionar problemas
-          técnicos de forma rápida e eficiente.
+          Os requisitos não funcionais referem-se a aspectos que não estão
+          diretamente relacionados às funcionalidades do jogo, mas que afetam a
+          experiência do jogador, o desempenho e outros atributos do jogo.
+          Alguns exemplos de requisitos não funcionais em jogos digitais
+          incluem:
         </p>
 
-        <p>
-          <strong>Atualizações e correções de bugs:</strong> Os jogos digitais
-          frequentemente recebem atualizações e correções de bugs para melhorar
-          a experiência do jogador.
-        </p>
-
-        <p>
-          A equipe de desenvolvimento deve monitorar o feedback dos jogadores,
-          identificar problemas recorrentes e implementar soluções por meio de
-          atualizações regulares. Isso demonstra um compromisso contínuo em
-          melhorar o jogo e atender às expectativas dos jogadores.
-        </p>
-
-        <p>
-          <strong>Fóruns e comunidades:</strong> Fornecer um espaço para a
-          comunidade de jogadores se reunir, trocar ideias, discutir estratégias
-          e compartilhar experiências é uma parte importante do suporte aos
-          jogadores.
-        </p>
-
-        <p>
-          Os fóruns de discussão, grupos nas redes sociais e outras plataformas
-          comunitárias podem ser estabelecidos para promover a interação entre
-          os jogadores e a equipe de desenvolvimento. Isso cria um senso de
-          pertencimento, engajamento e fidelidade dos jogadores ao jogo.
-        </p>
-
-        <p>
-          <strong>Atendimento ao cliente:</strong> O atendimento ao cliente é
-          uma parte essencial do suporte aos jogadores. Os jogadores devem ter
-          um canal direto para entrar em contato com a equipe de suporte, seja
-          por meio de e-mail, chat ao vivo ou sistemas de tickets.
-        </p>
+        <ul style="margin-inline-start: 2rem">
+          <li class="my-1">
+            <strong>Desempenho:</strong> Define requisitos relacionados ao
+            desempenho do jogo, como taxa de quadros por segundo (FPS), tempo de
+            carregamento, otimização de memória e resposta rápida aos comandos
+            do jogador.
+          </li>
+          <li class="my-1">
+            <strong>Gráficos e áudio:</strong> Descreve a qualidade e o estilo
+            visual e sonoro do jogo, incluindo resolução, qualidade das
+            texturas, efeitos visuais, trilha sonora, efeitos sonoros e
+            dublagem.
+          </li>
+          <li class="my-1">
+            <strong>Usabilidade:</strong> Define requisitos relacionados à
+            facilidade de uso e experiência do jogador, como controles
+            intuitivos, interfaces claras, tutoriais, feedback adequado,
+            legibilidade de texto e acessibilidade para diferentes públicos.
+          </li>
+          <li class="my-1">
+            <strong>Confiabilidade:</strong> Descreve a capacidade do jogo de
+            funcionar sem falhas ou problemas técnicos, como crashes,
+            travamentos ou bugs significativos que possam prejudicar a
+            experiência do jogador.
+          </li>
+        </ul>
       </div>
       <!-- End BlackBox -->
     </div>
@@ -540,74 +789,33 @@
     <section class="container course">
       <div class="section">
         <div class="contentSection">
+          <ul style="margin-inline-start: 2rem">
+            <li class="my-1">
+              <strong>Segurança:</strong> Define requisitos de segurança para
+              proteger os dados do jogador, prevenir hacks ou trapaças, e
+              garantir a integridade do jogo.
+            </li>
+            <li class="my-1">
+              <strong>Requisitos de plataforma:</strong>Estabelece as restrições
+              e requisitos específicos de plataformas nas quais o jogo será
+              lançado, como requisitos de sistema, suporte a diferentes
+              dispositivos (PC, consoles, dispositivos móveis) e conformidade
+              com as políticas de cada plataforma.
+            </li>
+          </ul>
+
           <p>
-            É importante responder prontamente às consultas dos jogadores,
-            resolver problemas ou encaminhá-los para o funcionário ou equipe
-            adequada para obter assistência adicional.
+            A clara definição e documentação dos requisitos funcionais e não
+            funcionais são essenciais para orientar o desenvolvimento do jogo,
+            alinhar as expectativas da equipe de desenvolvimento e garantir que
+            o jogo atenda às necessidades dos jogadores.
           </p>
 
           <p>
-            <strong>Expansões e conteúdo adicional:</strong> Para manter o
-            interesse dos jogadores ao longo do tempo, muitos jogos digitais
-            lançam expansões e conteúdo adicional, como DLCs (downloadable
-            content).
+            Esses requisitos ajudam a garantir que o jogo seja jogável,
+            agradável, de alta qualidade e atenda aos padrões e expectativas do
+            público-alvo.
           </p>
-
-          <p>
-            Esses conteúdos extras podem adicionar novas missões, personagens,
-            mapas, modos de jogo, entre outros, oferecendo uma experiência
-            prolongada aos jogadores.
-          </p>
-
-          <p>
-            O suporte ao jogador também inclui garantir que essas expansões
-            sejam entregues sem problemas e que os jogadores tenham acesso
-            adequado a elas.
-          </p>
-
-          <p>
-            Vale salientar que a maior parte desses conteúdos são pagos, pois
-            integram o modelo atual de negócios da indústria, consolidado desde
-            que os consoles de videogame passaram a ter acesso à internet e os
-            seus próprios sistemas de distribuição digital (vide a Microsoft
-            Store e a PlayStation Network).
-          </p>
-
-          <div class="atencion my-3">
-            <img src="./img/global/icons/lightbulb.png" />
-            <div class="column" style="padding-left: 1.87rem">
-              <p><strong>VOCÊ SABIA?</strong></p>
-              <br />
-              <p>
-                Nos dias 16 e 17 de abril de 2011 a PSN (PlayStation Network)
-                sofreu um grande ataque hacker que obrigou a Sony a desligar os
-                servidores da rede dos consoles da linha PlayStation. Mais de
-                100 milhões de usuários do mundo inteiro tiveram seus dados
-                pessoais expostos, forçando a Sony a investir ainda mais em
-                segurança por meio da reconstrução de sua rede, ativando-a
-                algumas semanas após o ataque. Para compensar a queda do
-                serviço, a Sony lançou o pacote “Bem-vindos de volta”, que
-                presenteou os usuários com dois jogos gratuitos a serem
-                escolhidos a partir de uma lista, ambos de posse vitalícia.
-              </p>
-              <br />
-              <p>
-                G1. Entenda o ataque à rede online do PlayStation 3, a PSN.
-                2011. Disponível em:
-                <a target="_blank" href=" https://shorturl.at/FKV34">
-                  https://shorturl.at/FKV34</a
-                >
-              </p>
-              <br />
-              <p>
-                G1. A Sony oferece jogos gratuitos aos usuários da rede on-line
-                do PS3. 2011. Disponível em:
-                <a target="_blank" href="https://shorturl.at/hVX19">
-                  https://shorturl.at/hVX19</a
-                >
-              </p>
-            </div>
-          </div>
 
           <!-- inicio questão 2 -->
           <div class="marginVertical">
@@ -615,8 +823,8 @@
               <div class="question-description-container">
                 <p>QUESTÃO 2</p>
                 <p>
-                  Qual das seguintes atividades NÃO faz parte do Suporte aos
-                  jogadores?
+                  Qual das seguintes opções NÃO descreve um requisito funcional
+                  em um jogo digital?
                 </p>
               </div>
 
@@ -686,9 +894,7 @@
                     />
                   </td>
                   <td>
-                    <label for="q2-option-1">
-                      Atualizações e correções de bugs
-                    </label>
+                    <label for="q2-option-1"> Interface de usuário </label>
                   </td>
                 </tr>
                 <tr>
@@ -701,7 +907,7 @@
                     />
                   </td>
                   <td>
-                    <label for="q2-option-2"> Suporte técnico </label>
+                    <label for="q2-option-2"> Mecânicas de jogo </label>
                   </td>
                 </tr>
                 <tr>
@@ -714,7 +920,7 @@
                     />
                   </td>
                   <td>
-                    <label for="q2-option-3"> Ofertas e promoções </label>
+                    <label for="q2-option-3"> Narrativa </label>
                   </td>
                 </tr>
                 <tr>
@@ -727,22 +933,7 @@
                     />
                   </td>
                   <td>
-                    <label for="q2-option-4"> Atendimento ao cliente </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                      id="q2-option-5"
-                      type="radio"
-                      name="q2-myRadios"
-                      class="question-type-one-radio"
-                    />
-                  </td>
-                  <td>
-                    <label for="q2-option-5">
-                      Expansões e conteúdo adicional
-                    </label>
+                    <label for="q2-option-4"> Progressão e metas </label>
                   </td>
                 </tr>
               </table>
@@ -759,195 +950,55 @@
           </div>
           <!-- fim questão 2 -->
 
-          <h3 class="text-subtitle2 blue mx-5" id="maintenance">Manutenção</h3>
+          <h3 class="text-subtitle2 blue mx-5" id="gdd">
+            Game Design Document (GDD)
+          </h3>
 
           <p>
-            A manutenção de um jogo digital após o seu lançamento é uma parte
-            essencial do processo de desenvolvimento e gestão de jogos. Ela
-            envolve uma série de atividades contínuas realizadas pela equipe
-            responsável pelo jogo, com o objetivo de melhorar, corrigir
-            problemas e fornecer suporte aos jogadores.
+            O Game Design Document (GDD), ou Documento de Projeto de Jogo, é um
+            documento detalhado que descreve todos os aspectos do design e
+            desenvolvimento de um jogo.
+          </p>
+
+          <p>
+            Ele serve como um guia abrangente para a equipe de desenvolvimento,
+            fornecendo informações essenciais sobre a visão do jogo, mecânicas,
+            história, personagens, arte, som e muito mais.
           </p>
 
           <img
             class="w-75 m-auto"
-            src="./img/ue14/imagem1.jpg"
-            alt="Cyberpunk 2077 é o maior exemplo recente de um jogo digital lançado antes do tempo que precisou de bastante investimento na manutenção para não destruir a reputação da empresa CDProjekt Red e não perder o investimento milionário."
+            src="./img/ue14/imagem8.jpg"
+            alt="Na imagem, mulher projeta jogo de quebra-cabeça"
           />
 
           <p>
-            Uma das principais razões para a manutenção contínua de um jogo é a
-            necessidade de corrigir bugs e problemas técnicos que possam surgir
-            após o lançamento.
+            O GDD é uma ferramenta de referência central que ajuda a garantir
+            que todos os membros da equipe estejam alinhados e trabalhem em
+            direção a um objetivo comum. Aqui estão alguns elementos típicos
+            encontrados em um Game Design Document:
           </p>
 
           <p>
-            Mesmo com testes rigorosos antes do lançamento, é difícil prever
-            todas as situações e comportamentos que podem ocorrer quando o jogo
-            é jogado por uma grande variedade de jogadores em diferentes
-            dispositivos e configurações.
+            <strong>Visão geral:</strong> O GDD começa com uma visão geral do
+            jogo, incluindo uma sinopse, gênero, público-alvo e principais
+            objetivos do jogo. Isso estabelece o tom e a intenção do jogo.
           </p>
 
           <p>
-            Portanto, a equipe de desenvolvimento deve estar preparada para
-            identificar e corrigir esses problemas assim que eles forem
-            relatados pelos jogadores.
+            <strong>Mecânicas de jogo:</strong> Descreve as mecânicas de jogo,
+            ou seja, as regras e sistemas que governam a jogabilidade. Isso
+            inclui as ações do personagem do jogador, sistema de combate,
+            interações com o ambiente, quebra-cabeças, progressão do jogador,
+            sistema de pontuação, entre outros.
           </p>
 
           <p>
-            Além disso, a manutenção do jogo também pode incluir atualizações de
-            conteúdo, que trazem novos recursos, personagens, níveis ou modos de
-            jogo.
-          </p>
-
-          <p>
-            Essas atualizações ajudam a manter o interesse dos jogadores e a
-            mantê-los engajados com o jogo por um período mais longo.
-          </p>
-
-          <p>
-            A adição de conteúdo novo e relevante pode atrair jogadores antigos
-            de volta ao jogo e também pode atrair novos jogadores que possam ter
-            ficado interessados no jogo por causa das atualizações.
-          </p>
-
-          <p>
-            Outro aspecto importante da manutenção de jogos é o suporte ao
-            jogador. Isso envolve responder a perguntas, solucionar problemas e
-            fornecer orientações aos jogadores que podem ter dúvidas sobre como
-            jogar o jogo, como resolver certos desafios ou como usar
-            determinados recursos.
-          </p>
-
-          <p>
-            O suporte ao jogador pode ser fornecido por meio de fóruns, redes
-            sociais, chats online ou sistemas de suporte dedicados.
-          </p>
-
-          <img
-            class="w-75 m-auto"
-            src="./img/ue14/gif2.gif"
-            alt="Chamada de rádio via Codec do Coronel para Snake no jogo Metal Gear Solid."
-          />
-
-          <p>
-            Além disso, a manutenção de um jogo digital também pode envolver
-            ajustes de equilíbrio de jogo. À medida que os jogadores exploram e
-            interagem com o jogo, a equipe de desenvolvimento pode identificar
-            áreas onde certos elementos do jogo estão desequilibrados.
-          </p>
-
-          <p>
-            Isso pode incluir habilidades de personagens muito fortes ou fracas,
-            armas desbalanceadas ou mecânicas de jogo que podem ser abusadas.
-            Realizar ajustes de equilíbrio periodicamente ajuda a garantir uma
-            experiência de jogo justa e agradável para todos os jogadores.
-          </p>
-
-          <div class="atencion my-3">
-            <img src="./img/global/icons/lightbulb.png" />
-            <div class="column" style="padding-left: 1.87rem">
-              <p><strong>VOCÊ SABIA?</strong></p>
-              <br />
-              <p>
-                Criadora de franquias de sucesso como MegaMan, Street Fighter e
-                Resident Evil, a empresa nipônica Capcom possui um longo
-                histórico de polêmicas envolvendo conteúdos extras de seus
-                jogos. Títulos como Resident Evil 5 e Street Fighter X Tekken
-                causaram revolta na comunidade gamer mundial por cobrar por
-                conteúdo que já está presente no disco vendido, fazendo o
-                jogador pagar apenas por uma chave que destrava o conteúdo extra
-                ofertado.
-              </p>
-              <br />
-              <p>
-                As desenvolvedoras de jogos são frequentemente criticadas por
-                adotar práticas controversas, como lançar jogos incompletos e
-                posteriormente vender complementos para oferecer uma experiência
-                completa, o que tem sido considerado uma estratégia
-                mercadológica questionável. É importante mencionar os casos em
-                que as DLCs transformam os jogos em pay-to-win, onde as
-                desenvolvedoras vendem pacotes de expansão que conferem uma
-                ampla vantagem aos compradores, resultando em um desequilíbrio
-                no jogo para aqueles que não adquiriram as DLCs. Isso tem sido
-                uma ocorrência frequente, como observado na Eletronic Arts em
-                jogos como Fifa e Star Wars Battlefront 2. Outro exemplo recente
-                são os jogos da série Destiny, que torna impossível jogá-los sem
-                as DLCs, pois a Activision bloqueou o acesso ao modo PVP e aos
-                assaltos semanais, que proporcionam os melhores itens para
-                aqueles que não possuem as expansões.
-              </p>
-              <br />
-              <p>
-                The Enemy. Conteúdo de Resident Evil 5 coloca em questão a
-                cobrança por extras que os jogadores já têm. 2009. Disponível
-                em:
-                <a target="_blank" href="https://shorturl.at/fpyGI">
-                  https://shorturl.at/fpyGI</a
-                >
-              </p>
-              <br />
-              <p>
-                TechTudo. Capcom diz não ver diferença entre DLC e conteúdo
-                travado no disco de Street Fighter X Tekken. 2012. Disponível
-                em:
-                <a target="_blank" href="https://shorturl.at/kJKLW">
-                  https://shorturl.at/kJKLW</a
-                >
-              </p>
-            </div>
-          </div>
-
-          <h3 class="text-subtitle2 blue mx-5" id="publication">Publicação</h3>
-
-          <p>
-            Uma etapa muito importante na produção de um jogo é a sua
-            publicação, pois isso significa finalmente disponibilizá-lo no
-            mercado para os jogadores.
-          </p>
-
-          <p>
-            Na indústria do entretenimento interativo, há empresas
-            especializadas na publicação de jogos, denominadas Game Publisher.
-          </p>
-
-          <p>
-            Como o processo de publicação de um jogo envolve bastante
-            investimento, essas empresas selecionam quais jogos estão aptos a
-            serem lançados, mediante uma análise profunda de mercado e de
-            riscos.
-          </p>
-
-          <img
-            class="w-75 m-auto"
-            src="./img/ue14/gif3.gif"
-            alt="Na animação, uma jovem muito feliz jogando dinheiro para cima. Ela conta dezenas de notas muito rápido."
-          />
-
-          <p>
-            A publicação envolve uma série de etapas e estratégias para garantir
-            que o jogo seja lançado com sucesso e alcance seu público-alvo.
-            Seguem abaixo as principais considerações da publicação de jogos
-            digitais:
-          </p>
-
-          <p>
-            <strong>Planejamento de lançamento:</strong> Antes de publicar um
-            jogo, é crucial realizar um planejamento detalhado do lançamento.
-            Isso envolve definir metas, identificar o público-alvo, criar
-            estratégias de marketing e estabelecer um cronograma. O planejamento
-            cuidadoso ajudará a garantir que todas as etapas necessárias sejam
-            executadas de forma eficiente e que o lançamento ocorra no momento
-            ideal.
-          </p>
-
-          <p>
-            <strong>Distribuição de plataformas:</strong> Uma decisão importante
-            na publicação de jogos digitais é determinar em quais plataformas o
-            jogo será lançado. Isso pode incluir consoles de videogame,
-            computadores, ou dispositivos móveis. Cada plataforma tem suas
-            próprias considerações técnicas e requisitos, de modo que é
-            necessário adaptar o jogo de acordo com essas especificações.
+            <strong>História e narrativa:</strong> Apresenta a história do jogo,
+            incluindo personagens, contexto, enredo principal e eventuais
+            ramificações narrativas. Descreve também a forma como a história
+            será contada ao jogador, como cutscenes, diálogos, narrativa
+            emergente ou outros elementos narrativos.
           </p>
         </div>
       </div>
@@ -957,44 +1008,47 @@
     <div class="parallax background-parallax2">
       <div class="cubeBlack">
         <p>
-          <strong>Certificação e aprovação:</strong> Dependendo da plataforma,
-          pode ser necessário passar por um processo de certificação e aprovação
-          antes do lançamento. Por exemplo, as principais plataformas de
-          consoles possuem requisitos estritos de qualidade e conformidade que
-          um jogo deve atender antes de ser disponibilizado para os usuários. É
-          importante preparar e enviar o jogo para essa fase de certificação com
-          antecedência suficiente para garantir que todos os requisitos sejam
-          cumpridos.
+          <strong>Personagens:</strong> Detalha os personagens do jogo,
+          incluindo protagonistas, antagonistas, NPCs (personagens não jogáveis)
+          e suas características, histórias, habilidades e interações com o
+          jogador. Isso ajuda a definir a personalidade e o papel dos
+          personagens na experiência do jogo.
         </p>
 
         <p>
-          <strong>Estratégias de marketing:</strong> A publicação de um jogo
-          digital requer uma estratégia de marketing eficaz para alcançar os
-          jogadores. Isso pode incluir a criação de um site oficial, o uso de
-          mídias sociais, a produção de materiais promocionais, como trailers e
-          imagens, a colaboração com influenciadores e a participação em eventos
-          de jogos. O objetivo é criar conscientização sobre o jogo, gerar
-          interesse e aumentar a base de jogadores antes e durante o lançamento.
+          <strong>Arte e design visual:</strong> Aborda a direção artística e o
+          design visual do jogo. Isso inclui descrições de cenários,
+          personagens, objetos, efeitos visuais, estilo de arte, animações e
+          interfaces de usuário. O objetivo é garantir uma estética visual
+          consistente e coerente.
         </p>
 
         <p>
-          <strong>Atualizações pós-lançamento:</strong> A publicação de jogos
-          digitais não termina no lançamento inicial. Após o lançamento, é
-          essencial fornecer suporte contínuo ao jogo, corrigindo bugs, lançando
-          atualizações de conteúdo e interagindo com a comunidade de jogadores.
+          <strong>Áudio e música:</strong> Descreve a direção sonora do jogo,
+          incluindo efeitos sonoros, trilha sonora, ambientação e qualquer outra
+          forma de áudio presente no jogo. Isso ajuda a estabelecer a atmosfera
+          e a imersão sonora desejada.
         </p>
 
         <p>
-          Essas atualizações pós-lançamento ajudam a manter o interesse dos
-          jogadores, melhorar a qualidade do jogo e construir uma base de
-          jogadores engajada.
+          <strong>Fluxo de jogo e progressão:</strong> Descreve a estrutura e o
+          fluxo do jogo, incluindo a progressão do jogador, a divisão em níveis
+          ou fases, a dificuldade, a curva de aprendizado e a sensação geral de
+          progresso.
         </p>
 
         <p>
-          <strong>Monetização:</strong> A publicação de jogos digitais também
-          envolve decidir sobre o modelo de monetização do jogo. Isso pode
-          incluir a venda direta do jogo, microtransações, assinaturas, anúncios
-          ou uma combinação de diferentes modelos.
+          <strong>Requisitos técnicos:</strong> Inclui informações sobre os
+          requisitos técnicos do jogo, como plataformas de lançamento, suporte a
+          hardware específico, requisitos de rede, limitações de desempenho e
+          outros aspectos técnicos relevantes.
+        </p>
+
+        <p>
+          <strong>Cronograma e planejamento:</strong> O GDD pode conter um
+          cronograma e um planejamento geral do desenvolvimento do jogo. Isso
+          ajuda a definir marcos, estimativas de tempo e organização das
+          diferentes fases do desenvolvimento.
         </p>
       </div>
       <!-- End BlackBox -->
@@ -1006,61 +1060,214 @@
       <div class="section">
         <div class="contentSection">
           <p>
-            É importante encontrar um equilíbrio entre o valor oferecido aos
-            jogadores e a sustentabilidade financeira do jogo. Atualmente
-            existem três modelos de negócios na indústria: Pay-to-play,
-            Free-to-play e os jogos NFT. O Pay-to-play é o modelo tradicional,
-            no qual os jogadores pagam uma única taxa para adquirir a versão
-            física ou digital do jogo.
+            <strong>Equipe e responsabilidades:</strong> O GDD pode listar os
+            membros da equipe de desenvolvimento, suas responsabilidades e
+            funções específicas no projeto do jogo.
           </p>
 
           <p>
-            No modelo Free-to-play os jogadores podem baixar e jogar o jogo
-            gratuitamente, mas podem comprar itens dentro do jogo para melhorar
-            sua experiência.
+            É importante ressaltar que o conteúdo e a estrutura do GDD podem
+            variar dependendo do estúdio, da equipe de desenvolvimento e da
+            complexidade do jogo. O objetivo principal do GDD é fornecer uma
+            documentação clara e abrangente do design do jogo, permitindo que a
+            equipe de desenvolvimento siga uma visão comum e trabalhe de forma
+            mais eficiente.
           </p>
 
           <p>
-            Por fim, os jogos NFT usam tokens não fungíveis (NFTs) para
-            representar ativos exclusivos e indivisíveis dentro do jogo, muitas
-            vezes usando a tecnologia blockchain para garantir a autenticidade e
-            a propriedade.
+            À medida que o desenvolvimento avança, o GDD pode ser atualizado e
+            refinado para refletir as mudanças e os avanços do jogo.
           </p>
 
           <p>
-            Esses ativos podem incluir itens, personagens, terrenos ou qualquer
-            outra coisa que tenha valor dentro do jogo. Os jogadores podem
-            comprar, vender e trocar NFTs uns com os outros, assim como também
-            podem usá-los em outros jogos que suportem NFTs.
+            Seguem abaixo os dois modelos de GDD mais utilizados no mercado:
           </p>
 
-          <p>Segue abaixo exemplos de jogos de cada modelo de negócios:</p>
+          <h3 class="text-subtitle2 blue mx-5" id="one-page">One Page (GDD)</h3>
 
-          <div class="container-slides-image">
-            <img
-              src="./img/global/icons/back-button.svg"
-              onclick="imagemAnterior(interableImages1)"
-            />
-            <img
-              id="interable1"
-              class="slide-image"
-              src="./img/ue14/Slide 1.png"
-            />
-            <img
-              src="./img/global/icons/next-button.svg"
-              onclick="proximaImagem(interableImages1)"
-            />
-          </div>
+          <p>
+            Documento curto utilizado no mercado para apresentar rapidamente o
+            projeto do jogo a um investidor. Deve conter uma ideia clara sobre o
+            jogo, cujo conteúdo possui informações essenciais: Descrição e
+            objetivos, PUV (Proposta Única de Vendas), Público-Alvo,  Principais
+            Características, Tema e Ambientação, e Mecânicas do Jogo.
+          </p>
 
           <img
             class="w-75 m-auto"
-            src="./img/ue14/imagem2.jpg"
-            alt="Logotipo, captura de tela do jogo de criptomoeda blockchain nft ethereum Axie na tela do laptop. Homem brincando, colecionando, criando animais de estimação criptográficos, heróis. Ganhar tokens de dinheiro digital AXS."
+            src="./img/ue14/imagem9.png"
+            alt="Na imagem, One Page GDD"
           />
 
+          <h3 class="text-subtitle2 blue mx-5" id="gdd10">GDD de 10 Páginas</h3>
+
           <p>
-            Agora para aprimorar os seus conhecimentos, vamos responder às
-            questões a seguir?
+            O GDD de 10 páginas é bastante conciso e deve conter apenas os
+            aspectos mais importantes do jogo. Segue abaixo a estrutura
+            tradicional deste formato:
+          </p>
+
+          <div class="border-orange-type2">
+            <ol style="margin-inline-start: 2rem" class="change-orange">
+              <li class="my-1">
+                <strong class="">Capa e Introdução</strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>Nome do jogo, logotipo e detalhes do projeto.</li>
+                  <li>Visão geral do jogo e contexto da história.</li>
+                  <li>
+                    Equipe de desenvolvimento e data de criação do documento.
+                  </li>
+                </ul>
+              </li>
+
+              <li class="my-1">
+                <strong class=""> Resumo do Jogo</strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>
+                    Descrição breve do conceito central e do gênero do jogo.
+                  </li>
+                  <li>Propósito do jogo e público-alvo.</li>
+                  <li>
+                    Objetivos principais do jogador e principais
+                    características.
+                  </li>
+                </ul>
+              </li>
+
+              <li class="my-1">
+                <strong class=""> Mecânicas do Jogo</strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>Descrição das principais mecânicas de jogabilidade.</li>
+                  <li>Como o jogador interage com o mundo do jogo.</li>
+                  <li>
+                    Mecânicas-chave que diferenciam o jogo de outros do mesmo
+                    gênero.
+                  </li>
+                </ul>
+              </li>
+
+              <li class="my-1">
+                <strong class="">Enredo e Personagens</strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>Resumo da história do jogo.</li>
+                  <li>
+                    Descrição dos personagens principais, incluindo protagonista
+                    e antagonista.
+                  </li>
+                  <li>Relações entre os personagens e seus papéis na trama.</li>
+                </ul>
+              </li>
+
+              <li class="my-1">
+                <strong class="">Arte e Design </strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>
+                    Estilo artístico geral do jogo (2D, 3D, pixel art, etc.).
+                  </li>
+                  <li>
+                    Descrição dos principais elementos visuais, como cenários e
+                    personagens.
+                  </li>
+                  <li>
+                    Esboço de possíveis conceitos de arte e referências visuais.
+                  </li>
+                </ul>
+              </li>
+
+              <li class="my-1">
+                <strong class="">Áudio e Trilha Sonora</strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>Descrição da atmosfera sonora do jogo.</li>
+                  <li>Tipos de sons e efeitos sonoros que serão utilizados.</li>
+                  <li>
+                    Possíveis inspirações para a trilha sonora e estilos
+                    musicais.
+                  </li>
+                </ul>
+              </li>
+
+              <li class="my-1">
+                <strong class="">Níveis e Progressão</strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>
+                    Descrição dos diferentes níveis, fases ou capítulos do jogo.
+                  </li>
+                  <li>Progressão do jogador e objetivos em cada nível.</li>
+                  <li>Elementos de desafio e recompensa em cada nível.</li>
+                </ul>
+              </li>
+
+              <li class="my-1">
+                <strong class="">Interface do Usuário</strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>
+                    Descrição da interface do jogador, incluindo menus e HUD.
+                  </li>
+                  <li>Controles e esquema de comandos do jogo.</li>
+                  <li>
+                    Como o jogador navega e interage com os elementos da
+                    interface.
+                  </li>
+                </ul>
+              </li>
+
+              <li class="my-1">
+                <strong class="">Considerações Técnicas</strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>
+                    Plataformas de destino (PC, consoles, dispositivos móveis,
+                    etc.).
+                  </li>
+                  <li>
+                    Requisitos mínimos do sistema e especificações técnicas.
+                  </li>
+                  <li>Considerações sobre otimização e desempenho.</li>
+                </ul>
+              </li>
+
+              <li class="my-1">
+                <strong class="">Cronograma e Orçamento</strong>
+                <span class="font-semibold">(1 página)</span>
+
+                <ul style="margin-inline-start: 1rem">
+                  <li>
+                    Estimativa de tempo para cada fase do desenvolvimento.
+                  </li>
+                  <li>
+                    Orçamento geral do projeto, incluindo recursos humanos e
+                    licenças de software.
+                  </li>
+                  <li>Possíveis planos de lançamento e distribuição.</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+          <p>
+            Vale ressaltar que esse esboço é apenas uma sugestão e pode variar
+            de acordo com o projeto e suas necessidades específicas. Em projetos
+            mais complexos, o GDD pode ser bem mais extenso, detalhando cada
+            aspecto do jogo em páginas adicionais. O importante é que o GDD
+            forneça informações claras e precisas para orientar a equipe de
+            desenvolvimento ao longo do processo de criação do jogo.
           </p>
 
           <!-- inicio questão 3 -->
@@ -1069,8 +1276,8 @@
               <div class="question-description-container">
                 <p>QUESTÃO 3</p>
                 <p>
-                  Qual é uma das principais considerações da publicação de jogos
-                  digitais?
+                  Qual é a principal função do Game Design Document (GDD) em um
+                  projeto de desenvolvimento de jogos?
                 </p>
               </div>
 
@@ -1141,7 +1348,8 @@
                   </td>
                   <td>
                     <label for="q3-option-1">
-                      Definir metas e identificar o público-alvo
+                      Descrever os requisitos técnicos e de hardware necessários
+                      para executar o jogo.
                     </label>
                   </td>
                 </tr>
@@ -1156,7 +1364,8 @@
                   </td>
                   <td>
                     <label for="q3-option-2">
-                      Escolher em quais plataformas o jogo será lançado
+                      Listar os membros da equipe de desenvolvimento e suas
+                      funções no projeto.
                     </label>
                   </td>
                 </tr>
@@ -1171,7 +1380,9 @@
                   </td>
                   <td>
                     <label for="q3-option-3">
-                      Preparar o jogo para certificação e aprovação
+                      Fornecer uma documentação clara e abrangente do design do
+                      jogo, incluindo visão geral, mecânicas, história,
+                      personagens, arte e som.
                     </label>
                   </td>
                 </tr>
@@ -1186,22 +1397,8 @@
                   </td>
                   <td>
                     <label for="q3-option-4">
-                      Criar uma estratégia de marketing eficaz
-                    </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                      id="q3-option-5"
-                      type="radio"
-                      name="q3-myRadios"
-                      class="question-type-one-radio"
-                    />
-                  </td>
-                  <td>
-                    <label for="q3-option-5">
-                      Todas as alternativas estão corretas
+                      Definir o cronograma detalhado e as estimativas de tempo
+                      para cada fase do desenvolvimento do jogo.
                     </label>
                   </td>
                 </tr>
@@ -1218,151 +1415,6 @@
             </div>
           </div>
           <!-- fim questão 3 -->
-
-          <!-- inicio questão 4 -->
-          <div class="marginVertical">
-            <div class="question-box-container" id="question4-box-correct">
-              <div class="question-description-container">
-                <p>QUESTÃO 4</p>
-                <p>
-                  Qual é uma característica distintiva do modelo de negócios
-                  Free-to-Play (F2P) em jogos digitais?
-                </p>
-              </div>
-
-              <div
-                class="question-box-correct-container feedback-container"
-                id="q4-box-feedback"
-              >
-                <div class="question-box-title">
-                  <p class="feedback-title"></p>
-
-                  <svg
-                    class="feedback-success-icon"
-                    style="position: absolute; right: 32px"
-                    width="19"
-                    height="14"
-                    viewBox="0 0 19 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M17.9571 1.04289C18.3476 1.43342 18.3476 2.06658 17.9571 2.45711L7.45711 12.9571C7.06658 13.3476 6.43342 13.3476 6.04289 12.9571L0.792893 7.70711C0.402369 7.31658 0.402369 6.68342 0.792893 6.29289C1.18342 5.90237 1.81658 5.90237 2.20711 6.29289L6.75 10.8358L16.5429 1.04289C16.9334 0.652369 17.5666 0.652369 17.9571 1.04289Z"
-                      fill="#436900"
-                    />
-                  </svg>
-
-                  <svg
-                    class="feedback-error-icon"
-                    style="position: absolute; right: 32px"
-                    width="19"
-                    height="19"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M19.4571 4.54289C19.8476 4.93342 19.8476 5.56658 19.4571 5.95711L5.95711 19.4571C5.56658 19.8476 4.93342 19.8476 4.54289 19.4571C4.15237 19.0666 4.15237 18.4334 4.54289 18.0429L18.0429 4.54289C18.4334 4.15237 19.0666 4.15237 19.4571 4.54289Z"
-                      fill="#93000A"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M4.54289 4.54289C4.93342 4.15237 5.56658 4.15237 5.95711 4.54289L19.4571 18.0429C19.8476 18.4334 19.8476 19.0666 19.4571 19.4571C19.0666 19.8476 18.4334 19.8476 18.0429 19.4571L4.54289 5.95711C4.15237 5.56658 4.15237 4.93342 4.54289 4.54289Z"
-                      fill="#93000A"
-                    />
-                  </svg>
-                </div>
-
-                <div class="question-box-text">
-                  <span class="feedback-message"> </span>
-                </div>
-              </div>
-            </div>
-
-            <div class="question-type-one-container">
-              <table id="table-type-two" style="border-collapse: collapse">
-                <tr>
-                  <td>
-                    <input
-                      id="q4-option-1"
-                      type="radio"
-                      name="q4-myRadios"
-                      class="question-type-one-radio"
-                    />
-                  </td>
-                  <td>
-                    <label for="q4-option-1">
-                      Os jogadores precisam comprar o jogo antes de jogar
-                    </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                      id="q4-option-2"
-                      type="radio"
-                      name="q4-myRadios"
-                      class="question-type-one-radio"
-                    />
-                  </td>
-                  <td>
-                    <label for="q4-option-2">
-                      A utilização de Tokens Não Fungíveis (NFTs) para
-                      representar ativos dentro do jogo por meio do uso do
-                      blockchain
-                    </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                      id="q4-option-3"
-                      type="radio"
-                      name="q4-myRadios"
-                      class="question-type-one-radio"
-                    />
-                  </td>
-                  <td>
-                    <label for="q4-option-3">
-                      Os jogos oferecem uma única compra inicial sem
-                      microtransações
-                    </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                      id="q4-option-4"
-                      type="radio"
-                      name="q4-myRadios"
-                      class="question-type-one-radio"
-                    />
-                  </td>
-                  <td>
-                    <label for="q4-option-4">
-                      Os jogadores podem experimentar o jogo gratuitamente, mas
-                      podem gastar dinheiro em itens virtuais
-                    </label>
-                  </td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="w-full flex justify-center">
-              <div
-                class="button-send-responses"
-                onclick="handleSubmitRadioTypeQuestion(question4)"
-              >
-                Enviar resposta
-              </div>
-            </div>
-          </div>
-          <!-- fim questão 4 -->
         </div>
       </div>
     </section>
@@ -1381,7 +1433,7 @@
           <div class="videoContainer marginVertical">
             <div class="videoFrame">
               <iframe
-                src="https://youtube.com/embed/RAETfkHhUn0"
+                src="https://youtube.com/embed/mPWwP7e0Oos"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -1393,7 +1445,6 @@
         </div>
       </div>
     </section>
-
     <div class="containerFooter row">
       <button class="row empty-btn" type="button" onclick="carregarHTML(13)">
         <img class="arrowImg" src="img/global/icons/previusclass.png" />
