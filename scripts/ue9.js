@@ -121,7 +121,7 @@ var question4 = {
   type: "RADIO",
   title: "QUESTÃO 4 - Verdadeiro ou Falso",
   description:
-    "Na blockcEm jogos digitais, uma biblioteca exige que o programador programe todos os recursos que precisa do zero.hain, os blocos possuem informações ou transações e são conectados em cadeia.",
+    "Em jogos digitais, uma biblioteca exige que o programador programe todos os recursos que precisa do zero.",
   feedbacks: [
     {
       optionId: "q4-option-1",
