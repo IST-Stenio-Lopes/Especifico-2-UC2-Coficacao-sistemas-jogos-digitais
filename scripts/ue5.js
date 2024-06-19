@@ -7,17 +7,17 @@ var question1 = {
     {
       optionId: "q1-option-1",
       feedBackId: "q1-box-feedback",
-      title: "OPS!",
-      message: "Na verdade, esta é uma boa definição de árvores de decisão.",
-      type: "error",
-    },
-    {
-      optionId: "q1-option-2",
-      feedBackId: "q1-box-feedback",
       title: "Exato!",
       message:
         "Isso mesmo, as árvores de decisão são diagramas que auxiliam na visualização de possíveis resultados de dentre várias escolhas.",
       type: "success",
+    },
+    {
+      optionId: "q1-option-2",
+      feedBackId: "q1-box-feedback",
+      title: "OPS!",
+      message: "Na verdade, esta é uma boa definição de árvores de decisão.",
+      type: "error",
     },
   ],
 };
