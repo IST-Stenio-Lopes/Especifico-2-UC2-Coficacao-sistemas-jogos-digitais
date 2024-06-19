@@ -9,7 +9,7 @@ var question1 = {
       feedBackId: "q1-box-feedback",
       title: "Exato!",
       message:
-        "O padrão Decorator diciona responsabilidades adicionais aos objetos do jogo sem alterar seu código.",
+        "O padrão Decorator adiciona responsabilidades adicionais aos objetos do jogo sem alterar seu código.",
       type: "success",
     },
     {
