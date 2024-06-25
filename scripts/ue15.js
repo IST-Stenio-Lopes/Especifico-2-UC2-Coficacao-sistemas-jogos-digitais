@@ -82,7 +82,7 @@ var question3 = {
   type: "RADIO",
   title: "QUESTÃO 3",
   description:
-    "Qual é uma das principais considerações da publicação de jogos digitais?",
+    "Qual dos seguintes elementos NÃO é considerado um asset em jogos digitais?",
   feedbacks: [
     {
       optionId: "q3-option-1",
